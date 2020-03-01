@@ -363,3 +363,7 @@ Please use OO.ui.throttle/debounce instead. See https://phabricator.wikimedia.or
 [0221/213427.455:WARNING:audio_sync_reader.cc(187)] ASR: No room in socket buffer.: Se está cerrando la canalización. (0xE8)
 [0221/213430.381:INFO:CONSOLE(0)] "Uncaught (in promise) NotSupportedError: screen.orientation.lock() is not available on this device.", source: https://m.youtube.com/watch?v=28W_sotzXUw (0)
 [0221/213436.735:ERROR:render_media_log.cc(27)] MediaEvent: MEDIA_ERROR_LOG_ENTRY {"error":"video decode error"}
+[0225/191808.994:ERROR:browser_process_sub_thread.cc(221)] Waited 12 ms for network service
+[0228/202622.802:ERROR:browser_process_sub_thread.cc(221)] Waited 17 ms for network service
+[0228/204425.640:ERROR:browser_process_sub_thread.cc(221)] Waited 12 ms for network service
+[0301/011235.705:ERROR:browser_process_sub_thread.cc(221)] Waited 23 ms for network service

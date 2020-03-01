@@ -34,10 +34,16 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.markButton = new System.Windows.Forms.Button();
+            this.textImageButton = new System.Windows.Forms.Button();
+            this.syncButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Pages = new System.Windows.Forms.Label();
+            this.PagesLabel = new System.Windows.Forms.Label();
+            this.searchButton = new System.Windows.Forms.Button();
+            this.searchTextBox = new System.Windows.Forms.TextBox();
+            this.nextPageButton = new System.Windows.Forms.Button();
+            this.backPagebutton = new System.Windows.Forms.Button();
             this.btn_leerEnciclopedia = new System.Windows.Forms.Button();
             this.btn_nav_adelante = new System.Windows.Forms.Button();
             this.btn_nav_atras = new System.Windows.Forms.Button();
@@ -110,44 +116,50 @@
             this.pictureBox5.TabIndex = 88;
             this.pictureBox5.TabStop = false;
             // 
-            // button1
+            // markButton
             // 
-            this.button1.Location = new System.Drawing.Point(271, 619);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 59);
-            this.button1.TabIndex = 89;
-            this.button1.Text = "Marcas ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.markButton.Location = new System.Drawing.Point(276, 619);
+            this.markButton.Name = "markButton";
+            this.markButton.Size = new System.Drawing.Size(101, 59);
+            this.markButton.TabIndex = 89;
+            this.markButton.Text = "Marcas ";
+            this.markButton.UseVisualStyleBackColor = true;
+            this.markButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button3
+            // textImageButton
             // 
-            this.button3.Location = new System.Drawing.Point(667, 514);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(112, 60);
-            this.button3.TabIndex = 91;
-            this.button3.Text = "TEXT/IMAGE";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.textImageButton.Location = new System.Drawing.Point(667, 514);
+            this.textImageButton.Name = "textImageButton";
+            this.textImageButton.Size = new System.Drawing.Size(112, 60);
+            this.textImageButton.TabIndex = 91;
+            this.textImageButton.Text = "TEXT/IMAGE";
+            this.textImageButton.UseVisualStyleBackColor = true;
+            this.textImageButton.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // syncButton
             // 
-            this.button2.Location = new System.Drawing.Point(140, 619);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 59);
-            this.button2.TabIndex = 92;
-            this.button2.Text = "Sync";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.syncButton.Location = new System.Drawing.Point(71, 581);
+            this.syncButton.Name = "syncButton";
+            this.syncButton.Size = new System.Drawing.Size(101, 44);
+            this.syncButton.TabIndex = 92;
+            this.syncButton.Text = "Sync\r\n";
+            this.syncButton.UseVisualStyleBackColor = true;
+            this.syncButton.Click += new System.EventHandler(this.syncPdfButton_Click);
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.Pages);
+            this.panel2.Controls.Add(this.PagesLabel);
+            this.panel2.Controls.Add(this.searchButton);
+            this.panel2.Controls.Add(this.searchTextBox);
+            this.panel2.Controls.Add(this.nextPageButton);
+            this.panel2.Controls.Add(this.backPagebutton);
             this.panel2.Controls.Add(this.btn_leerEnciclopedia);
             this.panel2.Controls.Add(this.btn_nav_adelante);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.syncButton);
             this.panel2.Controls.Add(this.btn_nav_atras);
             this.panel2.Controls.Add(this.btn_cerrarVentanaDerecha);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.markButton);
             this.panel2.Controls.Add(this.lbl_PalabraBuscada);
             this.panel2.Controls.Add(this.panel_navegador);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
@@ -155,6 +167,64 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(380, 681);
             this.panel2.TabIndex = 95;
+            // 
+            // Pages
+            // 
+            this.Pages.AutoSize = true;
+            this.Pages.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.Pages.Location = new System.Drawing.Point(15, 656);
+            this.Pages.Name = "Pages";
+            this.Pages.Size = new System.Drawing.Size(54, 16);
+            this.Pages.TabIndex = 134;
+            this.Pages.Text = "Pages :";
+            // 
+            // PagesLabel
+            // 
+            this.PagesLabel.AutoSize = true;
+            this.PagesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.PagesLabel.Location = new System.Drawing.Point(75, 657);
+            this.PagesLabel.Name = "PagesLabel";
+            this.PagesLabel.Size = new System.Drawing.Size(20, 16);
+            this.PagesLabel.TabIndex = 133;
+            this.PagesLabel.Text = "---";
+            // 
+            // searchButton
+            // 
+            this.searchButton.Location = new System.Drawing.Point(174, 627);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(59, 51);
+            this.searchButton.TabIndex = 132;
+            this.searchButton.Text = "Search Pages";
+            this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            // 
+            // searchTextBox
+            // 
+            this.searchTextBox.Location = new System.Drawing.Point(10, 627);
+            this.searchTextBox.Multiline = true;
+            this.searchTextBox.Name = "searchTextBox";
+            this.searchTextBox.Size = new System.Drawing.Size(162, 21);
+            this.searchTextBox.TabIndex = 131;
+            // 
+            // nextPageButton
+            // 
+            this.nextPageButton.Location = new System.Drawing.Point(174, 581);
+            this.nextPageButton.Name = "nextPageButton";
+            this.nextPageButton.Size = new System.Drawing.Size(59, 44);
+            this.nextPageButton.TabIndex = 95;
+            this.nextPageButton.Text = ">>";
+            this.nextPageButton.UseVisualStyleBackColor = true;
+            this.nextPageButton.Click += new System.EventHandler(this.nextPageButton_Click);
+            // 
+            // backPagebutton
+            // 
+            this.backPagebutton.Location = new System.Drawing.Point(10, 581);
+            this.backPagebutton.Name = "backPagebutton";
+            this.backPagebutton.Size = new System.Drawing.Size(59, 44);
+            this.backPagebutton.TabIndex = 94;
+            this.backPagebutton.Text = "<<";
+            this.backPagebutton.UseVisualStyleBackColor = true;
+            this.backPagebutton.Click += new System.EventHandler(this.backPagebutton_Click);
             // 
             // btn_leerEnciclopedia
             // 
@@ -468,7 +538,7 @@
             this.Controls.Add(this.btn_traductor);
             this.Controls.Add(this.btn_buscarWeb);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.textImageButton);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lbl_datoBuscado_trad_def);
             this.Controls.Add(this.rtb_result_definicion_traduccion);
@@ -501,9 +571,9 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button markButton;
+        private System.Windows.Forms.Button textImageButton;
+        private System.Windows.Forms.Button syncButton;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_nav_adelante;
         private System.Windows.Forms.Button btn_nav_atras;
@@ -533,5 +603,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_leerEnciclopedia;
         private System.Windows.Forms.Button btn_leerDefinicionTraduccion;
+        private System.Windows.Forms.Button nextPageButton;
+        private System.Windows.Forms.Button backPagebutton;
+        private System.Windows.Forms.Button searchButton;
+        private System.Windows.Forms.TextBox searchTextBox;
+        private System.Windows.Forms.Label Pages;
+        private System.Windows.Forms.Label PagesLabel;
     }
 }

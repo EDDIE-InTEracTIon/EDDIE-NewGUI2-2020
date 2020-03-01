@@ -133,3 +133,12 @@ C:\Users\Dania\source\repos\1IntegracionFinal9ProyectoCasiFinal\ModuloConsistenc
 C:\Users\Dania\source\repos\1IntegracionFinal9ProyectoCasiFinal\ModuloConsistenciaDatos\obj\Debug\ModuloConsistenciaDatos.csproj.CopyComplete
 C:\Users\Dania\source\repos\1IntegracionFinal9ProyectoCasiFinal\ModuloConsistenciaDatos\obj\Debug\ModuloConsistenciaDatos.dll
 C:\Users\Dania\source\repos\1IntegracionFinal9ProyectoCasiFinal\ModuloConsistenciaDatos\obj\Debug\ModuloConsistenciaDatos.pdb
+H:\Repo-AugmentedReading\CloneProyectoFinal\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\bin\Debug\ModuloConsistenciaDatos.dll
+H:\Repo-AugmentedReading\CloneProyectoFinal\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\bin\Debug\ModuloConsistenciaDatos.pdb
+H:\Repo-AugmentedReading\CloneProyectoFinal\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\bin\Debug\itextsharp.dll
+H:\Repo-AugmentedReading\CloneProyectoFinal\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\bin\Debug\itextsharp.xml
+H:\Repo-AugmentedReading\CloneProyectoFinal\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\obj\Debug\ModuloConsistenciaDatos.csprojAssemblyReference.cache
+H:\Repo-AugmentedReading\CloneProyectoFinal\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\obj\Debug\ModuloConsistenciaDatos.csproj.CoreCompileInputs.cache
+H:\Repo-AugmentedReading\CloneProyectoFinal\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\obj\Debug\ModuloConsistenciaDatos.csproj.CopyComplete
+H:\Repo-AugmentedReading\CloneProyectoFinal\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\obj\Debug\ModuloConsistenciaDatos.dll
+H:\Repo-AugmentedReading\CloneProyectoFinal\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\obj\Debug\ModuloConsistenciaDatos.pdb

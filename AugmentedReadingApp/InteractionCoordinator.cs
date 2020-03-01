@@ -275,8 +275,10 @@ namespace AugmentedReadingApp
 
         private void detenerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            captureGesture.Stop();
-            captureGesture.ImageGrabbed -= Capture_ImageGrabbed1;//retirar el evento de captura camara
+
+                captureGesture.Stop();
+                captureGesture.ImageGrabbed -= Capture_ImageGrabbed1;//retirar el evento de captura camara
+            
         }
 
 
@@ -342,6 +344,7 @@ namespace AugmentedReadingApp
                     ImageToBase64(cropColorFrame(m, rectangle).Bitmap, System.Drawing.Imaging.ImageFormat.Bmp);
 
                     //imageBox4.Image = cropColorFrame(m, new Rectangle(10,10,0,1)).ToImage<Bgr, byte>();
+                    CaptureImage();
                 }
 
             }
@@ -355,17 +358,18 @@ namespace AugmentedReadingApp
                 if (captureGesture != null)
                 {
                     captureGesture.Retrieve(m);
-                    if (checkBoxMouse.Checked)
-                    {
+                    rectangleImage = cropColorFrame(m, recGestual.RectangularSelection);
+                    //if (checkBoxMouse.Checked)
+                    //{
 
-                        rectangleImage = cropColorFrame(m, recGestual.RectangularSelection);
-                    }
-                    else
-                    {
+                    //    rectangleImage = cropColorFrame(m, recGestual.RectangularSelection);
+                    //}
+                    //else
+                    //{
 
-                        // rectangleImage = cropColorFrame(m, projection.Highlight.GetRectangle());
-                        rectangleImage = cropColorFrame(m, recGestual.RectangularSelection);
-                    }
+                    //    // rectangleImage = cropColorFrame(m, projection.Highlight.GetRectangle());
+                    //    rectangleImage = cropColorFrame(m, recGestual.RectangularSelection);
+                    //}
                     if (rectangleImage != null)
                     {
                         imageBox4.Image = rectangleImage.ToImage<Bgr, Byte>();

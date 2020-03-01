@@ -37,6 +37,9 @@ namespace AugmentedReadingApp
         StringBuilder csvFile = new StringBuilder();
         string csvpath = Directory.GetCurrentDirectory() + "/CSV_registro_actividades/log_actividades.csv";
 
+        int nPage = 1;
+        int nPages = 1;
+
         public ProjectionScreenActivity(InteractionCoordinator incomingForm)
         {
             
@@ -179,21 +182,23 @@ namespace AugmentedReadingApp
             if (Highlight.HighLightOn)
             {
 
-                button3.Text = "TEXT/IMAGE";
-                button3.BackColor = default(Color);
+                textImageButton.Text = "TEXT/IMAGE";
+                textImageButton.BackColor = default(Color);
                 Highlight.HighLightOn = false;
 
             }
             else
             {
                 //button3.BackColor = Color.Gray;
-                button3.BackColor = default(Color);
-                button3.Text = "HIGHLIGHT";
+                textImageButton.BackColor = default(Color);
+                textImageButton.Text = "HIGHLIGHT";
                 Highlight.HighLightOn = true;
             }
 
 
         }
+
+
 
         private void FirstClick()
         {
@@ -225,35 +230,57 @@ namespace AugmentedReadingApp
             {
                 if (originalForm.plugin.AutoCamCapture)//codicion de que el plugin permita autocapture (funcione con una camara). ej: reconocimiento gestual por lapiz
                 {
-                    if (!originalForm.checkBoxMouse.Checked)
+                    if (!originalForm.checkBoxMouse.Checked)// capture no esta chequeado
                     {
                         originalForm.recGestual.FinalToRectWH();
                     }
 
-                    
-
                     originalForm.CaptureImage();
 
-                    try
-                    {
-                        // textBox1.Text = OCRProcess.TransformImage();//activar si se selecciona un fragmento de texto
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("OCRProcess rectangulo: " + ex.Message);
-                    }
+                    //activar si se selecciona un fragmento de texto
+                    //try
+                    //{
+                    //    // textBox1.Text = OCRProcess.TransformImage();
+                    //}
+                    //catch (Exception ex)
+                    //{
+                    //    MessageBox.Show("OCRProcess rectangulo: " + ex.Message);
+                    //}
                 }
             }
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void syncPdfButton_Click(object sender, EventArgs e)
         {
+
             float llx = (Highlight.normRect.Left) * originalForm.documentoSyn.rectPage.Right;
             float lly = (1 - Highlight.normRect.Bottom ) * originalForm.documentoSyn.rectPage.Top - (Highlight.normRect.Top) * originalForm.documentoSyn.rectPage.Top;
             float urx = (Highlight.normRect.Left) * originalForm.documentoSyn.rectPage.Right + (Highlight.normRect.Right) * originalForm.documentoSyn.rectPage.Right;
             float ury = (1 - Highlight.normRect.Bottom) * originalForm.documentoSyn.rectPage.Top;
-            originalForm.documentoSyn.SaveAnno(llx, lly, urx, ury);
+            originalForm.documentoSyn.SaveAnno(llx, lly, urx, ury,nPage);
             Highlight.GetRectangles(originalForm.documentoSyn.listaRectangulos);
+            nPages = originalForm.documentoSyn.NPages;
+            syncButton.Text = " Sync\nPage " + nPage + "/" +nPages;
+
+        }
+
+        private void nextPageButton_Click(object sender, EventArgs e)
+        {
+            nPage++;
+            if (nPage > nPages) nPage = nPages; 
+            syncButton.Text = " Sync\nPage " + nPage + "/" + nPages;
+        }
+
+        private void backPagebutton_Click(object sender, EventArgs e)
+        {
+            nPage--;
+            if (nPage < 1) nPage = 1;
+            syncButton.Text = " Sync\nPage " + nPage + "/" + nPages;
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            PagesLabel.Text = String.Join(",", originalForm.documentoSyn.SearchTxtPdf(searchTextBox.Text).ToArray()); ;
         }
 
         private void btn_buscarWeb_Click(object sender, EventArgs e)
@@ -774,6 +801,9 @@ namespace AugmentedReadingApp
                 buscarPorImagen();
             }
         }
+
+
+
 
         // Fin del código para la interacción a través de comandos de voz //
 
