@@ -264,7 +264,7 @@
             this.btn_cerrarVentanaDerecha.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrarVentanaDerecha.Image")));
             this.btn_cerrarVentanaDerecha.Location = new System.Drawing.Point(178, 518);
             this.btn_cerrarVentanaDerecha.Name = "btn_cerrarVentanaDerecha";
-            this.btn_cerrarVentanaDerecha.Size = new System.Drawing.Size(55, 53);
+            this.btn_cerrarVentanaDerecha.Size = new System.Drawing.Size(55, 56);
             this.btn_cerrarVentanaDerecha.TabIndex = 3;
             this.btn_cerrarVentanaDerecha.UseVisualStyleBackColor = true;
             this.btn_cerrarVentanaDerecha.Visible = false;

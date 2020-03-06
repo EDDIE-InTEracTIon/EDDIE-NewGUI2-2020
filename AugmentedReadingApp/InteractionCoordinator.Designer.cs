@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnStartProjection = new System.Windows.Forms.Button();
             this.ComboBoxCameraList1 = new System.Windows.Forms.ComboBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.reconocimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,7 +72,7 @@
             this.numericUpDownResYText = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownXGestual = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownYGestual = new System.Windows.Forms.NumericUpDown();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnCaptureImagenGestureCam = new System.Windows.Forms.Button();
             this.PDFSelectBt = new System.Windows.Forms.Button();
             this.textBoxPathPDF = new System.Windows.Forms.TextBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -115,24 +115,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.FinalLocateX)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnStartProjection
             // 
-            this.button1.Location = new System.Drawing.Point(245, 60);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 48);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Comenzar Proyección";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.ProyectionActivityBt);
+            this.btnStartProjection.Location = new System.Drawing.Point(245, 60);
+            this.btnStartProjection.Name = "btnStartProjection";
+            this.btnStartProjection.Size = new System.Drawing.Size(121, 48);
+            this.btnStartProjection.TabIndex = 0;
+            this.btnStartProjection.Text = "Comenzar Proyección";
+            this.btnStartProjection.UseVisualStyleBackColor = true;
+            this.btnStartProjection.Click += new System.EventHandler(this.ProyectionActivityBt);
             // 
             // ComboBoxCameraList1
             // 
+            this.ComboBoxCameraList1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBoxCameraList1.FormattingEnabled = true;
             this.ComboBoxCameraList1.Location = new System.Drawing.Point(12, 61);
             this.ComboBoxCameraList1.Name = "ComboBoxCameraList1";
             this.ComboBoxCameraList1.Size = new System.Drawing.Size(226, 21);
             this.ComboBoxCameraList1.TabIndex = 2;
             this.ComboBoxCameraList1.SelectedIndexChanged += new System.EventHandler(this.ComboCameras_SelectedIndexChangedText);
+
             // 
             // menuStrip1
             // 
@@ -675,15 +677,15 @@
             0,
             0});
             // 
-            // button4
+            // btnCaptureImagenGestureCam
             // 
-            this.button4.Location = new System.Drawing.Point(245, 359);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(118, 54);
-            this.button4.TabIndex = 140;
-            this.button4.Text = "Captura";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnCaptureImagenGestureCam.Location = new System.Drawing.Point(245, 359);
+            this.btnCaptureImagenGestureCam.Name = "btnCaptureImagenGestureCam";
+            this.btnCaptureImagenGestureCam.Size = new System.Drawing.Size(118, 54);
+            this.btnCaptureImagenGestureCam.TabIndex = 140;
+            this.btnCaptureImagenGestureCam.Text = "Captura";
+            this.btnCaptureImagenGestureCam.UseVisualStyleBackColor = true;
+            this.btnCaptureImagenGestureCam.Click += new System.EventHandler(this.button4_Click);
             // 
             // PDFSelectBt
             // 
@@ -948,7 +950,7 @@
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.textBoxPathPDF);
             this.Controls.Add(this.PDFSelectBt);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnCaptureImagenGestureCam);
             this.Controls.Add(this.numericUpDownYGestual);
             this.Controls.Add(this.numericUpDownXGestual);
             this.Controls.Add(this.numericUpDownResYText);
@@ -986,7 +988,7 @@
             this.Controls.Add(this.ComboBoxCameraList2);
             this.Controls.Add(this.labelRecTxt);
             this.Controls.Add(this.ComboBoxCameraList1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnStartProjection);
             this.Controls.Add(this.menuStrip1);
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
@@ -1023,7 +1025,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnStartProjection;
         private System.Windows.Forms.ComboBox ComboBoxCameraList1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem reconocimientoToolStripMenuItem;
@@ -1066,7 +1068,7 @@
         public System.Windows.Forms.NumericUpDown numericUpDownResYText;
         public System.Windows.Forms.NumericUpDown numericUpDownXGestual;
         public System.Windows.Forms.NumericUpDown numericUpDownYGestual;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnCaptureImagenGestureCam;
         private System.Windows.Forms.Button PDFSelectBt;
         private System.Windows.Forms.TextBox textBoxPathPDF;
         public System.Windows.Forms.NumericUpDown numericUpDown1;

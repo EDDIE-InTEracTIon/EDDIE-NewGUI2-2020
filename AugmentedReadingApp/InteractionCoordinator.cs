@@ -68,7 +68,7 @@ namespace AugmentedReadingApp
 
             var folder = Path.GetDirectoryName(assembly.Location);
 
-            LoadPlugins(folder);
+            LoadPlugins(folder);//carga los plugins
 
             CreateFilterMenu();
 
@@ -165,8 +165,8 @@ namespace AugmentedReadingApp
         void LoadComboBox(List<KeyValuePair<int, string>> ListData,
         ComboBox ComboBoxCameraList)
         {
+            
             //Limpiar el comboBox que muestra las camaras
-
             ComboBoxCameraList.DataSource = null;
             ComboBoxCameraList.Items.Clear();
 
@@ -176,22 +176,26 @@ namespace AugmentedReadingApp
             ComboBoxCameraList.ValueMember = "Key";
         }
 
+       void refreshList(List<KeyValuePair<int, string>> ListData,
+        ComboBox ComboBoxCameraList)
+        {
+            ComboBoxCameraList.DataSource = ListData;
+            ComboBoxCameraList.Refresh();
+        }
+
         private void ComboCameras_SelectedIndexChangedText(object sender, EventArgs e)
         {
-            //Obtiene el item seleccionado del combobox
+            //Obtiene la camara seleccionada del combobox para reconocimiento de texto
             _CameraTextIndex = SelectItem((ComboBox)sender);
 
         }
 
         private void ComboCameras_SelectedIndexChangedGesture(object sender, EventArgs e)
         {
-            //Obtiene el item seleccionado del combobox
-
+            //Obtiene la camara seleccionada del combobox para reconocimiento gestual
             _CameraGestureIndex = SelectItem((ComboBox)sender);
 
         }
-
-
 
         int SelectItem(ComboBox ComboBoxCameraList)
         {
@@ -275,10 +279,11 @@ namespace AugmentedReadingApp
 
         private void detenerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (captureGesture != null)
+            {
                 captureGesture.Stop();
                 captureGesture.ImageGrabbed -= Capture_ImageGrabbed1;//retirar el evento de captura camara
-            
+            }
         }
 
 
@@ -304,10 +309,7 @@ namespace AugmentedReadingApp
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
+  
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -456,6 +458,12 @@ namespace AugmentedReadingApp
             projection.Highlight.RuntimeFinalLocation((int)FinalLocateX.Value, (int)FinalLocateY.Value);
 
         }
+
+        //private void ComboBoxCameraList1_Click(object sender, EventArgs e)//Action al apretar en el bombo box
+        //{
+        //    refreshList(camerasText.ListCameras(), ComboBoxCameraList1);
+        //    //LoadComboBox(camerasGesture.ListCameras(), ComboBoxCameraList2);
+        //}
 
     }
 }
