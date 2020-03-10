@@ -228,24 +228,27 @@ namespace AugmentedReadingApp
             }
             else
             {
-                if (originalForm.plugin.AutoCamCapture)//codicion de que el plugin permita autocapture (funcione con una camara). ej: reconocimiento gestual por lapiz
+                if (originalForm.captureGesture != null)
                 {
-                    if (!originalForm.checkBoxMouse.Checked)// capture no esta chequeado
+                    if (originalForm.plugin.AutoCamCapture)//codicion de que el plugin permita autocapture (funcione con una camara). ej: reconocimiento gestual por lapiz
                     {
-                        originalForm.recGestual.FinalToRectWH();
+                        if (!originalForm.checkBoxMouse.Checked)// capture no esta chequeado
+                        {
+                            originalForm.recGestual.FinalToRectWH();
+                        }
+
+                        originalForm.CaptureImage();
+
+                        //activar si se selecciona un fragmento de texto
+                        //try
+                        //{
+                        //    // textBox1.Text = OCRProcess.TransformImage();
+                        //}
+                        //catch (Exception ex)
+                        //{
+                        //    MessageBox.Show("OCRProcess rectangulo: " + ex.Message);
+                        //}
                     }
-
-                    originalForm.CaptureImage();
-
-                    //activar si se selecciona un fragmento de texto
-                    //try
-                    //{
-                    //    // textBox1.Text = OCRProcess.TransformImage();
-                    //}
-                    //catch (Exception ex)
-                    //{
-                    //    MessageBox.Show("OCRProcess rectangulo: " + ex.Message);
-                    //}
                 }
             }
         }

@@ -134,7 +134,6 @@
             this.ComboBoxCameraList1.Size = new System.Drawing.Size(226, 21);
             this.ComboBoxCameraList1.TabIndex = 2;
             this.ComboBoxCameraList1.SelectedIndexChanged += new System.EventHandler(this.ComboCameras_SelectedIndexChangedText);
-
             // 
             // menuStrip1
             // 
@@ -159,14 +158,14 @@
             // comenzarToolStripMenuItem
             // 
             this.comenzarToolStripMenuItem.Name = "comenzarToolStripMenuItem";
-            this.comenzarToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.comenzarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.comenzarToolStripMenuItem.Text = "Comenzar";
             this.comenzarToolStripMenuItem.Click += new System.EventHandler(this.comenzarToolStripMenuItem_Click);
             // 
             // detenerToolStripMenuItem
             // 
             this.detenerToolStripMenuItem.Name = "detenerToolStripMenuItem";
-            this.detenerToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.detenerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.detenerToolStripMenuItem.Text = "Detener";
             this.detenerToolStripMenuItem.Click += new System.EventHandler(this.detenerToolStripMenuItem_Click);
             // 
@@ -187,6 +186,7 @@
             // 
             // ComboBoxCameraList2
             // 
+            this.ComboBoxCameraList2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBoxCameraList2.FormattingEnabled = true;
             this.ComboBoxCameraList2.Location = new System.Drawing.Point(11, 362);
             this.ComboBoxCameraList2.Name = "ComboBoxCameraList2";
@@ -876,7 +876,7 @@
             this.FinalLocateX.Size = new System.Drawing.Size(90, 20);
             this.FinalLocateX.TabIndex = 154;
             this.FinalLocateX.Value = new decimal(new int[] {
-            757,
+            647,
             0,
             0,
             0});

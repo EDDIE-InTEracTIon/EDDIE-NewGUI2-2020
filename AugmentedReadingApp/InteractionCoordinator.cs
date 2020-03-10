@@ -24,7 +24,7 @@ namespace AugmentedReadingApp
         private int _CameraTextIndex;
         private int _CameraGestureIndex;
         VideoCapture captureText;
-        VideoCapture captureGesture;
+        public VideoCapture captureGesture;
         Dictionary<string, IPlugin> _plugins = new Dictionary<string, IPlugin>();
 
         public IPlugin plugin;
