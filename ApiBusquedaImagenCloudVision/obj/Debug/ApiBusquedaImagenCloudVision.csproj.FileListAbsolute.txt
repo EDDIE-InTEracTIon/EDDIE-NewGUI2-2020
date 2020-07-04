@@ -89,3 +89,10 @@ C:\Users\Dania\source\repos\1IntegracionFinal8ProyectoCasiFinal\ApiBusquedaImage
 C:\Users\Dania\source\repos\1IntegracionFinal8ProyectoCasiFinal\ApiBusquedaImagenCloudVision\obj\Debug\ApiBusquedaImagenCloudVision.csproj.CopyComplete
 C:\Users\Dania\source\repos\1IntegracionFinal8ProyectoCasiFinal\ApiBusquedaImagenCloudVision\obj\Debug\ApiBusquedaImagenCloudVision.dll
 C:\Users\Dania\source\repos\1IntegracionFinal8ProyectoCasiFinal\ApiBusquedaImagenCloudVision\obj\Debug\ApiBusquedaImagenCloudVision.pdb
+C:\Users\Dania\Desktop\Github2\EDDIE-Augmented-Reading\AugmentedReadingApp\bin\x86\Debug\Apis\ApiBusquedaImagenCloudVision.dll
+C:\Users\Dania\Desktop\Github2\EDDIE-Augmented-Reading\AugmentedReadingApp\bin\x86\Debug\Apis\ApiBusquedaImagenCloudVision.pdb
+C:\Users\Dania\Desktop\Github2\EDDIE-Augmented-Reading\ApiBusquedaImagenCloudVision\obj\Debug\ApiBusquedaImagenCloudVision.csprojAssemblyReference.cache
+C:\Users\Dania\Desktop\Github2\EDDIE-Augmented-Reading\ApiBusquedaImagenCloudVision\obj\Debug\ApiBusquedaImagenCloudVision.csproj.CoreCompileInputs.cache
+C:\Users\Dania\Desktop\Github2\EDDIE-Augmented-Reading\ApiBusquedaImagenCloudVision\obj\Debug\ApiBusquedaImagenCloudVision.csproj.CopyComplete
+C:\Users\Dania\Desktop\Github2\EDDIE-Augmented-Reading\ApiBusquedaImagenCloudVision\obj\Debug\ApiBusquedaImagenCloudVision.dll
+C:\Users\Dania\Desktop\Github2\EDDIE-Augmented-Reading\ApiBusquedaImagenCloudVision\obj\Debug\ApiBusquedaImagenCloudVision.pdb

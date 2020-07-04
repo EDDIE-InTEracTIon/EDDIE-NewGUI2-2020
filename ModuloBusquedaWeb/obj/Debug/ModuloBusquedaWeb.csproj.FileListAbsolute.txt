@@ -124,3 +124,12 @@ D:\Repo-proyecto-github\EDDIE-Augmented-Reading\ModuloBusquedaWeb\obj\Debug\Modu
 D:\Repo-proyecto-github\EDDIE-Augmented-Reading\ModuloBusquedaWeb\obj\Debug\ModuloBusquedaWeb.csproj.CopyComplete
 D:\Repo-proyecto-github\EDDIE-Augmented-Reading\ModuloBusquedaWeb\obj\Debug\ModuloBusquedaWeb.dll
 D:\Repo-proyecto-github\EDDIE-Augmented-Reading\ModuloBusquedaWeb\obj\Debug\ModuloBusquedaWeb.pdb
+C:\Users\Dania\Desktop\Github2\EDDIE-Augmented-Reading\ModuloBusquedaWeb\bin\Debug\ModuloBusquedaWeb.dll
+C:\Users\Dania\Desktop\Github2\EDDIE-Augmented-Reading\ModuloBusquedaWeb\bin\Debug\ModuloBusquedaWeb.pdb
+C:\Users\Dania\Desktop\Github2\EDDIE-Augmented-Reading\ModuloBusquedaWeb\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Dania\Desktop\Github2\EDDIE-Augmented-Reading\ModuloBusquedaWeb\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Dania\Desktop\Github2\EDDIE-Augmented-Reading\ModuloBusquedaWeb\obj\Debug\ModuloBusquedaWeb.csprojAssemblyReference.cache
+C:\Users\Dania\Desktop\Github2\EDDIE-Augmented-Reading\ModuloBusquedaWeb\obj\Debug\ModuloBusquedaWeb.csproj.CoreCompileInputs.cache
+C:\Users\Dania\Desktop\Github2\EDDIE-Augmented-Reading\ModuloBusquedaWeb\obj\Debug\ModuloBusquedaWeb.csproj.CopyComplete
+C:\Users\Dania\Desktop\Github2\EDDIE-Augmented-Reading\ModuloBusquedaWeb\obj\Debug\ModuloBusquedaWeb.dll
+C:\Users\Dania\Desktop\Github2\EDDIE-Augmented-Reading\ModuloBusquedaWeb\obj\Debug\ModuloBusquedaWeb.pdb

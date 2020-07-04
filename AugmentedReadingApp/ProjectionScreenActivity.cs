@@ -32,7 +32,7 @@ namespace AugmentedReadingApp
         bool Hidden;
 
         string conceptoBuscar;
-        //string conceptoBuscar = "LQ!ve";
+        //string conceptoBuscar = "Harry Potter";
 
         StringBuilder csvFile = new StringBuilder();
         string csvpath = Directory.GetCurrentDirectory() + "/CSV_registro_actividades/log_actividades.csv";
@@ -721,55 +721,55 @@ namespace AugmentedReadingApp
         private void sre_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
             string resultado = e.Result.Text;
-            if (resultado.Equals("Cerrar Enciclopedia"))
+            if (resultado.Equals("EDDIE Cerrar Enciclopedia"))
             {
                 cerrar_enciclopedia();
             }
-            else if (resultado.Equals("Cerrar Video"))
+            else if (resultado.Equals("EDDIE Cerrar Video"))
             {
                 cerrar_video();
             }
-            else if (resultado.Equals("Cerrar Definición"))
+            else if (resultado.Equals("EDDIE Cerrar Definición"))
             {
                 cerrar_definicion();
             }
-            else if (resultado.Equals("Cerrar Traducción"))
+            else if (resultado.Equals("EDDIE Cerrar Traducción"))
             {
                 cerrar_traduccion();
             }
-            else if (resultado.Equals("Cerrar Imagen"))
+            else if (resultado.Equals("EDDIE Cerrar Imagen"))
             {
                 cerrar_imagen();
             }
-            else if (resultado.Equals("Lectura Definición"))
+            else if (resultado.Equals("EDDIE Lectura Definición"))
             {
                 leerVozAlta(rtb_result_definicion_traduccion.Text);
             }
-            else if (resultado.Equals("Lectura Traducción"))
+            else if (resultado.Equals("EDDIE Lectura Traducción"))
             {
                 leerVozAlta(rtb_result_definicion_traduccion.Text);
             }
-            else if (resultado.Equals("Lectura Enciclopedia"))
+            else if (resultado.Equals("EDDIE Lectura Enciclopedia"))
             {
                 leerVozAlta(rtb_ResultadosWikipedia.Text);
             }
-            else if (resultado.Equals("Buscar Traducción"))
+            else if (resultado.Equals("EDDIE Buscar Traducción"))
             {
                 traductor();
             }
-            else if (resultado.Equals("Buscar Definición"))
+            else if (resultado.Equals("EDDIE Buscar Definición"))
             {
                 diccionario();
             }
-            else if (resultado.Equals("Buscar Video"))
+            else if (resultado.Equals("EDDIE Buscar Video"))
             {
                 buscar_Video();
             }
-            else if (resultado.Equals("Buscar Enciclopedia"))
+            else if (resultado.Equals("EDDIE Buscar Enciclopedia"))
             {
                 buscar_Enciclopedia();
             }
-            else if (resultado.Equals("Buscar Imagen"))
+            else if (resultado.Equals("EDDIE Buscar Imagen"))
             {
                 buscarPorImagen();
             }
