@@ -39,7 +39,6 @@
             this.toolTipMouseControl = new System.Windows.Forms.ToolTip(this.components);
             this.saveData = new System.Windows.Forms.CheckBox();
             this.toolTipSaveData = new System.Windows.Forms.ToolTip(this.components);
-            this.resetConfig = new System.Windows.Forms.Button();
             this.pluginsRouteBrowse = new System.Windows.Forms.Button();
             this.reticlesRouteBrowse = new System.Windows.Forms.Button();
             this.saveFileRouteBrowse = new System.Windows.Forms.Button();
@@ -85,9 +84,9 @@
             // 
             // saveChanges
             // 
-            this.saveChanges.Location = new System.Drawing.Point(153, 497);
+            this.saveChanges.Location = new System.Drawing.Point(62, 497);
             this.saveChanges.Name = "saveChanges";
-            this.saveChanges.Size = new System.Drawing.Size(75, 23);
+            this.saveChanges.Size = new System.Drawing.Size(112, 23);
             this.saveChanges.TabIndex = 2;
             this.saveChanges.Text = "Aplicar";
             this.saveChanges.UseVisualStyleBackColor = true;
@@ -95,9 +94,9 @@
             // 
             // cancelChanges
             // 
-            this.cancelChanges.Location = new System.Drawing.Point(243, 497);
+            this.cancelChanges.Location = new System.Drawing.Point(204, 497);
             this.cancelChanges.Name = "cancelChanges";
-            this.cancelChanges.Size = new System.Drawing.Size(75, 23);
+            this.cancelChanges.Size = new System.Drawing.Size(114, 23);
             this.cancelChanges.TabIndex = 3;
             this.cancelChanges.Text = "Cerrar";
             this.cancelChanges.UseVisualStyleBackColor = true;
@@ -154,16 +153,6 @@
             this.saveData.UseVisualStyleBackColor = true;
             this.saveData.CheckedChanged += new System.EventHandler(this.SaveData_CheckedChanged);
             this.saveData.MouseHover += new System.EventHandler(this.SaveData_MouseHover);
-            // 
-            // resetConfig
-            // 
-            this.resetConfig.Location = new System.Drawing.Point(60, 497);
-            this.resetConfig.Name = "resetConfig";
-            this.resetConfig.Size = new System.Drawing.Size(75, 23);
-            this.resetConfig.TabIndex = 11;
-            this.resetConfig.Text = "Reiniciar";
-            this.resetConfig.UseVisualStyleBackColor = true;
-            //this.resetConfig.Click += new System.EventHandler(this.ResetConfig_Click);
             // 
             // pluginsRouteBrowse
             // 
@@ -408,7 +397,6 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pluginGroupBox);
             this.Controls.Add(this.reticleGroupBox);
-            this.Controls.Add(this.resetConfig);
             this.Controls.Add(this.cancelChanges);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -442,7 +430,6 @@
         private System.Windows.Forms.ToolTip toolTipMouseControl;
         private System.Windows.Forms.CheckBox saveData;
         private System.Windows.Forms.ToolTip toolTipSaveData;
-        private System.Windows.Forms.Button resetConfig;
         private System.Windows.Forms.Button pluginsRouteBrowse;
         private System.Windows.Forms.Button reticlesRouteBrowse;
         private System.Windows.Forms.Button saveFileRouteBrowse;

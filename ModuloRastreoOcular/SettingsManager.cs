@@ -50,6 +50,10 @@ namespace ModuloRastreoOcular
         /// <returns>True if written successfully. False if not.</returns>
         public bool SaveSettings(string fileRoute, List<object> controls)
         {
+            if (File.Exists(fileRoute))
+            {
+                File.Delete(fileRoute);
+            }
             FormAttributes fAttributes  = new FormAttributes();
             try
             {
