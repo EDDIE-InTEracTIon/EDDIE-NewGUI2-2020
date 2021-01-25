@@ -69,9 +69,25 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel_log = new System.Windows.Forms.Panel();
             this.gb_busquedasRecientes = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonEliminarComentario = new System.Windows.Forms.Button();
+            this.buttonEliminarMarcador = new System.Windows.Forms.Button();
+            this.comentariosPDF = new System.Windows.Forms.Label();
+            this.labelMarcadoresPDF = new System.Windows.Forms.Label();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.fl_busquedasRecientes = new System.Windows.Forms.FlowLayoutPanel();
             this.btn_leerDefinicionTraduccion = new System.Windows.Forms.Button();
+            this.buttonFiguresPD = new System.Windows.Forms.Button();
+            this.buttonPDF = new System.Windows.Forms.Button();
+            this.buttonMarker = new System.Windows.Forms.Button();
+            this.buttonComments = new System.Windows.Forms.Button();
+            this.labelFiguras = new System.Windows.Forms.Label();
+            this.labelMarker = new System.Windows.Forms.Label();
+            this.labelComments = new System.Windows.Forms.Label();
+            this.labelPDF = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -79,6 +95,7 @@
             this.panel_navegador.SuspendLayout();
             this.panel_log.SuspendLayout();
             this.gb_busquedasRecientes.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
@@ -128,9 +145,9 @@
             // 
             // textImageButton
             // 
-            this.textImageButton.Location = new System.Drawing.Point(667, 514);
+            this.textImageButton.Location = new System.Drawing.Point(759, 510);
             this.textImageButton.Name = "textImageButton";
-            this.textImageButton.Size = new System.Drawing.Size(112, 60);
+            this.textImageButton.Size = new System.Drawing.Size(70, 60);
             this.textImageButton.TabIndex = 91;
             this.textImageButton.Text = "TEXT/IMAGE";
             this.textImageButton.UseVisualStyleBackColor = true;
@@ -413,7 +430,7 @@
             // btn_buscarWeb
             // 
             this.btn_buscarWeb.Image = ((System.Drawing.Image)(resources.GetObject("btn_buscarWeb.Image")));
-            this.btn_buscarWeb.Location = new System.Drawing.Point(541, 514);
+            this.btn_buscarWeb.Location = new System.Drawing.Point(584, 514);
             this.btn_buscarWeb.Name = "btn_buscarWeb";
             this.btn_buscarWeb.Size = new System.Drawing.Size(71, 60);
             this.btn_buscarWeb.TabIndex = 118;
@@ -480,6 +497,7 @@
             // 
             // gb_busquedasRecientes
             // 
+            this.gb_busquedasRecientes.Controls.Add(this.groupBox1);
             this.gb_busquedasRecientes.Controls.Add(this.label1);
             this.gb_busquedasRecientes.Controls.Add(this.fl_busquedasRecientes);
             this.gb_busquedasRecientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -488,6 +506,98 @@
             this.gb_busquedasRecientes.Size = new System.Drawing.Size(272, 619);
             this.gb_busquedasRecientes.TabIndex = 0;
             this.gb_busquedasRecientes.TabStop = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.buttonEliminarComentario);
+            this.groupBox1.Controls.Add(this.buttonEliminarMarcador);
+            this.groupBox1.Controls.Add(this.comentariosPDF);
+            this.groupBox1.Controls.Add(this.labelMarcadoresPDF);
+            this.groupBox1.Controls.Add(this.listBox2);
+            this.groupBox1.Controls.Add(this.listBox1);
+            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(6, 182);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(264, 440);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Contenido PDF";
+            // 
+            // buttonEliminarComentario
+            // 
+            this.buttonEliminarComentario.Enabled = false;
+            this.buttonEliminarComentario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminarComentario.Location = new System.Drawing.Point(139, 413);
+            this.buttonEliminarComentario.Name = "buttonEliminarComentario";
+            this.buttonEliminarComentario.Size = new System.Drawing.Size(107, 27);
+            this.buttonEliminarComentario.TabIndex = 6;
+            this.buttonEliminarComentario.Text = "Eliminar comentario";
+            this.buttonEliminarComentario.UseVisualStyleBackColor = true;
+            this.buttonEliminarComentario.Click += new System.EventHandler(this.buttonEliminarComentario_Click);
+            // 
+            // buttonEliminarMarcador
+            // 
+            this.buttonEliminarMarcador.Enabled = false;
+            this.buttonEliminarMarcador.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminarMarcador.Location = new System.Drawing.Point(136, 219);
+            this.buttonEliminarMarcador.Name = "buttonEliminarMarcador";
+            this.buttonEliminarMarcador.Size = new System.Drawing.Size(107, 27);
+            this.buttonEliminarMarcador.TabIndex = 5;
+            this.buttonEliminarMarcador.Text = "Eliminar marcador";
+            this.buttonEliminarMarcador.UseVisualStyleBackColor = true;
+            this.buttonEliminarMarcador.Click += new System.EventHandler(this.buttonEliminarMarcador_Click);
+            // 
+            // comentariosPDF
+            // 
+            this.comentariosPDF.AutoSize = true;
+            this.comentariosPDF.Location = new System.Drawing.Point(6, 253);
+            this.comentariosPDF.Name = "comentariosPDF";
+            this.comentariosPDF.Size = new System.Drawing.Size(104, 15);
+            this.comentariosPDF.TabIndex = 4;
+            this.comentariosPDF.Text = "Comentarios PDF";
+            // 
+            // labelMarcadoresPDF
+            // 
+            this.labelMarcadoresPDF.AutoSize = true;
+            this.labelMarcadoresPDF.Location = new System.Drawing.Point(3, 60);
+            this.labelMarcadoresPDF.Name = "labelMarcadoresPDF";
+            this.labelMarcadoresPDF.Size = new System.Drawing.Size(100, 15);
+            this.labelMarcadoresPDF.TabIndex = 3;
+            this.labelMarcadoresPDF.Text = "Marcadores PDF";
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 15;
+            this.listBox2.Location = new System.Drawing.Point(6, 271);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(240, 139);
+            this.listBox2.TabIndex = 2;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 15;
+            this.listBox1.Location = new System.Drawing.Point(3, 77);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(240, 139);
+            this.listBox1.TabIndex = 1;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.checkBox1.Location = new System.Drawing.Point(9, 25);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(177, 20);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.Text = "Mostrar/Esconder figuras";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label1
             // 
@@ -505,7 +615,7 @@
             this.fl_busquedasRecientes.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.fl_busquedasRecientes.Location = new System.Drawing.Point(2, 19);
             this.fl_busquedasRecientes.Name = "fl_busquedasRecientes";
-            this.fl_busquedasRecientes.Size = new System.Drawing.Size(269, 594);
+            this.fl_busquedasRecientes.Size = new System.Drawing.Size(269, 151);
             this.fl_busquedasRecientes.TabIndex = 0;
             // 
             // btn_leerDefinicionTraduccion
@@ -519,11 +629,96 @@
             this.btn_leerDefinicionTraduccion.Visible = false;
             this.btn_leerDefinicionTraduccion.Click += new System.EventHandler(this.btn_leerDefinicionTraduccion_Click);
             // 
+            // buttonFiguresPD
+            // 
+            this.buttonFiguresPD.Image = ((System.Drawing.Image)(resources.GetObject("buttonFiguresPD.Image")));
+            this.buttonFiguresPD.Location = new System.Drawing.Point(512, 515);
+            this.buttonFiguresPD.Name = "buttonFiguresPD";
+            this.buttonFiguresPD.Size = new System.Drawing.Size(53, 57);
+            this.buttonFiguresPD.TabIndex = 131;
+            this.buttonFiguresPD.UseVisualStyleBackColor = true;
+            this.buttonFiguresPD.Click += new System.EventHandler(this.buttonFiguresPD_Click);
+            // 
+            // buttonPDF
+            // 
+            this.buttonPDF.Image = ((System.Drawing.Image)(resources.GetObject("buttonPDF.Image")));
+            this.buttonPDF.Location = new System.Drawing.Point(678, 514);
+            this.buttonPDF.Name = "buttonPDF";
+            this.buttonPDF.Size = new System.Drawing.Size(55, 55);
+            this.buttonPDF.TabIndex = 132;
+            this.buttonPDF.UseVisualStyleBackColor = true;
+            this.buttonPDF.Click += new System.EventHandler(this.buttonPDF_Click);
+            // 
+            // buttonMarker
+            // 
+            this.buttonMarker.Image = ((System.Drawing.Image)(resources.GetObject("buttonMarker.Image")));
+            this.buttonMarker.Location = new System.Drawing.Point(440, 515);
+            this.buttonMarker.Name = "buttonMarker";
+            this.buttonMarker.Size = new System.Drawing.Size(53, 56);
+            this.buttonMarker.TabIndex = 133;
+            this.buttonMarker.UseVisualStyleBackColor = true;
+            this.buttonMarker.Click += new System.EventHandler(this.buttonMarker_Click);
+            // 
+            // buttonComments
+            // 
+            this.buttonComments.Image = ((System.Drawing.Image)(resources.GetObject("buttonComments.Image")));
+            this.buttonComments.Location = new System.Drawing.Point(363, 514);
+            this.buttonComments.Name = "buttonComments";
+            this.buttonComments.Size = new System.Drawing.Size(53, 56);
+            this.buttonComments.TabIndex = 134;
+            this.buttonComments.UseVisualStyleBackColor = true;
+            this.buttonComments.Click += new System.EventHandler(this.buttonComments_Click);
+            // 
+            // labelFiguras
+            // 
+            this.labelFiguras.AutoSize = true;
+            this.labelFiguras.Location = new System.Drawing.Point(519, 572);
+            this.labelFiguras.Name = "labelFiguras";
+            this.labelFiguras.Size = new System.Drawing.Size(41, 13);
+            this.labelFiguras.TabIndex = 135;
+            this.labelFiguras.Text = "Figuras";
+            // 
+            // labelMarker
+            // 
+            this.labelMarker.AutoSize = true;
+            this.labelMarker.Location = new System.Drawing.Point(441, 571);
+            this.labelMarker.Name = "labelMarker";
+            this.labelMarker.Size = new System.Drawing.Size(52, 13);
+            this.labelMarker.TabIndex = 136;
+            this.labelMarker.Text = "Marcador";
+            // 
+            // labelComments
+            // 
+            this.labelComments.AutoSize = true;
+            this.labelComments.Location = new System.Drawing.Point(360, 570);
+            this.labelComments.Name = "labelComments";
+            this.labelComments.Size = new System.Drawing.Size(60, 13);
+            this.labelComments.TabIndex = 137;
+            this.labelComments.Text = "Comentario";
+            // 
+            // labelPDF
+            // 
+            this.labelPDF.AutoSize = true;
+            this.labelPDF.Location = new System.Drawing.Point(680, 570);
+            this.labelPDF.Name = "labelPDF";
+            this.labelPDF.Size = new System.Drawing.Size(58, 26);
+            this.labelPDF.TabIndex = 138;
+            this.labelPDF.Text = "Contenido \r\nPDF";
+            this.labelPDF.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ProjectionScreenActivity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.labelPDF);
+            this.Controls.Add(this.labelComments);
+            this.Controls.Add(this.labelMarker);
+            this.Controls.Add(this.labelFiguras);
+            this.Controls.Add(this.buttonComments);
+            this.Controls.Add(this.buttonMarker);
+            this.Controls.Add(this.buttonPDF);
+            this.Controls.Add(this.buttonFiguresPD);
             this.Controls.Add(this.panel_log);
             this.Controls.Add(this.btn_drawMenu);
             this.Controls.Add(this.lbl_imagenes);
@@ -561,6 +756,8 @@
             this.panel_log.ResumeLayout(false);
             this.gb_busquedasRecientes.ResumeLayout(false);
             this.gb_busquedasRecientes.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -609,5 +806,21 @@
         private System.Windows.Forms.TextBox searchTextBox;
         private System.Windows.Forms.Label Pages;
         private System.Windows.Forms.Label PagesLabel;
+        private System.Windows.Forms.Button buttonFiguresPD;
+        private System.Windows.Forms.Button buttonPDF;
+        private System.Windows.Forms.Button buttonMarker;
+        private System.Windows.Forms.Button buttonComments;
+        private System.Windows.Forms.Label labelFiguras;
+        private System.Windows.Forms.Label labelMarker;
+        private System.Windows.Forms.Label labelComments;
+        private System.Windows.Forms.Label labelPDF;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button buttonEliminarComentario;
+        private System.Windows.Forms.Button buttonEliminarMarcador;
+        private System.Windows.Forms.Label comentariosPDF;
+        private System.Windows.Forms.Label labelMarcadoresPDF;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
