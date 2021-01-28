@@ -129,6 +129,7 @@
             // 
             // ComboBoxCameraList1
             // 
+            this.ComboBoxCameraList1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBoxCameraList1.FormattingEnabled = true;
             this.ComboBoxCameraList1.Location = new System.Drawing.Point(12, 61);
             this.ComboBoxCameraList1.Name = "ComboBoxCameraList1";
@@ -203,6 +204,7 @@
             // 
             // ComboBoxCameraList2
             // 
+            this.ComboBoxCameraList2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBoxCameraList2.FormattingEnabled = true;
             this.ComboBoxCameraList2.Location = new System.Drawing.Point(11, 362);
             this.ComboBoxCameraList2.Name = "ComboBoxCameraList2";
