@@ -27,7 +27,7 @@ namespace AugmentedReadingApp
         private int _CameraTextIndex;
         private int _CameraGestureIndex;
         VideoCapture captureText;
-        VideoCapture captureGesture;
+        public VideoCapture captureGesture;
         Dictionary<string, IPlugin> _plugins = new Dictionary<string, IPlugin>();
 
         public IPlugin plugin;
@@ -39,6 +39,16 @@ namespace AugmentedReadingApp
         OpenFileDialog openFilePDF = new OpenFileDialog();
 
         public byte[] byteImagenBuscada;
+
+        //
+        //Agrega Modulo consistencia DP
+        //
+
+        public int numeroCamara;
+        public string pdfName;
+        public VideoCapture _capture;
+        public Mat _frame;
+        //Fin agrega Modulo consistencia DP
 
         private Mat rectangleImage;
         public Mat RectangleImage
@@ -69,7 +79,7 @@ namespace AugmentedReadingApp
 
             var folder = Path.GetDirectoryName(assembly.Location);
 
-            LoadPlugins(folder);
+            LoadPlugins(folder);//carga los plugins
 
             CreateFilterMenu();
 
@@ -166,8 +176,8 @@ namespace AugmentedReadingApp
         void LoadComboBox(List<KeyValuePair<int, string>> ListData,
         ComboBox ComboBoxCameraList)
         {
+            
             //Limpiar el comboBox que muestra las camaras
-
             ComboBoxCameraList.DataSource = null;
             ComboBoxCameraList.Items.Clear();
 
@@ -177,22 +187,26 @@ namespace AugmentedReadingApp
             ComboBoxCameraList.ValueMember = "Key";
         }
 
+       void refreshList(List<KeyValuePair<int, string>> ListData,
+        ComboBox ComboBoxCameraList)
+        {
+            ComboBoxCameraList.DataSource = ListData;
+            ComboBoxCameraList.Refresh();
+        }
+
         private void ComboCameras_SelectedIndexChangedText(object sender, EventArgs e)
         {
-            //Obtiene el item seleccionado del combobox
+            //Obtiene la camara seleccionada del combobox para reconocimiento de texto
             _CameraTextIndex = SelectItem((ComboBox)sender);
 
         }
 
         private void ComboCameras_SelectedIndexChangedGesture(object sender, EventArgs e)
         {
-            //Obtiene el item seleccionado del combobox
-
+            //Obtiene la camara seleccionada del combobox para reconocimiento gestual
             _CameraGestureIndex = SelectItem((ComboBox)sender);
 
         }
-
-
 
         int SelectItem(ComboBox ComboBoxCameraList)
         {
@@ -216,6 +230,10 @@ namespace AugmentedReadingApp
 
                 imageBox1.Image = recTxt.Recognition(captureText);
             }
+            
+            //Agrega Modulo Consistencia DP
+            consistencyCamera(CameraNumber);
+            numeroCamara = CameraNumber;
         }
 
         private void comenzarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -274,8 +292,11 @@ namespace AugmentedReadingApp
 
         private void detenerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            captureGesture.Stop();
-            captureGesture.ImageGrabbed -= Capture_ImageGrabbed1;//retirar el evento de captura camara
+            if (captureGesture != null)
+            {
+                captureGesture.Stop();
+                captureGesture.ImageGrabbed -= Capture_ImageGrabbed1;//retirar el evento de captura camara
+            }
         }
 
 
@@ -301,7 +322,7 @@ namespace AugmentedReadingApp
 
         }
 
-
+  
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -336,8 +357,8 @@ namespace AugmentedReadingApp
 
                     imageBox4.Image = cropColorFrame(m, rectangle).ToImage<Bgr, byte>();
                     ImageToBase64(cropColorFrame(m, rectangle).Bitmap, System.Drawing.Imaging.ImageFormat.Bmp);
-                    CaptureImage();
                     //imageBox4.Image = cropColorFrame(m, new Rectangle(10,10,0,1)).ToImage<Bgr, byte>();
+                    CaptureImage();
                 }
 
             }
@@ -351,17 +372,18 @@ namespace AugmentedReadingApp
                 if (captureGesture != null)
                 {
                     captureGesture.Retrieve(m);
-                    if (checkBoxMouse.Checked)
-                    {
+                    rectangleImage = cropColorFrame(m, recGestual.RectangularSelection);
+                    //if (checkBoxMouse.Checked)
+                    //{
 
-                        rectangleImage = cropColorFrame(m, recGestual.RectangularSelection);
-                    }
-                    else
-                    {
+                    //    rectangleImage = cropColorFrame(m, recGestual.RectangularSelection);
+                    //}
+                    //else
+                    //{
 
-                        // rectangleImage = cropColorFrame(m, projection.Highlight.GetRectangle());
-                        rectangleImage = cropColorFrame(m, recGestual.RectangularSelection);
-                    }
+                    //    // rectangleImage = cropColorFrame(m, projection.Highlight.GetRectangle());
+                    //    rectangleImage = cropColorFrame(m, recGestual.RectangularSelection);
+                    //}
                     if (rectangleImage != null)
                     {
                         imageBox4.Image = rectangleImage.ToImage<Bgr, Byte>();
@@ -416,6 +438,9 @@ namespace AugmentedReadingApp
                 projection.Highlight.pageSize.Right = documentoSyn.rectPage.Right;
                 projection.Highlight.pageSize.Top = documentoSyn.rectPage.Top;
 
+                //Agrega Modulo consistencia DP
+                pdfName = textBoxPathPDF.Text;
+
             }
         }
 
@@ -447,6 +472,55 @@ namespace AugmentedReadingApp
         {
             projection.Highlight.RuntimeFinalLocation((int)FinalLocateX.Value, (int)FinalLocateY.Value);
 
+        }
+
+        //private void ComboBoxCameraList1_Click(object sender, EventArgs e)//Action al apretar en el bombo box
+        //{
+        //    refreshList(camerasText.ListCameras(), ComboBoxCameraList1);
+        //    //LoadComboBox(camerasGesture.ListCameras(), ComboBoxCameraList2);
+        //}
+
+
+        //Agregar Modulo Consistencia DP
+
+        private async void ProcessFrame(object sender, EventArgs e)
+        {
+            if (_capture != null && _capture.Ptr != IntPtr.Zero)
+            {
+                _capture.Retrieve(_frame, 0);
+                if (_frame != null)
+                {
+                    Image<Bgr, byte> imagen_aux = _frame.ToImage<Bgr, byte>();
+                    //imagen_aux = imagen_aux.Rotate(180, new Bgr(0, 0, 0));
+                    imageBox3.Image = imagen_aux;
+                    //pictureBox1.Image = _frame.Bitmap;
+                    double fps = 15;
+                    await Task.Delay(1000 / Convert.ToInt32(fps));
+                }
+
+
+            }
+        }
+
+        public void consistencyCamera(int CameraNumber)
+        {
+            _capture = new VideoCapture(CameraNumber);
+
+
+            _capture.ImageGrabbed += ProcessFrame;
+            _frame = new Mat();
+            if (_capture != null)
+            {
+                try
+                {
+                    _capture.Start();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+
+                }
+            }
         }
 
         private void configurarToolStripMenuItem_Click(object sender, EventArgs e)
