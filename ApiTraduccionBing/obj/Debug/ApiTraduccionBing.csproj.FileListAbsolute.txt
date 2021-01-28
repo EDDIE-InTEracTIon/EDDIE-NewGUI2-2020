@@ -93,3 +93,6 @@ C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\ApiTraduccionBing\obj\Debu
 C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\ApiTraduccionBing\obj\Debug\ApiTraduccionBing.csproj.CoreCompileInputs.cache
 C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\ApiTraduccionBing\obj\Debug\ApiTraduccionBing.dll
 C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\ApiTraduccionBing\obj\Debug\ApiTraduccionBing.pdb
+C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\AugmentedReadingApp\bin\x86\Debug\Apis\ApiTraduccionBing.dll
+C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\AugmentedReadingApp\bin\x86\Debug\Apis\ApiTraduccionBing.pdb
+C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\ApiTraduccionBing\obj\Debug\ApiTraduccionBing.csproj.CopyComplete

@@ -91,3 +91,6 @@ C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\ApiDefinicionesGoogle\obj\
 C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\ApiDefinicionesGoogle\obj\Debug\ApiDefinicionesGoogle.csproj.CoreCompileInputs.cache
 C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\ApiDefinicionesGoogle\obj\Debug\ApiDefinicionesGoogle.dll
 C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\ApiDefinicionesGoogle\obj\Debug\ApiDefinicionesGoogle.pdb
+C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\AugmentedReadingApp\bin\x86\Debug\Apis\ApiDefinicionesGoogle.dll
+C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\AugmentedReadingApp\bin\x86\Debug\Apis\ApiDefinicionesGoogle.pdb
+C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\ApiDefinicionesGoogle\obj\Debug\ApiDefinicionesGoogle.csproj.CopyComplete

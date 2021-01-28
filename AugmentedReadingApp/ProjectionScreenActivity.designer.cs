@@ -79,7 +79,7 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.fl_busquedasRecientes = new System.Windows.Forms.FlowLayoutPanel();
-            this.btn_leerDefinicionTraduccion = new System.Windows.Forms.Button();
+            this.btn_leerDefinicionTraduccion = new ModuloRastreoOcular.ButtonAlt();
             this.buttonFiguresPD = new System.Windows.Forms.Button();
             this.buttonPDF = new System.Windows.Forms.Button();
             this.buttonMarker = new System.Windows.Forms.Button();

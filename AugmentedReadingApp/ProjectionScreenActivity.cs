@@ -1008,18 +1008,26 @@ namespace AugmentedReadingApp
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             //MessageBox.Show("Cambio");
-            if (FiguresDP.Visible == true)
+            if (FiguresDP == null)
             {
-                FiguresDP.Visible = false;
-                Color redColor = Color.FromArgb(255, 0, 0);
-                checkBox1.ForeColor = redColor;
+                MessageBox.Show("FiguresDP is null.\n" +
+                                "Check ProjectionScreenActivity.cs line 1014 for debugging");
             }
             else
             {
-                FiguresDP.Visible = true;
-                Color greenColor = Color.FromArgb(0, 192, 0);
-                checkBox1.ForeColor = greenColor;
+                if (FiguresDP.Visible == true)
+                {
+                    FiguresDP.Visible = false;
+                    Color redColor = Color.FromArgb(255, 0, 0);
+                    checkBox1.ForeColor = redColor;
+                }
+                else
+                {
+                    FiguresDP.Visible = true;
+                    Color greenColor = Color.FromArgb(0, 192, 0);
+                    checkBox1.ForeColor = greenColor;
 
+                }
             }
         }
 
@@ -1029,51 +1037,59 @@ namespace AugmentedReadingApp
         {
             string pdfName = originalForm.pdfName;
             numeroCamara = originalForm.numeroCamara;
-            int page = Int32.Parse(searchTextBox.Text);
-            VideoCapture auxCapture = originalForm._capture;
-            Mat captureImage = new Mat();
-            auxCapture.Read(captureImage);
-            Image<Bgr, byte> imagen_aux = captureImage.ToImage<Bgr, byte>();
-            ///pictureBox1.Image = imagen_aux.Bitmap;
-            //imageBox1.Image = imagen_aux;
-
-            ConsistencyCommentsPD getCommentsPD = new ConsistencyCommentsPD();
-            Console.WriteLine("Entro en comentarios PD " + numeroCamara);
-
-
-            if (pdfName != null)
+            try
             {
-                // Inicia el contador de tiempo figuras DP:
-                DateTime timeCommentsPD1 = DateTime.Now;
-                List<List<string>> comments = getCommentsPD.GetComments(originalForm.pdfName, captureImage, page);
-                // Para el contador e imprime el resultado:
-                DateTime timeCommentsPD2 = DateTime.Now;
-                TimeSpan timeCommentsPD = new TimeSpan(timeCommentsPD2.Ticks - timeCommentsPD1.Ticks);
-                Console.WriteLine("TIEMPO Comments PD: " + timeCommentsPD.ToString());
-               
+                int page = Int32.Parse(searchTextBox.Text);
+
+                VideoCapture auxCapture = originalForm._capture;
+                Mat captureImage = new Mat();
+                auxCapture.Read(captureImage);
+                Image<Bgr, byte> imagen_aux = captureImage.ToImage<Bgr, byte>();
+                ///pictureBox1.Image = imagen_aux.Bitmap;
+                //imageBox1.Image = imagen_aux;
+
+                ConsistencyCommentsPD getCommentsPD = new ConsistencyCommentsPD();
+                Console.WriteLine("Entro en comentarios PD " + numeroCamara);
 
 
-                foreach (var item in comments)
+                if (pdfName != null)
                 {
-                    foreach (var item2 in item)
+                    // Inicia el contador de tiempo figuras DP:
+                    DateTime timeCommentsPD1 = DateTime.Now;
+                    List<List<string>> comments = getCommentsPD.GetComments(originalForm.pdfName, captureImage, page);
+                    // Para el contador e imprime el resultado:
+                    DateTime timeCommentsPD2 = DateTime.Now;
+                    TimeSpan timeCommentsPD = new TimeSpan(timeCommentsPD2.Ticks - timeCommentsPD1.Ticks);
+                    Console.WriteLine("TIEMPO Comments PD: " + timeCommentsPD.ToString());
+
+
+
+                    foreach (var item in comments)
                     {
-                        Console.WriteLine("Respondio de biblio " + item2);
-                        if (item2 == "SI")
+                        foreach (var item2 in item)
                         {
-                            MessageBox.Show("Se sincronizó el comentario");
+                            Console.WriteLine("Respondio de biblio " + item2);
+                            if (item2 == "SI")
+                            {
+                                MessageBox.Show("Se sincronizó el comentario");
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se encontró comentario para sincronizar");
+                            }
                         }
-                        else
-                        {
-                            MessageBox.Show("No se encontró comentario para sincronizar");
-                        }
+
                     }
 
                 }
-
+                else
+                {
+                    MessageBox.Show("No se ha ingresado archivo PDF");
+                }
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("No se ha ingresado archivo PDF");
+                MessageBox.Show(ex.ToString());
             }
         }
 

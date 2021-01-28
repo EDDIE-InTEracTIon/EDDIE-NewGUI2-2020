@@ -40,3 +40,6 @@ C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\ApiEnciclopedia2\obj\Debug
 C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\ApiEnciclopedia2\obj\Debug\ApiEnciclopedia2.csproj.CoreCompileInputs.cache
 C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\ApiEnciclopedia2\obj\Debug\ApiEnciclopedia2.dll
 C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\ApiEnciclopedia2\obj\Debug\ApiEnciclopedia2.pdb
+C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\AugmentedReadingApp\bin\x86\Debug\Apis\ApiEnciclopedia2.dll
+C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\AugmentedReadingApp\bin\x86\Debug\Apis\ApiEnciclopedia2.pdb
+C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\ApiEnciclopedia2\obj\Debug\ApiEnciclopedia2.csproj.CopyComplete
