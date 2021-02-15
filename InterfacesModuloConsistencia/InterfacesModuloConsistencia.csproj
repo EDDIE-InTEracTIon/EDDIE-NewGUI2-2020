@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Platforms>AnyCPU;x86</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,10 +11,10 @@
 
   <ItemGroup>
     <Reference Include="Emgu.CV.UI">
-      <HintPath>bin\Debug\netstandard2.0\Emgu.CV.UI.dll</HintPath>
+      <HintPath>..\AugmentedReadingApp\bin\x86\Debug\Plugins\Emgu.CV.UI.dll</HintPath>
     </Reference>
     <Reference Include="Emgu.CV.World">
-      <HintPath>bin\Debug\netstandard2.0\Emgu.CV.World.dll</HintPath>
+      <HintPath>..\AugmentedReadingApp\bin\x86\Debug\Plugins\Emgu.CV.World.dll</HintPath>
     </Reference>
   </ItemGroup>
 

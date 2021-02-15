@@ -87,3 +87,10 @@ C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\ApiWikipedia\obj\Debug\Api
 C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\AugmentedReadingApp\bin\x86\Debug\Apis\ApiWikipedia.dll
 C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\AugmentedReadingApp\bin\x86\Debug\Apis\ApiWikipedia.pdb
 C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\ApiWikipedia\obj\Debug\ApiWikipedia.csproj.CopyComplete
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\bin\x86\Debug\Apis\ApiWikipedia.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\bin\x86\Debug\Apis\ApiWikipedia.pdb
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ApiWikipedia\obj\Debug\ApiWikipedia.csprojAssemblyReference.cache
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ApiWikipedia\obj\Debug\ApiWikipedia.csproj.CoreCompileInputs.cache
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ApiWikipedia\obj\Debug\ApiWikipedia.csproj.CopyComplete
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ApiWikipedia\obj\Debug\ApiWikipedia.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ApiWikipedia\obj\Debug\ApiWikipedia.pdb

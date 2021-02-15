@@ -220,3 +220,33 @@ C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\ModuloConsistenciaDatos\bi
 C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\ModuloConsistenciaDatos\bin\Debug\tr\ZedGraph.resources.dll
 C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\ModuloConsistenciaDatos\bin\Debug\zh-cn\ZedGraph.resources.dll
 C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\ModuloConsistenciaDatos\bin\Debug\zh-tw\ZedGraph.resources.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\bin\Debug\ModuloConsistenciaDatos.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\bin\Debug\ModuloConsistenciaDatos.pdb
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\bin\Debug\Emgu.CV.UI.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\bin\Debug\Emgu.CV.World.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\bin\Debug\itextsharp.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\bin\Debug\Newtonsoft.Json.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\bin\Debug\ZedGraph.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\bin\Debug\Emgu.CV.UI.xml
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\bin\Debug\Emgu.CV.World.xml
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\bin\Debug\itextsharp.xml
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\bin\Debug\Newtonsoft.Json.xml
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\bin\Debug\ZedGraph.xml
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\bin\Debug\de\ZedGraph.resources.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\bin\Debug\es\ZedGraph.resources.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\bin\Debug\fr\ZedGraph.resources.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\bin\Debug\hu\ZedGraph.resources.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\bin\Debug\it\ZedGraph.resources.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\bin\Debug\ja\ZedGraph.resources.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\bin\Debug\pt\ZedGraph.resources.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\bin\Debug\ru\ZedGraph.resources.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\bin\Debug\sk\ZedGraph.resources.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\bin\Debug\sv\ZedGraph.resources.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\bin\Debug\tr\ZedGraph.resources.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\bin\Debug\zh-cn\ZedGraph.resources.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\bin\Debug\zh-tw\ZedGraph.resources.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\obj\Debug\ModuloConsistenciaDatos.csproj.CoreCompileInputs.cache
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\obj\Debug\ModuloConsistenciaDatos.csproj.CopyComplete
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\obj\Debug\ModuloConsistenciaDatos.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\obj\Debug\ModuloConsistenciaDatos.pdb
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloConsistenciaDatos\obj\Debug\ModuloConsistenciaDatos.csprojAssemblyReference.cache

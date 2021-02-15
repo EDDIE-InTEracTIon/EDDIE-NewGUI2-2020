@@ -586,3 +586,20 @@ C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\AugmentedReadingApp\bin\x8
 C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\AugmentedReadingApp\bin\x86\Debug\Plugins\ColorPenRecognition.dll
 C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\AugmentedReadingApp\bin\x86\Debug\Plugins\ColorPenRecognition.pdb
 C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\ColorPenRecognition\obj\Debug\ColorPenRecognition.csproj.CopyComplete
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\bin\x86\Debug\Plugins\x64\concrt140.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\bin\x86\Debug\Plugins\x64\cvextern.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\bin\x86\Debug\Plugins\x64\msvcp140.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\bin\x86\Debug\Plugins\x64\opencv_ffmpeg410_64.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\bin\x86\Debug\Plugins\x64\vcruntime140.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\bin\x86\Debug\Plugins\x86\concrt140.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\bin\x86\Debug\Plugins\x86\cvextern.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\bin\x86\Debug\Plugins\x86\msvcp140.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\bin\x86\Debug\Plugins\x86\opencv_ffmpeg410.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\bin\x86\Debug\Plugins\x86\vcruntime140.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\bin\x86\Debug\Plugins\ColorPenRecognition.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\bin\x86\Debug\Plugins\ColorPenRecognition.pdb
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ColorPenRecognition\obj\Debug\ColorPenRecognition.csprojAssemblyReference.cache
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ColorPenRecognition\obj\Debug\ColorPenRecognition.csproj.CoreCompileInputs.cache
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ColorPenRecognition\obj\Debug\ColorPenRecognition.csproj.CopyComplete
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ColorPenRecognition\obj\Debug\ColorPenRecognition.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ColorPenRecognition\obj\Debug\ColorPenRecognition.pdb

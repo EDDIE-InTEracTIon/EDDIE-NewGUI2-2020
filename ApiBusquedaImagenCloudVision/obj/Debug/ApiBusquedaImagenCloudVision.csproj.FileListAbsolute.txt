@@ -102,3 +102,10 @@ C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\ApiBusquedaImagenCloudVisi
 C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\AugmentedReadingApp\bin\x86\Debug\Apis\ApiBusquedaImagenCloudVision.dll
 C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\AugmentedReadingApp\bin\x86\Debug\Apis\ApiBusquedaImagenCloudVision.pdb
 C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\ApiBusquedaImagenCloudVision\obj\Debug\ApiBusquedaImagenCloudVision.csproj.CopyComplete
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\bin\x86\Debug\Apis\ApiBusquedaImagenCloudVision.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\bin\x86\Debug\Apis\ApiBusquedaImagenCloudVision.pdb
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ApiBusquedaImagenCloudVision\obj\Debug\ApiBusquedaImagenCloudVision.csprojAssemblyReference.cache
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ApiBusquedaImagenCloudVision\obj\Debug\ApiBusquedaImagenCloudVision.csproj.CoreCompileInputs.cache
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ApiBusquedaImagenCloudVision\obj\Debug\ApiBusquedaImagenCloudVision.csproj.CopyComplete
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ApiBusquedaImagenCloudVision\obj\Debug\ApiBusquedaImagenCloudVision.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ApiBusquedaImagenCloudVision\obj\Debug\ApiBusquedaImagenCloudVision.pdb

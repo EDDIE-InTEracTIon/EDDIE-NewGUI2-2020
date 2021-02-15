@@ -94,3 +94,10 @@ C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\ApiDefinicionesGoogle\obj\
 C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\AugmentedReadingApp\bin\x86\Debug\Apis\ApiDefinicionesGoogle.dll
 C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\AugmentedReadingApp\bin\x86\Debug\Apis\ApiDefinicionesGoogle.pdb
 C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\ApiDefinicionesGoogle\obj\Debug\ApiDefinicionesGoogle.csproj.CopyComplete
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\bin\x86\Debug\Apis\ApiDefinicionesGoogle.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\bin\x86\Debug\Apis\ApiDefinicionesGoogle.pdb
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ApiDefinicionesGoogle\obj\Debug\ApiDefinicionesGoogle.csprojAssemblyReference.cache
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ApiDefinicionesGoogle\obj\Debug\ApiDefinicionesGoogle.csproj.CoreCompileInputs.cache
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ApiDefinicionesGoogle\obj\Debug\ApiDefinicionesGoogle.csproj.CopyComplete
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ApiDefinicionesGoogle\obj\Debug\ApiDefinicionesGoogle.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ApiDefinicionesGoogle\obj\Debug\ApiDefinicionesGoogle.pdb

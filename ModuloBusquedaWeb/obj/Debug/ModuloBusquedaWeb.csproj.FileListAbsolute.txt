@@ -160,3 +160,12 @@ C:\Users\Denisse\Desktop\Repositorio\EDDIE-Augmented-Reading\ModuloBusquedaWeb\o
 C:\Users\Denisse\Desktop\Repositorio\EDDIE-Augmented-Reading\ModuloBusquedaWeb\obj\Debug\ModuloBusquedaWeb.csproj.CopyComplete
 C:\Users\Denisse\Desktop\Repositorio\EDDIE-Augmented-Reading\ModuloBusquedaWeb\obj\Debug\ModuloBusquedaWeb.dll
 C:\Users\Denisse\Desktop\Repositorio\EDDIE-Augmented-Reading\ModuloBusquedaWeb\obj\Debug\ModuloBusquedaWeb.pdb
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloBusquedaWeb\bin\Debug\ModuloBusquedaWeb.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloBusquedaWeb\bin\Debug\ModuloBusquedaWeb.pdb
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloBusquedaWeb\bin\Debug\Newtonsoft.Json.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloBusquedaWeb\bin\Debug\Newtonsoft.Json.xml
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloBusquedaWeb\obj\Debug\ModuloBusquedaWeb.csprojAssemblyReference.cache
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloBusquedaWeb\obj\Debug\ModuloBusquedaWeb.csproj.CoreCompileInputs.cache
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloBusquedaWeb\obj\Debug\ModuloBusquedaWeb.csproj.CopyComplete
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloBusquedaWeb\obj\Debug\ModuloBusquedaWeb.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloBusquedaWeb\obj\Debug\ModuloBusquedaWeb.pdb

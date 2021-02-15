@@ -891,3 +891,39 @@ C:\Users\Denisse\Desktop\Repositorio\EDDIE-Augmented-Reading\ModuloReconocimient
 C:\Users\Denisse\Desktop\Repositorio\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\obj\Debug\ModuloReconocimientoGestual.csproj.CopyComplete
 C:\Users\Denisse\Desktop\Repositorio\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\obj\Debug\ModuloReconocimientoGestual.dll
 C:\Users\Denisse\Desktop\Repositorio\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\obj\Debug\ModuloReconocimientoGestual.pdb
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\x64\concrt140.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\x64\cvextern.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\x64\msvcp140.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\x64\opencv_ffmpeg410_64.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\x64\vcruntime140.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\x86\concrt140.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\x86\cvextern.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\x86\msvcp140.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\x86\opencv_ffmpeg410.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\x86\vcruntime140.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\ModuloReconocimientoGestual.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\ModuloReconocimientoGestual.pdb
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\Emgu.CV.UI.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\Emgu.CV.World.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\ZedGraph.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\Emgu.CV.UI.xml
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\Emgu.CV.World.xml
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\ZedGraph.xml
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\de\ZedGraph.resources.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\es\ZedGraph.resources.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\fr\ZedGraph.resources.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\hu\ZedGraph.resources.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\it\ZedGraph.resources.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\ja\ZedGraph.resources.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\pt\ZedGraph.resources.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\ru\ZedGraph.resources.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\sk\ZedGraph.resources.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\sv\ZedGraph.resources.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\tr\ZedGraph.resources.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\zh-cn\ZedGraph.resources.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\bin\Debug\zh-tw\ZedGraph.resources.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\obj\Debug\ModuloReconocimientoGestual.csprojAssemblyReference.cache
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\obj\Debug\ModuloReconocimientoGestual.csproj.CoreCompileInputs.cache
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\obj\Debug\ModuloReconocimientoGestual.csproj.CopyComplete
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\obj\Debug\ModuloReconocimientoGestual.dll
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ModuloReconocimientoGestual\obj\Debug\ModuloReconocimientoGestual.pdb
