@@ -163,6 +163,9 @@
     <Compile Include="InteractionCoordinator.Designer.cs">
       <DependentUpon>InteractionCoordinator.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModifiedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ReadingSession.cs" />
     <Compile Include="ProjectionScreenActivity.cs">
       <SubType>Form</SubType>
