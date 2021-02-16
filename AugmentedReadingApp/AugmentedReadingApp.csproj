@@ -230,6 +230,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="SeleccionApis.resx">
       <DependentUpon>SeleccionApis.cs</DependentUpon>
@@ -256,6 +257,69 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="License-LGPL.txt" />
+    <None Include="Resources\XButtonImageHover.png" />
+    <None Include="Resources\XButtonImageClicked.png" />
+    <None Include="Resources\XButtonImage.png" />
+    <None Include="Resources\WebSearcherButtonONImage.png" />
+    <None Include="Resources\WebSearcherButtonOMHover.png" />
+    <None Include="Resources\WebSearcherButtonOFFImage.png" />
+    <None Include="Resources\WebSearcherButtonOFFHover.png" />
+    <None Include="Resources\VideoButtonImage.png" />
+    <None Include="Resources\VideoButtonHover.png" />
+    <None Include="Resources\VideoButtonClicked.png" />
+    <None Include="Resources\TurnOffButtonImage.png" />
+    <None Include="Resources\TurnOffButtonHover.png" />
+    <None Include="Resources\TurnOffButtonClicked.png" />
+    <None Include="Resources\TraductorButtonImage.png" />
+    <None Include="Resources\TraductorButtonHover.png" />
+    <None Include="Resources\TraductorButtonClicked.png" />
+    <None Include="Resources\SynchronizerButtonONImage.png" />
+    <None Include="Resources\SynchronizerButtonONHover.png" />
+    <None Include="Resources\SynchronizerButtonOFFHover.png" />
+    <None Include="Resources\SynchonizerButtonOFFImage.png" />
+    <None Include="Resources\SyncHighlightsButtonImage.png" />
+    <None Include="Resources\SyncHighlightsButtonHover.png" />
+    <None Include="Resources\SyncHighlightsButtonClicked.png" />
+    <None Include="Resources\RightArrowButtonImage.png" />
+    <None Include="Resources\RightArrowButtonHover.png" />
+    <None Include="Resources\RightArrowButtonClicked.png" />
+    <None Include="Resources\ReadButtonImage.png" />
+    <None Include="Resources\ReadButtonHover.png" />
+    <None Include="Resources\ReadButtonClicked.png" />
+    <None Include="Resources\LeftArrowButtonImage.png" />
+    <None Include="Resources\LeftArrowButtonHover.png" />
+    <None Include="Resources\LeftArrowButtonClicked.png" />
+    <None Include="Resources\ImagesButtonImage.png" />
+    <None Include="Resources\ImagesButtonHover.png" />
+    <None Include="Resources\ImagesButtonClicked.png" />
+    <None Include="Resources\HistoryButtonImage.png" />
+    <None Include="Resources\HistoryButtonHover.png" />
+    <None Include="Resources\HistoryButtonClicked.png" />
+    <None Include="Resources\HighlightModeButtonImage.png" />
+    <None Include="Resources\HighlightModeButtonHover.png" />
+    <None Include="Resources\FiguresButtonnImage.png" />
+    <None Include="Resources\FiguresButtonnHover.png" />
+    <None Include="Resources\FiguresButtonnClicked.png" />
+    <None Include="Resources\EncyclopediaButtonImage.png" />
+    <None Include="Resources\EncyclopediaButtonHover.png" />
+    <None Include="Resources\EncyclopediaButtonClicked.png" />
+    <None Include="Resources\DiccionarioButtonImage.png" />
+    <None Include="Resources\DiccionarioButtonHover.png" />
+    <None Include="Resources\DiccionarioButtonClicked.png" />
+    <None Include="Resources\DeleteBookmarksButtonImage.png" />
+    <None Include="Resources\DeleteBookmarksButtonHover.png" />
+    <None Include="Resources\DeleteBookmarksButtonClicked.png" />
+    <None Include="Resources\ContentButtonImage.png" />
+    <None Include="Resources\ContentButtonHover.png" />
+    <None Include="Resources\ContentButtonClicked.png" />
+    <None Include="Resources\CommentsButtonImage.png" />
+    <None Include="Resources\CommentsButtonHover.png" />
+    <None Include="Resources\CommentsButtonClicked.png" />
+    <None Include="Resources\CaptureModeButtonImage.png" />
+    <None Include="Resources\CaptureModeButtonHover.png" />
+    <None Include="Resources\BookmarkButtonImage.png" />
+    <None Include="Resources\BookmarkButtonHover.png" />
+    <None Include="Resources\BookmarkButtonClicked.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\InterfacesModuloWeb\InterfacesModuloWeb.csproj">
