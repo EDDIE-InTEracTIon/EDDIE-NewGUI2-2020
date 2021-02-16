@@ -3194,3 +3194,4 @@ Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augm
 Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\obj\x86\Debug\AugmentedReadingApp.InteractionsSettings.resources
 Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\obj\x86\Debug\AugmentedReadingApp.WebSearchServicesSettings.resources
 Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\obj\x86\Debug\AugmentedReadingApp.MenuSettings.resources
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\obj\x86\Debug\AugmentedReadingApp.ProjectionScreen.resources

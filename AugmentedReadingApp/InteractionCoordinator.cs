@@ -65,8 +65,13 @@ namespace AugmentedReadingApp
             ///Codigo de preuba para probar menusettings
             //MenuSettings menuSettings = new MenuSettings();
             //menuSettings.Show();
-            ///
+            ///Codigo de prueba para probar projection screen.cs
+            ProjectionScreen projectionScreen = new ProjectionScreen();
+            projectionScreen.Show();
+
+
             projection = new ProjectionScreenActivity(this);
+
 
             SeleccionInteraccionPorVoz seleccionInteraccionPorVoz = new SeleccionInteraccionPorVoz();
             seleccionInteraccionPorVoz.TopMost = true;
