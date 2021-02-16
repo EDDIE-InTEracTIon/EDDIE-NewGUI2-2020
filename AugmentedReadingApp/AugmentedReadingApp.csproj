@@ -169,6 +169,12 @@
     <Compile Include="InteractionsSettings.designer.cs">
       <DependentUpon>InteractionsSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuSettings.designer.cs">
+      <DependentUpon>MenuSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModifiedButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -209,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InteractionsSettings.resx">
       <DependentUpon>InteractionsSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuSettings.resx">
+      <DependentUpon>MenuSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProjectionScreenActivity.resx">
       <DependentUpon>ProjectionScreenActivity.cs</DependentUpon>

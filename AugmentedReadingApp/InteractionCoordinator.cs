@@ -21,7 +21,7 @@ namespace AugmentedReadingApp
 {
     public partial class InteractionCoordinator : Form
     {   //Clase y atributos para detectar y desplegar camaras
-
+        
         CameraActivity camerasText = new CameraActivity();
         CameraActivity camerasGesture = new CameraActivity();
         private int _CameraTextIndex;
@@ -62,6 +62,10 @@ namespace AugmentedReadingApp
 
         public InteractionCoordinator()
         {
+            ///Codigo de preuba para probar menusettings
+            //MenuSettings menuSettings = new MenuSettings();
+            //menuSettings.Show();
+            ///
             projection = new ProjectionScreenActivity(this);
 
             SeleccionInteraccionPorVoz seleccionInteraccionPorVoz = new SeleccionInteraccionPorVoz();
