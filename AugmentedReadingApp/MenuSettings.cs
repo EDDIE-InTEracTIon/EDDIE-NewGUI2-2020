@@ -26,6 +26,7 @@ namespace AugmentedReadingApp
         WebSearchServicesSettings WebSearchServicesForm = new WebSearchServicesSettings();
         SeleccionInteraccionPorVoz seleccionInteraccionPorVoz = new SeleccionInteraccionPorVoz();
         SeleccionApis seleccionApis = new SeleccionApis();
+        EyeTrackingConfiguration eyeTrackingConfig = new EyeTrackingConfiguration();
         //SeleccionApis seleccionapis1 = new SeleccionApis();
         //ProjectionScreen ProjectionScreenForm = new ProjectionScreen();
         int posY = 0;//Variables para mover el formulario con el mouse presionan el panel superior
@@ -139,6 +140,7 @@ namespace AugmentedReadingApp
         {
             changeAllToLightFont();
             EyeTrackingButton.Font = new Font(EyeTrackingButton.Font, FontStyle.Bold);
+            AbrirFormEnPanel(eyeTrackingConfig);  
         }
         private void TextRecognitiionButton_Click(object sender, EventArgs e)
         {
