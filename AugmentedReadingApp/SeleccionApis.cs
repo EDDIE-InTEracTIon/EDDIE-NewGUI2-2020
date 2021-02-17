@@ -33,7 +33,15 @@ namespace AugmentedReadingApp
 
             path = Directory.GetCurrentDirectory() + "\\Apis";
         }
+        //Nuevo constructor sin formProjection
+        public SeleccionApis()
+        {
+            
+            InitializeComponent();
 
+            path = Directory.GetCurrentDirectory() + "\\Apis";
+        }
+        //
         public void SeleccionApis_Load(object sender, EventArgs e)
         {
 

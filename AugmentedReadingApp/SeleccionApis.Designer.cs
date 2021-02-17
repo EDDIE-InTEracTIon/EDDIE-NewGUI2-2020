@@ -192,17 +192,17 @@
         #endregion
 
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cbx_idiomaTraducir;
-        private System.Windows.Forms.Button btn_guardarConfiguraciones;
-        private System.Windows.Forms.ComboBox cbx_apisImagenes;
+        public System.Windows.Forms.ComboBox cbx_idiomaTraducir;
+        public System.Windows.Forms.Button btn_guardarConfiguraciones;
+        public System.Windows.Forms.ComboBox cbx_apisImagenes;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbx_apisTraducciones;
+        public System.Windows.Forms.ComboBox cbx_apisTraducciones;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbx_apisDefiniciones;
+        public System.Windows.Forms.ComboBox cbx_apisDefiniciones;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbx_apisVideos;
+        public System.Windows.Forms.ComboBox cbx_apisVideos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_Enciclopedias;
-        private System.Windows.Forms.ComboBox cbx_apisEnciclopedia;
+        public System.Windows.Forms.ComboBox cbx_apisEnciclopedia;
     }
 }

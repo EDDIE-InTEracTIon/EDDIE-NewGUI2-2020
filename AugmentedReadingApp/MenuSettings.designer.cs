@@ -86,6 +86,7 @@
             // 
             this.PageDetectionButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.PageDetectionButton.FlatAppearance.BorderSize = 0;
+            this.PageDetectionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PageDetectionButton.Font = new System.Drawing.Font("IBM Plex Sans Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PageDetectionButton.Location = new System.Drawing.Point(0, 282);
             this.PageDetectionButton.Name = "PageDetectionButton";
@@ -100,6 +101,7 @@
             // 
             this.TextRecognitiionButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.TextRecognitiionButton.FlatAppearance.BorderSize = 0;
+            this.TextRecognitiionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TextRecognitiionButton.Font = new System.Drawing.Font("IBM Plex Sans Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextRecognitiionButton.Location = new System.Drawing.Point(0, 194);
             this.TextRecognitiionButton.Name = "TextRecognitiionButton";
@@ -114,6 +116,7 @@
             // 
             this.GestureRecognitionButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.GestureRecognitionButton.FlatAppearance.BorderSize = 0;
+            this.GestureRecognitionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GestureRecognitionButton.Font = new System.Drawing.Font("IBM Plex Sans Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GestureRecognitionButton.Location = new System.Drawing.Point(0, 238);
             this.GestureRecognitionButton.Name = "GestureRecognitionButton";
@@ -128,6 +131,7 @@
             // 
             this.EyeTrackingButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.EyeTrackingButton.FlatAppearance.BorderSize = 0;
+            this.EyeTrackingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EyeTrackingButton.Font = new System.Drawing.Font("IBM Plex Sans Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EyeTrackingButton.Location = new System.Drawing.Point(0, 150);
             this.EyeTrackingButton.Name = "EyeTrackingButton";
@@ -142,6 +146,7 @@
             // 
             this.WebSearchServicesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.WebSearchServicesButton.FlatAppearance.BorderSize = 0;
+            this.WebSearchServicesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.WebSearchServicesButton.Font = new System.Drawing.Font("IBM Plex Sans Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WebSearchServicesButton.Location = new System.Drawing.Point(0, 108);
             this.WebSearchServicesButton.Name = "WebSearchServicesButton";
@@ -156,6 +161,7 @@
             // 
             this.InteractionsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.InteractionsButton.FlatAppearance.BorderSize = 0;
+            this.InteractionsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.InteractionsButton.Font = new System.Drawing.Font("IBM Plex Sans Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InteractionsButton.Location = new System.Drawing.Point(0, 62);
             this.InteractionsButton.Name = "InteractionsButton";

@@ -19,11 +19,13 @@ namespace AugmentedReadingApp
         {
             InitializeComponent();
             seleccionInteraccionPorVoz.btn_guardar.Visible = false;
+            seleccionApis.btn_guardarConfiguraciones.Visible = false;
         }
         //Se Instancias los formularios con cada configuracion de cada módulo
         InteractionsSettings InteractionsForm = new InteractionsSettings();
         WebSearchServicesSettings WebSearchServicesForm = new WebSearchServicesSettings();
         SeleccionInteraccionPorVoz seleccionInteraccionPorVoz = new SeleccionInteraccionPorVoz();
+        SeleccionApis seleccionApis = new SeleccionApis();
         //SeleccionApis seleccionapis1 = new SeleccionApis();
         //ProjectionScreen ProjectionScreenForm = new ProjectionScreen();
         int posY = 0;//Variables para mover el formulario con el mouse presionan el panel superior
@@ -123,7 +125,7 @@ namespace AugmentedReadingApp
         {
             changeAllToLightFont();
             WebSearchServicesButton.Font = new Font(WebSearchServicesButton.Font, FontStyle.Bold);
-            //AbrirFormEnPanel(seleccionapis1);
+            AbrirFormEnPanel(seleccionApis);
 
             /*
             //Método para abrir el form WebSearchServicesSettings
@@ -208,6 +210,7 @@ namespace AugmentedReadingApp
 
         private void SaveSettingsButtonModified_Click(object sender, EventArgs e)
         {
+            //Codigo de guardado de SeleccionInteraccionPorVoz
             if (seleccionInteraccionPorVoz.rbtn_voz_si.Checked && seleccionInteraccionPorVoz.rbtn_Si_botones.Checked)
             {
                 SeleccionInteraccionPorVoz.activarBusquedaVoz = seleccionInteraccionPorVoz.rbtn_voz_si.Text;
@@ -228,6 +231,15 @@ namespace AugmentedReadingApp
                 MessageBox.Show("Ha seleccionado la opción de interacción por botones");
                 //this.Hide();
             }
+            //Codigo de boton de guardado de SeleccionApis
+            SeleccionApis.apiSeleccionadaEnciclopedia = seleccionApis.cbx_apisEnciclopedia.GetItemText(seleccionApis.cbx_apisEnciclopedia.SelectedItem);
+            SeleccionApis.apiSeleccionadaDefinicion = seleccionApis.cbx_apisDefiniciones.GetItemText(seleccionApis.cbx_apisDefiniciones.SelectedItem);
+            SeleccionApis.apiSeleccionadaTraduccion = seleccionApis.cbx_apisTraducciones.GetItemText(seleccionApis.cbx_apisTraducciones.SelectedItem);
+            SeleccionApis.apiSeleccionadaVideo = seleccionApis.cbx_apisVideos.GetItemText(seleccionApis.cbx_apisVideos.SelectedItem);
+            SeleccionApis.apiSeleccionadaImagen = seleccionApis.cbx_apisImagenes.GetItemText(seleccionApis.cbx_apisImagenes.SelectedItem);
+            SeleccionApis.idiomaSeleccionadoTraduccion = seleccionApis.cbx_idiomaTraducir.GetItemText(seleccionApis.cbx_idiomaTraducir.SelectedValue);
+            MessageBox.Show("Apis seleccionadas con éxito");
+            //this.WindowState = FormWindowState.Minimized;
         }
     }
 }
