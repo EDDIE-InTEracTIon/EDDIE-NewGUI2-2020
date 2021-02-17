@@ -150,13 +150,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn_guardar;
+        public System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton rbtn_voz_no;
-        private System.Windows.Forms.RadioButton rbtn_voz_si;
+        public System.Windows.Forms.RadioButton rbtn_voz_no;
+        public System.Windows.Forms.RadioButton rbtn_voz_si;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton rbtn_no_botones;
-        private System.Windows.Forms.RadioButton rbtn_Si_botones;
+        public System.Windows.Forms.RadioButton rbtn_no_botones;
+        public System.Windows.Forms.RadioButton rbtn_Si_botones;
     }
 }

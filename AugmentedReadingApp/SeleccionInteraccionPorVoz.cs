@@ -14,10 +14,12 @@ namespace AugmentedReadingApp
     {
         public static string activarBusquedaVoz;
         public static string mostrarBotonesconVoz;
-
+        //Codigo agregado
+        ///
         public SeleccionInteraccionPorVoz()
         {
             InitializeComponent();
+
         }
 
         private void btn_guardar_Click(object sender, EventArgs e)

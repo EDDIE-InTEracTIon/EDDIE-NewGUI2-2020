@@ -18,10 +18,13 @@ namespace AugmentedReadingApp
         public MenuSettings()
         {
             InitializeComponent();
+            seleccionInteraccionPorVoz.btn_guardar.Visible = false;
         }
         //Se Instancias los formularios con cada configuracion de cada módulo
         InteractionsSettings InteractionsForm = new InteractionsSettings();
         WebSearchServicesSettings WebSearchServicesForm = new WebSearchServicesSettings();
+        SeleccionInteraccionPorVoz seleccionInteraccionPorVoz = new SeleccionInteraccionPorVoz();
+        //SeleccionApis seleccionapis1 = new SeleccionApis();
         //ProjectionScreen ProjectionScreenForm = new ProjectionScreen();
         int posY = 0;//Variables para mover el formulario con el mouse presionan el panel superior
         int posX = 0;
@@ -106,7 +109,8 @@ namespace AugmentedReadingApp
         {
             changeAllToLightFont();
             InteractionsButton.Font = new Font(InteractionsButton.Font, FontStyle.Bold);
-            AbrirFormEnPanel(InteractionsForm);
+            //AbrirFormEnPanel(InteractionsForm);
+            AbrirFormEnPanel(seleccionInteraccionPorVoz);
             /*
             //Método para abrir el form InteractionsSettings
             InteractionsSettings fm = new InteractionsSettings();
@@ -119,7 +123,7 @@ namespace AugmentedReadingApp
         {
             changeAllToLightFont();
             WebSearchServicesButton.Font = new Font(WebSearchServicesButton.Font, FontStyle.Bold);
-            AbrirFormEnPanel(WebSearchServicesForm);
+            //AbrirFormEnPanel(seleccionapis1);
 
             /*
             //Método para abrir el form WebSearchServicesSettings
@@ -200,6 +204,30 @@ namespace AugmentedReadingApp
             await task;
             //ProjectionScreenForm.Show();
             ocultarLoading();
+        }
+
+        private void SaveSettingsButtonModified_Click(object sender, EventArgs e)
+        {
+            if (seleccionInteraccionPorVoz.rbtn_voz_si.Checked && seleccionInteraccionPorVoz.rbtn_Si_botones.Checked)
+            {
+                SeleccionInteraccionPorVoz.activarBusquedaVoz = seleccionInteraccionPorVoz.rbtn_voz_si.Text;
+                SeleccionInteraccionPorVoz.mostrarBotonesconVoz = seleccionInteraccionPorVoz.rbtn_Si_botones.Text;
+                MessageBox.Show("Ha seleccionado la opción de interacción por voz");
+                //this.Hide();
+            }
+            if (seleccionInteraccionPorVoz.rbtn_voz_si.Checked && seleccionInteraccionPorVoz.rbtn_no_botones.Checked)
+            {
+                SeleccionInteraccionPorVoz.activarBusquedaVoz = seleccionInteraccionPorVoz.rbtn_voz_si.Text;
+                SeleccionInteraccionPorVoz.mostrarBotonesconVoz = seleccionInteraccionPorVoz.rbtn_no_botones.Text;
+                MessageBox.Show("Ha seleccionado la opción de interacción por voz");
+                //this.Hide();
+            }
+            if (seleccionInteraccionPorVoz.rbtn_voz_no.Checked)
+            {
+                SeleccionInteraccionPorVoz.activarBusquedaVoz = seleccionInteraccionPorVoz.rbtn_voz_no.Text;
+                MessageBox.Show("Ha seleccionado la opción de interacción por botones");
+                //this.Hide();
+            }
         }
     }
 }

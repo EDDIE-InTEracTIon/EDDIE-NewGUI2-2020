@@ -63,11 +63,11 @@ namespace AugmentedReadingApp
         public InteractionCoordinator()
         {
             ///Codigo de preuba para probar menusettings
-            //MenuSettings menuSettings = new MenuSettings();
-            //menuSettings.Show();
+            MenuSettings menuSettings = new MenuSettings();
+            menuSettings.Show();
             ///Codigo de prueba para probar projection screen.cs
-            ProjectionScreen projectionScreen = new ProjectionScreen();
-            projectionScreen.Show();
+            //ProjectionScreen projectionScreen = new ProjectionScreen();
+            //projectionScreen.Show();
 
 
             projection = new ProjectionScreenActivity(this);

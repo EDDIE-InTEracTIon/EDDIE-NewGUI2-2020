@@ -263,6 +263,7 @@
             this.SaveSettingsButtonModified.TabIndex = 5;
             this.SaveSettingsButtonModified.Text = "Save Settings";
             this.SaveSettingsButtonModified.UseVisualStyleBackColor = false;
+            this.SaveSettingsButtonModified.Click += new System.EventHandler(this.SaveSettingsButtonModified_Click);
             // 
             // StartProjectionButtonModified
             // 
