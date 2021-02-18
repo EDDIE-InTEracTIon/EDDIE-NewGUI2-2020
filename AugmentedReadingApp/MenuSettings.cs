@@ -24,13 +24,16 @@ namespace AugmentedReadingApp
         InteractionCoordinator interactionCoordinator = new InteractionCoordinator();
         //SeleccionApis seleccionapis1 = new SeleccionApis();
         ProjectionScreen projectionScreenForm = new ProjectionScreen();
-        PageDetectionSettings pageDetectionSettings2 = new PageDetectionSettings();
-        ProjectionScreenActivity2 projectionScreenActivity2;
+        public PageDetectionSettings pageDetectionSettings;
+        public ProjectionScreenActivity2 projectionScreenActivity2;
         int posY = 0;//Variables para mover el formulario con el mouse presionan el panel superior
         int posX = 0;
         public MenuSettings()
         {
             InitializeComponent();
+            pageDetectionSettings = new PageDetectionSettings();
+            projectionScreenActivity2 = new ProjectionScreenActivity2(pageDetectionSettings);
+            
             //projectionScreenActivity2 = new ProjectionScreenActivity2();
             seleccionInteraccionPorVoz.btn_guardar.Visible = false;
             seleccionApis.btn_guardarConfiguraciones.Visible = false;
@@ -163,7 +166,7 @@ namespace AugmentedReadingApp
         {
             changeAllToLightFont();
             PageDetectionButton.Font = new Font(PageDetectionButton.Font, FontStyle.Bold);
-            AbrirFormEnPanel(pageDetectionSettings2);
+            AbrirFormEnPanel(pageDetectionSettings);
         }
         //Evento para desplegar la interfaz de realidad aumentada
         private async void StartProjectionButton_Click(object sender, EventArgs e)
@@ -172,6 +175,7 @@ namespace AugmentedReadingApp
             Task task = new Task(dummySleep);//Se simula un estado de cargando
             task.Start();
             await task;
+            projectionScreenActivity2.Show();
             //ProjectionScreenForm.Show();
             ocultarLoading();
             
@@ -215,6 +219,7 @@ namespace AugmentedReadingApp
             task.Start();
             await task;
             //ProjectionScreenForm.Show();
+            projectionScreenActivity2.Show();
             ocultarLoading();
         }
 

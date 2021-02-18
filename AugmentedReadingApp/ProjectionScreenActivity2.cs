@@ -23,6 +23,7 @@ namespace AugmentedReadingApp
 {
     public partial class ProjectionScreenActivity2 : Form
     {
+        PageDetectionSettings incomingPageDetectionSettings;
         public int CameraNumber;
         InteractionCoordinator originalForm;
 
@@ -30,7 +31,7 @@ namespace AugmentedReadingApp
         bool markPoint = true;
         public ColorRecognition recTxt;
 
-        public HighlightTool Highlight;
+        public static HighlightTool Highlight;
 
         public ChromiumWebBrowser navegador;
 
@@ -52,15 +53,15 @@ namespace AugmentedReadingApp
         //Agrega Modulo Consistencia DP
         public int numeroCamara;
         FiguresDP FiguresDP;
-
-
-        public ProjectionScreenActivity2(PageDetectionSettings pageDetectionSettings2)
+        
+        public ProjectionScreenActivity2(PageDetectionSettings pageDetectionSettings)
         {
-            
-            //originalForm = incomingForm;
 
             InitializeComponent();
-            
+
+            incomingPageDetectionSettings = pageDetectionSettings;
+            //originalForm = incomingForm;
+
             pictureBox3.Image = Image.FromFile("x_mark_red_circle.png");
             pictureBox4.Image = Image.FromFile("x_mark_red_circle.png");
             pictureBox5.Image = Image.FromFile("x_mark_red_circle.png");
@@ -98,6 +99,7 @@ namespace AugmentedReadingApp
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            //PageDetectionSettings incomingPageDetectionSettings = pageDetectionSettings;
             // En esta parte se comprueba si el usuario ha seleccionado//
             // La opción de interacción a través de la voz o no//
             var opcionInteraccionSeleccionada = SeleccionInteraccionPorVoz.activarBusquedaVoz;
@@ -267,13 +269,13 @@ namespace AugmentedReadingApp
         private void syncPdfButton_Click(object sender, EventArgs e)
         {
 
-            float llx = (Highlight.normRect.Left) * originalForm.documentoSyn.rectPage.Right;
-            float lly = (1 - Highlight.normRect.Bottom ) * originalForm.documentoSyn.rectPage.Top - (Highlight.normRect.Top) * originalForm.documentoSyn.rectPage.Top;
-            float urx = (Highlight.normRect.Left) * originalForm.documentoSyn.rectPage.Right + (Highlight.normRect.Right) * originalForm.documentoSyn.rectPage.Right;
-            float ury = (1 - Highlight.normRect.Bottom) * originalForm.documentoSyn.rectPage.Top;
-            originalForm.documentoSyn.SaveAnno(llx, lly, urx, ury,nPage);
-            Highlight.GetRectangles(originalForm.documentoSyn.listaRectangulos);
-            nPages = originalForm.documentoSyn.NPages;
+            float llx = (Highlight.normRect.Left) * incomingPageDetectionSettings.documentoSyn.rectPage.Right;
+            float lly = (1 - Highlight.normRect.Bottom ) * incomingPageDetectionSettings.documentoSyn.rectPage.Top - (Highlight.normRect.Top) * incomingPageDetectionSettings.documentoSyn.rectPage.Top;
+            float urx = (Highlight.normRect.Left) * incomingPageDetectionSettings.documentoSyn.rectPage.Right + (Highlight.normRect.Right) * incomingPageDetectionSettings.documentoSyn.rectPage.Right;
+            float ury = (1 - Highlight.normRect.Bottom) * incomingPageDetectionSettings.documentoSyn.rectPage.Top;
+            incomingPageDetectionSettings.documentoSyn.SaveAnno(llx, lly, urx, ury,nPage);
+            Highlight.GetRectangles(incomingPageDetectionSettings.documentoSyn.listaRectangulos);
+            nPages = incomingPageDetectionSettings.documentoSyn.NPages;
             syncButton.Text = " Sync\nPage " + nPage + "/" +nPages;
 
         }

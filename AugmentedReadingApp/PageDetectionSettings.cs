@@ -20,7 +20,8 @@ using ModuloRastreoOcular;
 namespace AugmentedReadingApp
 {
     public partial class PageDetectionSettings : Form
-    {   //Clase y atributos para detectar y desplegar camaras
+    {
+        //Clase y atributos para detectar y desplegar camaras
         
         CameraActivity camerasText = new CameraActivity();
         CameraActivity camerasGesture = new CameraActivity();
@@ -62,7 +63,6 @@ namespace AugmentedReadingApp
 
         public PageDetectionSettings()
         {
-            projection = new ProjectionScreenActivity2(this);
             ///Codigo de preuba para probar menusettings
             //MenuSettings menuSettings = new MenuSettings();
             //menuSettings.Show();
@@ -74,11 +74,14 @@ namespace AugmentedReadingApp
             //projection = new ProjectionScreenActivity(this);
 
             InitializeComponent();
+
+            //projection = projectionScreenActivity2;
+
             //SeleccionInteraccionPorVoz seleccionInteraccionPorVoz = new SeleccionInteraccionPorVoz();
             //seleccionInteraccionPorVoz.TopMost = true;
             //seleccionInteraccionPorVoz.Show();
 
-            
+
 
             //LoadComboBox(camerasText.ListCameras(), ComboBoxCameraList1);
             //LoadComboBox(camerasGesture.ListCameras(), ComboBoxCameraList2);
@@ -445,8 +448,8 @@ namespace AugmentedReadingApp
                 documentoSyn = new DigitalDocSync(openFilePDF.FileName);
                 numericUpDown5.Value = (int)documentoSyn.rectPage.Right;
                 numericUpDown6.Value = (int)documentoSyn.rectPage.Top;
-                projection.Highlight.pageSize.Right = documentoSyn.rectPage.Right;
-                projection.Highlight.pageSize.Top = documentoSyn.rectPage.Top;
+                ProjectionScreenActivity2.Highlight.pageSize.Right = documentoSyn.rectPage.Right;
+                ProjectionScreenActivity2.Highlight.pageSize.Top = documentoSyn.rectPage.Top;
 
                 //Agrega Modulo consistencia DP
                 pdfName = textBoxPathPDF.Text;
@@ -480,7 +483,7 @@ namespace AugmentedReadingApp
 
         private void Resize_Click(object sender, EventArgs e)
         {
-            projection.Highlight.RuntimeFinalLocation((int)FinalLocateX.Value, (int)FinalLocateY.Value);
+            ProjectionScreenActivity2.Highlight.RuntimeFinalLocation((int)FinalLocateX.Value, (int)FinalLocateY.Value);
 
         }
 
