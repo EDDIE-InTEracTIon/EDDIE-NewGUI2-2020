@@ -296,7 +296,7 @@ namespace AugmentedReadingApp
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-            PagesLabel.Text = String.Join(",", originalForm.documentoSyn.SearchTxtPdf(searchTextBox.Text).ToArray()); ;
+            PagesLabel.Text = String.Join(",", incomingPageDetectionSettings.documentoSyn.SearchTxtPdf(searchTextBox.Text).ToArray()); ;
         }
 
         private void btn_buscarWeb_Click(object sender, EventArgs e)
