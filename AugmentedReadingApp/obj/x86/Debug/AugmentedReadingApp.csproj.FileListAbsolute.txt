@@ -3199,3 +3199,4 @@ Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augm
 Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\bin\x86\Debug\Serilog.Sinks.File.dll
 Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\obj\x86\Debug\AugmentedReadingApp.ProjectionScreenActivity2.resources
 Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\obj\x86\Debug\AugmentedReadingApp.PageDetectionSettings.resources
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\obj\x86\Debug\AugmentedReadingApp.TextRecognitionSettings.resources

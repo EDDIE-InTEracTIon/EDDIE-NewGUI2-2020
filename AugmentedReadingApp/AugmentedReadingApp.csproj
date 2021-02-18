@@ -157,6 +157,12 @@
     <Compile Include="EyeTrackingConfiguration.Designer.cs">
       <DependentUpon>EyeTrackingConfiguration.cs</DependentUpon>
     </Compile>
+    <Compile Include="TextRecognitionSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TextRecognitionSettings.Designer.cs">
+      <DependentUpon>TextRecognitionSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="PageDetectionSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EyeTrackingConfiguration.resx">
       <DependentUpon>EyeTrackingConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextRecognitionSettings.resx">
+      <DependentUpon>TextRecognitionSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PageDetectionSettings.resx">
       <DependentUpon>PageDetectionSettings.cs</DependentUpon>
