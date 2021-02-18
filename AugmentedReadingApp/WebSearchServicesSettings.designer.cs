@@ -31,7 +31,9 @@
             this.WebSearchTittle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.WebSearchServicesSettingsPanel = new System.Windows.Forms.Panel();
+            this.PDFSelectBt = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.WebSearchServicesSettingsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // WebSearchTittle
@@ -56,10 +58,20 @@
             // WebSearchServicesSettingsPanel
             // 
             this.WebSearchServicesSettingsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.WebSearchServicesSettingsPanel.Controls.Add(this.PDFSelectBt);
             this.WebSearchServicesSettingsPanel.Location = new System.Drawing.Point(12, 76);
             this.WebSearchServicesSettingsPanel.Name = "WebSearchServicesSettingsPanel";
             this.WebSearchServicesSettingsPanel.Size = new System.Drawing.Size(947, 212);
             this.WebSearchServicesSettingsPanel.TabIndex = 2;
+            // 
+            // PDFSelectBt
+            // 
+            this.PDFSelectBt.Location = new System.Drawing.Point(436, 83);
+            this.PDFSelectBt.Name = "PDFSelectBt";
+            this.PDFSelectBt.Size = new System.Drawing.Size(75, 47);
+            this.PDFSelectBt.TabIndex = 143;
+            this.PDFSelectBt.Text = "Seleccionar PDF";
+            this.PDFSelectBt.UseVisualStyleBackColor = true;
             // 
             // WebSearchServicesSettings
             // 
@@ -75,6 +87,7 @@
             this.Load += new System.EventHandler(this.WebSearchServicesSettings_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.WebSearchServicesSettingsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -84,5 +97,6 @@
         private System.Windows.Forms.Label WebSearchTittle;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel WebSearchServicesSettingsPanel;
+        private System.Windows.Forms.Button PDFSelectBt;
     }
 }

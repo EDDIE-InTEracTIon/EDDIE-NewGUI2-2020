@@ -19,7 +19,7 @@ using ModuloRastreoOcular;
 
 namespace AugmentedReadingApp
 {
-    public partial class InteractionCoordinator : Form
+    public partial class PageDetectionSettings2 : Form
     {   //Clase y atributos para detectar y desplegar camaras
         
         CameraActivity camerasText = new CameraActivity();
@@ -60,7 +60,7 @@ namespace AugmentedReadingApp
         }
 
 
-        public InteractionCoordinator()
+        public PageDetectionSettings2()
         {
             ///Codigo de preuba para probar menusettings
             //MenuSettings menuSettings = new MenuSettings();
@@ -70,17 +70,17 @@ namespace AugmentedReadingApp
             //projectionScreen.Show();
 
 
-            projection = new ProjectionScreenActivity(this);
-
-
-            SeleccionInteraccionPorVoz seleccionInteraccionPorVoz = new SeleccionInteraccionPorVoz();
-            seleccionInteraccionPorVoz.TopMost = true;
-            seleccionInteraccionPorVoz.Show();
+            //projection = new ProjectionScreenActivity(this);
 
             InitializeComponent();
+            //SeleccionInteraccionPorVoz seleccionInteraccionPorVoz = new SeleccionInteraccionPorVoz();
+            //seleccionInteraccionPorVoz.TopMost = true;
+            //seleccionInteraccionPorVoz.Show();
 
-            LoadComboBox(camerasText.ListCameras(), ComboBoxCameraList1);
-            LoadComboBox(camerasGesture.ListCameras(), ComboBoxCameraList2);
+            
+
+            //LoadComboBox(camerasText.ListCameras(), ComboBoxCameraList1);
+            //LoadComboBox(camerasGesture.ListCameras(), ComboBoxCameraList2);
 
 
             //Atributos y metodos reflexion
@@ -126,16 +126,16 @@ namespace AugmentedReadingApp
 
         void CreateFilterMenu()
         {
-            complementoToolStripMenuItem.DropDownItems.Clear();
+            //complementoToolStripMenuItem.DropDownItems.Clear();
 
-            foreach (KeyValuePair<string, IPlugin> pair in _plugins)
-            {
-                var item = new ToolStripMenuItem(pair.Key);
-                item.Click += new EventHandler(menuItem_click);
-                complementoToolStripMenuItem.DropDownItems.Add(item);
-                // ((ToolStripMenuItem)menuItem).Checked = true;
+            //foreach (KeyValuePair<string, IPlugin> pair in _plugins)
+            //{
+            //    var item = new ToolStripMenuItem(pair.Key);
+            //    item.Click += new EventHandler(menuItem_click);
+            //    complementoToolStripMenuItem.DropDownItems.Add(item);
+            //    // ((ToolStripMenuItem)menuItem).Checked = true;
 
-            }
+            //}
 
         }
 
@@ -233,11 +233,11 @@ namespace AugmentedReadingApp
             projection.Show();
             if (captureText == null)
             {
-                captureText = new VideoCapture(CameraNumber);
-                captureText.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameWidth, (double)numericUpDownResXText.Value);
-                captureText.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameHeight, (double)numericUpDownResYText.Value);
+                //captureText = new VideoCapture(CameraNumber);
+                //captureText.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameWidth, (double)numericUpDownResXText.Value);
+                //captureText.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameHeight, (double)numericUpDownResYText.Value);
 
-                imageBox1.Image = recTxt.Recognition(captureText);
+                //imageBox1.Image = recTxt.Recognition(captureText);
             }
             
             //Agrega Modulo Consistencia DP
@@ -251,8 +251,8 @@ namespace AugmentedReadingApp
             if (captureGesture == null)
             {
                 captureGesture = new VideoCapture(CameraNumber);
-                captureGesture.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameWidth, (double)numericUpDownXGestual.Value);
-                captureGesture.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameHeight, (double)numericUpDownYGestual.Value);
+                //captureGesture.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameWidth, (double)numericUpDownXGestual.Value);
+                //captureGesture.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameHeight, (double)numericUpDownYGestual.Value);
                 captureGesture.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.Fps, 5);
 
             }
@@ -264,37 +264,37 @@ namespace AugmentedReadingApp
 
         private void SetValue_textBoxX(string hecho)
         {
-            if (textBoxX.InvokeRequired)
-            {
-                SetValueDelegate delegado = new SetValueDelegate(SetValue_textBoxX);
-                textBoxX.Invoke(delegado, new object[] { hecho });
-            }
-            textBoxX.Text = hecho;
+            //if (textBoxX.InvokeRequired)
+            //{
+            //    SetValueDelegate delegado = new SetValueDelegate(SetValue_textBoxX);
+            //    textBoxX.Invoke(delegado, new object[] { hecho });
+            //}
+            //textBoxX.Text = hecho;
         }
 
 
 
         private void SetValue_textBoxY(string hecho)
         {
-            if (textBoxY.InvokeRequired)
-            {
-                SetValueDelegate delegado = new SetValueDelegate(SetValue_textBoxY);
-                textBoxY.Invoke(delegado, new object[] { hecho });
-            }
-            textBoxY.Text = hecho;
+            //if (textBoxY.InvokeRequired)
+            //{
+            //    SetValueDelegate delegado = new SetValueDelegate(SetValue_textBoxY);
+            //    textBoxY.Invoke(delegado, new object[] { hecho });
+            //}
+            //textBoxY.Text = hecho;
         }
 
         private void Capture_ImageGrabbed1(object sender, EventArgs e)
         {
-            recGestual.ActiveX = checkBoxX.Checked;
-            recGestual.ActiveY = checkBoxY.Checked;
-            recGestual.MouseRecOn = checkBoxMouse.Checked;
-            imageBox2.Image = recGestual.Capture_ImageGrabbed(captureGesture, (float)numericUpDownSStartX.Value,
-            (float)numericUpDownSEndX.Value, (float)numericUpDownAStartX.Value, (float)numericUpDownAEndX.Value,
-            (float)numericUpDownSStartY.Value, (float)numericUpDownSEndY.Value, (float)numericUpDownAStartY.Value,
-            (float)numericUpDownAEndY.Value);
-            SetValue_textBoxX(recGestual.SensorX.ToString());
-            SetValue_textBoxY(recGestual.SensorY.ToString());
+            //recGestual.ActiveX = checkBoxX.Checked;
+            //recGestual.ActiveY = checkBoxY.Checked;
+            //recGestual.MouseRecOn = checkBoxMouse.Checked;
+            //imageBox2.Image = recGestual.Capture_ImageGrabbed(captureGesture, (float)numericUpDownSStartX.Value,
+            //(float)numericUpDownSEndX.Value, (float)numericUpDownAStartX.Value, (float)numericUpDownAEndX.Value,
+            //(float)numericUpDownSStartY.Value, (float)numericUpDownSEndY.Value, (float)numericUpDownAStartY.Value,
+            //(float)numericUpDownAEndY.Value);
+            //SetValue_textBoxX(recGestual.SensorX.ToString());
+            //SetValue_textBoxY(recGestual.SensorY.ToString());
 
         }
 
@@ -314,11 +314,11 @@ namespace AugmentedReadingApp
             captureText.Start();
             try
             {
-                imageBox1.Image = recTxt.Recognition(captureText);
-                if (recTxt.TextImage != null)
-                {
-                    imageBox3.Image = recTxt.TextImage;
-                }
+                //imageBox1.Image = recTxt.Recognition(captureText);
+                //if (recTxt.TextImage != null)
+                //{
+                //    imageBox3.Image = recTxt.TextImage;
+                //}
 
             }
             catch (Exception ex)
@@ -364,7 +364,7 @@ namespace AugmentedReadingApp
                 {
                     captureGesture.Retrieve(m);
 
-                    imageBox4.Image = cropColorFrame(m, rectangle).ToImage<Bgr, byte>();
+                    //imageBox4.Image = cropColorFrame(m, rectangle).ToImage<Bgr, byte>();
                     ImageToBase64(cropColorFrame(m, rectangle).Bitmap, System.Drawing.Imaging.ImageFormat.Bmp);
                     //imageBox4.Image = cropColorFrame(m, new Rectangle(10,10,0,1)).ToImage<Bgr, byte>();
                     CaptureImage();
@@ -395,7 +395,7 @@ namespace AugmentedReadingApp
                     //}
                     if (rectangleImage != null)
                     {
-                        imageBox4.Image = rectangleImage.ToImage<Bgr, Byte>();
+                        //imageBox4.Image = rectangleImage.ToImage<Bgr, Byte>();
                         Image<Bgr, Byte> img = rectangleImage.ToImage<Bgr, Byte>();
                         Console.WriteLine("Imagen capturada " + recGestual.RectangularSelection);
                         Bitmap bimage = img.ToBitmap();
@@ -455,18 +455,18 @@ namespace AugmentedReadingApp
 
         public void GetSettings()
         {
-            numericUpDownSStartX.Value = Properties.Settings.Default.ValorX1;
-            numericUpDownSStartY.Value = Properties.Settings.Default.ValorY1;
-            numericUpDownSEndX.Value = Properties.Settings.Default.ValorX2;
-            numericUpDownSEndY.Value = Properties.Settings.Default.ValorY2;
+            //numericUpDownSStartX.Value = Properties.Settings.Default.ValorX1;
+            //numericUpDownSStartY.Value = Properties.Settings.Default.ValorY1;
+            //numericUpDownSEndX.Value = Properties.Settings.Default.ValorX2;
+            //numericUpDownSEndY.Value = Properties.Settings.Default.ValorY2;
 
         }
         public void SaveSettings()
         {
-            Properties.Settings.Default.ValorX1 = (int)numericUpDownSStartX.Value;
-            Properties.Settings.Default.ValorY1 = (int)numericUpDownSStartY.Value;
-            Properties.Settings.Default.ValorX2 = (int)numericUpDownSEndX.Value;
-            Properties.Settings.Default.ValorY2 = (int)numericUpDownSEndY.Value;
+            //Properties.Settings.Default.ValorX1 = (int)numericUpDownSStartX.Value;
+            //Properties.Settings.Default.ValorY1 = (int)numericUpDownSStartY.Value;
+            //Properties.Settings.Default.ValorX2 = (int)numericUpDownSEndX.Value;
+            //Properties.Settings.Default.ValorY2 = (int)numericUpDownSEndY.Value;
             Properties.Settings.Default.Save();
 
         }
@@ -501,7 +501,7 @@ namespace AugmentedReadingApp
                 {
                     Image<Bgr, byte> imagen_aux = _frame.ToImage<Bgr, byte>();
                     //imagen_aux = imagen_aux.Rotate(180, new Bgr(0, 0, 0));
-                    imageBox3.Image = imagen_aux;
+                    //imageBox3.Image = imagen_aux;
                     //pictureBox1.Image = _frame.Bitmap;
                     double fps = 15;
                     await Task.Delay(1000 / Convert.ToInt32(fps));

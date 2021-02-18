@@ -20,6 +20,7 @@ namespace AugmentedReadingApp
             InitializeComponent();
             seleccionInteraccionPorVoz.btn_guardar.Visible = false;
             seleccionApis.btn_guardarConfiguraciones.Visible = false;
+            //ProjectionScreenForm.Show();
         }
         //Se Instancias los formularios con cada configuracion de cada módulo
         InteractionsSettings InteractionsForm = new InteractionsSettings();
@@ -27,8 +28,10 @@ namespace AugmentedReadingApp
         SeleccionInteraccionPorVoz seleccionInteraccionPorVoz = new SeleccionInteraccionPorVoz();
         SeleccionApis seleccionApis = new SeleccionApis();
         EyeTrackingConfiguration eyeTrackingConfig = new EyeTrackingConfiguration();
+        InteractionCoordinator interactionCoordinator = new InteractionCoordinator();
         //SeleccionApis seleccionapis1 = new SeleccionApis();
-        //ProjectionScreen ProjectionScreenForm = new ProjectionScreen();
+        ProjectionScreen projectionScreenForm = new ProjectionScreen();
+        PageDetectionSettings2 pageDetectionSettings2 = new PageDetectionSettings2();
         int posY = 0;//Variables para mover el formulario con el mouse presionan el panel superior
         int posX = 0;
 
@@ -146,6 +149,7 @@ namespace AugmentedReadingApp
         {
             changeAllToLightFont();
             TextRecognitiionButton.Font = new Font(TextRecognitiionButton.Font, FontStyle.Bold);
+            AbrirFormEnPanel(interactionCoordinator);
         }
         private void GestureRecognitionButton_Click(object sender, EventArgs e)
         {
@@ -156,6 +160,7 @@ namespace AugmentedReadingApp
         {
             changeAllToLightFont();
             PageDetectionButton.Font = new Font(PageDetectionButton.Font, FontStyle.Bold);
+            AbrirFormEnPanel(pageDetectionSettings2);
         }
         //Evento para desplegar la interfaz de realidad aumentada
         private async void StartProjectionButton_Click(object sender, EventArgs e)
