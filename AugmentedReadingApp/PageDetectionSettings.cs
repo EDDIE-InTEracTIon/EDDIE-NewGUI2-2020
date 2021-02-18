@@ -19,7 +19,7 @@ using ModuloRastreoOcular;
 
 namespace AugmentedReadingApp
 {
-    public partial class PageDetectionSettings2 : Form
+    public partial class PageDetectionSettings : Form
     {   //Clase y atributos para detectar y desplegar camaras
         
         CameraActivity camerasText = new CameraActivity();
@@ -34,7 +34,7 @@ namespace AugmentedReadingApp
 
         public ColorRecognition recTxt = new ColorRecognition();
         public GestureRecognitionActivity recGestual = new GestureRecognitionActivity();
-        public ProjectionScreenActivity projection;
+        public ProjectionScreenActivity2 projection;
         public DigitalDocSync documentoSyn;
         OpenFileDialog openFilePDF = new OpenFileDialog();
 
@@ -60,8 +60,9 @@ namespace AugmentedReadingApp
         }
 
 
-        public PageDetectionSettings2()
+        public PageDetectionSettings()
         {
+            projection = new ProjectionScreenActivity2(this);
             ///Codigo de preuba para probar menusettings
             //MenuSettings menuSettings = new MenuSettings();
             //menuSettings.Show();

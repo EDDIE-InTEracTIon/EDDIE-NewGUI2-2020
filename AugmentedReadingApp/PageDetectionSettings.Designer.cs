@@ -1,6 +1,6 @@
 ﻿namespace AugmentedReadingApp
 {
-    partial class PageDetectionSettings2
+    partial class PageDetectionSettings
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.PDFSelectBt = new System.Windows.Forms.Button();
             this.textBoxPathPDF = new System.Windows.Forms.TextBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -52,14 +51,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.FinalLocateY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FinalLocateX)).BeginInit();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1180, 24);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // PDFSelectBt
             // 
@@ -312,9 +303,7 @@
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.textBoxPathPDF);
             this.Controls.Add(this.PDFSelectBt);
-            this.Controls.Add(this.menuStrip1);
             this.KeyPreview = true;
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "PageDetectionSettings2";
             this.Text = "Configuración";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -329,7 +318,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Button PDFSelectBt;
         private System.Windows.Forms.TextBox textBoxPathPDF;
         public System.Windows.Forms.NumericUpDown numericUpDown1;

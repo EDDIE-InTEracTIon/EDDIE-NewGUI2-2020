@@ -15,13 +15,6 @@ namespace AugmentedReadingApp
 {
     public partial class MenuSettings : Form
     {
-        public MenuSettings()
-        {
-            InitializeComponent();
-            seleccionInteraccionPorVoz.btn_guardar.Visible = false;
-            seleccionApis.btn_guardarConfiguraciones.Visible = false;
-            //ProjectionScreenForm.Show();
-        }
         //Se Instancias los formularios con cada configuracion de cada módulo
         InteractionsSettings InteractionsForm = new InteractionsSettings();
         WebSearchServicesSettings WebSearchServicesForm = new WebSearchServicesSettings();
@@ -31,9 +24,19 @@ namespace AugmentedReadingApp
         InteractionCoordinator interactionCoordinator = new InteractionCoordinator();
         //SeleccionApis seleccionapis1 = new SeleccionApis();
         ProjectionScreen projectionScreenForm = new ProjectionScreen();
-        PageDetectionSettings2 pageDetectionSettings2 = new PageDetectionSettings2();
+        PageDetectionSettings pageDetectionSettings2 = new PageDetectionSettings();
+        ProjectionScreenActivity2 projectionScreenActivity2;
         int posY = 0;//Variables para mover el formulario con el mouse presionan el panel superior
         int posX = 0;
+        public MenuSettings()
+        {
+            InitializeComponent();
+            //projectionScreenActivity2 = new ProjectionScreenActivity2();
+            seleccionInteraccionPorVoz.btn_guardar.Visible = false;
+            seleccionApis.btn_guardarConfiguraciones.Visible = false;
+            //ProjectionScreenForm.Show();
+        }
+        
 
 
         private void MenuSettings_Load(object sender, EventArgs e)
