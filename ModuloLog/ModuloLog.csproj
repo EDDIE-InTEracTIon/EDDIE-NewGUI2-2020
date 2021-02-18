@@ -8,9 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Serilog" Version="2.10.0" />
-    <PackageReference Include="Serilog.Sinks.Async" Version="1.4.0" />
-    <PackageReference Include="Serilog.Sinks.File" Version="4.1.0" />
+    <Reference Include="Serilog">
+      <HintPath>..\..\..\Descargas\drive-download-20210218T003401Z-001\Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.Async">
+      <HintPath>..\..\..\Descargas\drive-download-20210218T003401Z-001\Serilog.Sinks.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.File">
+      <HintPath>..\..\..\Descargas\drive-download-20210218T003401Z-001\Serilog.Sinks.File.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
