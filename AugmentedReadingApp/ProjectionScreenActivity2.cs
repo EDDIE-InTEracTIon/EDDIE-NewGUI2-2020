@@ -23,6 +23,9 @@ namespace AugmentedReadingApp
 {
     public partial class ProjectionScreenActivity2 : Form
     {
+        int posY = 0;//Variable para mover el formulario con el mouse
+        int posX = 0;//Variable para mover el formulario con el mouse
+
         PageDetectionSettings incomingPageDetectionSettings;
         public int CameraNumber;
         InteractionCoordinator originalForm;
@@ -294,22 +297,25 @@ namespace AugmentedReadingApp
             incomingPageDetectionSettings.documentoSyn.SaveAnno(llx, lly, urx, ury,nPage);
             Highlight.GetRectangles(incomingPageDetectionSettings.documentoSyn.listaRectangulos);
             nPages = incomingPageDetectionSettings.documentoSyn.NPages;
-            syncButton.Text = " Sync\nPage " + nPage + "/" +nPages;
-
+            //syncPDFLabel.Text = " Sync\nPage " + nPage + "/" +nPages;
+            syncPDFLabel.Text = " Sync Page " + nPage + "/" + nPages;
+            syncPDFLabel.Visible = true;
         }
 
         private void nextPageButton_Click(object sender, EventArgs e)
         {
             nPage++;
-            if (nPage > nPages) nPage = nPages; 
-            syncButton.Text = " Sync\nPage " + nPage + "/" + nPages;
+            if (nPage > nPages) nPage = nPages;
+            //syncPDFLabel.Text = " Sync\nPage " + nPage + "/" + nPages;
+            syncPDFLabel.Text = " Sync Page " + nPage + "/" + nPages;
         }
 
         private void backPagebutton_Click(object sender, EventArgs e)
         {
             nPage--;
             if (nPage < 1) nPage = 1;
-            syncButton.Text = " Sync\nPage " + nPage + "/" + nPages;
+            //syncPDFLabel.Text = " Sync\nPage " + nPage + "/" + nPages;
+            syncPDFLabel.Text = " Sync Page " + nPage + "/" + nPages;
         }
 
         private void searchButton_Click(object sender, EventArgs e)
@@ -399,6 +405,7 @@ namespace AugmentedReadingApp
 
         private void btn_enciclopedia_Click(object sender, EventArgs e)
         {
+            panel2.Visible = true;
             buscar_Enciclopedia();
         }
 
@@ -412,7 +419,7 @@ namespace AugmentedReadingApp
 
             var textoBuscar = conceptoBuscar;
 
-            busquedasRecientes busquedaReciente = new busquedasRecientes();
+            busquedasRecientes2 busquedaReciente = new busquedasRecientes2();
             var time = DateTime.Now;
             string formatTime = time.ToString("yyyy/MM/dd-HH:mm:ss");
             busquedaReciente.terminoBuscado = textoBuscar;
@@ -447,21 +454,23 @@ namespace AugmentedReadingApp
 
         private void btn_video_Click(object sender, EventArgs e)
         {
+            panel2.Visible = true;
             buscar_Video();
         }
 
         private void buscar_Video()
         {
+            panel2.Visible = true;
             btn_leerEnciclopedia.Visible = false;
             var videoBuscar = conceptoBuscar;
             lbl_PalabraBuscada.Visible = true;
-            lbl_PalabraBuscada.Text = videoBuscar;
+            lbl_PalabraBuscada.Text = "Searching:" + videoBuscar;
 
             if (rtb_ResultadosWikipedia.Visible == true)
             {
                 rtb_ResultadosWikipedia.Visible = false;
             }
-            busquedasRecientes busquedaReciente = new busquedasRecientes();
+            busquedasRecientes2 busquedaReciente = new busquedasRecientes2();
             var time = DateTime.Now;
             string formatTime = time.ToString("yyyy/MM/dd-HH:mm:ss");
             busquedaReciente.terminoBuscado = videoBuscar;
@@ -510,7 +519,7 @@ namespace AugmentedReadingApp
             var textoTraducir = conceptoBuscar;
             var idiomaSeleccionado = SeleccionApis.idiomaSeleccionadoTraduccion;
 
-            busquedasRecientes busquedaReciente = new busquedasRecientes();
+            busquedasRecientes2 busquedaReciente = new busquedasRecientes2();
             var time = DateTime.Now;
             string formatTime = time.ToString("yyyy/MM/dd-HH:mm:ss");
             busquedaReciente.terminoBuscado = textoTraducir;
@@ -548,6 +557,8 @@ namespace AugmentedReadingApp
 
         private void diccionario()
         {
+            panel_log.Visible = false;
+            panel3.Visible = true;
             btn_cerrarVentanaIzquierda.Visible = true;
             lbl_datoBuscado_trad_def.Visible = true;
             rtb_result_definicion_traduccion.Visible = true;
@@ -560,7 +571,7 @@ namespace AugmentedReadingApp
             lbl_datoBuscado_trad_def.Text = definicionBuscada;
      
 
-            busquedasRecientes busquedaReciente = new busquedasRecientes();
+            busquedasRecientes2 busquedaReciente = new busquedasRecientes2();
             var time = DateTime.Now;
             string formatTime = time.ToString("yyyy/MM/dd-HH:mm:ss");
             busquedaReciente.terminoBuscado = definicionBuscada;
@@ -611,7 +622,7 @@ namespace AugmentedReadingApp
 
         private void buscarPorImagen() {
             btn_leerEnciclopedia.Visible = false;
-            busquedasRecientes busquedaReciente = new busquedasRecientes();
+            busquedasRecientes2 busquedaReciente = new busquedasRecientes2();
             var time = DateTime.Now;
             string formatTime = time.ToString("yyyy/MM/dd-HH:mm:ss");
             string apiUtilizada = "Imagen";
@@ -660,6 +671,7 @@ namespace AugmentedReadingApp
 
         private void btn_cerrarVentanaDerecha_Click(object sender, EventArgs e)
         {
+            panel2.Visible = false;
             cerrar_enciclopedia();
             cerrar_video();
             cerrar_imagen();
@@ -751,8 +763,16 @@ namespace AugmentedReadingApp
 
         private void btn_drawMenu_Click(object sender, EventArgs e)
         {
-            timer1.Start();
-            panel_log.Visible = true;
+            if(panel_log.Visible == false){
+                //timer1.Start();
+                panel_log.Visible = true;
+                panel_log.BringToFront();
+            }
+            else
+            {
+                panel_log.Visible = false;
+            }
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -1022,12 +1042,12 @@ namespace AugmentedReadingApp
             if (listBox1.Items.Count > 0)
             {
 
-                buttonEliminarMarcador.Enabled = true;
+                buttonEliminarMarcador2.Enabled = true;
 
             }
             if (listBox2.Items.Count > 0)
             {
-                buttonEliminarComentario.Enabled = true;
+                buttonEliminarComentario2.Enabled = true;
 
             }
         }
@@ -1573,6 +1593,41 @@ namespace AugmentedReadingApp
         private void btn_turnOFF_MouseLeave(object sender, EventArgs e)
         {
             btn_turnOFF.Image = AugmentedReadingApp.Properties.Resources.TurnOffButtonImage;
+        }
+
+        private void ProjectionScreenActivity2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                posX = e.X;
+                posY = e.Y;
+
+            }
+            else
+            {
+                Left = Left + (e.X - posX);
+                Top = Top + (e.Y - posY);
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rtb_ResultadosWikipedia_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+
         }
     }
 }
