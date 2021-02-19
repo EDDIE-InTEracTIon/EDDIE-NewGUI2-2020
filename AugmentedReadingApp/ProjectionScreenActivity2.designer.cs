@@ -41,16 +41,13 @@
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.nextPageButton = new System.Windows.Forms.Button();
             this.backPagebutton = new System.Windows.Forms.Button();
+            this.btn_leerEnciclopedia = new ModuloRastreoOcular.ButtonAlt();
             this.btn_nav_adelante = new ModuloRastreoOcular.ButtonAlt();
             this.btn_nav_atras = new ModuloRastreoOcular.ButtonAlt();
+            this.btn_cerrarVentanaDerecha = new ModuloRastreoOcular.ButtonAlt();
             this.lbl_PalabraBuscada = new System.Windows.Forms.Label();
             this.panel_navegador = new System.Windows.Forms.Panel();
             this.rtb_ResultadosWikipedia = new System.Windows.Forms.RichTextBox();
-            this.lbl_imagenes = new System.Windows.Forms.Label();
-            this.lbl_video = new System.Windows.Forms.Label();
-            this.lbl_traductor = new System.Windows.Forms.Label();
-            this.lbl_enciclopedia = new System.Windows.Forms.Label();
-            this.lbl_diccionario = new System.Windows.Forms.Label();
             this.lbl_datoBuscado_trad_def = new System.Windows.Forms.Label();
             this.rtb_result_definicion_traduccion = new System.Windows.Forms.RichTextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -66,10 +63,6 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.fl_busquedasRecientes = new System.Windows.Forms.FlowLayoutPanel();
-            this.labelFiguras = new System.Windows.Forms.Label();
-            this.labelMarker = new System.Windows.Forms.Label();
-            this.labelComments = new System.Windows.Forms.Label();
-            this.labelPDF = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonComments = new System.Windows.Forms.Button();
             this.buttonMarker = new System.Windows.Forms.Button();
@@ -82,13 +75,12 @@
             this.btn_enciclopedia = new ModuloRastreoOcular.ButtonAlt();
             this.btn_traductor = new ModuloRastreoOcular.ButtonAlt();
             this.btn_buscarWeb = new ModuloRastreoOcular.ButtonAlt();
-            this.btn_leerEnciclopedia = new ModuloRastreoOcular.ButtonAlt();
-            this.btn_cerrarVentanaDerecha = new ModuloRastreoOcular.ButtonAlt();
             this.btn_cerrarVentanaIzquierda = new ModuloRastreoOcular.ButtonAlt();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btn_leerDefinicionTraduccion = new ModuloRastreoOcular.ButtonAlt();
+            this.btn_sincronizadorPdf = new ModuloRastreoOcular.ButtonAlt();
             this.panel2.SuspendLayout();
             this.panel_navegador.SuspendLayout();
             this.panel_log.SuspendLayout();
@@ -120,13 +112,13 @@
             // textImageButton
             // 
             this.textImageButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.textImageButton.BackgroundImage = global::AugmentedReadingApp.Properties.Resources.HighlightModeButtonImage;
             this.textImageButton.FlatAppearance.BorderSize = 0;
             this.textImageButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.textImageButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.textImageButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.textImageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.textImageButton.Location = new System.Drawing.Point(788, 504);
+            this.textImageButton.Image = global::AugmentedReadingApp.Properties.Resources.HighlightModeButtonImage;
+            this.textImageButton.Location = new System.Drawing.Point(553, 510);
             this.textImageButton.Name = "textImageButton";
             this.textImageButton.Size = new System.Drawing.Size(60, 60);
             this.textImageButton.TabIndex = 91;
@@ -223,6 +215,17 @@
             this.backPagebutton.UseVisualStyleBackColor = true;
             this.backPagebutton.Click += new System.EventHandler(this.backPagebutton_Click);
             // 
+            // btn_leerEnciclopedia
+            // 
+            this.btn_leerEnciclopedia.Image = ((System.Drawing.Image)(resources.GetObject("btn_leerEnciclopedia.Image")));
+            this.btn_leerEnciclopedia.Location = new System.Drawing.Point(326, 518);
+            this.btn_leerEnciclopedia.Name = "btn_leerEnciclopedia";
+            this.btn_leerEnciclopedia.Size = new System.Drawing.Size(50, 45);
+            this.btn_leerEnciclopedia.TabIndex = 93;
+            this.btn_leerEnciclopedia.UseVisualStyleBackColor = true;
+            this.btn_leerEnciclopedia.Visible = false;
+            this.btn_leerEnciclopedia.Click += new System.EventHandler(this.btn_leerEnciclopedia_Click);
+            // 
             // btn_nav_adelante
             // 
             this.btn_nav_adelante.Location = new System.Drawing.Point(310, 460);
@@ -244,6 +247,17 @@
             this.btn_nav_atras.UseVisualStyleBackColor = true;
             this.btn_nav_atras.Visible = false;
             this.btn_nav_atras.Click += new System.EventHandler(this.btn_nav_atras_Click);
+            // 
+            // btn_cerrarVentanaDerecha
+            // 
+            this.btn_cerrarVentanaDerecha.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrarVentanaDerecha.Image")));
+            this.btn_cerrarVentanaDerecha.Location = new System.Drawing.Point(178, 518);
+            this.btn_cerrarVentanaDerecha.Name = "btn_cerrarVentanaDerecha";
+            this.btn_cerrarVentanaDerecha.Size = new System.Drawing.Size(55, 56);
+            this.btn_cerrarVentanaDerecha.TabIndex = 3;
+            this.btn_cerrarVentanaDerecha.UseVisualStyleBackColor = true;
+            this.btn_cerrarVentanaDerecha.Visible = false;
+            this.btn_cerrarVentanaDerecha.Click += new System.EventHandler(this.btn_cerrarVentanaDerecha_Click);
             // 
             // lbl_PalabraBuscada
             // 
@@ -274,61 +288,6 @@
             this.rtb_ResultadosWikipedia.TabIndex = 2;
             this.rtb_ResultadosWikipedia.Text = "";
             this.rtb_ResultadosWikipedia.Visible = false;
-            // 
-            // lbl_imagenes
-            // 
-            this.lbl_imagenes.AutoSize = true;
-            this.lbl_imagenes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_imagenes.Location = new System.Drawing.Point(722, 660);
-            this.lbl_imagenes.Name = "lbl_imagenes";
-            this.lbl_imagenes.Size = new System.Drawing.Size(68, 16);
-            this.lbl_imagenes.TabIndex = 128;
-            this.lbl_imagenes.Text = "Imágenes";
-            this.lbl_imagenes.Visible = false;
-            // 
-            // lbl_video
-            // 
-            this.lbl_video.AutoSize = true;
-            this.lbl_video.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_video.Location = new System.Drawing.Point(645, 660);
-            this.lbl_video.Name = "lbl_video";
-            this.lbl_video.Size = new System.Drawing.Size(51, 16);
-            this.lbl_video.TabIndex = 127;
-            this.lbl_video.Text = "Videos";
-            this.lbl_video.Visible = false;
-            // 
-            // lbl_traductor
-            // 
-            this.lbl_traductor.AutoSize = true;
-            this.lbl_traductor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_traductor.Location = new System.Drawing.Point(548, 660);
-            this.lbl_traductor.Name = "lbl_traductor";
-            this.lbl_traductor.Size = new System.Drawing.Size(66, 16);
-            this.lbl_traductor.TabIndex = 126;
-            this.lbl_traductor.Text = "Traductor";
-            this.lbl_traductor.Visible = false;
-            // 
-            // lbl_enciclopedia
-            // 
-            this.lbl_enciclopedia.AutoSize = true;
-            this.lbl_enciclopedia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_enciclopedia.Location = new System.Drawing.Point(450, 660);
-            this.lbl_enciclopedia.Name = "lbl_enciclopedia";
-            this.lbl_enciclopedia.Size = new System.Drawing.Size(87, 16);
-            this.lbl_enciclopedia.TabIndex = 125;
-            this.lbl_enciclopedia.Text = "Enciclopedia";
-            this.lbl_enciclopedia.Visible = false;
-            // 
-            // lbl_diccionario
-            // 
-            this.lbl_diccionario.AutoSize = true;
-            this.lbl_diccionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_diccionario.Location = new System.Drawing.Point(368, 660);
-            this.lbl_diccionario.Name = "lbl_diccionario";
-            this.lbl_diccionario.Size = new System.Drawing.Size(76, 16);
-            this.lbl_diccionario.TabIndex = 124;
-            this.lbl_diccionario.Text = "Diccionario";
-            this.lbl_diccionario.Visible = false;
             // 
             // lbl_datoBuscado_trad_def
             // 
@@ -489,43 +448,6 @@
             this.fl_busquedasRecientes.Size = new System.Drawing.Size(269, 151);
             this.fl_busquedasRecientes.TabIndex = 0;
             // 
-            // labelFiguras
-            // 
-            this.labelFiguras.AutoSize = true;
-            this.labelFiguras.Location = new System.Drawing.Point(519, 572);
-            this.labelFiguras.Name = "labelFiguras";
-            this.labelFiguras.Size = new System.Drawing.Size(41, 13);
-            this.labelFiguras.TabIndex = 135;
-            this.labelFiguras.Text = "Figuras";
-            // 
-            // labelMarker
-            // 
-            this.labelMarker.AutoSize = true;
-            this.labelMarker.Location = new System.Drawing.Point(441, 571);
-            this.labelMarker.Name = "labelMarker";
-            this.labelMarker.Size = new System.Drawing.Size(52, 13);
-            this.labelMarker.TabIndex = 136;
-            this.labelMarker.Text = "Marcador";
-            // 
-            // labelComments
-            // 
-            this.labelComments.AutoSize = true;
-            this.labelComments.Location = new System.Drawing.Point(360, 570);
-            this.labelComments.Name = "labelComments";
-            this.labelComments.Size = new System.Drawing.Size(60, 13);
-            this.labelComments.TabIndex = 137;
-            this.labelComments.Text = "Comentario";
-            // 
-            // labelPDF
-            // 
-            this.labelPDF.AutoSize = true;
-            this.labelPDF.Location = new System.Drawing.Point(680, 570);
-            this.labelPDF.Name = "labelPDF";
-            this.labelPDF.Size = new System.Drawing.Size(58, 26);
-            this.labelPDF.TabIndex = 138;
-            this.labelPDF.Text = "Contenido \r\nPDF";
-            this.labelPDF.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -545,11 +467,12 @@
             this.buttonComments.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonComments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonComments.Image = global::AugmentedReadingApp.Properties.Resources.CommentsButtonImage;
-            this.buttonComments.Location = new System.Drawing.Point(313, 406);
+            this.buttonComments.Location = new System.Drawing.Point(412, 606);
             this.buttonComments.Name = "buttonComments";
             this.buttonComments.Size = new System.Drawing.Size(81, 61);
             this.buttonComments.TabIndex = 134;
             this.buttonComments.UseVisualStyleBackColor = false;
+            this.buttonComments.Visible = false;
             this.buttonComments.Click += new System.EventHandler(this.buttonComments_Click);
             this.buttonComments.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonComments_MouseDown);
             this.buttonComments.MouseEnter += new System.EventHandler(this.buttonComments_MouseEnter);
@@ -565,11 +488,12 @@
             this.buttonMarker.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonMarker.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMarker.Image = global::AugmentedReadingApp.Properties.Resources.BookmarkButtonImage;
-            this.buttonMarker.Location = new System.Drawing.Point(412, 406);
+            this.buttonMarker.Location = new System.Drawing.Point(499, 606);
             this.buttonMarker.Name = "buttonMarker";
             this.buttonMarker.Size = new System.Drawing.Size(81, 61);
             this.buttonMarker.TabIndex = 133;
             this.buttonMarker.UseVisualStyleBackColor = false;
+            this.buttonMarker.Visible = false;
             this.buttonMarker.Click += new System.EventHandler(this.buttonMarker_Click);
             this.buttonMarker.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonMarker_MouseDown);
             this.buttonMarker.MouseEnter += new System.EventHandler(this.buttonMarker_MouseEnter);
@@ -585,12 +509,17 @@
             this.buttonPDF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonPDF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPDF.Image = global::AugmentedReadingApp.Properties.Resources.ContentButtonImage;
-            this.buttonPDF.Location = new System.Drawing.Point(678, 514);
+            this.buttonPDF.Location = new System.Drawing.Point(673, 606);
             this.buttonPDF.Name = "buttonPDF";
             this.buttonPDF.Size = new System.Drawing.Size(81, 61);
             this.buttonPDF.TabIndex = 132;
             this.buttonPDF.UseVisualStyleBackColor = false;
+            this.buttonPDF.Visible = false;
             this.buttonPDF.Click += new System.EventHandler(this.buttonPDF_Click);
+            this.buttonPDF.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonPDF_MouseDown);
+            this.buttonPDF.MouseEnter += new System.EventHandler(this.buttonPDF_MouseEnter);
+            this.buttonPDF.MouseLeave += new System.EventHandler(this.buttonPDF_MouseLeave);
+            this.buttonPDF.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonPDF_MouseUp);
             // 
             // buttonFiguresPD
             // 
@@ -601,11 +530,12 @@
             this.buttonFiguresPD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonFiguresPD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonFiguresPD.Image = global::AugmentedReadingApp.Properties.Resources.FiguresButtonnImage;
-            this.buttonFiguresPD.Location = new System.Drawing.Point(512, 406);
+            this.buttonFiguresPD.Location = new System.Drawing.Point(586, 606);
             this.buttonFiguresPD.Name = "buttonFiguresPD";
             this.buttonFiguresPD.Size = new System.Drawing.Size(81, 61);
             this.buttonFiguresPD.TabIndex = 131;
             this.buttonFiguresPD.UseVisualStyleBackColor = false;
+            this.buttonFiguresPD.Visible = false;
             this.buttonFiguresPD.Click += new System.EventHandler(this.buttonFiguresPD_Click);
             this.buttonFiguresPD.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonFiguresPD_MouseDown);
             this.buttonFiguresPD.MouseEnter += new System.EventHandler(this.buttonFiguresPD_MouseEnter);
@@ -632,13 +562,17 @@
             this.btn_diccionario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_diccionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_diccionario.Image = global::AugmentedReadingApp.Properties.Resources.DiccionarioButtonImage;
-            this.btn_diccionario.Location = new System.Drawing.Point(376, 598);
+            this.btn_diccionario.Location = new System.Drawing.Point(363, 581);
             this.btn_diccionario.Name = "btn_diccionario";
             this.btn_diccionario.Size = new System.Drawing.Size(81, 61);
             this.btn_diccionario.TabIndex = 123;
             this.btn_diccionario.UseVisualStyleBackColor = false;
             this.btn_diccionario.Visible = false;
             this.btn_diccionario.Click += new System.EventHandler(this.btn_diccionario_Click);
+            this.btn_diccionario.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_diccionario_MouseDown);
+            this.btn_diccionario.MouseEnter += new System.EventHandler(this.btn_diccionario_MouseEnter);
+            this.btn_diccionario.MouseLeave += new System.EventHandler(this.btn_diccionario_MouseLeave);
+            this.btn_diccionario.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_diccionario_MouseUp);
             // 
             // btn_imagen
             // 
@@ -649,13 +583,17 @@
             this.btn_imagen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_imagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_imagen.Image = global::AugmentedReadingApp.Properties.Resources.ImagesButtonImage;
-            this.btn_imagen.Location = new System.Drawing.Point(726, 598);
+            this.btn_imagen.Location = new System.Drawing.Point(710, 581);
             this.btn_imagen.Name = "btn_imagen";
             this.btn_imagen.Size = new System.Drawing.Size(81, 61);
             this.btn_imagen.TabIndex = 122;
             this.btn_imagen.UseVisualStyleBackColor = false;
             this.btn_imagen.Visible = false;
             this.btn_imagen.Click += new System.EventHandler(this.btn_imagen_Click);
+            this.btn_imagen.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_imagen_MouseDown);
+            this.btn_imagen.MouseEnter += new System.EventHandler(this.btn_imagen_MouseEnter);
+            this.btn_imagen.MouseLeave += new System.EventHandler(this.btn_imagen_MouseLeave);
+            this.btn_imagen.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_imagen_MouseUp);
             // 
             // btn_video
             // 
@@ -666,13 +604,17 @@
             this.btn_video.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_video.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_video.Image = global::AugmentedReadingApp.Properties.Resources.VideoButtonImage;
-            this.btn_video.Location = new System.Drawing.Point(641, 598);
+            this.btn_video.Location = new System.Drawing.Point(624, 581);
             this.btn_video.Name = "btn_video";
             this.btn_video.Size = new System.Drawing.Size(81, 61);
             this.btn_video.TabIndex = 121;
             this.btn_video.UseVisualStyleBackColor = false;
             this.btn_video.Visible = false;
             this.btn_video.Click += new System.EventHandler(this.btn_video_Click);
+            this.btn_video.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_video_MouseDown);
+            this.btn_video.MouseEnter += new System.EventHandler(this.btn_video_MouseEnter);
+            this.btn_video.MouseLeave += new System.EventHandler(this.btn_video_MouseLeave);
+            this.btn_video.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_video_MouseUp);
             // 
             // btn_enciclopedia
             // 
@@ -683,13 +625,17 @@
             this.btn_enciclopedia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_enciclopedia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_enciclopedia.Image = global::AugmentedReadingApp.Properties.Resources.EncyclopediaButtonImage;
-            this.btn_enciclopedia.Location = new System.Drawing.Point(464, 598);
+            this.btn_enciclopedia.Location = new System.Drawing.Point(450, 581);
             this.btn_enciclopedia.Name = "btn_enciclopedia";
             this.btn_enciclopedia.Size = new System.Drawing.Size(81, 61);
             this.btn_enciclopedia.TabIndex = 120;
             this.btn_enciclopedia.UseVisualStyleBackColor = false;
             this.btn_enciclopedia.Visible = false;
             this.btn_enciclopedia.Click += new System.EventHandler(this.btn_enciclopedia_Click);
+            this.btn_enciclopedia.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_enciclopedia_MouseDown);
+            this.btn_enciclopedia.MouseEnter += new System.EventHandler(this.btn_enciclopedia_MouseEnter);
+            this.btn_enciclopedia.MouseLeave += new System.EventHandler(this.btn_enciclopedia_MouseLeave);
+            this.btn_enciclopedia.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_enciclopedia_MouseUp);
             // 
             // btn_traductor
             // 
@@ -700,13 +646,17 @@
             this.btn_traductor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_traductor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_traductor.Image = global::AugmentedReadingApp.Properties.Resources.TraductorButtonImage;
-            this.btn_traductor.Location = new System.Drawing.Point(552, 598);
+            this.btn_traductor.Location = new System.Drawing.Point(537, 581);
             this.btn_traductor.Name = "btn_traductor";
             this.btn_traductor.Size = new System.Drawing.Size(81, 61);
             this.btn_traductor.TabIndex = 119;
             this.btn_traductor.UseVisualStyleBackColor = false;
             this.btn_traductor.Visible = false;
             this.btn_traductor.Click += new System.EventHandler(this.btn_traductor_Click);
+            this.btn_traductor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_traductor_MouseDown);
+            this.btn_traductor.MouseEnter += new System.EventHandler(this.btn_traductor_MouseEnter);
+            this.btn_traductor.MouseLeave += new System.EventHandler(this.btn_traductor_MouseLeave);
+            this.btn_traductor.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_traductor_MouseUp);
             // 
             // btn_buscarWeb
             // 
@@ -718,34 +668,12 @@
             this.btn_buscarWeb.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_buscarWeb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_buscarWeb.Image = global::AugmentedReadingApp.Properties.Resources.WebSearcherButtonOFFImage;
-            this.btn_buscarWeb.Location = new System.Drawing.Point(599, 441);
+            this.btn_buscarWeb.Location = new System.Drawing.Point(466, 508);
             this.btn_buscarWeb.Name = "btn_buscarWeb";
             this.btn_buscarWeb.Size = new System.Drawing.Size(81, 65);
             this.btn_buscarWeb.TabIndex = 118;
             this.btn_buscarWeb.UseVisualStyleBackColor = false;
             this.btn_buscarWeb.Click += new System.EventHandler(this.btn_buscarWeb_Click);
-            // 
-            // btn_leerEnciclopedia
-            // 
-            this.btn_leerEnciclopedia.Image = ((System.Drawing.Image)(resources.GetObject("btn_leerEnciclopedia.Image")));
-            this.btn_leerEnciclopedia.Location = new System.Drawing.Point(326, 518);
-            this.btn_leerEnciclopedia.Name = "btn_leerEnciclopedia";
-            this.btn_leerEnciclopedia.Size = new System.Drawing.Size(50, 45);
-            this.btn_leerEnciclopedia.TabIndex = 93;
-            this.btn_leerEnciclopedia.UseVisualStyleBackColor = true;
-            this.btn_leerEnciclopedia.Visible = false;
-            this.btn_leerEnciclopedia.Click += new System.EventHandler(this.btn_leerEnciclopedia_Click);
-            // 
-            // btn_cerrarVentanaDerecha
-            // 
-            this.btn_cerrarVentanaDerecha.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrarVentanaDerecha.Image")));
-            this.btn_cerrarVentanaDerecha.Location = new System.Drawing.Point(178, 518);
-            this.btn_cerrarVentanaDerecha.Name = "btn_cerrarVentanaDerecha";
-            this.btn_cerrarVentanaDerecha.Size = new System.Drawing.Size(55, 56);
-            this.btn_cerrarVentanaDerecha.TabIndex = 3;
-            this.btn_cerrarVentanaDerecha.UseVisualStyleBackColor = true;
-            this.btn_cerrarVentanaDerecha.Visible = false;
-            this.btn_cerrarVentanaDerecha.Click += new System.EventHandler(this.btn_cerrarVentanaDerecha_Click);
             // 
             // btn_cerrarVentanaIzquierda
             // 
@@ -796,27 +724,36 @@
             this.btn_leerDefinicionTraduccion.Visible = false;
             this.btn_leerDefinicionTraduccion.Click += new System.EventHandler(this.btn_leerDefinicionTraduccion_Click);
             // 
+            // btn_sincronizadorPdf
+            // 
+            this.btn_sincronizadorPdf.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.btn_sincronizadorPdf.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_sincronizadorPdf.FlatAppearance.BorderSize = 0;
+            this.btn_sincronizadorPdf.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btn_sincronizadorPdf.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_sincronizadorPdf.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_sincronizadorPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_sincronizadorPdf.Image = global::AugmentedReadingApp.Properties.Resources.SynchonizerButtonOFFImage;
+            this.btn_sincronizadorPdf.Location = new System.Drawing.Point(624, 508);
+            this.btn_sincronizadorPdf.Name = "btn_sincronizadorPdf";
+            this.btn_sincronizadorPdf.Size = new System.Drawing.Size(81, 65);
+            this.btn_sincronizadorPdf.TabIndex = 140;
+            this.btn_sincronizadorPdf.UseVisualStyleBackColor = false;
+            this.btn_sincronizadorPdf.Click += new System.EventHandler(this.btn_sincronizadorPdf_Click);
+            // 
             // ProjectionScreenActivity2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.btn_sincronizadorPdf);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.labelPDF);
-            this.Controls.Add(this.labelComments);
-            this.Controls.Add(this.labelMarker);
-            this.Controls.Add(this.labelFiguras);
             this.Controls.Add(this.buttonComments);
             this.Controls.Add(this.buttonMarker);
             this.Controls.Add(this.buttonPDF);
             this.Controls.Add(this.buttonFiguresPD);
             this.Controls.Add(this.panel_log);
             this.Controls.Add(this.btn_drawMenu);
-            this.Controls.Add(this.lbl_imagenes);
-            this.Controls.Add(this.lbl_video);
-            this.Controls.Add(this.lbl_traductor);
-            this.Controls.Add(this.lbl_enciclopedia);
-            this.Controls.Add(this.lbl_diccionario);
             this.Controls.Add(this.btn_diccionario);
             this.Controls.Add(this.btn_imagen);
             this.Controls.Add(this.btn_video);
@@ -869,11 +806,6 @@
         private System.Windows.Forms.Label lbl_PalabraBuscada;
         private System.Windows.Forms.Panel panel_navegador;
         private System.Windows.Forms.RichTextBox rtb_ResultadosWikipedia;
-        private System.Windows.Forms.Label lbl_imagenes;
-        private System.Windows.Forms.Label lbl_video;
-        private System.Windows.Forms.Label lbl_traductor;
-        private System.Windows.Forms.Label lbl_enciclopedia;
-        private System.Windows.Forms.Label lbl_diccionario;
         private ModuloRastreoOcular.ButtonAlt btn_diccionario;
         private ModuloRastreoOcular.ButtonAlt btn_imagen;
         private ModuloRastreoOcular.ButtonAlt btn_video;
@@ -901,10 +833,6 @@
         private System.Windows.Forms.Button buttonPDF;
         private System.Windows.Forms.Button buttonMarker;
         private System.Windows.Forms.Button buttonComments;
-        private System.Windows.Forms.Label labelFiguras;
-        private System.Windows.Forms.Label labelMarker;
-        private System.Windows.Forms.Label labelComments;
-        private System.Windows.Forms.Label labelPDF;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button buttonEliminarComentario;
         private System.Windows.Forms.Button buttonEliminarMarcador;
@@ -914,5 +842,6 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label2;
+        private ModuloRastreoOcular.ButtonAlt btn_sincronizadorPdf;
     }
 }

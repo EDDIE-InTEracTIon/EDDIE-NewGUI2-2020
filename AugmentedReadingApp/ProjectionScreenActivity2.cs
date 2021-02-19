@@ -96,6 +96,10 @@ namespace AugmentedReadingApp
 
         }
 
+        bool webSearchButtonActived = false;
+        bool syncronizerButtonActived = false;
+        bool capturesButtonActived = true;
+
 
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -194,17 +198,31 @@ namespace AugmentedReadingApp
             Button button = sender as Button;
             if (Highlight.HighLightOn)
             {
-
-                textImageButton.Text = "TEXT/IMAGE";
-                textImageButton.BackColor = default(Color);
+                //capturesButtonActived = false;
+                //HighlightModeImageButton.Image = AugmentedReadingApp.Properties.Resources.CaptureModeButtonImage;
+                //CapturedContentLabel.Visible = false;
+                //CapturedContentPanel.Visible = false;
+                //HighlightModeLabel.Visible = true;
+                //SyncHighlightImageButton.Visible = true;
+                textImageButton.Image = AugmentedReadingApp.Properties.Resources.HighlightModeButtonImage;
+                //textImageButton.Text = "TEXT/IMAGE";
+                //textImageButton.BackColor = default(Color);
                 Highlight.HighLightOn = false;
 
             }
             else
             {
+                //capturesButtonActived = true;
+                //HighlightModeImageButton.Image = AugmentedReadingApp.Properties.Resources.HighlightModeButtonImage;
+                //CapturedContentLabel.Visible = true;
+                //CapturedContentPanel.Visible = true;
+                //HighlightModeLabel.Visible = false;
+                //SyncHighlightImageButton.Visible = false;
+
                 //button3.BackColor = Color.Gray;
-                textImageButton.BackColor = default(Color);
-                textImageButton.Text = "HIGHLIGHT";
+                textImageButton.Image = AugmentedReadingApp.Properties.Resources.CaptureModeButtonImage;
+                //textImageButton.BackColor = default(Color);
+                //textImageButton.Text = "HIGHLIGHT";
                 Highlight.HighLightOn = true;
             }
 
@@ -301,31 +319,81 @@ namespace AugmentedReadingApp
 
         private void btn_buscarWeb_Click(object sender, EventArgs e)
         {
-            if (btn_diccionario.Visible == false || btn_enciclopedia.Visible == false || btn_traductor.Visible == false || btn_video.Visible == false || btn_imagen.Visible == false)
+            //if (btn_diccionario.Visible == false || btn_enciclopedia.Visible == false || btn_traductor.Visible == false || btn_video.Visible == false || btn_imagen.Visible == false)
+            if(webSearchButtonActived == false)
             {
+                //Se Prenden los botonesWebSearch
+                webSearchButtonActived = true;
+                btn_buscarWeb.Image = AugmentedReadingApp.Properties.Resources.WebSearcherButtonONImage;
+
                 btn_diccionario.Visible = true;
                 btn_enciclopedia.Visible = true;
                 btn_traductor.Visible = true;
                 btn_video.Visible = true;
                 btn_imagen.Visible = true;
-                lbl_diccionario.Visible = true;
-                lbl_enciclopedia.Visible = true;
-                lbl_traductor.Visible = true;
-                lbl_video.Visible = true;
-                lbl_imagenes.Visible = true;
+                //lbl_diccionario.Visible = true;
+                //lbl_enciclopedia.Visible = true;
+                //lbl_traductor.Visible = true;
+                //lbl_video.Visible = true;
+                //lbl_imagenes.Visible = true;
+                if (syncronizerButtonActived == true)
+                {
+                    //Se Apagan los botonesSyncrhonizerPDF
+                    syncronizerButtonActived = false;
+                    btn_sincronizadorPdf.Image = AugmentedReadingApp.Properties.Resources.SynchonizerButtonOFFImage;
+                    //SynchronizerButton.BackColor = Color.FromArgb(248, 245, 250);//Blanco
+                    buttonMarker.Visible = false;
+                    buttonComments.Visible = false;
+                    buttonFiguresPD.Visible = false;
+                    buttonPDF.Visible = false;
+                }
             }
             else
             {
+                webSearchButtonActived = false;
+                btn_buscarWeb.Image = AugmentedReadingApp.Properties.Resources.WebSearcherButtonOFFImage;
                 btn_diccionario.Visible = false;
                 btn_enciclopedia.Visible = false;
                 btn_traductor.Visible = false;
                 btn_video.Visible = false;
                 btn_imagen.Visible = false;
-                lbl_diccionario.Visible = false;
-                lbl_enciclopedia.Visible = false;
-                lbl_traductor.Visible = false;
-                lbl_video.Visible = false;
-                lbl_imagenes.Visible = false;
+                //lbl_diccionario.Visible = false;
+                //lbl_enciclopedia.Visible = false;
+                //lbl_traductor.Visible = false;
+                //lbl_video.Visible = false;
+                //lbl_imagenes.Visible = false;
+            }
+        }
+
+        private void btn_sincronizadorPdf_Click(object sender, EventArgs e)
+        {
+            if (syncronizerButtonActived == false)
+            {
+                syncronizerButtonActived = true;
+                btn_sincronizadorPdf.Image = AugmentedReadingApp.Properties.Resources.SynchronizerButtonONImage;
+                buttonMarker.Visible = true;
+                buttonComments.Visible = true;
+                buttonFiguresPD.Visible = true;
+                buttonPDF.Visible = true;
+                if (webSearchButtonActived == true)
+                {
+                    webSearchButtonActived = false;
+                    btn_buscarWeb.Image = AugmentedReadingApp.Properties.Resources.WebSearcherButtonOFFImage;
+                    btn_diccionario.Visible = false;
+                    btn_enciclopedia.Visible = false;
+                    btn_traductor.Visible = false;
+                    btn_imagen.Visible = false;
+                    btn_video.Visible = false;
+                }
+            }
+            else
+            {
+                syncronizerButtonActived = false;
+                btn_sincronizadorPdf.Image = AugmentedReadingApp.Properties.Resources.SynchonizerButtonOFFImage;
+                buttonMarker.Visible = false;
+                buttonComments.Visible = false;
+                buttonFiguresPD.Visible = false;
+                buttonPDF.Visible = false;
             }
         }
 
@@ -1206,6 +1274,128 @@ namespace AugmentedReadingApp
         {
             buttonFiguresPD.Image = AugmentedReadingApp.Properties.Resources.FiguresButtonnImage;
         }
+
+        private void buttonPDF_MouseDown(object sender, MouseEventArgs e)
+        {
+            buttonPDF.Image = AugmentedReadingApp.Properties.Resources.ContentButtonClicked;
+        }
+
+        private void buttonPDF_MouseUp(object sender, MouseEventArgs e)
+        {
+            buttonPDF.Image = AugmentedReadingApp.Properties.Resources.ContentButtonHover;
+        }
+
+        private void buttonPDF_MouseEnter(object sender, EventArgs e)
+        {
+            buttonPDF.Image = AugmentedReadingApp.Properties.Resources.ContentButtonHover;
+        }
+
+        private void buttonPDF_MouseLeave(object sender, EventArgs e)
+        {
+            buttonPDF.Image = AugmentedReadingApp.Properties.Resources.ContentButtonImage;
+        }
+
+        private void btn_diccionario_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_diccionario.Image = AugmentedReadingApp.Properties.Resources.DiccionarioButtonClicked;
+        }
+
+        private void btn_diccionario_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_diccionario.Image = AugmentedReadingApp.Properties.Resources.DiccionarioButtonHover;
+        }
+
+        private void btn_diccionario_MouseEnter(object sender, EventArgs e)
+        {
+            btn_diccionario.Image = AugmentedReadingApp.Properties.Resources.DiccionarioButtonHover;
+        }
+
+        private void btn_diccionario_MouseLeave(object sender, EventArgs e)
+        {
+            btn_diccionario.Image = AugmentedReadingApp.Properties.Resources.DiccionarioButtonImage;
+        }
+
+        private void btn_enciclopedia_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_enciclopedia.Image = AugmentedReadingApp.Properties.Resources.EncyclopediaButtonClicked;
+        }
+
+        private void btn_enciclopedia_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_enciclopedia.Image = AugmentedReadingApp.Properties.Resources.EncyclopediaButtonHover;
+        }
+
+        private void btn_enciclopedia_MouseEnter(object sender, EventArgs e)
+        {
+            btn_enciclopedia.Image = AugmentedReadingApp.Properties.Resources.EncyclopediaButtonHover;
+        }
+
+        private void btn_enciclopedia_MouseLeave(object sender, EventArgs e)
+        {
+            btn_enciclopedia.Image = AugmentedReadingApp.Properties.Resources.EncyclopediaButtonImage;
+        }
+
+        private void btn_traductor_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_traductor.Image = AugmentedReadingApp.Properties.Resources.TraductorButtonClicked;
+        }
+
+        private void btn_traductor_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_traductor.Image = AugmentedReadingApp.Properties.Resources.TraductorButtonHover;
+        }
+
+        private void btn_traductor_MouseEnter(object sender, EventArgs e)
+        {
+            btn_traductor.Image = AugmentedReadingApp.Properties.Resources.TraductorButtonHover;
+        }
+
+        private void btn_traductor_MouseLeave(object sender, EventArgs e)
+        {
+            btn_traductor.Image = AugmentedReadingApp.Properties.Resources.TraductorButtonImage;
+        }
+
+        private void btn_video_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_video.Image = AugmentedReadingApp.Properties.Resources.VideoButtonClicked;
+        }
+
+        private void btn_video_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_video.Image = AugmentedReadingApp.Properties.Resources.VideoButtonHover;
+        }
+
+        private void btn_video_MouseEnter(object sender, EventArgs e)
+        {
+            btn_video.Image = AugmentedReadingApp.Properties.Resources.VideoButtonHover;
+        }
+
+        private void btn_video_MouseLeave(object sender, EventArgs e)
+        {
+            btn_video.Image = AugmentedReadingApp.Properties.Resources.VideoButtonImage;
+        }
+
+        private void btn_imagen_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_imagen.Image = AugmentedReadingApp.Properties.Resources.ImagesButtonClicked;
+        }
+
+        private void btn_imagen_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_imagen.Image = AugmentedReadingApp.Properties.Resources.ImagesButtonHover;
+        }
+
+        private void btn_imagen_MouseEnter(object sender, EventArgs e)
+        {
+            btn_imagen.Image = AugmentedReadingApp.Properties.Resources.ImagesButtonHover;
+        }
+
+        private void btn_imagen_MouseLeave(object sender, EventArgs e)
+        {
+            btn_imagen.Image = AugmentedReadingApp.Properties.Resources.ImagesButtonImage;
+        }
+
+        
     }
 }
 

@@ -31,9 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProjectionScreenActivity));
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.markButton = new System.Windows.Forms.Button();
             this.textImageButton = new System.Windows.Forms.Button();
             this.syncButton = new System.Windows.Forms.Button();
@@ -44,10 +41,8 @@
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.nextPageButton = new System.Windows.Forms.Button();
             this.backPagebutton = new System.Windows.Forms.Button();
-            this.btn_leerEnciclopedia = new ModuloRastreoOcular.ButtonAlt();
             this.btn_nav_adelante = new ModuloRastreoOcular.ButtonAlt();
             this.btn_nav_atras = new ModuloRastreoOcular.ButtonAlt();
-            this.btn_cerrarVentanaDerecha = new ModuloRastreoOcular.ButtonAlt();
             this.lbl_PalabraBuscada = new System.Windows.Forms.Label();
             this.panel_navegador = new System.Windows.Forms.Panel();
             this.rtb_ResultadosWikipedia = new System.Windows.Forms.RichTextBox();
@@ -56,14 +51,6 @@
             this.lbl_traductor = new System.Windows.Forms.Label();
             this.lbl_enciclopedia = new System.Windows.Forms.Label();
             this.lbl_diccionario = new System.Windows.Forms.Label();
-            this.btn_diccionario = new ModuloRastreoOcular.ButtonAlt();
-            this.btn_imagen = new ModuloRastreoOcular.ButtonAlt();
-            this.btn_video = new ModuloRastreoOcular.ButtonAlt();
-            this.btn_enciclopedia = new ModuloRastreoOcular.ButtonAlt();
-            this.btn_traductor = new ModuloRastreoOcular.ButtonAlt();
-            this.btn_buscarWeb = new ModuloRastreoOcular.ButtonAlt();
-            this.btn_drawMenu = new ModuloRastreoOcular.ButtonAlt();
-            this.btn_cerrarVentanaIzquierda = new ModuloRastreoOcular.ButtonAlt();
             this.lbl_datoBuscado_trad_def = new System.Windows.Forms.Label();
             this.rtb_result_definicion_traduccion = new System.Windows.Forms.RichTextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -79,23 +66,36 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.fl_busquedasRecientes = new System.Windows.Forms.FlowLayoutPanel();
-            this.btn_leerDefinicionTraduccion = new ModuloRastreoOcular.ButtonAlt();
-            this.buttonFiguresPD = new System.Windows.Forms.Button();
-            this.buttonPDF = new System.Windows.Forms.Button();
-            this.buttonMarker = new System.Windows.Forms.Button();
-            this.buttonComments = new System.Windows.Forms.Button();
             this.labelFiguras = new System.Windows.Forms.Label();
             this.labelMarker = new System.Windows.Forms.Label();
             this.labelComments = new System.Windows.Forms.Label();
             this.labelPDF = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.buttonComments = new System.Windows.Forms.Button();
+            this.buttonMarker = new System.Windows.Forms.Button();
+            this.buttonPDF = new System.Windows.Forms.Button();
+            this.buttonFiguresPD = new System.Windows.Forms.Button();
+            this.btn_drawMenu = new ModuloRastreoOcular.ButtonAlt();
+            this.btn_diccionario = new ModuloRastreoOcular.ButtonAlt();
+            this.btn_imagen = new ModuloRastreoOcular.ButtonAlt();
+            this.btn_video = new ModuloRastreoOcular.ButtonAlt();
+            this.btn_enciclopedia = new ModuloRastreoOcular.ButtonAlt();
+            this.btn_traductor = new ModuloRastreoOcular.ButtonAlt();
+            this.btn_buscarWeb = new ModuloRastreoOcular.ButtonAlt();
+            this.btn_leerEnciclopedia = new ModuloRastreoOcular.ButtonAlt();
+            this.btn_cerrarVentanaDerecha = new ModuloRastreoOcular.ButtonAlt();
+            this.btn_cerrarVentanaIzquierda = new ModuloRastreoOcular.ButtonAlt();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btn_leerDefinicionTraduccion = new ModuloRastreoOcular.ButtonAlt();
             this.panel2.SuspendLayout();
             this.panel_navegador.SuspendLayout();
             this.panel_log.SuspendLayout();
             this.gb_busquedasRecientes.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -105,33 +105,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(338, 38);
             this.textBox1.TabIndex = 6;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(298, 20);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 86;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Location = new System.Drawing.Point(297, 570);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 87;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Location = new System.Drawing.Point(797, 570);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 88;
-            this.pictureBox5.TabStop = false;
             // 
             // markButton
             // 
@@ -243,17 +216,6 @@
             this.backPagebutton.UseVisualStyleBackColor = true;
             this.backPagebutton.Click += new System.EventHandler(this.backPagebutton_Click);
             // 
-            // btn_leerEnciclopedia
-            // 
-            this.btn_leerEnciclopedia.Image = ((System.Drawing.Image)(resources.GetObject("btn_leerEnciclopedia.Image")));
-            this.btn_leerEnciclopedia.Location = new System.Drawing.Point(326, 518);
-            this.btn_leerEnciclopedia.Name = "btn_leerEnciclopedia";
-            this.btn_leerEnciclopedia.Size = new System.Drawing.Size(50, 45);
-            this.btn_leerEnciclopedia.TabIndex = 93;
-            this.btn_leerEnciclopedia.UseVisualStyleBackColor = true;
-            this.btn_leerEnciclopedia.Visible = false;
-            this.btn_leerEnciclopedia.Click += new System.EventHandler(this.btn_leerEnciclopedia_Click);
-            // 
             // btn_nav_adelante
             // 
             this.btn_nav_adelante.Location = new System.Drawing.Point(310, 460);
@@ -275,17 +237,6 @@
             this.btn_nav_atras.UseVisualStyleBackColor = true;
             this.btn_nav_atras.Visible = false;
             this.btn_nav_atras.Click += new System.EventHandler(this.btn_nav_atras_Click);
-            // 
-            // btn_cerrarVentanaDerecha
-            // 
-            this.btn_cerrarVentanaDerecha.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrarVentanaDerecha.Image")));
-            this.btn_cerrarVentanaDerecha.Location = new System.Drawing.Point(178, 518);
-            this.btn_cerrarVentanaDerecha.Name = "btn_cerrarVentanaDerecha";
-            this.btn_cerrarVentanaDerecha.Size = new System.Drawing.Size(55, 56);
-            this.btn_cerrarVentanaDerecha.TabIndex = 3;
-            this.btn_cerrarVentanaDerecha.UseVisualStyleBackColor = true;
-            this.btn_cerrarVentanaDerecha.Visible = false;
-            this.btn_cerrarVentanaDerecha.Click += new System.EventHandler(this.btn_cerrarVentanaDerecha_Click);
             // 
             // lbl_PalabraBuscada
             // 
@@ -371,93 +322,6 @@
             this.lbl_diccionario.TabIndex = 124;
             this.lbl_diccionario.Text = "Diccionario";
             this.lbl_diccionario.Visible = false;
-            // 
-            // btn_diccionario
-            // 
-            this.btn_diccionario.Image = ((System.Drawing.Image)(resources.GetObject("btn_diccionario.Image")));
-            this.btn_diccionario.Location = new System.Drawing.Point(376, 598);
-            this.btn_diccionario.Name = "btn_diccionario";
-            this.btn_diccionario.Size = new System.Drawing.Size(53, 59);
-            this.btn_diccionario.TabIndex = 123;
-            this.btn_diccionario.UseVisualStyleBackColor = true;
-            this.btn_diccionario.Visible = false;
-            this.btn_diccionario.Click += new System.EventHandler(this.btn_diccionario_Click);
-            // 
-            // btn_imagen
-            // 
-            this.btn_imagen.Image = ((System.Drawing.Image)(resources.GetObject("btn_imagen.Image")));
-            this.btn_imagen.Location = new System.Drawing.Point(726, 598);
-            this.btn_imagen.Name = "btn_imagen";
-            this.btn_imagen.Size = new System.Drawing.Size(53, 59);
-            this.btn_imagen.TabIndex = 122;
-            this.btn_imagen.UseVisualStyleBackColor = true;
-            this.btn_imagen.Visible = false;
-            this.btn_imagen.Click += new System.EventHandler(this.btn_imagen_Click);
-            // 
-            // btn_video
-            // 
-            this.btn_video.Image = ((System.Drawing.Image)(resources.GetObject("btn_video.Image")));
-            this.btn_video.Location = new System.Drawing.Point(641, 598);
-            this.btn_video.Name = "btn_video";
-            this.btn_video.Size = new System.Drawing.Size(53, 59);
-            this.btn_video.TabIndex = 121;
-            this.btn_video.UseVisualStyleBackColor = true;
-            this.btn_video.Visible = false;
-            this.btn_video.Click += new System.EventHandler(this.btn_video_Click);
-            // 
-            // btn_enciclopedia
-            // 
-            this.btn_enciclopedia.Image = ((System.Drawing.Image)(resources.GetObject("btn_enciclopedia.Image")));
-            this.btn_enciclopedia.Location = new System.Drawing.Point(464, 598);
-            this.btn_enciclopedia.Name = "btn_enciclopedia";
-            this.btn_enciclopedia.Size = new System.Drawing.Size(53, 59);
-            this.btn_enciclopedia.TabIndex = 120;
-            this.btn_enciclopedia.UseVisualStyleBackColor = true;
-            this.btn_enciclopedia.Visible = false;
-            this.btn_enciclopedia.Click += new System.EventHandler(this.btn_enciclopedia_Click);
-            // 
-            // btn_traductor
-            // 
-            this.btn_traductor.Image = ((System.Drawing.Image)(resources.GetObject("btn_traductor.Image")));
-            this.btn_traductor.Location = new System.Drawing.Point(552, 598);
-            this.btn_traductor.Name = "btn_traductor";
-            this.btn_traductor.Size = new System.Drawing.Size(53, 59);
-            this.btn_traductor.TabIndex = 119;
-            this.btn_traductor.UseVisualStyleBackColor = true;
-            this.btn_traductor.Visible = false;
-            this.btn_traductor.Click += new System.EventHandler(this.btn_traductor_Click);
-            // 
-            // btn_buscarWeb
-            // 
-            this.btn_buscarWeb.Image = ((System.Drawing.Image)(resources.GetObject("btn_buscarWeb.Image")));
-            this.btn_buscarWeb.Location = new System.Drawing.Point(584, 514);
-            this.btn_buscarWeb.Name = "btn_buscarWeb";
-            this.btn_buscarWeb.Size = new System.Drawing.Size(71, 60);
-            this.btn_buscarWeb.TabIndex = 118;
-            this.btn_buscarWeb.UseVisualStyleBackColor = true;
-            this.btn_buscarWeb.Click += new System.EventHandler(this.btn_buscarWeb_Click);
-            // 
-            // btn_drawMenu
-            // 
-            this.btn_drawMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_drawMenu.Image = ((System.Drawing.Image)(resources.GetObject("btn_drawMenu.Image")));
-            this.btn_drawMenu.Location = new System.Drawing.Point(0, 0);
-            this.btn_drawMenu.Name = "btn_drawMenu";
-            this.btn_drawMenu.Size = new System.Drawing.Size(50, 50);
-            this.btn_drawMenu.TabIndex = 16;
-            this.btn_drawMenu.UseVisualStyleBackColor = true;
-            this.btn_drawMenu.Click += new System.EventHandler(this.btn_drawMenu_Click);
-            // 
-            // btn_cerrarVentanaIzquierda
-            // 
-            this.btn_cerrarVentanaIzquierda.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrarVentanaIzquierda.Image")));
-            this.btn_cerrarVentanaIzquierda.Location = new System.Drawing.Point(87, 347);
-            this.btn_cerrarVentanaIzquierda.Name = "btn_cerrarVentanaIzquierda";
-            this.btn_cerrarVentanaIzquierda.Size = new System.Drawing.Size(55, 53);
-            this.btn_cerrarVentanaIzquierda.TabIndex = 4;
-            this.btn_cerrarVentanaIzquierda.UseVisualStyleBackColor = true;
-            this.btn_cerrarVentanaIzquierda.Visible = false;
-            this.btn_cerrarVentanaIzquierda.Click += new System.EventHandler(this.btn_cerrarVentanaIzquierda_Click);
             // 
             // lbl_datoBuscado_trad_def
             // 
@@ -618,57 +482,6 @@
             this.fl_busquedasRecientes.Size = new System.Drawing.Size(269, 151);
             this.fl_busquedasRecientes.TabIndex = 0;
             // 
-            // btn_leerDefinicionTraduccion
-            // 
-            this.btn_leerDefinicionTraduccion.Image = ((System.Drawing.Image)(resources.GetObject("btn_leerDefinicionTraduccion.Image")));
-            this.btn_leerDefinicionTraduccion.Location = new System.Drawing.Point(5, 347);
-            this.btn_leerDefinicionTraduccion.Name = "btn_leerDefinicionTraduccion";
-            this.btn_leerDefinicionTraduccion.Size = new System.Drawing.Size(50, 45);
-            this.btn_leerDefinicionTraduccion.TabIndex = 130;
-            this.btn_leerDefinicionTraduccion.UseVisualStyleBackColor = true;
-            this.btn_leerDefinicionTraduccion.Visible = false;
-            this.btn_leerDefinicionTraduccion.Click += new System.EventHandler(this.btn_leerDefinicionTraduccion_Click);
-            // 
-            // buttonFiguresPD
-            // 
-            this.buttonFiguresPD.Image = ((System.Drawing.Image)(resources.GetObject("buttonFiguresPD.Image")));
-            this.buttonFiguresPD.Location = new System.Drawing.Point(512, 515);
-            this.buttonFiguresPD.Name = "buttonFiguresPD";
-            this.buttonFiguresPD.Size = new System.Drawing.Size(53, 57);
-            this.buttonFiguresPD.TabIndex = 131;
-            this.buttonFiguresPD.UseVisualStyleBackColor = true;
-            this.buttonFiguresPD.Click += new System.EventHandler(this.buttonFiguresPD_Click);
-            // 
-            // buttonPDF
-            // 
-            this.buttonPDF.Image = ((System.Drawing.Image)(resources.GetObject("buttonPDF.Image")));
-            this.buttonPDF.Location = new System.Drawing.Point(678, 514);
-            this.buttonPDF.Name = "buttonPDF";
-            this.buttonPDF.Size = new System.Drawing.Size(55, 55);
-            this.buttonPDF.TabIndex = 132;
-            this.buttonPDF.UseVisualStyleBackColor = true;
-            this.buttonPDF.Click += new System.EventHandler(this.buttonPDF_Click);
-            // 
-            // buttonMarker
-            // 
-            this.buttonMarker.Image = ((System.Drawing.Image)(resources.GetObject("buttonMarker.Image")));
-            this.buttonMarker.Location = new System.Drawing.Point(440, 515);
-            this.buttonMarker.Name = "buttonMarker";
-            this.buttonMarker.Size = new System.Drawing.Size(53, 56);
-            this.buttonMarker.TabIndex = 133;
-            this.buttonMarker.UseVisualStyleBackColor = true;
-            this.buttonMarker.Click += new System.EventHandler(this.buttonMarker_Click);
-            // 
-            // buttonComments
-            // 
-            this.buttonComments.Image = ((System.Drawing.Image)(resources.GetObject("buttonComments.Image")));
-            this.buttonComments.Location = new System.Drawing.Point(363, 514);
-            this.buttonComments.Name = "buttonComments";
-            this.buttonComments.Size = new System.Drawing.Size(53, 56);
-            this.buttonComments.TabIndex = 134;
-            this.buttonComments.UseVisualStyleBackColor = true;
-            this.buttonComments.Click += new System.EventHandler(this.buttonComments_Click);
-            // 
             // labelFiguras
             // 
             this.labelFiguras.AutoSize = true;
@@ -705,6 +518,193 @@
             this.labelPDF.TabIndex = 138;
             this.labelPDF.Text = "Contenido \r\nPDF";
             this.labelPDF.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // buttonComments
+            // 
+            this.buttonComments.Image = ((System.Drawing.Image)(resources.GetObject("buttonComments.Image")));
+            this.buttonComments.Location = new System.Drawing.Point(363, 514);
+            this.buttonComments.Name = "buttonComments";
+            this.buttonComments.Size = new System.Drawing.Size(53, 56);
+            this.buttonComments.TabIndex = 134;
+            this.buttonComments.UseVisualStyleBackColor = true;
+            this.buttonComments.Click += new System.EventHandler(this.buttonComments_Click);
+            // 
+            // buttonMarker
+            // 
+            this.buttonMarker.Image = ((System.Drawing.Image)(resources.GetObject("buttonMarker.Image")));
+            this.buttonMarker.Location = new System.Drawing.Point(440, 515);
+            this.buttonMarker.Name = "buttonMarker";
+            this.buttonMarker.Size = new System.Drawing.Size(53, 56);
+            this.buttonMarker.TabIndex = 133;
+            this.buttonMarker.UseVisualStyleBackColor = true;
+            this.buttonMarker.Click += new System.EventHandler(this.buttonMarker_Click);
+            // 
+            // buttonPDF
+            // 
+            this.buttonPDF.Image = ((System.Drawing.Image)(resources.GetObject("buttonPDF.Image")));
+            this.buttonPDF.Location = new System.Drawing.Point(678, 514);
+            this.buttonPDF.Name = "buttonPDF";
+            this.buttonPDF.Size = new System.Drawing.Size(55, 55);
+            this.buttonPDF.TabIndex = 132;
+            this.buttonPDF.UseVisualStyleBackColor = true;
+            this.buttonPDF.Click += new System.EventHandler(this.buttonPDF_Click);
+            // 
+            // buttonFiguresPD
+            // 
+            this.buttonFiguresPD.Image = ((System.Drawing.Image)(resources.GetObject("buttonFiguresPD.Image")));
+            this.buttonFiguresPD.Location = new System.Drawing.Point(512, 515);
+            this.buttonFiguresPD.Name = "buttonFiguresPD";
+            this.buttonFiguresPD.Size = new System.Drawing.Size(53, 57);
+            this.buttonFiguresPD.TabIndex = 131;
+            this.buttonFiguresPD.UseVisualStyleBackColor = true;
+            this.buttonFiguresPD.Click += new System.EventHandler(this.buttonFiguresPD_Click);
+            // 
+            // btn_drawMenu
+            // 
+            this.btn_drawMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_drawMenu.Image = ((System.Drawing.Image)(resources.GetObject("btn_drawMenu.Image")));
+            this.btn_drawMenu.Location = new System.Drawing.Point(0, 0);
+            this.btn_drawMenu.Name = "btn_drawMenu";
+            this.btn_drawMenu.Size = new System.Drawing.Size(50, 50);
+            this.btn_drawMenu.TabIndex = 16;
+            this.btn_drawMenu.UseVisualStyleBackColor = true;
+            this.btn_drawMenu.Click += new System.EventHandler(this.btn_drawMenu_Click);
+            // 
+            // btn_diccionario
+            // 
+            this.btn_diccionario.Image = ((System.Drawing.Image)(resources.GetObject("btn_diccionario.Image")));
+            this.btn_diccionario.Location = new System.Drawing.Point(376, 598);
+            this.btn_diccionario.Name = "btn_diccionario";
+            this.btn_diccionario.Size = new System.Drawing.Size(53, 59);
+            this.btn_diccionario.TabIndex = 123;
+            this.btn_diccionario.UseVisualStyleBackColor = true;
+            this.btn_diccionario.Visible = false;
+            this.btn_diccionario.Click += new System.EventHandler(this.btn_diccionario_Click);
+            // 
+            // btn_imagen
+            // 
+            this.btn_imagen.Image = ((System.Drawing.Image)(resources.GetObject("btn_imagen.Image")));
+            this.btn_imagen.Location = new System.Drawing.Point(726, 598);
+            this.btn_imagen.Name = "btn_imagen";
+            this.btn_imagen.Size = new System.Drawing.Size(53, 59);
+            this.btn_imagen.TabIndex = 122;
+            this.btn_imagen.UseVisualStyleBackColor = true;
+            this.btn_imagen.Visible = false;
+            this.btn_imagen.Click += new System.EventHandler(this.btn_imagen_Click);
+            // 
+            // btn_video
+            // 
+            this.btn_video.Image = ((System.Drawing.Image)(resources.GetObject("btn_video.Image")));
+            this.btn_video.Location = new System.Drawing.Point(641, 598);
+            this.btn_video.Name = "btn_video";
+            this.btn_video.Size = new System.Drawing.Size(53, 59);
+            this.btn_video.TabIndex = 121;
+            this.btn_video.UseVisualStyleBackColor = true;
+            this.btn_video.Visible = false;
+            this.btn_video.Click += new System.EventHandler(this.btn_video_Click);
+            // 
+            // btn_enciclopedia
+            // 
+            this.btn_enciclopedia.Image = ((System.Drawing.Image)(resources.GetObject("btn_enciclopedia.Image")));
+            this.btn_enciclopedia.Location = new System.Drawing.Point(464, 598);
+            this.btn_enciclopedia.Name = "btn_enciclopedia";
+            this.btn_enciclopedia.Size = new System.Drawing.Size(53, 59);
+            this.btn_enciclopedia.TabIndex = 120;
+            this.btn_enciclopedia.UseVisualStyleBackColor = true;
+            this.btn_enciclopedia.Visible = false;
+            this.btn_enciclopedia.Click += new System.EventHandler(this.btn_enciclopedia_Click);
+            // 
+            // btn_traductor
+            // 
+            this.btn_traductor.Image = ((System.Drawing.Image)(resources.GetObject("btn_traductor.Image")));
+            this.btn_traductor.Location = new System.Drawing.Point(552, 598);
+            this.btn_traductor.Name = "btn_traductor";
+            this.btn_traductor.Size = new System.Drawing.Size(53, 59);
+            this.btn_traductor.TabIndex = 119;
+            this.btn_traductor.UseVisualStyleBackColor = true;
+            this.btn_traductor.Visible = false;
+            this.btn_traductor.Click += new System.EventHandler(this.btn_traductor_Click);
+            // 
+            // btn_buscarWeb
+            // 
+            this.btn_buscarWeb.Image = ((System.Drawing.Image)(resources.GetObject("btn_buscarWeb.Image")));
+            this.btn_buscarWeb.Location = new System.Drawing.Point(584, 514);
+            this.btn_buscarWeb.Name = "btn_buscarWeb";
+            this.btn_buscarWeb.Size = new System.Drawing.Size(71, 60);
+            this.btn_buscarWeb.TabIndex = 118;
+            this.btn_buscarWeb.UseVisualStyleBackColor = true;
+            this.btn_buscarWeb.Click += new System.EventHandler(this.btn_buscarWeb_Click);
+            // 
+            // btn_leerEnciclopedia
+            // 
+            this.btn_leerEnciclopedia.Image = ((System.Drawing.Image)(resources.GetObject("btn_leerEnciclopedia.Image")));
+            this.btn_leerEnciclopedia.Location = new System.Drawing.Point(326, 518);
+            this.btn_leerEnciclopedia.Name = "btn_leerEnciclopedia";
+            this.btn_leerEnciclopedia.Size = new System.Drawing.Size(50, 45);
+            this.btn_leerEnciclopedia.TabIndex = 93;
+            this.btn_leerEnciclopedia.UseVisualStyleBackColor = true;
+            this.btn_leerEnciclopedia.Visible = false;
+            this.btn_leerEnciclopedia.Click += new System.EventHandler(this.btn_leerEnciclopedia_Click);
+            // 
+            // btn_cerrarVentanaDerecha
+            // 
+            this.btn_cerrarVentanaDerecha.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrarVentanaDerecha.Image")));
+            this.btn_cerrarVentanaDerecha.Location = new System.Drawing.Point(178, 518);
+            this.btn_cerrarVentanaDerecha.Name = "btn_cerrarVentanaDerecha";
+            this.btn_cerrarVentanaDerecha.Size = new System.Drawing.Size(55, 56);
+            this.btn_cerrarVentanaDerecha.TabIndex = 3;
+            this.btn_cerrarVentanaDerecha.UseVisualStyleBackColor = true;
+            this.btn_cerrarVentanaDerecha.Visible = false;
+            this.btn_cerrarVentanaDerecha.Click += new System.EventHandler(this.btn_cerrarVentanaDerecha_Click);
+            // 
+            // btn_cerrarVentanaIzquierda
+            // 
+            this.btn_cerrarVentanaIzquierda.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrarVentanaIzquierda.Image")));
+            this.btn_cerrarVentanaIzquierda.Location = new System.Drawing.Point(87, 347);
+            this.btn_cerrarVentanaIzquierda.Name = "btn_cerrarVentanaIzquierda";
+            this.btn_cerrarVentanaIzquierda.Size = new System.Drawing.Size(55, 53);
+            this.btn_cerrarVentanaIzquierda.TabIndex = 4;
+            this.btn_cerrarVentanaIzquierda.UseVisualStyleBackColor = true;
+            this.btn_cerrarVentanaIzquierda.Visible = false;
+            this.btn_cerrarVentanaIzquierda.Click += new System.EventHandler(this.btn_cerrarVentanaIzquierda_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(297, 570);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 87;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Location = new System.Drawing.Point(797, 570);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 88;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Location = new System.Drawing.Point(298, 20);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 86;
+            this.pictureBox3.TabStop = false;
+            // 
+            // btn_leerDefinicionTraduccion
+            // 
+            this.btn_leerDefinicionTraduccion.Image = ((System.Drawing.Image)(resources.GetObject("btn_leerDefinicionTraduccion.Image")));
+            this.btn_leerDefinicionTraduccion.Location = new System.Drawing.Point(5, 347);
+            this.btn_leerDefinicionTraduccion.Name = "btn_leerDefinicionTraduccion";
+            this.btn_leerDefinicionTraduccion.Size = new System.Drawing.Size(50, 45);
+            this.btn_leerDefinicionTraduccion.TabIndex = 130;
+            this.btn_leerDefinicionTraduccion.UseVisualStyleBackColor = true;
+            this.btn_leerDefinicionTraduccion.Visible = false;
+            this.btn_leerDefinicionTraduccion.Click += new System.EventHandler(this.btn_leerDefinicionTraduccion_Click);
             // 
             // ProjectionScreenActivity
             // 
@@ -747,9 +747,6 @@
             this.Text = "AR";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ProjectionScreenActivity_FormClosing);
             this.Load += new System.EventHandler(this.Form2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel_navegador.ResumeLayout(false);
@@ -758,6 +755,9 @@
             this.gb_busquedasRecientes.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

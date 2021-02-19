@@ -117,19 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btn_drawMenu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAAJ5JREFUaEPtlkEKwzAMBH1qf98S6Dtb8oJk9xpkN6dIDjMwtwhkg8M0AACAO/GU
-        i/zJrZir9G4P2cUfRMOV9I5dKt78Ue/YZfoDvGU0VMmX7OIH4kN8ZTScqW/eyw8fMQBALm6hj3R3RL+y
-        TE+1kJePhis5bKGKN390mBLTH2CGnP7bQj5ExSqlhQBgAmihC6SFsqWFsqSFAADgbrS2A9w92blxQrMK
-        AAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="btn_leerEnciclopedia.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
@@ -172,6 +160,18 @@
         ol6uGb9PeAP5CEyS8kQAjWQfBoCxT4gLu/CayCK/T0QSJpZ7lkHW+m2tXAfGTlHPFc33duiIfDtulhHO
         iBGpFcDHwcTHLM4vXdYAxP8ng+fMJwzFo04gP4A7dlvfQiN5U2MrC8pp+XkrDMWNYg0A++UB0mQEbFBn
         GfMVsLZrQcNZF/+3zfTUzM41Ye1rUANQPT3/AyN+hc4kLK68AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="btn_drawMenu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAAJ5JREFUaEPtlkEKwzAMBH1qf98S6Dtb8oJk9xpkN6dIDjMwtwhkg8M0AACAO/GU
+        i/zJrZir9G4P2cUfRMOV9I5dKt78Ue/YZfoDvGU0VMmX7OIH4kN8ZTScqW/eyw8fMQBALm6hj3R3RL+y
+        TE+1kJePhis5bKGKN390mBLTH2CGnP7bQj5ExSqlhQBgAmihC6SFsqWFsqSFAADgbrS2A9w92blxQrMK
+        AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="btn_cerrarVentanaIzquierda.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
