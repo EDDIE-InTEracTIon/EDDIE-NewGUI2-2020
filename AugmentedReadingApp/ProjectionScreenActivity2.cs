@@ -1395,7 +1395,185 @@ namespace AugmentedReadingApp
             btn_imagen.Image = AugmentedReadingApp.Properties.Resources.ImagesButtonImage;
         }
 
-        
+        private void btn_nav_atras_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_nav_atras.Image = AugmentedReadingApp.Properties.Resources.LeftArrowButtonClicked;
+        }
+
+        private void btn_nav_atras_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_nav_atras.Image = AugmentedReadingApp.Properties.Resources.LeftArrowButtonHover;
+        }
+
+        private void btn_nav_atras_MouseEnter(object sender, EventArgs e)
+        {
+            btn_nav_atras.Image = AugmentedReadingApp.Properties.Resources.LeftArrowButtonHover;
+        }
+
+        private void btn_nav_atras_MouseLeave(object sender, EventArgs e)
+        {
+            btn_nav_atras.Image = AugmentedReadingApp.Properties.Resources.LeftArrowButtonImage;
+        }
+
+        private void btn_nav_adelante_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_nav_adelante.Image = AugmentedReadingApp.Properties.Resources.RightArrowButtonClicked; 
+        }
+
+        private void btn_nav_adelante_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_nav_adelante.Image = AugmentedReadingApp.Properties.Resources.RightArrowButtonHover;
+        }
+
+        private void btn_nav_adelante_MouseEnter(object sender, EventArgs e)
+        {
+            btn_nav_adelante.Image = AugmentedReadingApp.Properties.Resources.RightArrowButtonHover;
+        }
+
+        private void btn_nav_adelante_MouseLeave(object sender, EventArgs e)
+        {
+            btn_nav_adelante.Image = AugmentedReadingApp.Properties.Resources.RightArrowButtonImage;
+        }
+
+        private void btn_leerEnciclopedia_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_leerEnciclopedia.Image = AugmentedReadingApp.Properties.Resources.ReadButtonClicked;
+        }
+
+        private void btn_leerEnciclopedia_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_leerEnciclopedia.Image = AugmentedReadingApp.Properties.Resources.ReadButtonHover;
+        }
+
+        private void btn_leerEnciclopedia_MouseEnter(object sender, EventArgs e)
+        {
+            btn_leerEnciclopedia.Image = AugmentedReadingApp.Properties.Resources.ReadButtonHover;
+        }
+
+        private void btn_leerEnciclopedia_MouseLeave(object sender, EventArgs e)
+        {
+            btn_leerEnciclopedia.Image = AugmentedReadingApp.Properties.Resources.ReadButtonImage;
+        }
+
+        private void btn_cerrarVentanaDerecha_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_cerrarVentanaDerecha.Image = AugmentedReadingApp.Properties.Resources.XButtonImageClicked;
+        }
+
+        private void btn_cerrarVentanaDerecha_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_cerrarVentanaDerecha.Image = AugmentedReadingApp.Properties.Resources.XButtonImageHover;
+        }
+
+        private void btn_cerrarVentanaDerecha_MouseEnter(object sender, EventArgs e)
+        {
+            btn_cerrarVentanaDerecha.Image = AugmentedReadingApp.Properties.Resources.XButtonImageHover;
+        }
+
+        private void btn_cerrarVentanaDerecha_MouseLeave(object sender, EventArgs e)
+        {
+            btn_cerrarVentanaDerecha.Image = AugmentedReadingApp.Properties.Resources.XButtonImage;
+        }
+
+        private void btn_cerrarVentanaIzquierda_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_cerrarVentanaIzquierda.Image = AugmentedReadingApp.Properties.Resources.XButtonImageClicked;
+        }
+
+        private void btn_cerrarVentanaIzquierda_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_cerrarVentanaIzquierda.Image = AugmentedReadingApp.Properties.Resources.XButtonImageHover;
+        }
+
+        private void btn_cerrarVentanaIzquierda_MouseEnter(object sender, EventArgs e)
+        {
+            btn_cerrarVentanaIzquierda.Image = AugmentedReadingApp.Properties.Resources.XButtonImageHover;
+        }
+
+        private void btn_cerrarVentanaIzquierda_MouseLeave(object sender, EventArgs e)
+        {
+            btn_cerrarVentanaIzquierda.Image = AugmentedReadingApp.Properties.Resources.XButtonImage;
+        }
+
+        private void btn_leerDefinicionTraduccion_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_leerDefinicionTraduccion.Image = AugmentedReadingApp.Properties.Resources.ReadButtonClicked;
+        }
+
+        private void btn_leerDefinicionTraduccion_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_leerDefinicionTraduccion.Image = AugmentedReadingApp.Properties.Resources.ReadButtonHover;
+        }
+
+        private void btn_leerDefinicionTraduccion_MouseEnter(object sender, EventArgs e)
+        {
+            btn_leerDefinicionTraduccion.Image = AugmentedReadingApp.Properties.Resources.ReadButtonHover;
+        }
+
+        private void btn_leerDefinicionTraduccion_MouseLeave(object sender, EventArgs e)
+        {
+            btn_leerDefinicionTraduccion.Image = AugmentedReadingApp.Properties.Resources.ReadButtonImage;
+        }
+
+        private void btn_drawMenu_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_drawMenu.Image = AugmentedReadingApp.Properties.Resources.HistoryButtonClicked;
+        }
+
+        private void btn_drawMenu_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_drawMenu.Image = AugmentedReadingApp.Properties.Resources.HistoryButtonHover;
+        }
+
+        private void btn_drawMenu_MouseEnter(object sender, EventArgs e)
+        {
+            btn_drawMenu.Image = AugmentedReadingApp.Properties.Resources.HistoryButtonHover;
+        }
+
+        private void btn_drawMenu_MouseLeave(object sender, EventArgs e)
+        {
+            btn_drawMenu.Image = AugmentedReadingApp.Properties.Resources.HistoryButtonImage;
+        }
+
+        private void syncButton_MouseDown(object sender, MouseEventArgs e)
+        {
+            syncButton.Image = AugmentedReadingApp.Properties.Resources.SyncHighlightsButtonClicked;
+        }
+
+        private void syncButton_MouseUp(object sender, MouseEventArgs e)
+        {
+            syncButton.Image = AugmentedReadingApp.Properties.Resources.SyncHighlightsButtonHover;
+        }
+
+        private void syncButton_MouseEnter(object sender, EventArgs e)
+        {
+            syncButton.Image = AugmentedReadingApp.Properties.Resources.SyncHighlightsButtonHover;
+        }
+
+        private void syncButton_MouseLeave(object sender, EventArgs e)
+        {
+            syncButton.Image = AugmentedReadingApp.Properties.Resources.SyncHighlightsButtonImage;
+        }
+
+        private void btn_turnOFF_MouseDown(object sender, MouseEventArgs e)
+        {
+            btn_turnOFF.Image = AugmentedReadingApp.Properties.Resources.TurnOffButtonClicked;
+        }
+
+        private void btn_turnOFF_MouseUp(object sender, MouseEventArgs e)
+        {
+            btn_turnOFF.Image = AugmentedReadingApp.Properties.Resources.TurnOffButtonHover;
+        }
+
+        private void btn_turnOFF_MouseEnter(object sender, EventArgs e)
+        {
+            btn_turnOFF.Image = AugmentedReadingApp.Properties.Resources.TurnOffButtonHover;
+        }
+
+        private void btn_turnOFF_MouseLeave(object sender, EventArgs e)
+        {
+            btn_turnOFF.Image = AugmentedReadingApp.Properties.Resources.TurnOffButtonImage;
+        }
     }
 }
 
