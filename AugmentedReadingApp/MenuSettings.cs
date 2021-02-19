@@ -22,6 +22,7 @@ namespace AugmentedReadingApp
         SeleccionApis seleccionApis = new SeleccionApis();
         EyeTrackingConfiguration eyeTrackingConfig = new EyeTrackingConfiguration();
         TextRecognitionSettings textRecognitionSettings = new TextRecognitionSettings();
+        GestureRecognitionSettings gestureRecognitionSettings = new GestureRecognitionSettings();
         //InteractionCoordinator interactionCoordinator = new InteractionCoordinator();
         //SeleccionApis seleccionapis1 = new SeleccionApis();
         ProjectionScreen projectionScreenForm = new ProjectionScreen();
@@ -162,6 +163,7 @@ namespace AugmentedReadingApp
         {
             changeAllToLightFont();
             GestureRecognitionButton.Font = new Font(GestureRecognitionButton.Font, FontStyle.Bold);
+            AbrirFormEnPanel(gestureRecognitionSettings);
         }
         private void PageDetectionButton_Click(object sender, EventArgs e)
         {
