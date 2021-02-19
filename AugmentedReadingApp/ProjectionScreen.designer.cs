@@ -46,12 +46,12 @@ namespace AugmentedReadingApp
             this.RightPanelServiceLabel = new System.Windows.Forms.Label();
             this.RightPanelSearchingLabel = new System.Windows.Forms.Label();
             this.RightPanelTittleLabel = new System.Windows.Forms.Label();
-            this.HighlightModeImageButton = new System.Windows.Forms.Button();
-            this.WebSearcherImageButton = new System.Windows.Forms.Button();
-            this.SynchronizerImageButton = new System.Windows.Forms.Button();
             this.XRightPanelImageButton = new System.Windows.Forms.Button();
             this.RightArrowImageButton = new System.Windows.Forms.Button();
             this.LeftArrowImageButton = new System.Windows.Forms.Button();
+            this.HighlightModeImageButton = new System.Windows.Forms.Button();
+            this.WebSearcherImageButton = new System.Windows.Forms.Button();
+            this.SynchronizerImageButton = new System.Windows.Forms.Button();
             this.HistoryImageButton = new System.Windows.Forms.Button();
             this.TurnOffImageButton = new System.Windows.Forms.Button();
             this.ContentImageButton = new System.Windows.Forms.Button();
@@ -197,58 +197,6 @@ namespace AugmentedReadingApp
             this.RightPanelTittleLabel.TabIndex = 28;
             this.RightPanelTittleLabel.Text = "Tittle";
             // 
-            // HighlightModeImageButton
-            // 
-            this.HighlightModeImageButton.FlatAppearance.BorderSize = 0;
-            this.HighlightModeImageButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.HighlightModeImageButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.HighlightModeImageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HighlightModeImageButton.Image = global::AugmentedReadingApp.Properties.Resources.HighlightModeButtonImage;
-            this.HighlightModeImageButton.Location = new System.Drawing.Point(575, 518);
-            this.HighlightModeImageButton.Name = "HighlightModeImageButton";
-            this.HighlightModeImageButton.Size = new System.Drawing.Size(60, 60);
-            this.HighlightModeImageButton.TabIndex = 48;
-            this.HighlightModeImageButton.UseVisualStyleBackColor = true;
-            this.HighlightModeImageButton.Click += new System.EventHandler(this.HighlightModeImageButton_Click);
-            this.HighlightModeImageButton.MouseEnter += new System.EventHandler(this.HighlightModeImageButton_MouseEnter);
-            this.HighlightModeImageButton.MouseLeave += new System.EventHandler(this.HighlightModeImageButton_MouseLeave);
-            // 
-            // WebSearcherImageButton
-            // 
-            this.WebSearcherImageButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.WebSearcherImageButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.WebSearcherImageButton.FlatAppearance.BorderSize = 0;
-            this.WebSearcherImageButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.WebSearcherImageButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.WebSearcherImageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.WebSearcherImageButton.Image = global::AugmentedReadingApp.Properties.Resources.WebSearcherButtonOFFImage;
-            this.WebSearcherImageButton.Location = new System.Drawing.Point(660, 515);
-            this.WebSearcherImageButton.Name = "WebSearcherImageButton";
-            this.WebSearcherImageButton.Size = new System.Drawing.Size(81, 65);
-            this.WebSearcherImageButton.TabIndex = 47;
-            this.WebSearcherImageButton.UseVisualStyleBackColor = false;
-            this.WebSearcherImageButton.Click += new System.EventHandler(this.WebSearcherImageButton_Click);
-            this.WebSearcherImageButton.MouseEnter += new System.EventHandler(this.WebSearcherImageButton_MouseEnter);
-            this.WebSearcherImageButton.MouseLeave += new System.EventHandler(this.WebSearcherImageButton_MouseLeave);
-            // 
-            // SynchronizerImageButton
-            // 
-            this.SynchronizerImageButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.SynchronizerImageButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SynchronizerImageButton.FlatAppearance.BorderSize = 0;
-            this.SynchronizerImageButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.SynchronizerImageButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.SynchronizerImageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SynchronizerImageButton.Image = global::AugmentedReadingApp.Properties.Resources.SynchonizerButtonOFFImage;
-            this.SynchronizerImageButton.Location = new System.Drawing.Point(470, 515);
-            this.SynchronizerImageButton.Name = "SynchronizerImageButton";
-            this.SynchronizerImageButton.Size = new System.Drawing.Size(81, 65);
-            this.SynchronizerImageButton.TabIndex = 45;
-            this.SynchronizerImageButton.UseVisualStyleBackColor = false;
-            this.SynchronizerImageButton.Click += new System.EventHandler(this.SynchronizerImageButton_Click);
-            this.SynchronizerImageButton.MouseEnter += new System.EventHandler(this.SynchronizerImageButton_MouseEnter);
-            this.SynchronizerImageButton.MouseLeave += new System.EventHandler(this.SynchronizerImageButton_MouseLeave);
-            // 
             // XRightPanelImageButton
             // 
             this.XRightPanelImageButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
@@ -301,10 +249,63 @@ namespace AugmentedReadingApp
             this.LeftArrowImageButton.Size = new System.Drawing.Size(81, 61);
             this.LeftArrowImageButton.TabIndex = 42;
             this.LeftArrowImageButton.UseVisualStyleBackColor = false;
+            this.LeftArrowImageButton.Click += new System.EventHandler(this.LeftArrowImageButton_Click);
             this.LeftArrowImageButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LeftArrowImageButton_MouseDown);
             this.LeftArrowImageButton.MouseEnter += new System.EventHandler(this.LeftArrowImageButton_MouseEnter);
             this.LeftArrowImageButton.MouseLeave += new System.EventHandler(this.LeftArrowImageButton_MouseLeave);
             this.LeftArrowImageButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.LeftArrowImageButton_MouseUp);
+            // 
+            // HighlightModeImageButton
+            // 
+            this.HighlightModeImageButton.FlatAppearance.BorderSize = 0;
+            this.HighlightModeImageButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.HighlightModeImageButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.HighlightModeImageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HighlightModeImageButton.Image = global::AugmentedReadingApp.Properties.Resources.HighlightModeButtonImage;
+            this.HighlightModeImageButton.Location = new System.Drawing.Point(575, 518);
+            this.HighlightModeImageButton.Name = "HighlightModeImageButton";
+            this.HighlightModeImageButton.Size = new System.Drawing.Size(60, 60);
+            this.HighlightModeImageButton.TabIndex = 48;
+            this.HighlightModeImageButton.UseVisualStyleBackColor = true;
+            this.HighlightModeImageButton.Click += new System.EventHandler(this.HighlightModeImageButton_Click);
+            this.HighlightModeImageButton.MouseEnter += new System.EventHandler(this.HighlightModeImageButton_MouseEnter);
+            this.HighlightModeImageButton.MouseLeave += new System.EventHandler(this.HighlightModeImageButton_MouseLeave);
+            // 
+            // WebSearcherImageButton
+            // 
+            this.WebSearcherImageButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.WebSearcherImageButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.WebSearcherImageButton.FlatAppearance.BorderSize = 0;
+            this.WebSearcherImageButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.WebSearcherImageButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.WebSearcherImageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.WebSearcherImageButton.Image = global::AugmentedReadingApp.Properties.Resources.WebSearcherButtonOFFImage;
+            this.WebSearcherImageButton.Location = new System.Drawing.Point(660, 515);
+            this.WebSearcherImageButton.Name = "WebSearcherImageButton";
+            this.WebSearcherImageButton.Size = new System.Drawing.Size(81, 65);
+            this.WebSearcherImageButton.TabIndex = 47;
+            this.WebSearcherImageButton.UseVisualStyleBackColor = false;
+            this.WebSearcherImageButton.Click += new System.EventHandler(this.WebSearcherImageButton_Click);
+            this.WebSearcherImageButton.MouseEnter += new System.EventHandler(this.WebSearcherImageButton_MouseEnter);
+            this.WebSearcherImageButton.MouseLeave += new System.EventHandler(this.WebSearcherImageButton_MouseLeave);
+            // 
+            // SynchronizerImageButton
+            // 
+            this.SynchronizerImageButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.SynchronizerImageButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SynchronizerImageButton.FlatAppearance.BorderSize = 0;
+            this.SynchronizerImageButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.SynchronizerImageButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.SynchronizerImageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SynchronizerImageButton.Image = global::AugmentedReadingApp.Properties.Resources.SynchonizerButtonOFFImage;
+            this.SynchronizerImageButton.Location = new System.Drawing.Point(470, 515);
+            this.SynchronizerImageButton.Name = "SynchronizerImageButton";
+            this.SynchronizerImageButton.Size = new System.Drawing.Size(81, 65);
+            this.SynchronizerImageButton.TabIndex = 45;
+            this.SynchronizerImageButton.UseVisualStyleBackColor = false;
+            this.SynchronizerImageButton.Click += new System.EventHandler(this.SynchronizerImageButton_Click);
+            this.SynchronizerImageButton.MouseEnter += new System.EventHandler(this.SynchronizerImageButton_MouseEnter);
+            this.SynchronizerImageButton.MouseLeave += new System.EventHandler(this.SynchronizerImageButton_MouseLeave);
             // 
             // HistoryImageButton
             // 

@@ -778,5 +778,10 @@ namespace AugmentedReadingApp
         {
             SyncHighlightImageButton.Image = AugmentedReadingApp.Properties.Resources.SyncHighlightsButtonImage;
         }
+
+        private void LeftArrowImageButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

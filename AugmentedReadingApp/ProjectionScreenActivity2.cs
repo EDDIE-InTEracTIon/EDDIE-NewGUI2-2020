@@ -1146,6 +1146,66 @@ namespace AugmentedReadingApp
                 MessageBox.Show("Seleccione PDF");
             }
         }
+
+        private void buttonComments_MouseDown(object sender, MouseEventArgs e)
+        {
+            buttonComments.Image = AugmentedReadingApp.Properties.Resources.CommentsButtonClicked;
+        }
+
+        private void buttonComments_MouseUp(object sender, MouseEventArgs e)
+        {
+            buttonComments.Image = AugmentedReadingApp.Properties.Resources.CommentsButtonHover;
+        }
+
+        private void buttonComments_MouseEnter(object sender, EventArgs e)
+        {
+            buttonComments.Image = AugmentedReadingApp.Properties.Resources.CommentsButtonHover;
+        }
+
+        private void buttonComments_MouseLeave(object sender, EventArgs e)
+        {
+            buttonComments.Image = AugmentedReadingApp.Properties.Resources.CommentsButtonImage;
+        }
+        
+        private void buttonMarker_MouseDown(object sender, MouseEventArgs e)
+        {
+            buttonMarker.Image = AugmentedReadingApp.Properties.Resources.BookmarkButtonClicked;
+        }
+
+        private void buttonMarker_MouseUp(object sender, MouseEventArgs e)
+        {
+            buttonMarker.Image = AugmentedReadingApp.Properties.Resources.BookmarkButtonHover;
+        }
+
+        private void buttonMarker_MouseEnter(object sender, EventArgs e)
+        {
+            buttonMarker.Image = AugmentedReadingApp.Properties.Resources.BookmarkButtonHover;
+        }
+
+        private void buttonMarker_MouseLeave(object sender, EventArgs e)
+        {
+            buttonMarker.Image = AugmentedReadingApp.Properties.Resources.BookmarkButtonImage;
+        }
+
+        private void buttonFiguresPD_MouseDown(object sender, MouseEventArgs e)
+        {
+            buttonFiguresPD.Image = AugmentedReadingApp.Properties.Resources.FiguresButtonnClicked;
+        }
+
+        private void buttonFiguresPD_MouseUp(object sender, MouseEventArgs e)
+        {
+            buttonFiguresPD.Image = AugmentedReadingApp.Properties.Resources.FiguresButtonnHover;
+        }
+
+        private void buttonFiguresPD_MouseEnter(object sender, EventArgs e)
+        {
+            buttonFiguresPD.Image = AugmentedReadingApp.Properties.Resources.FiguresButtonnHover;
+        }
+
+        private void buttonFiguresPD_MouseLeave(object sender, EventArgs e)
+        {
+            buttonFiguresPD.Image = AugmentedReadingApp.Properties.Resources.FiguresButtonnImage;
+        }
     }
 }
 
