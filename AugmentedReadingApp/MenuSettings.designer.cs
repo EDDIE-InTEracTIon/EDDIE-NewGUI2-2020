@@ -76,6 +76,7 @@
             this.ContenidoNavBar.Controls.Add(this.WebSearchServicesButton);
             this.ContenidoNavBar.Controls.Add(this.InteractionsButton);
             this.ContenidoNavBar.Controls.Add(this.SettingsText);
+            this.ContenidoNavBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
             this.ContenidoNavBar.Location = new System.Drawing.Point(32, 24);
             this.ContenidoNavBar.Name = "ContenidoNavBar";
             this.ContenidoNavBar.Size = new System.Drawing.Size(210, 331);
@@ -88,6 +89,7 @@
             this.PageDetectionButton.FlatAppearance.BorderSize = 0;
             this.PageDetectionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PageDetectionButton.Font = new System.Drawing.Font("IBM Plex Sans Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PageDetectionButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
             this.PageDetectionButton.Location = new System.Drawing.Point(0, 282);
             this.PageDetectionButton.Name = "PageDetectionButton";
             this.PageDetectionButton.Size = new System.Drawing.Size(210, 39);
@@ -103,6 +105,7 @@
             this.TextRecognitiionButton.FlatAppearance.BorderSize = 0;
             this.TextRecognitiionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TextRecognitiionButton.Font = new System.Drawing.Font("IBM Plex Sans Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextRecognitiionButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
             this.TextRecognitiionButton.Location = new System.Drawing.Point(0, 194);
             this.TextRecognitiionButton.Name = "TextRecognitiionButton";
             this.TextRecognitiionButton.Size = new System.Drawing.Size(210, 39);
@@ -118,6 +121,7 @@
             this.GestureRecognitionButton.FlatAppearance.BorderSize = 0;
             this.GestureRecognitionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GestureRecognitionButton.Font = new System.Drawing.Font("IBM Plex Sans Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GestureRecognitionButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
             this.GestureRecognitionButton.Location = new System.Drawing.Point(0, 238);
             this.GestureRecognitionButton.Name = "GestureRecognitionButton";
             this.GestureRecognitionButton.Size = new System.Drawing.Size(210, 39);
@@ -133,6 +137,7 @@
             this.EyeTrackingButton.FlatAppearance.BorderSize = 0;
             this.EyeTrackingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EyeTrackingButton.Font = new System.Drawing.Font("IBM Plex Sans Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EyeTrackingButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
             this.EyeTrackingButton.Location = new System.Drawing.Point(0, 150);
             this.EyeTrackingButton.Name = "EyeTrackingButton";
             this.EyeTrackingButton.Size = new System.Drawing.Size(210, 39);
@@ -148,6 +153,7 @@
             this.WebSearchServicesButton.FlatAppearance.BorderSize = 0;
             this.WebSearchServicesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.WebSearchServicesButton.Font = new System.Drawing.Font("IBM Plex Sans Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WebSearchServicesButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
             this.WebSearchServicesButton.Location = new System.Drawing.Point(0, 108);
             this.WebSearchServicesButton.Name = "WebSearchServicesButton";
             this.WebSearchServicesButton.Size = new System.Drawing.Size(210, 39);
@@ -163,6 +169,7 @@
             this.InteractionsButton.FlatAppearance.BorderSize = 0;
             this.InteractionsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.InteractionsButton.Font = new System.Drawing.Font("IBM Plex Sans Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InteractionsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
             this.InteractionsButton.Location = new System.Drawing.Point(0, 62);
             this.InteractionsButton.Name = "InteractionsButton";
             this.InteractionsButton.Size = new System.Drawing.Size(210, 39);
@@ -177,6 +184,7 @@
             this.SettingsText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.SettingsText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SettingsText.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 16.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
             this.SettingsText.Location = new System.Drawing.Point(0, 0);
             this.SettingsText.Name = "SettingsText";
             this.SettingsText.Size = new System.Drawing.Size(210, 30);

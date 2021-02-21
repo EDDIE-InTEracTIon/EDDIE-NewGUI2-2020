@@ -169,6 +169,12 @@
     <Compile Include="GestureRecognitionSettings.Designer.cs">
       <DependentUpon>GestureRecognitionSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="SeleccionInteraccionPorVoz2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeleccionInteraccionPorVoz2.Designer.cs">
+      <DependentUpon>SeleccionInteraccionPorVoz2.cs</DependentUpon>
+    </Compile>
     <Compile Include="TextRecognitionSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,6 +257,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GestureRecognitionSettings.resx">
       <DependentUpon>GestureRecognitionSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeleccionInteraccionPorVoz2.resx">
+      <DependentUpon>SeleccionInteraccionPorVoz2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TextRecognitionSettings.resx">
       <DependentUpon>TextRecognitionSettings.cs</DependentUpon>

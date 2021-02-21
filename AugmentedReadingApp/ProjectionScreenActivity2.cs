@@ -109,8 +109,8 @@ namespace AugmentedReadingApp
             //PageDetectionSettings incomingPageDetectionSettings = pageDetectionSettings;
             // En esta parte se comprueba si el usuario ha seleccionado//
             // La opción de interacción a través de la voz o no//
-            var opcionInteraccionSeleccionada = SeleccionInteraccionPorVoz.activarBusquedaVoz;
-            var opcionMostrarBotonesSeleccionada = SeleccionInteraccionPorVoz.mostrarBotonesconVoz;
+            var opcionInteraccionSeleccionada = SeleccionInteraccionPorVoz2.activarBusquedaVoz;
+            var opcionMostrarBotonesSeleccionada = SeleccionInteraccionPorVoz2.mostrarBotonesconVoz;
 
             if (opcionInteraccionSeleccionada == "Si" && opcionMostrarBotonesSeleccionada == "Si")
             {

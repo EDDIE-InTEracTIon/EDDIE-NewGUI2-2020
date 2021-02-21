@@ -18,7 +18,7 @@ namespace AugmentedReadingApp
         //Se Instancias los formularios con cada configuracion de cada módulo
         InteractionsSettings InteractionsForm = new InteractionsSettings();
         WebSearchServicesSettings WebSearchServicesForm = new WebSearchServicesSettings();
-        SeleccionInteraccionPorVoz seleccionInteraccionPorVoz = new SeleccionInteraccionPorVoz();
+        SeleccionInteraccionPorVoz2 seleccionInteraccionPorVoz = new SeleccionInteraccionPorVoz2();
         SeleccionApis seleccionApis = new SeleccionApis();
         EyeTrackingConfiguration eyeTrackingConfig = new EyeTrackingConfiguration();
         TextRecognitionSettings textRecognitionSettings = new TextRecognitionSettings();
@@ -37,7 +37,7 @@ namespace AugmentedReadingApp
             projectionScreenActivity2 = new ProjectionScreenActivity2(pageDetectionSettings);
             
             //projectionScreenActivity2 = new ProjectionScreenActivity2();
-            seleccionInteraccionPorVoz.btn_guardar.Visible = false;
+            //seleccionInteraccionPorVoz.btn_guardar.Visible = false;
             seleccionApis.btn_guardarConfiguraciones.Visible = false;
             //ProjectionScreenForm.Show();
         }
@@ -231,21 +231,21 @@ namespace AugmentedReadingApp
             //Codigo de guardado de SeleccionInteraccionPorVoz
             if (seleccionInteraccionPorVoz.rbtn_voz_si.Checked && seleccionInteraccionPorVoz.rbtn_Si_botones.Checked)
             {
-                SeleccionInteraccionPorVoz.activarBusquedaVoz = seleccionInteraccionPorVoz.rbtn_voz_si.Text;
-                SeleccionInteraccionPorVoz.mostrarBotonesconVoz = seleccionInteraccionPorVoz.rbtn_Si_botones.Text;
+                SeleccionInteraccionPorVoz2.activarBusquedaVoz = seleccionInteraccionPorVoz.rbtn_voz_si.Text;
+                SeleccionInteraccionPorVoz2.mostrarBotonesconVoz = seleccionInteraccionPorVoz.rbtn_Si_botones.Text;
                 MessageBox.Show("Ha seleccionado la opción de interacción por voz");
                 //this.Hide();
             }
             if (seleccionInteraccionPorVoz.rbtn_voz_si.Checked && seleccionInteraccionPorVoz.rbtn_no_botones.Checked)
             {
-                SeleccionInteraccionPorVoz.activarBusquedaVoz = seleccionInteraccionPorVoz.rbtn_voz_si.Text;
-                SeleccionInteraccionPorVoz.mostrarBotonesconVoz = seleccionInteraccionPorVoz.rbtn_no_botones.Text;
+                SeleccionInteraccionPorVoz2.activarBusquedaVoz = seleccionInteraccionPorVoz.rbtn_voz_si.Text;
+                SeleccionInteraccionPorVoz2.mostrarBotonesconVoz = seleccionInteraccionPorVoz.rbtn_no_botones.Text;
                 MessageBox.Show("Ha seleccionado la opción de interacción por voz");
                 //this.Hide();
             }
             if (seleccionInteraccionPorVoz.rbtn_voz_no.Checked)
             {
-                SeleccionInteraccionPorVoz.activarBusquedaVoz = seleccionInteraccionPorVoz.rbtn_voz_no.Text;
+                SeleccionInteraccionPorVoz2.activarBusquedaVoz = seleccionInteraccionPorVoz.rbtn_voz_no.Text;
                 MessageBox.Show("Ha seleccionado la opción de interacción por botones");
                 //this.Hide();
             }
