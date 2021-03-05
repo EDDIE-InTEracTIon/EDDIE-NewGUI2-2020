@@ -82,7 +82,6 @@ C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\AugmentedReadingApp\bin\x8
 C:\Users\gesta\Desktop\EDDIE-Augmented-Reading-master\ApiBuscarYoutube\obj\Debug\ApiBuscarYoutube.csproj.CopyComplete
 Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\bin\x86\Debug\Apis\ApiBuscarYoutube.dll
 Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\bin\x86\Debug\Apis\ApiBuscarYoutube.pdb
-Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ApiBuscarYoutube\obj\Debug\ApiBuscarYoutube.csprojAssemblyReference.cache
 Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ApiBuscarYoutube\obj\Debug\ApiBuscarYoutube.csproj.CoreCompileInputs.cache
 Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ApiBuscarYoutube\obj\Debug\ApiBuscarYoutube.csproj.CopyComplete
 Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ApiBuscarYoutube\obj\Debug\ApiBuscarYoutube.dll

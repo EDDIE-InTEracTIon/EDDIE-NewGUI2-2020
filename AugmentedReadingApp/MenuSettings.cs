@@ -217,13 +217,13 @@ namespace AugmentedReadingApp
 
         private async void StartProjectionButtonModified_Click_1(object sender, EventArgs e)
         {
-            mostrarLoading();
-            Task task = new Task(dummySleep);
-            task.Start();
-            await task;
+            //mostrarLoading();
+            //Task task = new Task(dummySleep);
+            //task.Start();
+            //await task;
             //ProjectionScreenForm.Show();
             projectionScreenActivity2.Show();
-            ocultarLoading();
+            //ocultarLoading();
         }
 
         private void SaveSettingsButtonModified_Click(object sender, EventArgs e)

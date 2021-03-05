@@ -320,6 +320,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="License-LGPL.txt" />
+    <Content Include="Resources\informationIcon.png" />
     <None Include="Resources\XButtonImageHover.png" />
     <None Include="Resources\XButtonImageClicked.png" />
     <None Include="Resources\XButtonImage.png" />

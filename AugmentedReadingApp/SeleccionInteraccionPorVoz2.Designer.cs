@@ -32,14 +32,18 @@
             this.rbtn_voz_no = new System.Windows.Forms.RadioButton();
             this.rbtn_voz_si = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.rbtn_no_botones = new System.Windows.Forms.RadioButton();
             this.rbtn_Si_botones = new System.Windows.Forms.RadioButton();
             this.InteractionsSettingsPanel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.InteractionsTittle = new System.Windows.Forms.Label();
             this.TittlePanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.InteractionsSettingsPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.TittlePanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,11 +52,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
-            this.label1.Location = new System.Drawing.Point(17, 34);
+            this.label1.Location = new System.Drawing.Point(17, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(240, 22);
+            this.label1.Size = new System.Drawing.Size(212, 22);
             this.label1.TabIndex = 13;
-            this.label1.Text = "¿Activar interacción por voz?";
+            this.label1.Text = "Activate voice interaction";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // rbtn_voz_no
@@ -83,6 +87,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.rbtn_no_botones);
             this.panel1.Controls.Add(this.rbtn_Si_botones);
@@ -91,6 +96,16 @@
             this.panel1.Size = new System.Drawing.Size(221, 137);
             this.panel1.TabIndex = 19;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
+            this.pictureBox2.Location = new System.Drawing.Point(190, 7);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(28, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 21;
+            this.pictureBox2.TabStop = false;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -98,9 +113,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
             this.label2.Location = new System.Drawing.Point(3, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 22);
+            this.label2.Size = new System.Drawing.Size(181, 22);
             this.label2.TabIndex = 15;
-            this.label2.Text = "¿Mostrar botones?";
+            this.label2.Text = "Enable button display";
             // 
             // rbtn_no_botones
             // 
@@ -132,6 +147,7 @@
             // InteractionsSettingsPanel1
             // 
             this.InteractionsSettingsPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.InteractionsSettingsPanel1.Controls.Add(this.pictureBox1);
             this.InteractionsSettingsPanel1.Controls.Add(this.label1);
             this.InteractionsSettingsPanel1.Controls.Add(this.rbtn_voz_si);
             this.InteractionsSettingsPanel1.Controls.Add(this.panel1);
@@ -140,6 +156,16 @@
             this.InteractionsSettingsPanel1.Name = "InteractionsSettingsPanel1";
             this.InteractionsSettingsPanel1.Size = new System.Drawing.Size(947, 199);
             this.InteractionsSettingsPanel1.TabIndex = 20;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
+            this.pictureBox1.Location = new System.Drawing.Point(235, 34);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
             // 
             // InteractionsTittle
             // 
@@ -174,8 +200,10 @@
             this.Text = "SeleccionInteraccionPorVoz";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.InteractionsSettingsPanel1.ResumeLayout(false);
             this.InteractionsSettingsPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.TittlePanel.ResumeLayout(false);
             this.TittlePanel.PerformLayout();
             this.ResumeLayout(false);
@@ -193,5 +221,7 @@
         private System.Windows.Forms.Panel InteractionsSettingsPanel1;
         private System.Windows.Forms.Label InteractionsTittle;
         private System.Windows.Forms.Panel TittlePanel;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
