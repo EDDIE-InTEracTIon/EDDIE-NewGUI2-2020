@@ -16,7 +16,7 @@ namespace AugmentedReadingApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new InteractionCoordinator());
+            Application.Run(new MenuSettings());
         }
     }
 }

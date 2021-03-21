@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.IO;
 using System.Threading;
 using System.Drawing.Text;
+//Se agrega
+using Emgu.CV;
 
 namespace AugmentedReadingApp
 {
@@ -223,6 +225,16 @@ namespace AugmentedReadingApp
             //await task;
             //ProjectionScreenForm.Show();
             projectionScreenActivity2.Show();
+            //Configuraciones de Text Recognition Settings
+            var CameraNumber = textRecognitionSettings._CameraTextIndex;
+            if (textRecognitionSettings.captureText == null)
+            {
+                textRecognitionSettings.captureText = new VideoCapture(CameraNumber);
+                textRecognitionSettings.captureText.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameWidth, (double)textRecognitionSettings.numericUpDownResXText.Value);
+                textRecognitionSettings.captureText.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameHeight, (double)textRecognitionSettings.numericUpDownResYText.Value);
+
+                textRecognitionSettings.imageBox1.Image = textRecognitionSettings.recTxt.Recognition(textRecognitionSettings.captureText);
+            }
             //ocultarLoading();
         }
 

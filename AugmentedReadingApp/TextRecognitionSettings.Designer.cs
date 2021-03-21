@@ -175,8 +175,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox ComboBoxCameraList1;
         private System.Windows.Forms.Label labelRecTxt;
-        private Emgu.CV.UI.ImageBox imageBox1;
-        private Emgu.CV.UI.ImageBox imageBox3;
+        public Emgu.CV.UI.ImageBox imageBox1;
+        public Emgu.CV.UI.ImageBox imageBox3;
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.NumericUpDown numericUpDownResXText;
         public System.Windows.Forms.NumericUpDown numericUpDownResYText;
