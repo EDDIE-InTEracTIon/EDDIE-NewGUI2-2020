@@ -36,7 +36,7 @@ namespace AugmentedReadingApp
         {
             InitializeComponent();
             pageDetectionSettings = new PageDetectionSettings();
-            projectionScreenActivity2 = new ProjectionScreenActivity2(pageDetectionSettings);
+            projectionScreenActivity2 = new ProjectionScreenActivity2(pageDetectionSettings, textRecognitionSettings, gestureRecognitionSettings);
             
             //projectionScreenActivity2 = new ProjectionScreenActivity2();
             //seleccionInteraccionPorVoz.btn_guardar.Visible = false;

@@ -49,3 +49,4 @@ Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augm
 Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ApiEnciclopedia2\obj\Debug\ApiEnciclopedia2.csproj.CopyComplete
 Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ApiEnciclopedia2\obj\Debug\ApiEnciclopedia2.dll
 Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ApiEnciclopedia2\obj\Debug\ApiEnciclopedia2.pdb
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ApiEnciclopedia2\obj\Debug\ApiEnciclopedia2.csprojAssemblyReference.cache

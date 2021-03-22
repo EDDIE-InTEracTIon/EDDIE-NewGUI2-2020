@@ -86,3 +86,4 @@ Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augm
 Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ApiBuscarYoutube\obj\Debug\ApiBuscarYoutube.csproj.CopyComplete
 Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ApiBuscarYoutube\obj\Debug\ApiBuscarYoutube.dll
 Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ApiBuscarYoutube\obj\Debug\ApiBuscarYoutube.pdb
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\ApiBuscarYoutube\obj\Debug\ApiBuscarYoutube.csprojAssemblyReference.cache
