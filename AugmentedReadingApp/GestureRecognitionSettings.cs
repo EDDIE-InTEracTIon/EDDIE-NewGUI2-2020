@@ -126,7 +126,7 @@ namespace AugmentedReadingApp
         void CreateFilterMenu()
         {
             complementoToolStripMenuItem.DropDownItems.Clear();
-
+            //Se agregan a un toolStripMenuItem
             foreach (KeyValuePair<string, IPlugin> pair in _plugins)
             {
                 var item = new ToolStripMenuItem(pair.Key);
@@ -135,10 +135,45 @@ namespace AugmentedReadingApp
                 // ((ToolStripMenuItem)menuItem).Checked = true;
 
             }
+            //Ahora se agregan a un comboBox
+            foreach (KeyValuePair<string, IPlugin> pair in _plugins)
+            {
+                //var item = new ToolStripMenuItem(pair.Key);
+                //item.Click += new EventHandler(menuItem_click);
+                comboBox1.Items.Add(pair.Key);
+                //complementoToolStripMenuItem.DropDownItems.Add(item);
+                // ((ToolStripMenuItem)menuItem).Checked = true;
+
+            }
 
         }
 
         void menuItem_click(object sender, EventArgs e)
+        {
+            var menuItem = sender as ToolStripMenuItem;
+            plugin = _plugins[menuItem.Text];
+            recGestual.Plugin = _plugins[menuItem.Text];
+            UncheckOtherToolStripMenuItems((ToolStripMenuItem)sender);
+            ((ToolStripMenuItem)menuItem).Checked = true;
+
+            try
+            {
+                this.Cursor = Cursors.WaitCursor;
+                //pictureBox2.Image = _filter.RunPlugin(captureGesture);
+            }
+            //catch ()
+            catch (Exception ex)
+            {
+                MessageBox.Show(".dll externo" + ex.Message);
+                // no sabemos qué puede pasar al cargar en un .dll externo
+
+            }
+            finally
+            {
+                this.Cursor = Cursors.Default;
+            }
+        }
+        void menuItem_click2(object sender, EventArgs e)
         {
             var menuItem = sender as ToolStripMenuItem;
             plugin = _plugins[menuItem.Text];
@@ -220,7 +255,6 @@ namespace AugmentedReadingApp
         {
             //Obtiene el item seleccionado del combobox
             KeyValuePair<int, string> SelectedItem = (KeyValuePair<int, string>)ComboBoxCameraList.SelectedItem;
-
             //Asigna el numero del item camara selecionada a la salida
             return SelectedItem.Key;
         }
@@ -437,6 +471,34 @@ namespace AugmentedReadingApp
         {
             EyeTrackingConfiguration eyeTrackingConfig = new EyeTrackingConfiguration();
             eyeTrackingConfig.Show();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var menuItem = sender as ComboBox;
+            plugin = _plugins[menuItem.Text];
+            recGestual.Plugin = _plugins[menuItem.Text];
+            try
+            {
+                this.Cursor = Cursors.WaitCursor;
+                //pictureBox2.Image = _filter.RunPlugin(captureGesture);
+            }
+            //catch ()
+            catch (Exception ex)
+            {
+                MessageBox.Show(".dll externo" + ex.Message);
+                // no sabemos qué puede pasar al cargar en un .dll externo
+
+            }
+            finally
+            {
+                this.Cursor = Cursors.Default;
+            }
         }
     }
 }

@@ -68,6 +68,10 @@
             this.checkBoxMouse = new System.Windows.Forms.CheckBox();
             this.imageBox4 = new Emgu.CV.UI.ImageBox();
             this.imageBox2 = new Emgu.CV.UI.ImageBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.StartProjectionButtonModified = new Front_EDDIE_WindowsForm.ButtonModified();
+            this.buttonModified1 = new Front_EDDIE_WindowsForm.ButtonModified();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAStartY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAEndY)).BeginInit();
@@ -94,6 +98,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(1180, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // reconocimientoToolStripMenuItem
             // 
@@ -223,6 +228,8 @@
             // 
             // numericUpDownAEndY
             // 
+            this.numericUpDownAEndY.BackColor = System.Drawing.SystemColors.Window;
+            this.numericUpDownAEndY.ForeColor = System.Drawing.SystemColors.WindowText;
             this.numericUpDownAEndY.Location = new System.Drawing.Point(646, 377);
             this.numericUpDownAEndY.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.numericUpDownAEndY.Maximum = new decimal(new int[] {
@@ -580,11 +587,70 @@
             this.imageBox2.TabIndex = 124;
             this.imageBox2.TabStop = false;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(369, 61);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(180, 21);
+            this.comboBox1.TabIndex = 162;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(370, 42);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(161, 13);
+            this.label4.TabIndex = 163;
+            this.label4.Text = "Complemento de reconocimiento";
+            // 
+            // StartProjectionButtonModified
+            // 
+            this.StartProjectionButtonModified.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.StartProjectionButtonModified.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.StartProjectionButtonModified.FlatAppearance.BorderSize = 5;
+            this.StartProjectionButtonModified.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
+            this.StartProjectionButtonModified.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.StartProjectionButtonModified.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StartProjectionButtonModified.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartProjectionButtonModified.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.StartProjectionButtonModified.Location = new System.Drawing.Point(739, 46);
+            this.StartProjectionButtonModified.Name = "StartProjectionButtonModified";
+            this.StartProjectionButtonModified.Size = new System.Drawing.Size(178, 48);
+            this.StartProjectionButtonModified.TabIndex = 164;
+            this.StartProjectionButtonModified.Text = "Comenzar";
+            this.StartProjectionButtonModified.UseVisualStyleBackColor = false;
+            this.StartProjectionButtonModified.Click += new System.EventHandler(this.comenzarToolStripMenuItem_Click);
+            // 
+            // buttonModified1
+            // 
+            this.buttonModified1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonModified1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonModified1.FlatAppearance.BorderSize = 5;
+            this.buttonModified1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
+            this.buttonModified1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.buttonModified1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonModified1.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModified1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.buttonModified1.Location = new System.Drawing.Point(739, 103);
+            this.buttonModified1.Name = "buttonModified1";
+            this.buttonModified1.Size = new System.Drawing.Size(178, 48);
+            this.buttonModified1.TabIndex = 165;
+            this.buttonModified1.Text = "Detener";
+            this.buttonModified1.UseVisualStyleBackColor = false;
+            this.buttonModified1.Click += new System.EventHandler(this.detenerToolStripMenuItem_Click);
+            // 
             // GestureRecognitionSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1180, 654);
+            this.Controls.Add(this.buttonModified1);
+            this.Controls.Add(this.StartProjectionButtonModified);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.checkBoxMouse);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.numericUpDownYGestual);
@@ -681,5 +747,9 @@
         public System.Windows.Forms.CheckBox checkBoxMouse;
         private System.Windows.Forms.ToolStripMenuItem rastreoOcularToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configurarToolStripMenuItem;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label4;
+        private Front_EDDIE_WindowsForm.ButtonModified StartProjectionButtonModified;
+        private Front_EDDIE_WindowsForm.ButtonModified buttonModified1;
     }
 }

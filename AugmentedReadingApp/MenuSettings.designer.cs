@@ -44,10 +44,10 @@
             this.ExitPictureBox = new System.Windows.Forms.PictureBox();
             this.PanelContenido = new System.Windows.Forms.Panel();
             this.LoadingPictureBox = new System.Windows.Forms.PictureBox();
-            this.ResetSettingsButtonModified = new Front_EDDIE_WindowsForm.ButtonModified();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.SaveSettingsButtonModified = new Front_EDDIE_WindowsForm.ButtonModified();
             this.StartProjectionButtonModified = new Front_EDDIE_WindowsForm.ButtonModified();
+            this.SaveSettingsButtonModified = new Front_EDDIE_WindowsForm.ButtonModified();
+            this.ResetSettingsButtonModified = new Front_EDDIE_WindowsForm.ButtonModified();
             this.PanelNavBar.SuspendLayout();
             this.ContenidoNavBar.SuspendLayout();
             this.PanelBarraSuperior.SuspendLayout();
@@ -244,22 +244,23 @@
             this.LoadingPictureBox.TabIndex = 6;
             this.LoadingPictureBox.TabStop = false;
             // 
-            // ResetSettingsButtonModified
+            // StartProjectionButtonModified
             // 
-            this.ResetSettingsButtonModified.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.ResetSettingsButtonModified.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.ResetSettingsButtonModified.FlatAppearance.BorderSize = 5;
-            this.ResetSettingsButtonModified.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
-            this.ResetSettingsButtonModified.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.ResetSettingsButtonModified.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ResetSettingsButtonModified.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResetSettingsButtonModified.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.ResetSettingsButtonModified.Location = new System.Drawing.Point(263, 605);
-            this.ResetSettingsButtonModified.Name = "ResetSettingsButtonModified";
-            this.ResetSettingsButtonModified.Size = new System.Drawing.Size(252, 84);
-            this.ResetSettingsButtonModified.TabIndex = 4;
-            this.ResetSettingsButtonModified.Text = "Reset Settings";
-            this.ResetSettingsButtonModified.UseVisualStyleBackColor = false;
+            this.StartProjectionButtonModified.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.StartProjectionButtonModified.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.StartProjectionButtonModified.FlatAppearance.BorderSize = 5;
+            this.StartProjectionButtonModified.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
+            this.StartProjectionButtonModified.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.StartProjectionButtonModified.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StartProjectionButtonModified.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartProjectionButtonModified.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.StartProjectionButtonModified.Location = new System.Drawing.Point(990, 605);
+            this.StartProjectionButtonModified.Name = "StartProjectionButtonModified";
+            this.StartProjectionButtonModified.Size = new System.Drawing.Size(252, 84);
+            this.StartProjectionButtonModified.TabIndex = 6;
+            this.StartProjectionButtonModified.Text = "Start Projection";
+            this.StartProjectionButtonModified.UseVisualStyleBackColor = false;
+            this.StartProjectionButtonModified.Click += new System.EventHandler(this.StartProjectionButtonModified_Click_1);
             // 
             // SaveSettingsButtonModified
             // 
@@ -279,23 +280,22 @@
             this.SaveSettingsButtonModified.UseVisualStyleBackColor = false;
             this.SaveSettingsButtonModified.Click += new System.EventHandler(this.SaveSettingsButtonModified_Click);
             // 
-            // StartProjectionButtonModified
+            // ResetSettingsButtonModified
             // 
-            this.StartProjectionButtonModified.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.StartProjectionButtonModified.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.StartProjectionButtonModified.FlatAppearance.BorderSize = 5;
-            this.StartProjectionButtonModified.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
-            this.StartProjectionButtonModified.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.StartProjectionButtonModified.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StartProjectionButtonModified.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StartProjectionButtonModified.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.StartProjectionButtonModified.Location = new System.Drawing.Point(990, 605);
-            this.StartProjectionButtonModified.Name = "StartProjectionButtonModified";
-            this.StartProjectionButtonModified.Size = new System.Drawing.Size(252, 84);
-            this.StartProjectionButtonModified.TabIndex = 6;
-            this.StartProjectionButtonModified.Text = "Start Projection";
-            this.StartProjectionButtonModified.UseVisualStyleBackColor = false;
-            this.StartProjectionButtonModified.Click += new System.EventHandler(this.StartProjectionButtonModified_Click_1);
+            this.ResetSettingsButtonModified.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.ResetSettingsButtonModified.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.ResetSettingsButtonModified.FlatAppearance.BorderSize = 5;
+            this.ResetSettingsButtonModified.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
+            this.ResetSettingsButtonModified.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.ResetSettingsButtonModified.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ResetSettingsButtonModified.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetSettingsButtonModified.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.ResetSettingsButtonModified.Location = new System.Drawing.Point(263, 605);
+            this.ResetSettingsButtonModified.Name = "ResetSettingsButtonModified";
+            this.ResetSettingsButtonModified.Size = new System.Drawing.Size(252, 84);
+            this.ResetSettingsButtonModified.TabIndex = 4;
+            this.ResetSettingsButtonModified.Text = "Reset Settings";
+            this.ResetSettingsButtonModified.UseVisualStyleBackColor = false;
             // 
             // MenuSettings
             // 
