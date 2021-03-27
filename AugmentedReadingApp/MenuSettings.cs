@@ -21,7 +21,7 @@ namespace AugmentedReadingApp
         InteractionsSettings InteractionsForm = new InteractionsSettings();
         WebSearchServicesSettings WebSearchServicesForm = new WebSearchServicesSettings();
         SeleccionInteraccionPorVoz2 seleccionInteraccionPorVoz = new SeleccionInteraccionPorVoz2();
-        SeleccionApis seleccionApis = new SeleccionApis();
+        SeleccionApis2 seleccionApis = new SeleccionApis2();
         EyeTrackingConfiguration eyeTrackingConfig = new EyeTrackingConfiguration();
         TextRecognitionSettings textRecognitionSettings = new TextRecognitionSettings();
         GestureRecognitionSettings gestureRecognitionSettings = new GestureRecognitionSettings();
@@ -40,7 +40,7 @@ namespace AugmentedReadingApp
             
             //projectionScreenActivity2 = new ProjectionScreenActivity2();
             //seleccionInteraccionPorVoz.btn_guardar.Visible = false;
-            seleccionApis.btn_guardarConfiguraciones.Visible = false;
+            
             //ProjectionScreenForm.Show();
         }
         

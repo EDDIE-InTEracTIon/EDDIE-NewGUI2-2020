@@ -29,13 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.reconocimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.comenzarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.detenerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.complementoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rastreoOcularToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.configurarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ComboBoxCameraList2 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
@@ -56,7 +49,6 @@
             this.numericUpDownSEndX = new System.Windows.Forms.NumericUpDown();
             this.checkBoxY = new System.Windows.Forms.CheckBox();
             this.checkBoxX = new System.Windows.Forms.CheckBox();
-            this.buttonSetting = new System.Windows.Forms.Button();
             this.textBoxX = new System.Windows.Forms.TextBox();
             this.textBoxY = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -64,7 +56,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.numericUpDownXGestual = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownYGestual = new System.Windows.Forms.NumericUpDown();
-            this.button4 = new System.Windows.Forms.Button();
             this.checkBoxMouse = new System.Windows.Forms.CheckBox();
             this.imageBox4 = new Emgu.CV.UI.ImageBox();
             this.imageBox2 = new Emgu.CV.UI.ImageBox();
@@ -72,7 +63,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.StartProjectionButtonModified = new Front_EDDIE_WindowsForm.ButtonModified();
             this.buttonModified1 = new Front_EDDIE_WindowsForm.ButtonModified();
-            this.menuStrip1.SuspendLayout();
+            this.InteractionsSettingsPanel1 = new System.Windows.Forms.Panel();
+            this.TittlePanel = new System.Windows.Forms.Panel();
+            this.InteractionsTittle = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.buttonModified2 = new Front_EDDIE_WindowsForm.ButtonModified();
+            this.buttonModified3 = new Front_EDDIE_WindowsForm.ButtonModified();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAStartY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAEndY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSStartY)).BeginInit();
@@ -85,70 +85,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYGestual)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox2)).BeginInit();
+            this.InteractionsSettingsPanel1.SuspendLayout();
+            this.TittlePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reconocimientoToolStripMenuItem,
-            this.complementoToolStripMenuItem,
-            this.rastreoOcularToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1180, 24);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
-            // 
-            // reconocimientoToolStripMenuItem
-            // 
-            this.reconocimientoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.comenzarToolStripMenuItem,
-            this.detenerToolStripMenuItem});
-            this.reconocimientoToolStripMenuItem.Name = "reconocimientoToolStripMenuItem";
-            this.reconocimientoToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
-            this.reconocimientoToolStripMenuItem.Text = "Reconocimiento";
-            // 
-            // comenzarToolStripMenuItem
-            // 
-            this.comenzarToolStripMenuItem.Name = "comenzarToolStripMenuItem";
-            this.comenzarToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
-            this.comenzarToolStripMenuItem.Text = "Comenzar";
-            this.comenzarToolStripMenuItem.Click += new System.EventHandler(this.comenzarToolStripMenuItem_Click);
-            // 
-            // detenerToolStripMenuItem
-            // 
-            this.detenerToolStripMenuItem.Name = "detenerToolStripMenuItem";
-            this.detenerToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
-            this.detenerToolStripMenuItem.Text = "Detener";
-            this.detenerToolStripMenuItem.Click += new System.EventHandler(this.detenerToolStripMenuItem_Click);
-            // 
-            // complementoToolStripMenuItem
-            // 
-            this.complementoToolStripMenuItem.Name = "complementoToolStripMenuItem";
-            this.complementoToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
-            this.complementoToolStripMenuItem.Text = "Complemento";
-            // 
-            // rastreoOcularToolStripMenuItem
-            // 
-            this.rastreoOcularToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.configurarToolStripMenuItem});
-            this.rastreoOcularToolStripMenuItem.Name = "rastreoOcularToolStripMenuItem";
-            this.rastreoOcularToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
-            this.rastreoOcularToolStripMenuItem.Text = "Rastreo Ocular";
-            // 
-            // configurarToolStripMenuItem
-            // 
-            this.configurarToolStripMenuItem.Name = "configurarToolStripMenuItem";
-            this.configurarToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.configurarToolStripMenuItem.Text = "Configurar";
-            this.configurarToolStripMenuItem.Click += new System.EventHandler(this.configurarToolStripMenuItem_Click);
             // 
             // ComboBoxCameraList2
             // 
             this.ComboBoxCameraList2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBoxCameraList2.FormattingEnabled = true;
-            this.ComboBoxCameraList2.Location = new System.Drawing.Point(11, 46);
+            this.ComboBoxCameraList2.Location = new System.Drawing.Point(18, 31);
             this.ComboBoxCameraList2.Name = "ComboBoxCameraList2";
             this.ComboBoxCameraList2.Size = new System.Drawing.Size(226, 21);
             this.ComboBoxCameraList2.TabIndex = 5;
@@ -157,55 +106,61 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 30);
+            this.label1.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(15, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 13);
+            this.label1.Size = new System.Drawing.Size(255, 22);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Camara para reconocimiento gestual";
+            this.label1.Text = "Camera for gesture recognition";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(571, 379);
+            this.label51.Font = new System.Drawing.Font("IBM Plex Sans", 10.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.Location = new System.Drawing.Point(612, 377);
             this.label51.Margin = new System.Windows.Forms.Padding(0);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(48, 13);
+            this.label51.Size = new System.Drawing.Size(68, 19);
             this.label51.TabIndex = 109;
             this.label51.Text = "App End";
             // 
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(384, 379);
+            this.label52.Font = new System.Drawing.Font("IBM Plex Sans", 10.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.Location = new System.Drawing.Point(410, 377);
             this.label52.Margin = new System.Windows.Forms.Padding(0);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(51, 13);
+            this.label52.Size = new System.Drawing.Size(74, 19);
             this.label52.TabIndex = 108;
             this.label52.Text = "App Start";
             // 
             // label53
             // 
             this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(571, 357);
+            this.label53.Font = new System.Drawing.Font("IBM Plex Sans", 10.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.Location = new System.Drawing.Point(612, 351);
             this.label53.Margin = new System.Windows.Forms.Padding(0);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(62, 13);
+            this.label53.Size = new System.Drawing.Size(87, 19);
             this.label53.TabIndex = 107;
             this.label53.Text = "Sensor End";
             // 
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(384, 357);
+            this.label54.Font = new System.Drawing.Font("IBM Plex Sans", 10.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.Location = new System.Drawing.Point(410, 351);
             this.label54.Margin = new System.Windows.Forms.Padding(0);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(65, 13);
+            this.label54.Size = new System.Drawing.Size(93, 19);
             this.label54.TabIndex = 106;
             this.label54.Text = "Sensor Start";
             // 
             // numericUpDownAStartY
             // 
-            this.numericUpDownAStartY.Location = new System.Drawing.Point(459, 379);
+            this.numericUpDownAStartY.Location = new System.Drawing.Point(503, 377);
             this.numericUpDownAStartY.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.numericUpDownAStartY.Maximum = new decimal(new int[] {
             3000,
@@ -230,7 +185,7 @@
             // 
             this.numericUpDownAEndY.BackColor = System.Drawing.SystemColors.Window;
             this.numericUpDownAEndY.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.numericUpDownAEndY.Location = new System.Drawing.Point(646, 377);
+            this.numericUpDownAEndY.Location = new System.Drawing.Point(707, 377);
             this.numericUpDownAEndY.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.numericUpDownAEndY.Maximum = new decimal(new int[] {
             3000,
@@ -253,7 +208,7 @@
             // 
             // numericUpDownSStartY
             // 
-            this.numericUpDownSStartY.Location = new System.Drawing.Point(459, 355);
+            this.numericUpDownSStartY.Location = new System.Drawing.Point(503, 350);
             this.numericUpDownSStartY.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.numericUpDownSStartY.Maximum = new decimal(new int[] {
             300000,
@@ -276,7 +231,7 @@
             // 
             // numericUpDownSEndY
             // 
-            this.numericUpDownSEndY.Location = new System.Drawing.Point(646, 355);
+            this.numericUpDownSEndY.Location = new System.Drawing.Point(707, 350);
             this.numericUpDownSEndY.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.numericUpDownSEndY.Maximum = new decimal(new int[] {
             300000,
@@ -300,46 +255,52 @@
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(197, 390);
+            this.label38.Font = new System.Drawing.Font("IBM Plex Sans", 10.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(211, 377);
             this.label38.Margin = new System.Windows.Forms.Padding(0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(48, 13);
+            this.label38.Size = new System.Drawing.Size(68, 19);
             this.label38.TabIndex = 101;
             this.label38.Text = "App End";
             // 
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(10, 390);
+            this.label39.Font = new System.Drawing.Font("IBM Plex Sans", 10.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(15, 377);
             this.label39.Margin = new System.Windows.Forms.Padding(0);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(51, 13);
+            this.label39.Size = new System.Drawing.Size(74, 19);
             this.label39.TabIndex = 100;
             this.label39.Text = "App Start";
+            this.label39.Click += new System.EventHandler(this.label39_Click);
             // 
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(197, 370);
+            this.label40.Font = new System.Drawing.Font("IBM Plex Sans", 10.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(211, 351);
             this.label40.Margin = new System.Windows.Forms.Padding(0);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(62, 13);
+            this.label40.Size = new System.Drawing.Size(87, 19);
             this.label40.TabIndex = 99;
             this.label40.Text = "Sensor End";
             // 
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(10, 368);
+            this.label41.Font = new System.Drawing.Font("IBM Plex Sans", 10.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(15, 351);
             this.label41.Margin = new System.Windows.Forms.Padding(0);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(65, 13);
+            this.label41.Size = new System.Drawing.Size(93, 19);
             this.label41.TabIndex = 98;
             this.label41.Text = "Sensor Start";
+            this.label41.Click += new System.EventHandler(this.label41_Click);
             // 
             // numericUpDownAStartX
             // 
-            this.numericUpDownAStartX.Location = new System.Drawing.Point(85, 390);
+            this.numericUpDownAStartX.Location = new System.Drawing.Point(108, 377);
             this.numericUpDownAStartX.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.numericUpDownAStartX.Maximum = new decimal(new int[] {
             3000,
@@ -362,7 +323,7 @@
             // 
             // numericUpDownAEndX
             // 
-            this.numericUpDownAEndX.Location = new System.Drawing.Point(272, 392);
+            this.numericUpDownAEndX.Location = new System.Drawing.Point(307, 377);
             this.numericUpDownAEndX.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.numericUpDownAEndX.Maximum = new decimal(new int[] {
             3000,
@@ -385,7 +346,7 @@
             // 
             // numericUpDownSStartX
             // 
-            this.numericUpDownSStartX.Location = new System.Drawing.Point(85, 366);
+            this.numericUpDownSStartX.Location = new System.Drawing.Point(108, 350);
             this.numericUpDownSStartX.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.numericUpDownSStartX.Maximum = new decimal(new int[] {
             300000,
@@ -408,7 +369,7 @@
             // 
             // numericUpDownSEndX
             // 
-            this.numericUpDownSEndX.Location = new System.Drawing.Point(272, 368);
+            this.numericUpDownSEndX.Location = new System.Drawing.Point(307, 350);
             this.numericUpDownSEndX.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.numericUpDownSEndX.Maximum = new decimal(new int[] {
             300000,
@@ -432,45 +393,38 @@
             // checkBoxY
             // 
             this.checkBoxY.AutoSize = true;
-            this.checkBoxY.Location = new System.Drawing.Point(387, 328);
+            this.checkBoxY.Font = new System.Drawing.Font("IBM Plex Sans", 10.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxY.Location = new System.Drawing.Point(414, 316);
             this.checkBoxY.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.checkBoxY.Name = "checkBoxY";
-            this.checkBoxY.Size = new System.Drawing.Size(92, 17);
+            this.checkBoxY.Size = new System.Drawing.Size(111, 23);
             this.checkBoxY.TabIndex = 93;
-            this.checkBoxY.Text = "Transformar Y";
+            this.checkBoxY.Text = "Transform Y";
             this.checkBoxY.UseVisualStyleBackColor = true;
             // 
             // checkBoxX
             // 
             this.checkBoxX.AutoSize = true;
-            this.checkBoxX.Location = new System.Drawing.Point(13, 333);
+            this.checkBoxX.Font = new System.Drawing.Font("IBM Plex Sans", 10.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxX.Location = new System.Drawing.Point(19, 320);
             this.checkBoxX.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.checkBoxX.Name = "checkBoxX";
-            this.checkBoxX.Size = new System.Drawing.Size(92, 17);
+            this.checkBoxX.Size = new System.Drawing.Size(111, 23);
             this.checkBoxX.TabIndex = 92;
-            this.checkBoxX.Text = "Transformar X";
+            this.checkBoxX.Text = "Transform X";
             this.checkBoxX.UseVisualStyleBackColor = true;
-            // 
-            // buttonSetting
-            // 
-            this.buttonSetting.Location = new System.Drawing.Point(624, 410);
-            this.buttonSetting.Name = "buttonSetting";
-            this.buttonSetting.Size = new System.Drawing.Size(121, 44);
-            this.buttonSetting.TabIndex = 110;
-            this.buttonSetting.Text = "Save Settings";
-            this.buttonSetting.UseVisualStyleBackColor = true;
-            this.buttonSetting.Click += new System.EventHandler(this.buttonSetting_Click);
+            this.checkBoxX.CheckedChanged += new System.EventHandler(this.checkBoxX_CheckedChanged);
             // 
             // textBoxX
             // 
-            this.textBoxX.Location = new System.Drawing.Point(272, 330);
+            this.textBoxX.Location = new System.Drawing.Point(280, 319);
             this.textBoxX.Name = "textBoxX";
             this.textBoxX.Size = new System.Drawing.Size(90, 20);
             this.textBoxX.TabIndex = 119;
             // 
             // textBoxY
             // 
-            this.textBoxY.Location = new System.Drawing.Point(646, 326);
+            this.textBoxY.Location = new System.Drawing.Point(668, 319);
             this.textBoxY.Name = "textBoxY";
             this.textBoxY.Size = new System.Drawing.Size(90, 20);
             this.textBoxY.TabIndex = 120;
@@ -478,25 +432,27 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(197, 333);
+            this.label2.Font = new System.Drawing.Font("IBM Plex Sans", 10.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(186, 320);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.Size = new System.Drawing.Size(69, 19);
             this.label2.TabIndex = 121;
             this.label2.Text = "Sensor X";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(571, 329);
+            this.label3.Font = new System.Drawing.Font("IBM Plex Sans", 10.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(593, 320);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 13);
+            this.label3.Size = new System.Drawing.Size(69, 19);
             this.label3.TabIndex = 122;
             this.label3.Text = "Sensor Y";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(117, 76);
+            this.label5.Location = new System.Drawing.Point(124, 61);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(14, 13);
             this.label5.TabIndex = 135;
@@ -504,7 +460,7 @@
             // 
             // numericUpDownXGestual
             // 
-            this.numericUpDownXGestual.Location = new System.Drawing.Point(11, 72);
+            this.numericUpDownXGestual.Location = new System.Drawing.Point(18, 57);
             this.numericUpDownXGestual.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.numericUpDownXGestual.Maximum = new decimal(new int[] {
             3000,
@@ -527,7 +483,7 @@
             // 
             // numericUpDownYGestual
             // 
-            this.numericUpDownYGestual.Location = new System.Drawing.Point(148, 74);
+            this.numericUpDownYGestual.Location = new System.Drawing.Point(155, 59);
             this.numericUpDownYGestual.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.numericUpDownYGestual.Maximum = new decimal(new int[] {
             3000,
@@ -548,30 +504,22 @@
             0,
             0});
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(245, 43);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(118, 54);
-            this.button4.TabIndex = 140;
-            this.button4.Text = "Captura";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // checkBoxMouse
             // 
             this.checkBoxMouse.AutoSize = true;
-            this.checkBoxMouse.Location = new System.Drawing.Point(387, 425);
+            this.checkBoxMouse.Font = new System.Drawing.Font("IBM Plex Sans", 10.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxMouse.Location = new System.Drawing.Point(746, 88);
             this.checkBoxMouse.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.checkBoxMouse.Name = "checkBoxMouse";
-            this.checkBoxMouse.Size = new System.Drawing.Size(98, 17);
+            this.checkBoxMouse.Size = new System.Drawing.Size(130, 23);
             this.checkBoxMouse.TabIndex = 161;
             this.checkBoxMouse.Text = "Recognition on";
             this.checkBoxMouse.UseVisualStyleBackColor = true;
             // 
             // imageBox4
             // 
-            this.imageBox4.Location = new System.Drawing.Point(369, 103);
+            this.imageBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imageBox4.Location = new System.Drawing.Point(376, 88);
             this.imageBox4.Name = "imageBox4";
             this.imageBox4.Size = new System.Drawing.Size(352, 200);
             this.imageBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -580,7 +528,8 @@
             // 
             // imageBox2
             // 
-            this.imageBox2.Location = new System.Drawing.Point(11, 103);
+            this.imageBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imageBox2.Location = new System.Drawing.Point(18, 88);
             this.imageBox2.Name = "imageBox2";
             this.imageBox2.Size = new System.Drawing.Size(352, 200);
             this.imageBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -591,7 +540,7 @@
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(369, 61);
+            this.comboBox1.Location = new System.Drawing.Point(304, 31);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(180, 21);
             this.comboBox1.TabIndex = 162;
@@ -600,11 +549,13 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(370, 42);
+            this.label4.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(300, 6);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(161, 13);
+            this.label4.Size = new System.Drawing.Size(110, 22);
             this.label4.TabIndex = 163;
-            this.label4.Text = "Complemento de reconocimiento";
+            this.label4.Text = "Complement";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // StartProjectionButtonModified
             // 
@@ -614,13 +565,13 @@
             this.StartProjectionButtonModified.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
             this.StartProjectionButtonModified.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
             this.StartProjectionButtonModified.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StartProjectionButtonModified.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartProjectionButtonModified.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StartProjectionButtonModified.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.StartProjectionButtonModified.Location = new System.Drawing.Point(739, 46);
+            this.StartProjectionButtonModified.Location = new System.Drawing.Point(490, 14);
             this.StartProjectionButtonModified.Name = "StartProjectionButtonModified";
-            this.StartProjectionButtonModified.Size = new System.Drawing.Size(178, 48);
+            this.StartProjectionButtonModified.Size = new System.Drawing.Size(140, 63);
             this.StartProjectionButtonModified.TabIndex = 164;
-            this.StartProjectionButtonModified.Text = "Comenzar";
+            this.StartProjectionButtonModified.Text = "Start Recognition";
             this.StartProjectionButtonModified.UseVisualStyleBackColor = false;
             this.StartProjectionButtonModified.Click += new System.EventHandler(this.comenzarToolStripMenuItem_Click);
             // 
@@ -632,64 +583,184 @@
             this.buttonModified1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
             this.buttonModified1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
             this.buttonModified1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonModified1.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModified1.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonModified1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.buttonModified1.Location = new System.Drawing.Point(739, 103);
+            this.buttonModified1.Location = new System.Drawing.Point(782, 14);
             this.buttonModified1.Name = "buttonModified1";
-            this.buttonModified1.Size = new System.Drawing.Size(178, 48);
+            this.buttonModified1.Size = new System.Drawing.Size(137, 63);
             this.buttonModified1.TabIndex = 165;
-            this.buttonModified1.Text = "Detener";
+            this.buttonModified1.Text = "Stop Recognition";
             this.buttonModified1.UseVisualStyleBackColor = false;
             this.buttonModified1.Click += new System.EventHandler(this.detenerToolStripMenuItem_Click);
+            // 
+            // InteractionsSettingsPanel1
+            // 
+            this.InteractionsSettingsPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.InteractionsSettingsPanel1.Controls.Add(this.pictureBox4);
+            this.InteractionsSettingsPanel1.Controls.Add(this.pictureBox3);
+            this.InteractionsSettingsPanel1.Controls.Add(this.pictureBox2);
+            this.InteractionsSettingsPanel1.Controls.Add(this.pictureBox1);
+            this.InteractionsSettingsPanel1.Controls.Add(this.buttonModified3);
+            this.InteractionsSettingsPanel1.Controls.Add(this.buttonModified2);
+            this.InteractionsSettingsPanel1.Controls.Add(this.label6);
+            this.InteractionsSettingsPanel1.Controls.Add(this.ComboBoxCameraList2);
+            this.InteractionsSettingsPanel1.Controls.Add(this.buttonModified1);
+            this.InteractionsSettingsPanel1.Controls.Add(this.label1);
+            this.InteractionsSettingsPanel1.Controls.Add(this.StartProjectionButtonModified);
+            this.InteractionsSettingsPanel1.Controls.Add(this.checkBoxX);
+            this.InteractionsSettingsPanel1.Controls.Add(this.label4);
+            this.InteractionsSettingsPanel1.Controls.Add(this.checkBoxY);
+            this.InteractionsSettingsPanel1.Controls.Add(this.comboBox1);
+            this.InteractionsSettingsPanel1.Controls.Add(this.numericUpDownSEndX);
+            this.InteractionsSettingsPanel1.Controls.Add(this.checkBoxMouse);
+            this.InteractionsSettingsPanel1.Controls.Add(this.numericUpDownSStartX);
+            this.InteractionsSettingsPanel1.Controls.Add(this.numericUpDownAEndX);
+            this.InteractionsSettingsPanel1.Controls.Add(this.numericUpDownYGestual);
+            this.InteractionsSettingsPanel1.Controls.Add(this.numericUpDownAStartX);
+            this.InteractionsSettingsPanel1.Controls.Add(this.numericUpDownXGestual);
+            this.InteractionsSettingsPanel1.Controls.Add(this.label41);
+            this.InteractionsSettingsPanel1.Controls.Add(this.label5);
+            this.InteractionsSettingsPanel1.Controls.Add(this.label40);
+            this.InteractionsSettingsPanel1.Controls.Add(this.imageBox4);
+            this.InteractionsSettingsPanel1.Controls.Add(this.label39);
+            this.InteractionsSettingsPanel1.Controls.Add(this.imageBox2);
+            this.InteractionsSettingsPanel1.Controls.Add(this.label38);
+            this.InteractionsSettingsPanel1.Controls.Add(this.label3);
+            this.InteractionsSettingsPanel1.Controls.Add(this.numericUpDownSEndY);
+            this.InteractionsSettingsPanel1.Controls.Add(this.label2);
+            this.InteractionsSettingsPanel1.Controls.Add(this.numericUpDownSStartY);
+            this.InteractionsSettingsPanel1.Controls.Add(this.textBoxY);
+            this.InteractionsSettingsPanel1.Controls.Add(this.numericUpDownAEndY);
+            this.InteractionsSettingsPanel1.Controls.Add(this.textBoxX);
+            this.InteractionsSettingsPanel1.Controls.Add(this.numericUpDownAStartY);
+            this.InteractionsSettingsPanel1.Controls.Add(this.label54);
+            this.InteractionsSettingsPanel1.Controls.Add(this.label51);
+            this.InteractionsSettingsPanel1.Controls.Add(this.label53);
+            this.InteractionsSettingsPanel1.Controls.Add(this.label52);
+            this.InteractionsSettingsPanel1.Location = new System.Drawing.Point(12, 94);
+            this.InteractionsSettingsPanel1.Name = "InteractionsSettingsPanel1";
+            this.InteractionsSettingsPanel1.Size = new System.Drawing.Size(947, 417);
+            this.InteractionsSettingsPanel1.TabIndex = 166;
+            this.InteractionsSettingsPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.InteractionsSettingsPanel1_Paint);
+            // 
+            // TittlePanel
+            // 
+            this.TittlePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.TittlePanel.Controls.Add(this.InteractionsTittle);
+            this.TittlePanel.Location = new System.Drawing.Point(0, 0);
+            this.TittlePanel.Name = "TittlePanel";
+            this.TittlePanel.Size = new System.Drawing.Size(988, 74);
+            this.TittlePanel.TabIndex = 167;
+            // 
+            // InteractionsTittle
+            // 
+            this.InteractionsTittle.AutoSize = true;
+            this.InteractionsTittle.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 33.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InteractionsTittle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
+            this.InteractionsTittle.Location = new System.Drawing.Point(12, 8);
+            this.InteractionsTittle.Name = "InteractionsTittle";
+            this.InteractionsTittle.Size = new System.Drawing.Size(435, 58);
+            this.InteractionsTittle.TabIndex = 0;
+            this.InteractionsTittle.Text = "Gesture recognition";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(14, 296);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(99, 22);
+            this.label6.TabIndex = 166;
+            this.label6.Text = "Calibration";
+            // 
+            // buttonModified2
+            // 
+            this.buttonModified2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonModified2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonModified2.FlatAppearance.BorderSize = 5;
+            this.buttonModified2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
+            this.buttonModified2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.buttonModified2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonModified2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModified2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.buttonModified2.Location = new System.Drawing.Point(636, 14);
+            this.buttonModified2.Name = "buttonModified2";
+            this.buttonModified2.Size = new System.Drawing.Size(140, 63);
+            this.buttonModified2.TabIndex = 167;
+            this.buttonModified2.Text = "Capture";
+            this.buttonModified2.UseVisualStyleBackColor = false;
+            this.buttonModified2.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // buttonModified3
+            // 
+            this.buttonModified3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonModified3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonModified3.FlatAppearance.BorderSize = 5;
+            this.buttonModified3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
+            this.buttonModified3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.buttonModified3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonModified3.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModified3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.buttonModified3.Location = new System.Drawing.Point(773, 296);
+            this.buttonModified3.Name = "buttonModified3";
+            this.buttonModified3.Size = new System.Drawing.Size(157, 47);
+            this.buttonModified3.TabIndex = 168;
+            this.buttonModified3.Text = "Save calibration";
+            this.buttonModified3.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
+            this.pictureBox1.Location = new System.Drawing.Point(879, 87);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 169;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
+            this.pictureBox2.Location = new System.Drawing.Point(270, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 170;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
+            this.pictureBox3.Location = new System.Drawing.Point(414, 8);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 171;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
+            this.pictureBox4.Location = new System.Drawing.Point(110, 295);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 172;
+            this.pictureBox4.TabStop = false;
             // 
             // GestureRecognitionSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1180, 654);
-            this.Controls.Add(this.buttonModified1);
-            this.Controls.Add(this.StartProjectionButtonModified);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.checkBoxMouse);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.numericUpDownYGestual);
-            this.Controls.Add(this.numericUpDownXGestual);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.imageBox4);
-            this.Controls.Add(this.imageBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxY);
-            this.Controls.Add(this.textBoxX);
-            this.Controls.Add(this.buttonSetting);
-            this.Controls.Add(this.label51);
-            this.Controls.Add(this.label52);
-            this.Controls.Add(this.label53);
-            this.Controls.Add(this.label54);
-            this.Controls.Add(this.numericUpDownAStartY);
-            this.Controls.Add(this.numericUpDownAEndY);
-            this.Controls.Add(this.numericUpDownSStartY);
-            this.Controls.Add(this.numericUpDownSEndY);
-            this.Controls.Add(this.label38);
-            this.Controls.Add(this.label39);
-            this.Controls.Add(this.label40);
-            this.Controls.Add(this.label41);
-            this.Controls.Add(this.numericUpDownAStartX);
-            this.Controls.Add(this.numericUpDownAEndX);
-            this.Controls.Add(this.numericUpDownSStartX);
-            this.Controls.Add(this.numericUpDownSEndX);
-            this.Controls.Add(this.checkBoxY);
-            this.Controls.Add(this.checkBoxX);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.ComboBoxCameraList2);
-            this.Controls.Add(this.menuStrip1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(233)))), ((int)(((byte)(242)))));
+            this.ClientSize = new System.Drawing.Size(971, 500);
+            this.Controls.Add(this.TittlePanel);
+            this.Controls.Add(this.InteractionsSettingsPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "GestureRecognitionSettings";
             this.Text = "Configuración";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Load += new System.EventHandler(this.GestureRecognitionSettings_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAStartY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAEndY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSStartY)).EndInit();
@@ -702,17 +773,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownYGestual)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox2)).EndInit();
+            this.InteractionsSettingsPanel1.ResumeLayout(false);
+            this.InteractionsSettingsPanel1.PerformLayout();
+            this.TittlePanel.ResumeLayout(false);
+            this.TittlePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem reconocimientoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem comenzarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem detenerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem complementoToolStripMenuItem;
         private System.Windows.Forms.ComboBox ComboBoxCameraList2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label51;
@@ -733,7 +806,6 @@
         public System.Windows.Forms.NumericUpDown numericUpDownSEndX;
         private System.Windows.Forms.CheckBox checkBoxY;
         private System.Windows.Forms.CheckBox checkBoxX;
-        private System.Windows.Forms.Button buttonSetting;
         private System.Windows.Forms.TextBox textBoxX;
         private System.Windows.Forms.TextBox textBoxY;
         private System.Windows.Forms.Label label2;
@@ -743,13 +815,20 @@
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.NumericUpDown numericUpDownXGestual;
         public System.Windows.Forms.NumericUpDown numericUpDownYGestual;
-        private System.Windows.Forms.Button button4;
         public System.Windows.Forms.CheckBox checkBoxMouse;
-        private System.Windows.Forms.ToolStripMenuItem rastreoOcularToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem configurarToolStripMenuItem;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label4;
         private Front_EDDIE_WindowsForm.ButtonModified StartProjectionButtonModified;
         private Front_EDDIE_WindowsForm.ButtonModified buttonModified1;
+        private System.Windows.Forms.Panel InteractionsSettingsPanel1;
+        private System.Windows.Forms.Panel TittlePanel;
+        private System.Windows.Forms.Label InteractionsTittle;
+        private System.Windows.Forms.Label label6;
+        private Front_EDDIE_WindowsForm.ButtonModified buttonModified3;
+        private Front_EDDIE_WindowsForm.ButtonModified buttonModified2;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

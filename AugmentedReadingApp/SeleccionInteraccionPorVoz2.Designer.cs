@@ -32,19 +32,19 @@
             this.rbtn_voz_no = new System.Windows.Forms.RadioButton();
             this.rbtn_voz_si = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.rbtn_no_botones = new System.Windows.Forms.RadioButton();
             this.rbtn_Si_botones = new System.Windows.Forms.RadioButton();
             this.InteractionsSettingsPanel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.InteractionsTittle = new System.Windows.Forms.Label();
             this.TittlePanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.InteractionsSettingsPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.TittlePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -95,16 +95,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(221, 137);
             this.panel1.TabIndex = 19;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
-            this.pictureBox2.Location = new System.Drawing.Point(190, 7);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(28, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 21;
-            this.pictureBox2.TabStop = false;
             // 
             // label2
             // 
@@ -157,16 +147,6 @@
             this.InteractionsSettingsPanel1.Size = new System.Drawing.Size(947, 199);
             this.InteractionsSettingsPanel1.TabIndex = 20;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
-            this.pictureBox1.Location = new System.Drawing.Point(235, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(28, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
-            // 
             // InteractionsTittle
             // 
             this.InteractionsTittle.AutoSize = true;
@@ -182,10 +162,30 @@
             // 
             this.TittlePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.TittlePanel.Controls.Add(this.InteractionsTittle);
-            this.TittlePanel.Location = new System.Drawing.Point(0, -1);
+            this.TittlePanel.Location = new System.Drawing.Point(0, 0);
             this.TittlePanel.Name = "TittlePanel";
             this.TittlePanel.Size = new System.Drawing.Size(988, 74);
             this.TittlePanel.TabIndex = 21;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
+            this.pictureBox1.Location = new System.Drawing.Point(235, 34);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
+            this.pictureBox2.Location = new System.Drawing.Point(190, 7);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(28, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 21;
+            this.pictureBox2.TabStop = false;
             // 
             // SeleccionInteraccionPorVoz2
             // 
@@ -195,17 +195,18 @@
             this.ClientSize = new System.Drawing.Size(971, 500);
             this.Controls.Add(this.InteractionsSettingsPanel1);
             this.Controls.Add(this.TittlePanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SeleccionInteraccionPorVoz2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SeleccionInteraccionPorVoz";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.InteractionsSettingsPanel1.ResumeLayout(false);
             this.InteractionsSettingsPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.TittlePanel.ResumeLayout(false);
             this.TittlePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

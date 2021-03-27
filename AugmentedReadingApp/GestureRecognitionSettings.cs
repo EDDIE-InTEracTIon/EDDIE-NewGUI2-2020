@@ -125,13 +125,13 @@ namespace AugmentedReadingApp
 
         void CreateFilterMenu()
         {
-            complementoToolStripMenuItem.DropDownItems.Clear();
+            //complementoToolStripMenuItem.DropDownItems.Clear();
             //Se agregan a un toolStripMenuItem
             foreach (KeyValuePair<string, IPlugin> pair in _plugins)
             {
                 var item = new ToolStripMenuItem(pair.Key);
                 item.Click += new EventHandler(menuItem_click);
-                complementoToolStripMenuItem.DropDownItems.Add(item);
+                //complementoToolStripMenuItem.DropDownItems.Add(item);
                 // ((ToolStripMenuItem)menuItem).Checked = true;
 
             }
@@ -499,6 +499,41 @@ namespace AugmentedReadingApp
             {
                 this.Cursor = Cursors.Default;
             }
+        }
+
+        private void GestureRecognitionSettings_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InteractionsSettingsPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxX_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label41_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label39_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
