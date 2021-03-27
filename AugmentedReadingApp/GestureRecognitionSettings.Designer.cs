@@ -61,18 +61,19 @@
             this.imageBox2 = new Emgu.CV.UI.ImageBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.StartProjectionButtonModified = new Front_EDDIE_WindowsForm.ButtonModified();
-            this.buttonModified1 = new Front_EDDIE_WindowsForm.ButtonModified();
             this.InteractionsSettingsPanel1 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.TittlePanel = new System.Windows.Forms.Panel();
             this.InteractionsTittle = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.buttonModified2 = new Front_EDDIE_WindowsForm.ButtonModified();
+            this.buttonModified4 = new Front_EDDIE_WindowsForm.ButtonModified();
             this.buttonModified3 = new Front_EDDIE_WindowsForm.ButtonModified();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.buttonModified2 = new Front_EDDIE_WindowsForm.ButtonModified();
+            this.buttonModified1 = new Front_EDDIE_WindowsForm.ButtonModified();
+            this.StartProjectionButtonModified = new Front_EDDIE_WindowsForm.ButtonModified();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAStartY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAEndY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSStartY)).BeginInit();
@@ -86,20 +87,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox2)).BeginInit();
             this.InteractionsSettingsPanel1.SuspendLayout();
-            this.TittlePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.TittlePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // ComboBoxCameraList2
             // 
             this.ComboBoxCameraList2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxCameraList2.Font = new System.Drawing.Font("IBM Plex Sans", 9.749999F);
             this.ComboBoxCameraList2.FormattingEnabled = true;
             this.ComboBoxCameraList2.Location = new System.Drawing.Point(18, 31);
             this.ComboBoxCameraList2.Name = "ComboBoxCameraList2";
-            this.ComboBoxCameraList2.Size = new System.Drawing.Size(226, 21);
+            this.ComboBoxCameraList2.Size = new System.Drawing.Size(226, 25);
             this.ComboBoxCameraList2.TabIndex = 5;
             this.ComboBoxCameraList2.SelectedIndexChanged += new System.EventHandler(this.ComboCameras_SelectedIndexChangedGesture);
             // 
@@ -452,7 +454,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(124, 61);
+            this.label5.Location = new System.Drawing.Point(124, 65);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(14, 13);
             this.label5.TabIndex = 135;
@@ -460,7 +462,7 @@
             // 
             // numericUpDownXGestual
             // 
-            this.numericUpDownXGestual.Location = new System.Drawing.Point(18, 57);
+            this.numericUpDownXGestual.Location = new System.Drawing.Point(18, 61);
             this.numericUpDownXGestual.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.numericUpDownXGestual.Maximum = new decimal(new int[] {
             3000,
@@ -483,7 +485,7 @@
             // 
             // numericUpDownYGestual
             // 
-            this.numericUpDownYGestual.Location = new System.Drawing.Point(155, 59);
+            this.numericUpDownYGestual.Location = new System.Drawing.Point(155, 63);
             this.numericUpDownYGestual.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.numericUpDownYGestual.Maximum = new decimal(new int[] {
             3000,
@@ -539,10 +541,11 @@
             // comboBox1
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("IBM Plex Sans", 9.749999F);
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(304, 31);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(180, 21);
+            this.comboBox1.Size = new System.Drawing.Size(180, 25);
             this.comboBox1.TabIndex = 162;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -557,45 +560,10 @@
             this.label4.Text = "Complement";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // StartProjectionButtonModified
-            // 
-            this.StartProjectionButtonModified.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.StartProjectionButtonModified.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.StartProjectionButtonModified.FlatAppearance.BorderSize = 5;
-            this.StartProjectionButtonModified.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
-            this.StartProjectionButtonModified.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.StartProjectionButtonModified.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StartProjectionButtonModified.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StartProjectionButtonModified.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.StartProjectionButtonModified.Location = new System.Drawing.Point(490, 14);
-            this.StartProjectionButtonModified.Name = "StartProjectionButtonModified";
-            this.StartProjectionButtonModified.Size = new System.Drawing.Size(140, 63);
-            this.StartProjectionButtonModified.TabIndex = 164;
-            this.StartProjectionButtonModified.Text = "Start Recognition";
-            this.StartProjectionButtonModified.UseVisualStyleBackColor = false;
-            this.StartProjectionButtonModified.Click += new System.EventHandler(this.comenzarToolStripMenuItem_Click);
-            // 
-            // buttonModified1
-            // 
-            this.buttonModified1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.buttonModified1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.buttonModified1.FlatAppearance.BorderSize = 5;
-            this.buttonModified1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
-            this.buttonModified1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.buttonModified1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonModified1.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonModified1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.buttonModified1.Location = new System.Drawing.Point(782, 14);
-            this.buttonModified1.Name = "buttonModified1";
-            this.buttonModified1.Size = new System.Drawing.Size(137, 63);
-            this.buttonModified1.TabIndex = 165;
-            this.buttonModified1.Text = "Stop Recognition";
-            this.buttonModified1.UseVisualStyleBackColor = false;
-            this.buttonModified1.Click += new System.EventHandler(this.detenerToolStripMenuItem_Click);
-            // 
             // InteractionsSettingsPanel1
             // 
             this.InteractionsSettingsPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.InteractionsSettingsPanel1.Controls.Add(this.buttonModified4);
             this.InteractionsSettingsPanel1.Controls.Add(this.pictureBox4);
             this.InteractionsSettingsPanel1.Controls.Add(this.pictureBox3);
             this.InteractionsSettingsPanel1.Controls.Add(this.pictureBox2);
@@ -643,6 +611,60 @@
             this.InteractionsSettingsPanel1.TabIndex = 166;
             this.InteractionsSettingsPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.InteractionsSettingsPanel1_Paint);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Help;
+            this.pictureBox4.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
+            this.pictureBox4.Location = new System.Drawing.Point(110, 295);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 172;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Help;
+            this.pictureBox3.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
+            this.pictureBox3.Location = new System.Drawing.Point(414, 8);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 171;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Help;
+            this.pictureBox2.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
+            this.pictureBox2.Location = new System.Drawing.Point(270, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 170;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Help;
+            this.pictureBox1.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
+            this.pictureBox1.Location = new System.Drawing.Point(879, 87);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 169;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(14, 296);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(99, 22);
+            this.label6.TabIndex = 166;
+            this.label6.Text = "Calibration";
+            // 
             // TittlePanel
             // 
             this.TittlePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
@@ -663,19 +685,46 @@
             this.InteractionsTittle.TabIndex = 0;
             this.InteractionsTittle.Text = "Gesture recognition";
             // 
-            // label6
+            // buttonModified4
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(14, 296);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 22);
-            this.label6.TabIndex = 166;
-            this.label6.Text = "Calibration";
+            this.buttonModified4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonModified4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonModified4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonModified4.FlatAppearance.BorderSize = 5;
+            this.buttonModified4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
+            this.buttonModified4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.buttonModified4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonModified4.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModified4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.buttonModified4.Location = new System.Drawing.Point(746, 164);
+            this.buttonModified4.Name = "buttonModified4";
+            this.buttonModified4.Size = new System.Drawing.Size(157, 67);
+            this.buttonModified4.TabIndex = 173;
+            this.buttonModified4.Text = "Calibration Guide";
+            this.buttonModified4.UseVisualStyleBackColor = false;
+            // 
+            // buttonModified3
+            // 
+            this.buttonModified3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonModified3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonModified3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonModified3.FlatAppearance.BorderSize = 5;
+            this.buttonModified3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
+            this.buttonModified3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.buttonModified3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonModified3.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModified3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.buttonModified3.Location = new System.Drawing.Point(773, 296);
+            this.buttonModified3.Name = "buttonModified3";
+            this.buttonModified3.Size = new System.Drawing.Size(157, 47);
+            this.buttonModified3.TabIndex = 168;
+            this.buttonModified3.Text = "Save calibration";
+            this.buttonModified3.UseVisualStyleBackColor = false;
             // 
             // buttonModified2
             // 
             this.buttonModified2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonModified2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonModified2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
             this.buttonModified2.FlatAppearance.BorderSize = 5;
             this.buttonModified2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
@@ -691,62 +740,43 @@
             this.buttonModified2.UseVisualStyleBackColor = false;
             this.buttonModified2.Click += new System.EventHandler(this.button4_Click);
             // 
-            // buttonModified3
+            // buttonModified1
             // 
-            this.buttonModified3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.buttonModified3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.buttonModified3.FlatAppearance.BorderSize = 5;
-            this.buttonModified3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
-            this.buttonModified3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.buttonModified3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonModified3.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonModified3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.buttonModified3.Location = new System.Drawing.Point(773, 296);
-            this.buttonModified3.Name = "buttonModified3";
-            this.buttonModified3.Size = new System.Drawing.Size(157, 47);
-            this.buttonModified3.TabIndex = 168;
-            this.buttonModified3.Text = "Save calibration";
-            this.buttonModified3.UseVisualStyleBackColor = false;
+            this.buttonModified1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonModified1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonModified1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonModified1.FlatAppearance.BorderSize = 5;
+            this.buttonModified1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
+            this.buttonModified1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.buttonModified1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonModified1.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModified1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.buttonModified1.Location = new System.Drawing.Point(782, 14);
+            this.buttonModified1.Name = "buttonModified1";
+            this.buttonModified1.Size = new System.Drawing.Size(137, 63);
+            this.buttonModified1.TabIndex = 165;
+            this.buttonModified1.Text = "Stop Recognition";
+            this.buttonModified1.UseVisualStyleBackColor = false;
+            this.buttonModified1.Click += new System.EventHandler(this.detenerToolStripMenuItem_Click);
             // 
-            // pictureBox1
+            // StartProjectionButtonModified
             // 
-            this.pictureBox1.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
-            this.pictureBox1.Location = new System.Drawing.Point(879, 87);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 169;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
-            this.pictureBox2.Location = new System.Drawing.Point(270, 8);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 170;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
-            this.pictureBox3.Location = new System.Drawing.Point(414, 8);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 171;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
-            this.pictureBox4.Location = new System.Drawing.Point(110, 295);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 172;
-            this.pictureBox4.TabStop = false;
+            this.StartProjectionButtonModified.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.StartProjectionButtonModified.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.StartProjectionButtonModified.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.StartProjectionButtonModified.FlatAppearance.BorderSize = 5;
+            this.StartProjectionButtonModified.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
+            this.StartProjectionButtonModified.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.StartProjectionButtonModified.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StartProjectionButtonModified.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartProjectionButtonModified.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.StartProjectionButtonModified.Location = new System.Drawing.Point(490, 14);
+            this.StartProjectionButtonModified.Name = "StartProjectionButtonModified";
+            this.StartProjectionButtonModified.Size = new System.Drawing.Size(140, 63);
+            this.StartProjectionButtonModified.TabIndex = 164;
+            this.StartProjectionButtonModified.Text = "Start Recognition";
+            this.StartProjectionButtonModified.UseVisualStyleBackColor = false;
+            this.StartProjectionButtonModified.Click += new System.EventHandler(this.comenzarToolStripMenuItem_Click);
             // 
             // GestureRecognitionSettings
             // 
@@ -775,12 +805,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageBox2)).EndInit();
             this.InteractionsSettingsPanel1.ResumeLayout(false);
             this.InteractionsSettingsPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.TittlePanel.ResumeLayout(false);
             this.TittlePanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -830,5 +860,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Front_EDDIE_WindowsForm.ButtonModified buttonModified4;
     }
 }

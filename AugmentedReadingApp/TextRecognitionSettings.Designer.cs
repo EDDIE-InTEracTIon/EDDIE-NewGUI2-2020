@@ -34,28 +34,29 @@
             this.label4 = new System.Windows.Forms.Label();
             this.numericUpDownResXText = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownResYText = new System.Windows.Forms.NumericUpDown();
-            this.imageBox3 = new Emgu.CV.UI.ImageBox();
-            this.imageBox1 = new Emgu.CV.UI.ImageBox();
             this.TittlePanel = new System.Windows.Forms.Panel();
             this.InteractionsTittle = new System.Windows.Forms.Label();
             this.InteractionsSettingsPanel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.imageBox1 = new Emgu.CV.UI.ImageBox();
+            this.imageBox3 = new Emgu.CV.UI.ImageBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownResXText)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownResYText)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).BeginInit();
             this.TittlePanel.SuspendLayout();
             this.InteractionsSettingsPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // ComboBoxCameraList1
             // 
             this.ComboBoxCameraList1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxCameraList1.Font = new System.Drawing.Font("IBM Plex Sans", 9.749999F);
             this.ComboBoxCameraList1.FormattingEnabled = true;
             this.ComboBoxCameraList1.Location = new System.Drawing.Point(19, 45);
             this.ComboBoxCameraList1.Name = "ComboBoxCameraList1";
-            this.ComboBoxCameraList1.Size = new System.Drawing.Size(226, 21);
+            this.ComboBoxCameraList1.Size = new System.Drawing.Size(226, 25);
             this.ComboBoxCameraList1.TabIndex = 2;
             this.ComboBoxCameraList1.SelectedIndexChanged += new System.EventHandler(this.ComboCameras_SelectedIndexChangedText);
             // 
@@ -72,7 +73,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(125, 75);
+            this.label4.Location = new System.Drawing.Point(125, 81);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(14, 13);
             this.label4.TabIndex = 134;
@@ -80,7 +81,7 @@
             // 
             // numericUpDownResXText
             // 
-            this.numericUpDownResXText.Location = new System.Drawing.Point(19, 71);
+            this.numericUpDownResXText.Location = new System.Drawing.Point(19, 77);
             this.numericUpDownResXText.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.numericUpDownResXText.Maximum = new decimal(new int[] {
             3000,
@@ -103,7 +104,7 @@
             // 
             // numericUpDownResYText
             // 
-            this.numericUpDownResYText.Location = new System.Drawing.Point(155, 71);
+            this.numericUpDownResYText.Location = new System.Drawing.Point(155, 77);
             this.numericUpDownResYText.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.numericUpDownResYText.Maximum = new decimal(new int[] {
             3000,
@@ -123,26 +124,6 @@
             0,
             0,
             0});
-            // 
-            // imageBox3
-            // 
-            this.imageBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.imageBox3.Location = new System.Drawing.Point(383, 113);
-            this.imageBox3.Name = "imageBox3";
-            this.imageBox3.Size = new System.Drawing.Size(352, 200);
-            this.imageBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imageBox3.TabIndex = 125;
-            this.imageBox3.TabStop = false;
-            // 
-            // imageBox1
-            // 
-            this.imageBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.imageBox1.Location = new System.Drawing.Point(21, 113);
-            this.imageBox1.Name = "imageBox1";
-            this.imageBox1.Size = new System.Drawing.Size(352, 200);
-            this.imageBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imageBox1.TabIndex = 2;
-            this.imageBox1.TabStop = false;
             // 
             // TittlePanel
             // 
@@ -182,6 +163,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Help;
             this.pictureBox2.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
             this.pictureBox2.Location = new System.Drawing.Point(296, 19);
             this.pictureBox2.Name = "pictureBox2";
@@ -189,6 +171,26 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 138;
             this.pictureBox2.TabStop = false;
+            // 
+            // imageBox1
+            // 
+            this.imageBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imageBox1.Location = new System.Drawing.Point(21, 113);
+            this.imageBox1.Name = "imageBox1";
+            this.imageBox1.Size = new System.Drawing.Size(352, 200);
+            this.imageBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imageBox1.TabIndex = 2;
+            this.imageBox1.TabStop = false;
+            // 
+            // imageBox3
+            // 
+            this.imageBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imageBox3.Location = new System.Drawing.Point(383, 113);
+            this.imageBox3.Name = "imageBox3";
+            this.imageBox3.Size = new System.Drawing.Size(352, 200);
+            this.imageBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imageBox3.TabIndex = 125;
+            this.imageBox3.TabStop = false;
             // 
             // TextRecognitionSettings
             // 
@@ -204,13 +206,13 @@
             this.Text = "Configuración";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownResXText)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownResYText)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).EndInit();
             this.TittlePanel.ResumeLayout(false);
             this.TittlePanel.PerformLayout();
             this.InteractionsSettingsPanel1.ResumeLayout(false);
             this.InteractionsSettingsPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageBox3)).EndInit();
             this.ResumeLayout(false);
 
         }

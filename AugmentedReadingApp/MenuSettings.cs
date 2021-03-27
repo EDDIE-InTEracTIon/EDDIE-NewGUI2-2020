@@ -18,11 +18,10 @@ namespace AugmentedReadingApp
     public partial class MenuSettings : Form
     {
         //Se Instancias los formularios con cada configuracion de cada módulo
-        InteractionsSettings InteractionsForm = new InteractionsSettings();
         WebSearchServicesSettings WebSearchServicesForm = new WebSearchServicesSettings();
         SeleccionInteraccionPorVoz2 seleccionInteraccionPorVoz = new SeleccionInteraccionPorVoz2();
         SeleccionApis2 seleccionApis = new SeleccionApis2();
-        EyeTrackingConfiguration eyeTrackingConfig = new EyeTrackingConfiguration();
+        EyeTrackingConfiguration2 eyeTrackingConfig = new EyeTrackingConfiguration2();
         TextRecognitionSettings textRecognitionSettings = new TextRecognitionSettings();
         GestureRecognitionSettings gestureRecognitionSettings = new GestureRecognitionSettings();
         //InteractionCoordinator interactionCoordinator = new InteractionCoordinator();

@@ -79,10 +79,10 @@
             this.rbtn_voz_si.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
             this.rbtn_voz_si.Location = new System.Drawing.Point(21, 67);
             this.rbtn_voz_si.Name = "rbtn_voz_si";
-            this.rbtn_voz_si.Size = new System.Drawing.Size(44, 28);
+            this.rbtn_voz_si.Size = new System.Drawing.Size(57, 28);
             this.rbtn_voz_si.TabIndex = 11;
             this.rbtn_voz_si.TabStop = true;
-            this.rbtn_voz_si.Text = "Si";
+            this.rbtn_voz_si.Text = "Yes";
             this.rbtn_voz_si.UseVisualStyleBackColor = true;
             // 
             // panel1
@@ -128,10 +128,10 @@
             this.rbtn_Si_botones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
             this.rbtn_Si_botones.Location = new System.Drawing.Point(7, 41);
             this.rbtn_Si_botones.Name = "rbtn_Si_botones";
-            this.rbtn_Si_botones.Size = new System.Drawing.Size(44, 28);
+            this.rbtn_Si_botones.Size = new System.Drawing.Size(57, 28);
             this.rbtn_Si_botones.TabIndex = 16;
             this.rbtn_Si_botones.TabStop = true;
-            this.rbtn_Si_botones.Text = "Si";
+            this.rbtn_Si_botones.Text = "Yes";
             this.rbtn_Si_botones.UseVisualStyleBackColor = true;
             // 
             // InteractionsSettingsPanel1
@@ -169,6 +169,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Help;
             this.pictureBox1.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
             this.pictureBox1.Location = new System.Drawing.Point(235, 34);
             this.pictureBox1.Name = "pictureBox1";
@@ -179,6 +180,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Help;
             this.pictureBox2.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
             this.pictureBox2.Location = new System.Drawing.Point(190, 7);
             this.pictureBox2.Name = "pictureBox2";

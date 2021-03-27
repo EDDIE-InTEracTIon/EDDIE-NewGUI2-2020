@@ -3191,7 +3191,6 @@ Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augm
 Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\obj\x86\Debug\AugmentedReadingApp.csproj.CopyComplete
 Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\obj\x86\Debug\AugmentedReadingApp.exe
 Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\obj\x86\Debug\AugmentedReadingApp.pdb
-Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\obj\x86\Debug\AugmentedReadingApp.InteractionsSettings.resources
 Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\obj\x86\Debug\AugmentedReadingApp.WebSearchServicesSettings.resources
 Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\obj\x86\Debug\AugmentedReadingApp.MenuSettings.resources
 Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\obj\x86\Debug\AugmentedReadingApp.ProjectionScreen.resources
@@ -3204,3 +3203,4 @@ Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augm
 Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\obj\x86\Debug\AugmentedReadingApp.busquedasRecientes2.resources
 Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\obj\x86\Debug\AugmentedReadingApp.SeleccionInteraccionPorVoz2.resources
 Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\obj\x86\Debug\AugmentedReadingApp.SeleccionApis2.resources
+Z:\EDDIE Último Release con Denisse Pezoa y Gonzalo Estay 28-01-2021\EDDIE-Augmented-Reading\AugmentedReadingApp\obj\x86\Debug\AugmentedReadingApp.EyeTrackingConfiguration2.resources

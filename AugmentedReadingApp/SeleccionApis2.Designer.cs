@@ -55,9 +55,9 @@
             this.label5.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(435, 84);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(302, 22);
+            this.label5.Size = new System.Drawing.Size(278, 22);
             this.label5.TabIndex = 47;
-            this.label5.Text = "Seleccione el idioma al cual traducir:";
+            this.label5.Text = "Select the language to translate to";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // cbx_idiomaTraducir
@@ -86,9 +86,9 @@
             this.label4.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(21, 171);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(387, 22);
+            this.label4.Size = new System.Drawing.Size(177, 22);
             this.label4.TabIndex = 43;
-            this.label4.Text = "Seleccione una api para búsqueda de imágenes:";
+            this.label4.Text = "Image search service";
             // 
             // cbx_apisTraducciones
             // 
@@ -106,9 +106,9 @@
             this.label3.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(435, 12);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(311, 22);
+            this.label3.Size = new System.Drawing.Size(160, 22);
             this.label3.TabIndex = 41;
-            this.label3.Text = "Seleccione una api para traducciones:";
+            this.label3.Text = "Translation service";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // cbx_apisDefiniciones
@@ -127,9 +127,9 @@
             this.label2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(21, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(304, 22);
+            this.label2.Size = new System.Drawing.Size(156, 22);
             this.label2.TabIndex = 39;
-            this.label2.Text = "Seleccione una api para definiciones:";
+            this.label2.Text = "Definitions service";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // cbx_apisVideos
@@ -148,9 +148,9 @@
             this.label1.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(435, 171);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(259, 22);
+            this.label1.Size = new System.Drawing.Size(172, 22);
             this.label1.TabIndex = 37;
-            this.label1.Text = "Seleccione una api para videos:";
+            this.label1.Text = "Video search service";
             // 
             // lbl_Enciclopedias
             // 
@@ -158,9 +158,9 @@
             this.lbl_Enciclopedias.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Enciclopedias.Location = new System.Drawing.Point(21, 12);
             this.lbl_Enciclopedias.Name = "lbl_Enciclopedias";
-            this.lbl_Enciclopedias.Size = new System.Drawing.Size(309, 22);
+            this.lbl_Enciclopedias.Size = new System.Drawing.Size(176, 22);
             this.lbl_Enciclopedias.TabIndex = 36;
-            this.lbl_Enciclopedias.Text = "Seleccione una api para enciclopedia:";
+            this.lbl_Enciclopedias.Text = "Encyclopedia service";
             this.lbl_Enciclopedias.Click += new System.EventHandler(this.lbl_Enciclopedias_Click);
             // 
             // cbx_apisEnciclopedia

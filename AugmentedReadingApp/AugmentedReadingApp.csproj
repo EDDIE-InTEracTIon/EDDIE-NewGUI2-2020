@@ -157,6 +157,12 @@
     <Compile Include="busquedasRecientes.Designer.cs">
       <DependentUpon>busquedasRecientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="EyeTrackingConfiguration2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EyeTrackingConfiguration2.Designer.cs">
+      <DependentUpon>EyeTrackingConfiguration2.cs</DependentUpon>
+    </Compile>
     <Compile Include="EyeTrackingConfiguration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,12 +204,6 @@
     </Compile>
     <Compile Include="InteractionCoordinator.Designer.cs">
       <DependentUpon>InteractionCoordinator.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InteractionsSettings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InteractionsSettings.designer.cs">
-      <DependentUpon>InteractionsSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuSettings.cs">
       <SubType>Form</SubType>
@@ -258,6 +258,9 @@
     <EmbeddedResource Include="busquedasRecientes.resx">
       <DependentUpon>busquedasRecientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EyeTrackingConfiguration2.resx">
+      <DependentUpon>EyeTrackingConfiguration2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EyeTrackingConfiguration.resx">
       <DependentUpon>EyeTrackingConfiguration.cs</DependentUpon>
     </EmbeddedResource>
@@ -278,9 +281,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InteractionCoordinator.resx">
       <DependentUpon>InteractionCoordinator.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InteractionsSettings.resx">
-      <DependentUpon>InteractionsSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuSettings.resx">
       <DependentUpon>MenuSettings.cs</DependentUpon>
