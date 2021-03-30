@@ -47,6 +47,7 @@ namespace AugmentedReadingApp
 
         private void MenuSettings_Load(object sender, EventArgs e)
         {
+            GetAllSettings(seleccionInteraccionPorVoz,seleccionApis, textRecognitionSettings, gestureRecognitionSettings);
             /*
             PrivateFontCollection pfc = new PrivateFontCollection();
             pfc.AddFontFile(".../Fonts/IBMPlexSans-Regular.ttf");
@@ -118,6 +119,52 @@ namespace AugmentedReadingApp
             this.PanelContenido.Tag = formHijo;
             formHijo.Show();
             formHijo.BringToFront();
+        }
+        private void GetAllSettings(SeleccionInteraccionPorVoz2 interactionSettings, SeleccionApis2 seleccionApisSettings, TextRecognitionSettings textRecognitionSettings, GestureRecognitionSettings gestureRecognitionSettings)
+        {
+            if (Properties.Settings2.Default.buttonDisplay == "Yes")
+            {
+                interactionSettings.rbtn_Si_botones.Checked = true;
+            }
+            if (Properties.Settings2.Default.buttonDisplay == "No")
+            {
+                interactionSettings.rbtn_no_botones.Checked = true;
+            }
+            if (Properties.Settings2.Default.voiceInteraction == "Yes")
+            {
+                interactionSettings.rbtn_voz_si.Checked = true;
+            }
+            if (Properties.Settings2.Default.voiceInteraction == "No")
+            {
+                interactionSettings.rbtn_voz_no.Checked = true;
+            }
+            //seleccionApisSettings.cbx_apisDefiniciones.GetItemText = Properties.Settings.Default.;
+
+        }
+        private void SaveAllSettings(SeleccionInteraccionPorVoz2 interactionSettings,SeleccionApis2 seleccionApisSettings,TextRecognitionSettings textRecognitionSettings, GestureRecognitionSettings gestureRecognitionSettings)
+        {
+            if (interactionSettings.rbtn_Si_botones.Checked == true)
+            {
+                Properties.Settings2.Default.buttonDisplay = "Yes";
+            }
+            if (interactionSettings.rbtn_no_botones.Checked == true)
+            {
+                Properties.Settings2.Default.buttonDisplay = "No";
+            }
+            if (interactionSettings.rbtn_voz_si.Checked == true)
+            {
+                Properties.Settings2.Default.voiceInteraction = "Yes";
+            }
+            if (interactionSettings.rbtn_voz_no.Checked == true)
+            {
+                Properties.Settings2.Default.voiceInteraction = "No";
+            }
+            Properties.Settings2.Default.Save();
+
+        }
+        private void ResetAllSettings(SeleccionInteraccionPorVoz2 interactionSettings, SeleccionApis2 seleccionApisSettings, TextRecognitionSettings textRecognitionSettings, GestureRecognitionSettings gestureRecognitionSettings)
+        {
+            Properties.Settings2.Default.Reset();
         }
         //A Continuación los eventos click de los botones del navBar vertical
         private void InteractionsButton_Click(object sender, EventArgs e)
@@ -239,6 +286,7 @@ namespace AugmentedReadingApp
 
         private void SaveSettingsButtonModified_Click(object sender, EventArgs e)
         {
+            SaveAllSettings(seleccionInteraccionPorVoz, seleccionApis, textRecognitionSettings, gestureRecognitionSettings);
             //Codigo de guardado de SeleccionInteraccionPorVoz
             if (seleccionInteraccionPorVoz.rbtn_voz_si.Checked && seleccionInteraccionPorVoz.rbtn_Si_botones.Checked)
             {
@@ -269,6 +317,11 @@ namespace AugmentedReadingApp
             SeleccionApis.idiomaSeleccionadoTraduccion = seleccionApis.cbx_idiomaTraducir.GetItemText(seleccionApis.cbx_idiomaTraducir.SelectedValue);
             MessageBox.Show("Apis seleccionadas con éxito");
             //this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void ResetSettingsButtonModified_Click(object sender, EventArgs e)
+        {
+            ResetAllSettings(seleccionInteraccionPorVoz, seleccionApis, textRecognitionSettings, gestureRecognitionSettings);
         }
     }
 }

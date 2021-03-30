@@ -56,5 +56,15 @@ namespace AugmentedReadingApp
         {
 
         }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.Show("When activated it is possible to interact with the web search by means of voice prompts", pictureBox1);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            toolTip1.Show("When activated it is possible to interact with the web search by means of voice prompts", pictureBox1);
+        }
     }
 }

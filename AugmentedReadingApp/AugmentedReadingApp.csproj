@@ -187,6 +187,11 @@
     <Compile Include="SeleccionInteraccionPorVoz2.Designer.cs">
       <DependentUpon>SeleccionInteraccionPorVoz2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Settings2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings2.settings</DependentUpon>
+    </Compile>
     <Compile Include="TextRecognitionSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -323,6 +328,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Properties\Settings2.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings2.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

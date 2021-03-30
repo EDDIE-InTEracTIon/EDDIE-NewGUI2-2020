@@ -116,12 +116,12 @@ namespace AugmentedReadingApp
             var opcionInteraccionSeleccionada = SeleccionInteraccionPorVoz2.activarBusquedaVoz;
             var opcionMostrarBotonesSeleccionada = SeleccionInteraccionPorVoz2.mostrarBotonesconVoz;
 
-            if (opcionInteraccionSeleccionada == "Si" && opcionMostrarBotonesSeleccionada == "Si")
+            if (opcionInteraccionSeleccionada == "Yes" && opcionMostrarBotonesSeleccionada == "Yes")
             {
                 iniciarVR();
                 btn_buscarWeb.Visible = true;
             }
-            if (opcionInteraccionSeleccionada == "Si" && opcionMostrarBotonesSeleccionada == "No")
+            if (opcionInteraccionSeleccionada == "Yes" && opcionMostrarBotonesSeleccionada == "No")
             {
                 iniciarVR();
                 btn_buscarWeb.Visible = false;
@@ -443,7 +443,7 @@ namespace AugmentedReadingApp
                     fl_busquedasRecientes.Controls.Add(busquedaReciente);
                     csvFile.AppendLine(formatTime + " ; " + textoBuscar + " ; " + apiUtilizada);
 
-                    var apiSeleccionada = SeleccionApis.apiSeleccionadaEnciclopedia;
+                    var apiSeleccionada = SeleccionApis2.apiSeleccionadaEnciclopedia;
                     datosObtenidos = buscarEnciclopedia.buscarEnciclopedia(textoBuscar, apiSeleccionada);
                     lbl_PalabraBuscada.Text = textoBuscar;
 
@@ -499,7 +499,7 @@ namespace AugmentedReadingApp
                     fl_busquedasRecientes.Controls.Add(busquedaReciente);
                     csvFile.AppendLine(formatTime + " ; " + videoBuscar + " ; " + apiUtilizada);
 
-                    var apiSeleccionada = SeleccionApis.apiSeleccionadaVideo;
+                    var apiSeleccionada = SeleccionApis2.apiSeleccionadaVideo;
                     var urlObtenida = buscarVideoYoutube.buscarVideo(videoBuscar, apiSeleccionada);
                     navegador.Load(urlObtenida);
                 }
@@ -521,7 +521,7 @@ namespace AugmentedReadingApp
             btn_leerDefinicionTraduccion.Visible = true;
 
             var textoTraducir = conceptoBuscar;
-            var idiomaSeleccionado = SeleccionApis.idiomaSeleccionadoTraduccion;
+            var idiomaSeleccionado = SeleccionApis2.idiomaSeleccionadoTraduccion;
 
             busquedasRecientes2 busquedaReciente = new busquedasRecientes2();
             var time = DateTime.Now;
@@ -545,7 +545,7 @@ namespace AugmentedReadingApp
                     fl_busquedasRecientes.Controls.Add(busquedaReciente);
                     csvFile.AppendLine(formatTime + " ; " + textoTraducir + " ; " + apiUtilizada);
 
-                    var apiSeleccionada = SeleccionApis.apiSeleccionadaTraduccion;
+                    var apiSeleccionada = SeleccionApis2.apiSeleccionadaTraduccion;
                     string resultado = traducirTexto.traducirTexto(textoTraducir, idiomaSeleccionado, apiSeleccionada);
                     rtb_result_definicion_traduccion.AppendText(resultado);
                 }
@@ -594,7 +594,7 @@ namespace AugmentedReadingApp
                     csvFile.AppendLine(formatTime + " ; " + definicionBuscada + " ; " + apiUtilizada);
 
                     BuscarDefinicion buscarDefinicionG = new BuscarDefinicion();
-                    var apiSeleccionada = SeleccionApis.apiSeleccionadaDefinicion;
+                    var apiSeleccionada = SeleccionApis2.apiSeleccionadaDefinicion;
 
                     if (apiSeleccionada == null)
                     {
@@ -651,7 +651,7 @@ namespace AugmentedReadingApp
                     fl_busquedasRecientes.Controls.Add(busquedaReciente);
                     List<String> resultadosObtenidosCloudVision = new List<string>();
                     BuscarImagen buscarImagen = new BuscarImagen();
-                    var apiSeleccionada = SeleccionApis.apiSeleccionadaImagen;
+                    var apiSeleccionada = SeleccionApis2.apiSeleccionadaImagen;
                     if (apiSeleccionada == null)
                     {
                         MessageBox.Show("Seleccione una api para búsqueda por imagen.");

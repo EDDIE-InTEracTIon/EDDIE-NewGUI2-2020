@@ -305,6 +305,7 @@
             this.ResetSettingsButtonModified.TabIndex = 4;
             this.ResetSettingsButtonModified.Text = "Reset Settings";
             this.ResetSettingsButtonModified.UseVisualStyleBackColor = false;
+            this.ResetSettingsButtonModified.Click += new System.EventHandler(this.ResetSettingsButtonModified_Click);
             // 
             // MenuSettings
             // 
