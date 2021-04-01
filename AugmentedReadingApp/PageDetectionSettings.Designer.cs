@@ -45,10 +45,10 @@
             this.TittlePanel = new System.Windows.Forms.Panel();
             this.InteractionsTittle = new System.Windows.Forms.Label();
             this.InteractionsSettingsPanel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.buttonModified1 = new Front_EDDIE_WindowsForm.ButtonModified();
             this.buttonModified2 = new Front_EDDIE_WindowsForm.ButtonModified();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
@@ -319,21 +319,10 @@
             this.InteractionsSettingsPanel1.Controls.Add(this.FinalLocateX);
             this.InteractionsSettingsPanel1.Controls.Add(this.numericUpDown6);
             this.InteractionsSettingsPanel1.Controls.Add(this.numericUpDown5);
-            this.InteractionsSettingsPanel1.Location = new System.Drawing.Point(12, 90);
+            this.InteractionsSettingsPanel1.Location = new System.Drawing.Point(12, 94);
             this.InteractionsSettingsPanel1.Name = "InteractionsSettingsPanel1";
             this.InteractionsSettingsPanel1.Size = new System.Drawing.Size(532, 230);
             this.InteractionsSettingsPanel1.TabIndex = 161;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
-            this.label1.Location = new System.Drawing.Point(15, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 22);
-            this.label1.TabIndex = 162;
-            this.label1.Text = "PDF Settings";
             // 
             // pictureBox2
             // 
@@ -383,6 +372,17 @@
             this.buttonModified2.Text = "Resize";
             this.buttonModified2.UseVisualStyleBackColor = false;
             this.buttonModified2.Click += new System.EventHandler(this.Resize_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
+            this.label1.Location = new System.Drawing.Point(15, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 22);
+            this.label1.TabIndex = 162;
+            this.label1.Text = "PDF Settings";
             // 
             // PageDetectionSettings
             // 

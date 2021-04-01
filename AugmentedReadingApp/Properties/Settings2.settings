@@ -29,11 +29,11 @@
     <Setting Name="cameraTextIndex" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="cameraTextWidth" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">0</Value>
+    <Setting Name="cameraTextWidth" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">640</Value>
     </Setting>
-    <Setting Name="cameraTextHeight" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">0</Value>
+    <Setting Name="cameraTextHeight" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">480</Value>
     </Setting>
     <Setting Name="gestureComplementIndex" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
@@ -44,29 +44,26 @@
     <Setting Name="gestureValorX2" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="gestureValorX3" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">0</Value>
-    </Setting>
     <Setting Name="gestureValorY1" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="gestureValorY2" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="gestureValorY3" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">0</Value>
-    </Setting>
-    <Setting Name="gestureTextJpg" Type="System.Int32" Scope="User">
+    <Setting Name="cameraGestureIndex" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="gestureRecognitionOnChecked" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="cameraGestureWidth" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="cameraGestureWidth" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">960</Value>
     </Setting>
-    <Setting Name="cameraGestureHeight" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="cameraGestureHeight" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">720</Value>
+    </Setting>
+    <Setting Name="encyclopediaApiIndex" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
     </Setting>
   </Settings>
 </SettingsFile>

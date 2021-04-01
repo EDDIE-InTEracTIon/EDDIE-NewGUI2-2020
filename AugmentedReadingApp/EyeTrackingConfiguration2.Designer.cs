@@ -61,31 +61,31 @@
             this.TittlePanel = new System.Windows.Forms.Panel();
             this.InteractionsTittle = new System.Windows.Forms.Label();
             this.InteractionsSettingsPanel1 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.buttonModified2 = new Front_EDDIE_WindowsForm.ButtonModified();
             this.buttonModified1 = new Front_EDDIE_WindowsForm.ButtonModified();
             this.buttonModified3 = new Front_EDDIE_WindowsForm.ButtonModified();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.reticleExample)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clickTimer)).BeginInit();
             this.TittlePanel.SuspendLayout();
             this.InteractionsSettingsPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // trackingPlugins
@@ -351,10 +351,32 @@
             this.InteractionsSettingsPanel1.Controls.Add(this.label1);
             this.InteractionsSettingsPanel1.Controls.Add(this.trackingPlugins);
             this.InteractionsSettingsPanel1.Controls.Add(this.pluginsRouteBrowse);
-            this.InteractionsSettingsPanel1.Location = new System.Drawing.Point(22, 92);
+            this.InteractionsSettingsPanel1.Location = new System.Drawing.Point(12, 94);
             this.InteractionsSettingsPanel1.Name = "InteractionsSettingsPanel1";
             this.InteractionsSettingsPanel1.Size = new System.Drawing.Size(372, 133);
             this.InteractionsSettingsPanel1.TabIndex = 25;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Help;
+            this.pictureBox2.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
+            this.pictureBox2.Location = new System.Drawing.Point(246, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 171;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
+            this.label8.Location = new System.Drawing.Point(13, 12);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(227, 22);
+            this.label8.TabIndex = 29;
+            this.label8.Text = "Eye tracking Plugin Options";
             // 
             // panel1
             // 
@@ -367,10 +389,32 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.saveFileRouteBrowse);
             this.panel1.Controls.Add(this.saveFileRoute);
-            this.panel1.Location = new System.Drawing.Point(413, 92);
+            this.panel1.Location = new System.Drawing.Point(401, 94);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(437, 150);
             this.panel1.TabIndex = 26;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Help;
+            this.pictureBox4.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
+            this.pictureBox4.Location = new System.Drawing.Point(194, 14);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 174;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
+            this.label9.Location = new System.Drawing.Point(22, 12);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(166, 22);
+            this.label9.TabIndex = 30;
+            this.label9.Text = "Data saving options";
             // 
             // panel2
             // 
@@ -384,45 +428,21 @@
             this.panel2.Controls.Add(this.reticlesRoute);
             this.panel2.Controls.Add(this.reticleSelected);
             this.panel2.Controls.Add(this.reticlesRouteBrowse);
-            this.panel2.Location = new System.Drawing.Point(22, 231);
+            this.panel2.Location = new System.Drawing.Point(12, 233);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(372, 150);
             this.panel2.TabIndex = 27;
             // 
-            // panel3
+            // pictureBox1
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.controlMouse);
-            this.panel3.Controls.Add(this.clickTimer);
-            this.panel3.Location = new System.Drawing.Point(22, 387);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(372, 101);
-            this.panel3.TabIndex = 28;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
-            this.label8.Location = new System.Drawing.Point(13, 12);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(227, 22);
-            this.label8.TabIndex = 29;
-            this.label8.Text = "Eye tracking Plugin Options";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
-            this.label9.Location = new System.Drawing.Point(22, 12);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(166, 22);
-            this.label9.TabIndex = 30;
-            this.label9.Text = "Data saving options";
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Help;
+            this.pictureBox1.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
+            this.pictureBox1.Location = new System.Drawing.Point(148, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 172;
+            this.pictureBox1.TabStop = false;
             // 
             // label10
             // 
@@ -434,6 +454,30 @@
             this.label10.Size = new System.Drawing.Size(129, 22);
             this.label10.TabIndex = 31;
             this.label10.Text = "Reticle Options";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.panel3.Controls.Add(this.pictureBox3);
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.controlMouse);
+            this.panel3.Controls.Add(this.clickTimer);
+            this.panel3.Location = new System.Drawing.Point(12, 389);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(372, 101);
+            this.panel3.TabIndex = 28;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Help;
+            this.pictureBox3.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
+            this.pictureBox3.Location = new System.Drawing.Point(204, 12);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 173;
+            this.pictureBox3.TabStop = false;
             // 
             // label11
             // 
@@ -457,7 +501,7 @@
             this.buttonModified2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonModified2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonModified2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.buttonModified2.Location = new System.Drawing.Point(413, 259);
+            this.buttonModified2.Location = new System.Drawing.Point(401, 259);
             this.buttonModified2.Name = "buttonModified2";
             this.buttonModified2.Size = new System.Drawing.Size(140, 44);
             this.buttonModified2.TabIndex = 168;
@@ -476,7 +520,7 @@
             this.buttonModified1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonModified1.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonModified1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.buttonModified1.Location = new System.Drawing.Point(559, 259);
+            this.buttonModified1.Location = new System.Drawing.Point(547, 259);
             this.buttonModified1.Name = "buttonModified1";
             this.buttonModified1.Size = new System.Drawing.Size(140, 44);
             this.buttonModified1.TabIndex = 169;
@@ -495,57 +539,13 @@
             this.buttonModified3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonModified3.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonModified3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.buttonModified3.Location = new System.Drawing.Point(705, 259);
+            this.buttonModified3.Location = new System.Drawing.Point(693, 259);
             this.buttonModified3.Name = "buttonModified3";
             this.buttonModified3.Size = new System.Drawing.Size(140, 44);
             this.buttonModified3.TabIndex = 170;
             this.buttonModified3.Text = "Load Settings";
             this.buttonModified3.UseVisualStyleBackColor = false;
             this.buttonModified3.Click += new System.EventHandler(this.LoadConfig_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Help;
-            this.pictureBox2.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
-            this.pictureBox2.Location = new System.Drawing.Point(246, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 171;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Help;
-            this.pictureBox1.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
-            this.pictureBox1.Location = new System.Drawing.Point(148, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 172;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Help;
-            this.pictureBox3.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
-            this.pictureBox3.Location = new System.Drawing.Point(204, 12);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 173;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Help;
-            this.pictureBox4.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
-            this.pictureBox4.Location = new System.Drawing.Point(194, 14);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 174;
-            this.pictureBox4.TabStop = false;
             // 
             // EyeTrackingConfiguration2
             // 
@@ -573,16 +573,16 @@
             this.TittlePanel.PerformLayout();
             this.InteractionsSettingsPanel1.ResumeLayout(false);
             this.InteractionsSettingsPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -25,7 +25,8 @@ namespace AugmentedReadingApp
         CameraActivity camerasText = new CameraActivity();
         CameraActivity camerasGesture = new CameraActivity();
         private int _CameraTextIndex;
-        private int _CameraGestureIndex;
+        //Se pasa a public
+        public int _CameraGestureIndex;
         VideoCapture captureText;
         public VideoCapture captureGesture;
         Dictionary<string, IPlugin> _plugins = new Dictionary<string, IPlugin>();

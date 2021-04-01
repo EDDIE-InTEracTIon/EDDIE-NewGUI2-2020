@@ -218,7 +218,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox ComboBoxCameraList1;
+        public System.Windows.Forms.ComboBox ComboBoxCameraList1;
         private System.Windows.Forms.Label labelRecTxt;
         public Emgu.CV.UI.ImageBox imageBox1;
         public Emgu.CV.UI.ImageBox imageBox3;

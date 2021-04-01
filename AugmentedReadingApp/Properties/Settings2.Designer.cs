@@ -133,10 +133,10 @@ namespace AugmentedReadingApp.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int cameraTextWidth {
+        [global::System.Configuration.DefaultSettingValueAttribute("640")]
+        public decimal cameraTextWidth {
             get {
-                return ((int)(this["cameraTextWidth"]));
+                return ((decimal)(this["cameraTextWidth"]));
             }
             set {
                 this["cameraTextWidth"] = value;
@@ -145,10 +145,10 @@ namespace AugmentedReadingApp.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int cameraTextHeight {
+        [global::System.Configuration.DefaultSettingValueAttribute("480")]
+        public decimal cameraTextHeight {
             get {
-                return ((int)(this["cameraTextHeight"]));
+                return ((decimal)(this["cameraTextHeight"]));
             }
             set {
                 this["cameraTextHeight"] = value;
@@ -194,18 +194,6 @@ namespace AugmentedReadingApp.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int gestureValorX3 {
-            get {
-                return ((int)(this["gestureValorX3"]));
-            }
-            set {
-                this["gestureValorX3"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
         public int gestureValorY1 {
             get {
                 return ((int)(this["gestureValorY1"]));
@@ -230,24 +218,12 @@ namespace AugmentedReadingApp.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int gestureValorY3 {
+        public int cameraGestureIndex {
             get {
-                return ((int)(this["gestureValorY3"]));
+                return ((int)(this["cameraGestureIndex"]));
             }
             set {
-                this["gestureValorY3"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int gestureTextJpg {
-            get {
-                return ((int)(this["gestureTextJpg"]));
-            }
-            set {
-                this["gestureTextJpg"] = value;
+                this["cameraGestureIndex"] = value;
             }
         }
         
@@ -265,10 +241,10 @@ namespace AugmentedReadingApp.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string cameraGestureWidth {
+        [global::System.Configuration.DefaultSettingValueAttribute("960")]
+        public decimal cameraGestureWidth {
             get {
-                return ((string)(this["cameraGestureWidth"]));
+                return ((decimal)(this["cameraGestureWidth"]));
             }
             set {
                 this["cameraGestureWidth"] = value;
@@ -277,13 +253,25 @@ namespace AugmentedReadingApp.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string cameraGestureHeight {
+        [global::System.Configuration.DefaultSettingValueAttribute("720")]
+        public decimal cameraGestureHeight {
             get {
-                return ((string)(this["cameraGestureHeight"]));
+                return ((decimal)(this["cameraGestureHeight"]));
             }
             set {
                 this["cameraGestureHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int encyclopediaApiIndex {
+            get {
+                return ((int)(this["encyclopediaApiIndex"]));
+            }
+            set {
+                this["encyclopediaApiIndex"] = value;
             }
         }
     }

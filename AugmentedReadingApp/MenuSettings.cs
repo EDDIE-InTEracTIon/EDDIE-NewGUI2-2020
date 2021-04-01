@@ -138,11 +138,34 @@ namespace AugmentedReadingApp
             {
                 interactionSettings.rbtn_voz_no.Checked = true;
             }
-            //seleccionApisSettings.cbx_apisDefiniciones.GetItemText = Properties.Settings.Default.;
-
+            //Configuraciones de seleccion de apis
+            seleccionApisSettings.cbx_apisDefiniciones.Text = Properties.Settings2.Default.definitionApi;
+            seleccionApisSettings.cbx_apisEnciclopedia.Text = Properties.Settings2.Default.encyclopediaApi;
+            //seleccionApisSettings.cbx_apisEnciclopedia.SelectedIndex = Properties.Settings2.Default.encyclopediaApiIndex;
+            seleccionApisSettings.cbx_apisVideos.Text = Properties.Settings2.Default.videoApi;
+            seleccionApisSettings.cbx_apisImagenes.Text = Properties.Settings2.Default.imageApi;
+            seleccionApisSettings.cbx_apisTraducciones.Text = Properties.Settings2.Default.translationApi;
+            seleccionApisSettings.cbx_idiomaTraducir.Text = Properties.Settings2.Default.languageTranslate;
+            //Configuraciones de TextRecognitionSettings
+            textRecognitionSettings._CameraTextIndex = Properties.Settings2.Default.cameraTextIndex;//Se cambia la variable
+            textRecognitionSettings.ComboBoxCameraList1.SelectedIndex = Properties.Settings2.Default.cameraTextIndex;  //La parte visual del cbox
+            textRecognitionSettings.numericUpDownResXText.Value = Properties.Settings2.Default.cameraTextWidth;
+            textRecognitionSettings.numericUpDownResYText.Value = Properties.Settings2.Default.cameraTextHeight;
+            //Configuraciones de GestureRecognitionSettings
+            gestureRecognitionSettings._CameraGestureIndex = Properties.Settings2.Default.cameraGestureIndex;//Se cambia la variable
+            gestureRecognitionSettings.ComboBoxCameraList2.SelectedIndex = Properties.Settings2.Default.cameraGestureIndex;//La parte visual del cbox
+            gestureRecognitionSettings.numericUpDownXGestual.Value = Properties.Settings2.Default.cameraGestureWidth;
+            gestureRecognitionSettings.numericUpDownYGestual.Value = Properties.Settings2.Default.cameraGestureHeight;
+            gestureRecognitionSettings.comboBox1.SelectedIndex = Properties.Settings2.Default.gestureComplementIndex;
+            gestureRecognitionSettings.numericUpDownSStartX.Value = Properties.Settings2.Default.gestureValorX1;
+            gestureRecognitionSettings.numericUpDownSStartY.Value = Properties.Settings2.Default.gestureValorY1;
+            gestureRecognitionSettings.numericUpDownSEndX.Value = Properties.Settings2.Default.gestureValorX2;
+            gestureRecognitionSettings.numericUpDownSEndY.Value = Properties.Settings2.Default.gestureValorY2;
+            gestureRecognitionSettings.checkBoxMouse.Checked = Properties.Settings2.Default.gestureRecognitionOnChecked;
         }
-        private void SaveAllSettings(SeleccionInteraccionPorVoz2 interactionSettings,SeleccionApis2 seleccionApisSettings,TextRecognitionSettings textRecognitionSettings, GestureRecognitionSettings gestureRecognitionSettings)
+        private void SaveAllSettings(SeleccionInteraccionPorVoz2 interactionSettings, SeleccionApis2 seleccionApisSettings, TextRecognitionSettings textRecognitionSettings, GestureRecognitionSettings gestureRecognitionSettings)
         {
+            //Configuraciones de interactionSettings
             if (interactionSettings.rbtn_Si_botones.Checked == true)
             {
                 Properties.Settings2.Default.buttonDisplay = "Yes";
@@ -159,6 +182,38 @@ namespace AugmentedReadingApp
             {
                 Properties.Settings2.Default.voiceInteraction = "No";
             }
+            //Configuraciones de seleccion de apis
+            Properties.Settings2.Default.definitionApi = seleccionApisSettings.cbx_apisDefiniciones.Text;
+            
+            Properties.Settings2.Default.encyclopediaApi = seleccionApisSettings.cbx_apisEnciclopedia.Text;
+            Properties.Settings2.Default.encyclopediaApiIndex = seleccionApisSettings.cbx_apisEnciclopedia.SelectedIndex;
+
+            Properties.Settings2.Default.videoApi = seleccionApisSettings.cbx_apisVideos.Text;
+            Properties.Settings2.Default.imageApi = seleccionApisSettings.cbx_apisImagenes.Text;
+            Properties.Settings2.Default.translationApi = seleccionApisSettings.cbx_apisTraducciones.Text;
+            Properties.Settings2.Default.languageTranslate = seleccionApisSettings.cbx_idiomaTraducir.Text;
+            //Configuraciones de TextRecognitionSettings
+            Properties.Settings2.Default.cameraTextIndex = textRecognitionSettings._CameraTextIndex;
+            Properties.Settings2.Default.cameraTextWidth = textRecognitionSettings.numericUpDownResXText.Value;
+            Properties.Settings2.Default.cameraTextHeight = textRecognitionSettings.numericUpDownResYText.Value;
+            //Configuraciones de GestureRecognitionSettings
+            Properties.Settings2.Default.cameraGestureIndex = gestureRecognitionSettings._CameraGestureIndex;
+            Properties.Settings2.Default.cameraGestureWidth = gestureRecognitionSettings.numericUpDownXGestual.Value;
+            Properties.Settings2.Default.cameraGestureHeight = gestureRecognitionSettings.numericUpDownYGestual.Value;
+            Properties.Settings2.Default.gestureComplementIndex = gestureRecognitionSettings.comboBox1.SelectedIndex;
+            Properties.Settings2.Default.gestureValorX1 = (int)gestureRecognitionSettings.numericUpDownSStartX.Value;
+            Properties.Settings2.Default.gestureValorY1 = (int)gestureRecognitionSettings.numericUpDownSStartY.Value;
+            Properties.Settings2.Default.gestureValorX2 = (int)gestureRecognitionSettings.numericUpDownSEndX.Value;
+            Properties.Settings2.Default.gestureValorY2 = (int)gestureRecognitionSettings.numericUpDownSEndY.Value;
+            if (gestureRecognitionSettings.checkBoxMouse.Checked == true)
+            {
+                Properties.Settings2.Default.gestureRecognitionOnChecked = true;
+            }
+            if (gestureRecognitionSettings.checkBoxMouse.Checked == false)
+            {
+                Properties.Settings2.Default.gestureRecognitionOnChecked = false;
+            }
+            //Guardado de todos los valores default
             Properties.Settings2.Default.Save();
 
         }
@@ -287,6 +342,7 @@ namespace AugmentedReadingApp
         private void SaveSettingsButtonModified_Click(object sender, EventArgs e)
         {
             SaveAllSettings(seleccionInteraccionPorVoz, seleccionApis, textRecognitionSettings, gestureRecognitionSettings);
+            //GetAllSettings(seleccionInteraccionPorVoz, seleccionApis, textRecognitionSettings, gestureRecognitionSettings);
             //Codigo de guardado de SeleccionInteraccionPorVoz
             if (seleccionInteraccionPorVoz.rbtn_voz_si.Checked && seleccionInteraccionPorVoz.rbtn_Si_botones.Checked)
             {
@@ -309,14 +365,14 @@ namespace AugmentedReadingApp
                 //this.Hide();
             }
             //Codigo de boton de guardado de SeleccionApis
-            SeleccionApis.apiSeleccionadaEnciclopedia = seleccionApis.cbx_apisEnciclopedia.GetItemText(seleccionApis.cbx_apisEnciclopedia.SelectedItem);
-            SeleccionApis.apiSeleccionadaDefinicion = seleccionApis.cbx_apisDefiniciones.GetItemText(seleccionApis.cbx_apisDefiniciones.SelectedItem);
-            SeleccionApis.apiSeleccionadaTraduccion = seleccionApis.cbx_apisTraducciones.GetItemText(seleccionApis.cbx_apisTraducciones.SelectedItem);
-            SeleccionApis.apiSeleccionadaVideo = seleccionApis.cbx_apisVideos.GetItemText(seleccionApis.cbx_apisVideos.SelectedItem);
-            SeleccionApis.apiSeleccionadaImagen = seleccionApis.cbx_apisImagenes.GetItemText(seleccionApis.cbx_apisImagenes.SelectedItem);
-            SeleccionApis.idiomaSeleccionadoTraduccion = seleccionApis.cbx_idiomaTraducir.GetItemText(seleccionApis.cbx_idiomaTraducir.SelectedValue);
+            //SeleccionApis2.apiSeleccionadaEnciclopedia = seleccionApis.cbx_apisEnciclopedia.GetItemText(seleccionApis.cbx_apisEnciclopedia.SelectedItem);
+            //SeleccionApis2.apiSeleccionadaDefinicion = seleccionApis.cbx_apisDefiniciones.GetItemText(seleccionApis.cbx_apisDefiniciones.SelectedItem);
+            //SeleccionApis2.apiSeleccionadaTraduccion = seleccionApis.cbx_apisTraducciones.GetItemText(seleccionApis.cbx_apisTraducciones.SelectedItem);
+            //SeleccionApis2.apiSeleccionadaVideo = seleccionApis.cbx_apisVideos.GetItemText(seleccionApis.cbx_apisVideos.SelectedItem);
+            //SeleccionApis2.apiSeleccionadaImagen = seleccionApis.cbx_apisImagenes.GetItemText(seleccionApis.cbx_apisImagenes.SelectedItem);
+            //SeleccionApis2.idiomaSeleccionadoTraduccion = seleccionApis.cbx_idiomaTraducir.GetItemText(seleccionApis.cbx_idiomaTraducir.SelectedValue);
             MessageBox.Show("Apis seleccionadas con éxito");
-            //this.WindowState = FormWindowState.Minimized;
+            
         }
 
         private void ResetSettingsButtonModified_Click(object sender, EventArgs e)

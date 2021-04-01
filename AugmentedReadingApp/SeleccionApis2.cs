@@ -85,6 +85,7 @@ namespace AugmentedReadingApp
             cbx_idiomaTraducir.DataSource = new BindingSource(idiomas, null);
             cbx_idiomaTraducir.ValueMember = "Key";
             cbx_idiomaTraducir.DisplayMember = "Value";
+            cbx_idiomaTraducir.Text = Properties.Settings2.Default.languageTranslate;
 
         }
 
