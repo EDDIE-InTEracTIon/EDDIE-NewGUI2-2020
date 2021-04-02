@@ -11,7 +11,7 @@ namespace Front_EDDIE_WindowsForm
 {
     //the modified button class looks like this
 
-    class ButtonModified : System.Windows.Forms.Button
+    public class ButtonModified : System.Windows.Forms.Button
     {
         //we can use this to modify the color of the border 
         public Color BorderColor = Color.FromArgb(28, 157, 236);//Celeste

@@ -18,7 +18,10 @@ namespace AugmentedReadingApp
     public partial class MenuSettings : Form
     {
         //Se Instancias los formularios con cada configuracion de cada módulo
-        WebSearchServicesSettings WebSearchServicesForm = new WebSearchServicesSettings();
+        //WebSearchServicesSettings WebSearchServicesForm = new WebSearchServicesSettings();
+        AlertBox alertBox;
+        String bandera;
+        
         SeleccionInteraccionPorVoz2 seleccionInteraccionPorVoz = new SeleccionInteraccionPorVoz2();
         SeleccionApis2 seleccionApis = new SeleccionApis2();
         EyeTrackingConfiguration2 eyeTrackingConfig = new EyeTrackingConfiguration2();
@@ -33,7 +36,9 @@ namespace AugmentedReadingApp
         int posX = 0;
         public MenuSettings()
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
+            alertBox = new AlertBox(this, seleccionInteraccionPorVoz, seleccionApis, textRecognitionSettings, gestureRecognitionSettings,bandera);
             pageDetectionSettings = new PageDetectionSettings();
             projectionScreenActivity2 = new ProjectionScreenActivity2(pageDetectionSettings, textRecognitionSettings, gestureRecognitionSettings);
             
@@ -77,11 +82,50 @@ namespace AugmentedReadingApp
 
         private void ExitIconPictureBox_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Está seguro de cerrar?", "Mensaje de Alerta", MessageBoxButtons.YesNo) == DialogResult.Yes)//Mensaje de alerta tras presionar la X para cerrar
+            Form formBackground = new Form();
+            try
             {
-                //Acá debe venir el código que mantiene guardado los ajustes antes de cerrar
-                Application.Exit();
+                formBackground.StartPosition = FormStartPosition.Manual;
+                formBackground.FormBorderStyle = FormBorderStyle.None;
+                formBackground.Opacity = .50d;
+                formBackground.BackColor = Color.Black;
+                formBackground.WindowState = FormWindowState.Normal;
+                formBackground.Width = 1280;
+                formBackground.Height = 720;
+                formBackground.TopMost = true;
+                formBackground.Location = this.Location;
+                formBackground.ShowInTaskbar = false;
+                formBackground.Show();
+
+                alertBox.bandera = "exit";
+                alertBox.label1.Text = "¿Are you sure you want to close the application?";
+                alertBox.label2.Text = "If you have not saved any settings, they will be lost for the next session.";
+                alertBox.okButton.Visible = false;
+                alertBox.buttonModified1.Visible = true;
+                alertBox.buttonModified2.Visible = true;
+                SaveAllSettings(seleccionInteraccionPorVoz, seleccionApis, textRecognitionSettings, gestureRecognitionSettings);
+                alertBox.StartPosition = FormStartPosition.CenterScreen;
+                alertBox.Location = this.Location;
+                alertBox.ShowDialog();
+
+                formBackground.Dispose();
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                formBackground.Dispose();
+            }
+
+
+
+            //if (MessageBox.Show("Está seguro de cerrar?", "Mensaje de Alerta", MessageBoxButtons.YesNo) == DialogResult.Yes)//Mensaje de alerta tras presionar la X para cerrar
+            //{
+            //    //Acá debe venir el código que mantiene guardado los ajustes antes de cerrar
+            //    Application.Exit();
+            //}
 
         }
 
@@ -89,7 +133,7 @@ namespace AugmentedReadingApp
         {
             this.WindowState = FormWindowState.Minimized;
         }
-        //Evento para mover la ventana al mantener el click derecho en el panel superior
+        //Evento para mover la ventana al mantener el click izquierdo en el panel superior
         private void PanelBarraSuperior_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button != MouseButtons.Left)
@@ -163,7 +207,7 @@ namespace AugmentedReadingApp
             gestureRecognitionSettings.numericUpDownSEndY.Value = Properties.Settings2.Default.gestureValorY2;
             gestureRecognitionSettings.checkBoxMouse.Checked = Properties.Settings2.Default.gestureRecognitionOnChecked;
         }
-        private void SaveAllSettings(SeleccionInteraccionPorVoz2 interactionSettings, SeleccionApis2 seleccionApisSettings, TextRecognitionSettings textRecognitionSettings, GestureRecognitionSettings gestureRecognitionSettings)
+        public void SaveAllSettings(SeleccionInteraccionPorVoz2 interactionSettings, SeleccionApis2 seleccionApisSettings, TextRecognitionSettings textRecognitionSettings, GestureRecognitionSettings gestureRecognitionSettings)
         {
             //Configuraciones de interactionSettings
             if (interactionSettings.rbtn_Si_botones.Checked == true)
@@ -213,13 +257,43 @@ namespace AugmentedReadingApp
             {
                 Properties.Settings2.Default.gestureRecognitionOnChecked = false;
             }
+            //Se modifica el formulario de seleccionInteraccionPorVoz
+            if (seleccionInteraccionPorVoz.rbtn_voz_si.Checked && seleccionInteraccionPorVoz.rbtn_Si_botones.Checked)
+            {
+                SeleccionInteraccionPorVoz2.activarBusquedaVoz = seleccionInteraccionPorVoz.rbtn_voz_si.Text;
+                SeleccionInteraccionPorVoz2.mostrarBotonesconVoz = seleccionInteraccionPorVoz.rbtn_Si_botones.Text;
+                //MessageBox.Show("Ha seleccionado la opción de interacción por voz");
+                //this.Hide();
+            }
+            if (seleccionInteraccionPorVoz.rbtn_voz_si.Checked && seleccionInteraccionPorVoz.rbtn_no_botones.Checked)
+            {
+                SeleccionInteraccionPorVoz2.activarBusquedaVoz = seleccionInteraccionPorVoz.rbtn_voz_si.Text;
+                SeleccionInteraccionPorVoz2.mostrarBotonesconVoz = seleccionInteraccionPorVoz.rbtn_no_botones.Text;
+                //MessageBox.Show("Ha seleccionado la opción de interacción por voz");
+                //this.Hide();
+            }
+            if (seleccionInteraccionPorVoz.rbtn_voz_no.Checked)
+            {
+                SeleccionInteraccionPorVoz2.activarBusquedaVoz = seleccionInteraccionPorVoz.rbtn_voz_no.Text;
+                //MessageBox.Show("Ha seleccionado la opción de interacción por botones");
+                //this.Hide();
+            }
+
             //Guardado de todos los valores default
             Properties.Settings2.Default.Save();
 
         }
-        private void ResetAllSettings(SeleccionInteraccionPorVoz2 interactionSettings, SeleccionApis2 seleccionApisSettings, TextRecognitionSettings textRecognitionSettings, GestureRecognitionSettings gestureRecognitionSettings)
+        public void ResetAllSettings(SeleccionInteraccionPorVoz2 interactionSettings, SeleccionApis2 seleccionApisSettings, TextRecognitionSettings textRecognitionSettings, GestureRecognitionSettings gestureRecognitionSettings)
         {
+            interactionSettings.rbtn_Si_botones.Checked = false;
+            interactionSettings.rbtn_no_botones.Checked = false;
+            interactionSettings.rbtn_voz_si.Checked = false;
+            interactionSettings.rbtn_voz_no.Checked = false;
+            //Resetear valores default
             Properties.Settings2.Default.Reset();
+            Properties.Settings2.Default.Save();
+            GetAllSettings(seleccionInteraccionPorVoz, seleccionApis, textRecognitionSettings, gestureRecognitionSettings);
+            //SaveAllSettings(seleccionInteraccionPorVoz, seleccionApis, textRecognitionSettings, gestureRecognitionSettings);
         }
         //A Continuación los eventos click de los botones del navBar vertical
         private void InteractionsButton_Click(object sender, EventArgs e)
@@ -341,43 +415,125 @@ namespace AugmentedReadingApp
 
         private void SaveSettingsButtonModified_Click(object sender, EventArgs e)
         {
-            SaveAllSettings(seleccionInteraccionPorVoz, seleccionApis, textRecognitionSettings, gestureRecognitionSettings);
+            Form formBackground = new Form();
+            try
+            {
+                formBackground.StartPosition = FormStartPosition.Manual;
+                formBackground.FormBorderStyle = FormBorderStyle.None;
+                formBackground.Opacity = .50d;
+                formBackground.BackColor = Color.Black;
+                formBackground.WindowState = FormWindowState.Normal;
+                formBackground.Width = 1280;
+                formBackground.Height = 720;
+                formBackground.TopMost = true;
+                formBackground.Location = this.Location;
+                formBackground.ShowInTaskbar = false;
+                formBackground.Show();
+
+                alertBox.bandera = "save";
+                alertBox.label1.Text = "¡Changes have been saved!";
+                alertBox.label2.Text = "The settings made will be saved for subsequent sessions";
+                alertBox.okButton.Visible = true;
+                alertBox.buttonModified1.Visible = false;
+                alertBox.buttonModified2.Visible = false;
+                SaveAllSettings(seleccionInteraccionPorVoz, seleccionApis, textRecognitionSettings, gestureRecognitionSettings);
+                alertBox.StartPosition = FormStartPosition.CenterScreen;
+                alertBox.Location = this.Location;
+                alertBox.ShowDialog();
+
+                formBackground.Dispose();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                formBackground.Dispose();
+            }
+
+
+
+            
+            //manto.Show();
+            
+            //SaveAllSettings(seleccionInteraccionPorVoz, seleccionApis, textRecognitionSettings, gestureRecognitionSettings);
             //GetAllSettings(seleccionInteraccionPorVoz, seleccionApis, textRecognitionSettings, gestureRecognitionSettings);
             //Codigo de guardado de SeleccionInteraccionPorVoz
-            if (seleccionInteraccionPorVoz.rbtn_voz_si.Checked && seleccionInteraccionPorVoz.rbtn_Si_botones.Checked)
-            {
-                SeleccionInteraccionPorVoz2.activarBusquedaVoz = seleccionInteraccionPorVoz.rbtn_voz_si.Text;
-                SeleccionInteraccionPorVoz2.mostrarBotonesconVoz = seleccionInteraccionPorVoz.rbtn_Si_botones.Text;
-                MessageBox.Show("Ha seleccionado la opción de interacción por voz");
-                //this.Hide();
-            }
-            if (seleccionInteraccionPorVoz.rbtn_voz_si.Checked && seleccionInteraccionPorVoz.rbtn_no_botones.Checked)
-            {
-                SeleccionInteraccionPorVoz2.activarBusquedaVoz = seleccionInteraccionPorVoz.rbtn_voz_si.Text;
-                SeleccionInteraccionPorVoz2.mostrarBotonesconVoz = seleccionInteraccionPorVoz.rbtn_no_botones.Text;
-                MessageBox.Show("Ha seleccionado la opción de interacción por voz");
-                //this.Hide();
-            }
-            if (seleccionInteraccionPorVoz.rbtn_voz_no.Checked)
-            {
-                SeleccionInteraccionPorVoz2.activarBusquedaVoz = seleccionInteraccionPorVoz.rbtn_voz_no.Text;
-                MessageBox.Show("Ha seleccionado la opción de interacción por botones");
-                //this.Hide();
-            }
-            //Codigo de boton de guardado de SeleccionApis
-            //SeleccionApis2.apiSeleccionadaEnciclopedia = seleccionApis.cbx_apisEnciclopedia.GetItemText(seleccionApis.cbx_apisEnciclopedia.SelectedItem);
-            //SeleccionApis2.apiSeleccionadaDefinicion = seleccionApis.cbx_apisDefiniciones.GetItemText(seleccionApis.cbx_apisDefiniciones.SelectedItem);
-            //SeleccionApis2.apiSeleccionadaTraduccion = seleccionApis.cbx_apisTraducciones.GetItemText(seleccionApis.cbx_apisTraducciones.SelectedItem);
-            //SeleccionApis2.apiSeleccionadaVideo = seleccionApis.cbx_apisVideos.GetItemText(seleccionApis.cbx_apisVideos.SelectedItem);
-            //SeleccionApis2.apiSeleccionadaImagen = seleccionApis.cbx_apisImagenes.GetItemText(seleccionApis.cbx_apisImagenes.SelectedItem);
-            //SeleccionApis2.idiomaSeleccionadoTraduccion = seleccionApis.cbx_idiomaTraducir.GetItemText(seleccionApis.cbx_idiomaTraducir.SelectedValue);
-            MessageBox.Show("Apis seleccionadas con éxito");
+            //if (seleccionInteraccionPorVoz.rbtn_voz_si.Checked && seleccionInteraccionPorVoz.rbtn_Si_botones.Checked)
+            //{
+            //    SeleccionInteraccionPorVoz2.activarBusquedaVoz = seleccionInteraccionPorVoz.rbtn_voz_si.Text;
+            //    SeleccionInteraccionPorVoz2.mostrarBotonesconVoz = seleccionInteraccionPorVoz.rbtn_Si_botones.Text;
+            //    MessageBox.Show("Ha seleccionado la opción de interacción por voz");
+            //    //this.Hide();
+            //}
+            //if (seleccionInteraccionPorVoz.rbtn_voz_si.Checked && seleccionInteraccionPorVoz.rbtn_no_botones.Checked)
+            //{
+            //    SeleccionInteraccionPorVoz2.activarBusquedaVoz = seleccionInteraccionPorVoz.rbtn_voz_si.Text;
+            //    SeleccionInteraccionPorVoz2.mostrarBotonesconVoz = seleccionInteraccionPorVoz.rbtn_no_botones.Text;
+            //    MessageBox.Show("Ha seleccionado la opción de interacción por voz");
+            //    //this.Hide();
+            //}
+            //if (seleccionInteraccionPorVoz.rbtn_voz_no.Checked)
+            //{
+            //    SeleccionInteraccionPorVoz2.activarBusquedaVoz = seleccionInteraccionPorVoz.rbtn_voz_no.Text;
+            //    MessageBox.Show("Ha seleccionado la opción de interacción por botones");
+            //    //this.Hide();
+            //}
+            ////Codigo de boton de guardado de SeleccionApis
+            ////SeleccionApis2.apiSeleccionadaEnciclopedia = seleccionApis.cbx_apisEnciclopedia.GetItemText(seleccionApis.cbx_apisEnciclopedia.SelectedItem);
+            ////SeleccionApis2.apiSeleccionadaDefinicion = seleccionApis.cbx_apisDefiniciones.GetItemText(seleccionApis.cbx_apisDefiniciones.SelectedItem);
+            ////SeleccionApis2.apiSeleccionadaTraduccion = seleccionApis.cbx_apisTraducciones.GetItemText(seleccionApis.cbx_apisTraducciones.SelectedItem);
+            ////SeleccionApis2.apiSeleccionadaVideo = seleccionApis.cbx_apisVideos.GetItemText(seleccionApis.cbx_apisVideos.SelectedItem);
+            ////SeleccionApis2.apiSeleccionadaImagen = seleccionApis.cbx_apisImagenes.GetItemText(seleccionApis.cbx_apisImagenes.SelectedItem);
+            ////SeleccionApis2.idiomaSeleccionadoTraduccion = seleccionApis.cbx_idiomaTraducir.GetItemText(seleccionApis.cbx_idiomaTraducir.SelectedValue);
+            //MessageBox.Show("Apis seleccionadas con éxito");
             
         }
 
         private void ResetSettingsButtonModified_Click(object sender, EventArgs e)
         {
-            ResetAllSettings(seleccionInteraccionPorVoz, seleccionApis, textRecognitionSettings, gestureRecognitionSettings);
+            Form formBackground = new Form();
+            try
+            {
+                formBackground.StartPosition = FormStartPosition.Manual;
+                formBackground.FormBorderStyle = FormBorderStyle.None;
+                formBackground.Opacity = .50d;
+                formBackground.BackColor = Color.Black;
+                formBackground.WindowState = FormWindowState.Normal;
+                formBackground.Width = 1280;
+                formBackground.Height = 720;
+                formBackground.TopMost = true;
+                formBackground.Location = this.Location;
+                formBackground.ShowInTaskbar = false;
+                formBackground.Show();
+
+                alertBox.bandera = "reset";
+                alertBox.label1.Text = "¿Are you sure to do this action?";
+                alertBox.label2.Text = "If you reset the settings, the changes made to the settings so far will be lost";
+                alertBox.okButton.Visible = false;
+                alertBox.buttonModified1.Visible = true;
+                alertBox.buttonModified2.Visible = true;
+                alertBox.StartPosition = FormStartPosition.CenterScreen;
+                alertBox.Location = this.Location;
+                alertBox.ShowDialog();
+
+                formBackground.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                formBackground.Dispose();
+            }
+
+
+
+            ///
+            
+            
         }
     }
 }

@@ -251,11 +251,11 @@
     <Compile Include="SeleccionInteraccionPorVoz.Designer.cs">
       <DependentUpon>SeleccionInteraccionPorVoz.cs</DependentUpon>
     </Compile>
-    <Compile Include="WebSearchServicesSettings.cs">
+    <Compile Include="AlertBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WebSearchServicesSettings.designer.cs">
-      <DependentUpon>WebSearchServicesSettings.cs</DependentUpon>
+    <Compile Include="AlertBox.designer.cs">
+      <DependentUpon>AlertBox.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="busquedasRecientes2.resx">
       <DependentUpon>busquedasRecientes2.cs</DependentUpon>
@@ -315,8 +315,8 @@
     <EmbeddedResource Include="SeleccionInteraccionPorVoz.resx">
       <DependentUpon>SeleccionInteraccionPorVoz.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WebSearchServicesSettings.resx">
-      <DependentUpon>WebSearchServicesSettings.cs</DependentUpon>
+    <EmbeddedResource Include="AlertBox.resx">
+      <DependentUpon>AlertBox.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
