@@ -32,19 +32,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuSettings));
             this.PanelNavBar = new System.Windows.Forms.Panel();
             this.ContenidoNavBar = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.PageDetectionButton = new System.Windows.Forms.Button();
             this.TextRecognitiionButton = new System.Windows.Forms.Button();
             this.GestureRecognitionButton = new System.Windows.Forms.Button();
             this.EyeTrackingButton = new System.Windows.Forms.Button();
             this.WebSearchServicesButton = new System.Windows.Forms.Button();
             this.InteractionsButton = new System.Windows.Forms.Button();
-            this.SettingsText = new System.Windows.Forms.TextBox();
             this.PanelBarraSuperior = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.MinimizePictureBox = new System.Windows.Forms.PictureBox();
             this.ExitPictureBox = new System.Windows.Forms.PictureBox();
             this.PanelContenido = new System.Windows.Forms.Panel();
             this.LoadingPictureBox = new System.Windows.Forms.PictureBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.backgroundWorkerStartProjection = new System.ComponentModel.BackgroundWorker();
             this.StartProjectionButtonModified = new Front_EDDIE_WindowsForm.ButtonModified();
             this.SaveSettingsButtonModified = new Front_EDDIE_WindowsForm.ButtonModified();
             this.ResetSettingsButtonModified = new Front_EDDIE_WindowsForm.ButtonModified();
@@ -53,7 +55,6 @@
             this.PanelBarraSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MinimizePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitPictureBox)).BeginInit();
-            this.PanelContenido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LoadingPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +62,7 @@
             // PanelNavBar
             // 
             this.PanelNavBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.PanelNavBar.Controls.Add(this.LoadingPictureBox);
             this.PanelNavBar.Controls.Add(this.ContenidoNavBar);
             this.PanelNavBar.Location = new System.Drawing.Point(0, 58);
             this.PanelNavBar.Name = "PanelNavBar";
@@ -69,19 +71,32 @@
             // 
             // ContenidoNavBar
             // 
+            this.ContenidoNavBar.Controls.Add(this.textBox3);
             this.ContenidoNavBar.Controls.Add(this.PageDetectionButton);
             this.ContenidoNavBar.Controls.Add(this.TextRecognitiionButton);
             this.ContenidoNavBar.Controls.Add(this.GestureRecognitionButton);
             this.ContenidoNavBar.Controls.Add(this.EyeTrackingButton);
             this.ContenidoNavBar.Controls.Add(this.WebSearchServicesButton);
             this.ContenidoNavBar.Controls.Add(this.InteractionsButton);
-            this.ContenidoNavBar.Controls.Add(this.SettingsText);
             this.ContenidoNavBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
             this.ContenidoNavBar.Location = new System.Drawing.Point(32, 24);
             this.ContenidoNavBar.Name = "ContenidoNavBar";
             this.ContenidoNavBar.Size = new System.Drawing.Size(225, 331);
             this.ContenidoNavBar.TabIndex = 0;
             this.ContenidoNavBar.Paint += new System.Windows.Forms.PaintEventHandler(this.ContenidoNavBar_Paint);
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 16.75F, System.Drawing.FontStyle.Bold);
+            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
+            this.textBox3.Location = new System.Drawing.Point(0, 0);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(210, 30);
+            this.textBox3.TabIndex = 8;
+            this.textBox3.Text = "Settings";
             // 
             // PageDetectionButton
             // 
@@ -185,21 +200,10 @@
             this.InteractionsButton.UseVisualStyleBackColor = false;
             this.InteractionsButton.Click += new System.EventHandler(this.InteractionsButton_Click);
             // 
-            // SettingsText
-            // 
-            this.SettingsText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.SettingsText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.SettingsText.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 16.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SettingsText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
-            this.SettingsText.Location = new System.Drawing.Point(0, 0);
-            this.SettingsText.Name = "SettingsText";
-            this.SettingsText.Size = new System.Drawing.Size(210, 30);
-            this.SettingsText.TabIndex = 0;
-            this.SettingsText.Text = "Settings";
-            // 
             // PanelBarraSuperior
             // 
             this.PanelBarraSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.PanelBarraSuperior.Controls.Add(this.textBox1);
             this.PanelBarraSuperior.Controls.Add(this.MinimizePictureBox);
             this.PanelBarraSuperior.Controls.Add(this.ExitPictureBox);
             this.PanelBarraSuperior.Location = new System.Drawing.Point(0, 0);
@@ -207,6 +211,19 @@
             this.PanelBarraSuperior.Size = new System.Drawing.Size(1281, 58);
             this.PanelBarraSuperior.TabIndex = 2;
             this.PanelBarraSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelBarraSuperior_MouseMove);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 16.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.textBox1.Location = new System.Drawing.Point(583, 12);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(237, 30);
+            this.textBox1.TabIndex = 6;
+            this.textBox1.Text = "EDDIE Menu Settings";
             // 
             // MinimizePictureBox
             // 
@@ -233,7 +250,6 @@
             // PanelContenido
             // 
             this.PanelContenido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.PanelContenido.Controls.Add(this.LoadingPictureBox);
             this.PanelContenido.Location = new System.Drawing.Point(257, 58);
             this.PanelContenido.Name = "PanelContenido";
             this.PanelContenido.Size = new System.Drawing.Size(987, 539);
@@ -242,13 +258,21 @@
             // 
             // LoadingPictureBox
             // 
-            this.LoadingPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("LoadingPictureBox.Image")));
-            this.LoadingPictureBox.Location = new System.Drawing.Point(462, 236);
+            this.LoadingPictureBox.Image = global::AugmentedReadingApp.Properties.Resources.LoadingSinFondo;
+            this.LoadingPictureBox.Location = new System.Drawing.Point(32, 450);
             this.LoadingPictureBox.Name = "LoadingPictureBox";
-            this.LoadingPictureBox.Size = new System.Drawing.Size(63, 62);
-            this.LoadingPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.LoadingPictureBox.Size = new System.Drawing.Size(200, 200);
+            this.LoadingPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.LoadingPictureBox.TabIndex = 6;
             this.LoadingPictureBox.TabStop = false;
+            this.LoadingPictureBox.Visible = false;
+            // 
+            // backgroundWorkerStartProjection
+            // 
+            this.backgroundWorkerStartProjection.WorkerReportsProgress = true;
+            this.backgroundWorkerStartProjection.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerStartProjection_DoWork);
+            this.backgroundWorkerStartProjection.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorkerStartProjection_ProgressChanged);
+            this.backgroundWorkerStartProjection.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerStartProjection_RunWorkerCompleted);
             // 
             // StartProjectionButtonModified
             // 
@@ -324,12 +348,13 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.MenuSettings_Load);
             this.PanelNavBar.ResumeLayout(false);
+            this.PanelNavBar.PerformLayout();
             this.ContenidoNavBar.ResumeLayout(false);
             this.ContenidoNavBar.PerformLayout();
             this.PanelBarraSuperior.ResumeLayout(false);
+            this.PanelBarraSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MinimizePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitPictureBox)).EndInit();
-            this.PanelContenido.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LoadingPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
@@ -341,7 +366,6 @@
         private System.Windows.Forms.Panel PanelBarraSuperior;
         private System.Windows.Forms.Panel PanelContenido;
         private System.Windows.Forms.Panel ContenidoNavBar;
-        private System.Windows.Forms.TextBox SettingsText;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Button PageDetectionButton;
         private System.Windows.Forms.Button TextRecognitiionButton;
@@ -355,6 +379,9 @@
         private Front_EDDIE_WindowsForm.ButtonModified ResetSettingsButtonModified;
         private Front_EDDIE_WindowsForm.ButtonModified SaveSettingsButtonModified;
         private Front_EDDIE_WindowsForm.ButtonModified StartProjectionButtonModified;
+        public System.ComponentModel.BackgroundWorker backgroundWorkerStartProjection;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox3;
         //private ButtonModified StartProjectionButtonModified;
         //private ButtonModified SaveSettingsButtonModified;
         //private ButtonModified ResetSettingsButtonModified;

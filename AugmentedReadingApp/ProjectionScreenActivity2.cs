@@ -68,10 +68,10 @@ namespace AugmentedReadingApp
             incomingTextRecognitionSettings = textRecognitionSettings;
             incomingGestureRecognitionSettings = gestureRecognitionSettings;
             //originalForm = incomingForm;
-
-            pictureBox3.Image = Image.FromFile("x_mark_red_circle.png");
-            pictureBox4.Image = Image.FromFile("x_mark_red_circle.png");
-            pictureBox5.Image = Image.FromFile("x_mark_red_circle.png");
+            //Descomentar si se desea utilizar las marcas rojas antiguas
+            //pictureBox3.Image = Image.FromFile("x_mark_red_circle.png");
+            //pictureBox4.Image = Image.FromFile("x_mark_red_circle.png");
+            //pictureBox5.Image = Image.FromFile("x_mark_red_circle.png");
 
             markPoint = false;
 
@@ -106,6 +106,7 @@ namespace AugmentedReadingApp
         bool webSearchButtonActived = false;
         bool syncronizerButtonActived = false;
         bool capturesButtonActived = true;
+        
 
 
         private void Form2_Load(object sender, EventArgs e)

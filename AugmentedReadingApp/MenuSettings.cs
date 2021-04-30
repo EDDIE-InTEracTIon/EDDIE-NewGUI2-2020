@@ -21,7 +21,7 @@ namespace AugmentedReadingApp
         //WebSearchServicesSettings WebSearchServicesForm = new WebSearchServicesSettings();
         AlertBox alertBox;
         String bandera;
-        
+        //ProgressBox progressBox = new ProgressBox();
         SeleccionInteraccionPorVoz2 seleccionInteraccionPorVoz = new SeleccionInteraccionPorVoz2();
         SeleccionApis2 seleccionApis = new SeleccionApis2();
         EyeTrackingConfiguration2 eyeTrackingConfig = new EyeTrackingConfiguration2();
@@ -206,6 +206,34 @@ namespace AugmentedReadingApp
             gestureRecognitionSettings.numericUpDownSEndX.Value = Properties.Settings2.Default.gestureValorX2;
             gestureRecognitionSettings.numericUpDownSEndY.Value = Properties.Settings2.Default.gestureValorY2;
             gestureRecognitionSettings.checkBoxMouse.Checked = Properties.Settings2.Default.gestureRecognitionOnChecked;
+            //Codigo de guardado de SeleccionInteraccionPorVoz
+            if (seleccionInteraccionPorVoz.rbtn_voz_si.Checked && seleccionInteraccionPorVoz.rbtn_Si_botones.Checked)
+            {
+                SeleccionInteraccionPorVoz2.activarBusquedaVoz = seleccionInteraccionPorVoz.rbtn_voz_si.Text;
+                SeleccionInteraccionPorVoz2.mostrarBotonesconVoz = seleccionInteraccionPorVoz.rbtn_Si_botones.Text;
+                //MessageBox.Show("Ha seleccionado la opción de interacción por voz");
+                //this.Hide();
+            }
+            if (seleccionInteraccionPorVoz.rbtn_voz_si.Checked && seleccionInteraccionPorVoz.rbtn_no_botones.Checked)
+            {
+                SeleccionInteraccionPorVoz2.activarBusquedaVoz = seleccionInteraccionPorVoz.rbtn_voz_si.Text;
+                SeleccionInteraccionPorVoz2.mostrarBotonesconVoz = seleccionInteraccionPorVoz.rbtn_no_botones.Text;
+                //MessageBox.Show("Ha seleccionado la opción de interacción por voz");
+                //this.Hide();
+            }
+            if (seleccionInteraccionPorVoz.rbtn_voz_no.Checked)
+            {
+                SeleccionInteraccionPorVoz2.activarBusquedaVoz = seleccionInteraccionPorVoz.rbtn_voz_no.Text;
+                //MessageBox.Show("Ha seleccionado la opción de interacción por botones");
+                //this.Hide();
+            }
+            //Codigo de boton de guardado de SeleccionApis
+            SeleccionApis2.apiSeleccionadaEnciclopedia = seleccionApis.cbx_apisEnciclopedia.GetItemText(seleccionApis.cbx_apisEnciclopedia.SelectedItem);
+            SeleccionApis2.apiSeleccionadaDefinicion = seleccionApis.cbx_apisDefiniciones.GetItemText(seleccionApis.cbx_apisDefiniciones.SelectedItem);
+            SeleccionApis2.apiSeleccionadaTraduccion = seleccionApis.cbx_apisTraducciones.GetItemText(seleccionApis.cbx_apisTraducciones.SelectedItem);
+            SeleccionApis2.apiSeleccionadaVideo = seleccionApis.cbx_apisVideos.GetItemText(seleccionApis.cbx_apisVideos.SelectedItem);
+            SeleccionApis2.apiSeleccionadaImagen = seleccionApis.cbx_apisImagenes.GetItemText(seleccionApis.cbx_apisImagenes.SelectedItem);
+            SeleccionApis2.idiomaSeleccionadoTraduccion = seleccionApis.cbx_idiomaTraducir.GetItemText(seleccionApis.cbx_idiomaTraducir.SelectedValue);
         }
         public void SaveAllSettings(SeleccionInteraccionPorVoz2 interactionSettings, SeleccionApis2 seleccionApisSettings, TextRecognitionSettings textRecognitionSettings, GestureRecognitionSettings gestureRecognitionSettings)
         {
@@ -394,12 +422,15 @@ namespace AugmentedReadingApp
 
         private async void StartProjectionButtonModified_Click_1(object sender, EventArgs e)
         {
+            LoadingPictureBox.Show();
+            //progressBox.StartPosition = FormStartPosition.CenterScreen;
+            //progressBox.Show();
             //mostrarLoading();
             //Task task = new Task(dummySleep);
             //task.Start();
             //await task;
             //ProjectionScreenForm.Show();
-            projectionScreenActivity2.Show();
+            //projectionScreenActivity2.Show();
             //Configuraciones de Text Recognition Settings
             var CameraNumber = textRecognitionSettings._CameraTextIndex;
             if (textRecognitionSettings.captureText == null)
@@ -410,8 +441,11 @@ namespace AugmentedReadingApp
 
                 textRecognitionSettings.imageBox1.Image = textRecognitionSettings.recTxt.Recognition(textRecognitionSettings.captureText);
             }
+            projectionScreenActivity2.Show();
+            //progressBox.Close();
             //ocultarLoading();
-        }
+            LoadingPictureBox.Hide();
+        }//IDENTIFICAR EL MENSAJE "No hay reconocedor instalado"
 
         private void SaveSettingsButtonModified_Click(object sender, EventArgs e)
         {
@@ -454,41 +488,41 @@ namespace AugmentedReadingApp
 
 
 
-            
+
             //manto.Show();
-            
-            //SaveAllSettings(seleccionInteraccionPorVoz, seleccionApis, textRecognitionSettings, gestureRecognitionSettings);
-            //GetAllSettings(seleccionInteraccionPorVoz, seleccionApis, textRecognitionSettings, gestureRecognitionSettings);
+
+            SaveAllSettings(seleccionInteraccionPorVoz, seleccionApis, textRecognitionSettings, gestureRecognitionSettings);
+            GetAllSettings(seleccionInteraccionPorVoz, seleccionApis, textRecognitionSettings, gestureRecognitionSettings);
             //Codigo de guardado de SeleccionInteraccionPorVoz
-            //if (seleccionInteraccionPorVoz.rbtn_voz_si.Checked && seleccionInteraccionPorVoz.rbtn_Si_botones.Checked)
-            //{
-            //    SeleccionInteraccionPorVoz2.activarBusquedaVoz = seleccionInteraccionPorVoz.rbtn_voz_si.Text;
-            //    SeleccionInteraccionPorVoz2.mostrarBotonesconVoz = seleccionInteraccionPorVoz.rbtn_Si_botones.Text;
-            //    MessageBox.Show("Ha seleccionado la opción de interacción por voz");
-            //    //this.Hide();
-            //}
-            //if (seleccionInteraccionPorVoz.rbtn_voz_si.Checked && seleccionInteraccionPorVoz.rbtn_no_botones.Checked)
-            //{
-            //    SeleccionInteraccionPorVoz2.activarBusquedaVoz = seleccionInteraccionPorVoz.rbtn_voz_si.Text;
-            //    SeleccionInteraccionPorVoz2.mostrarBotonesconVoz = seleccionInteraccionPorVoz.rbtn_no_botones.Text;
-            //    MessageBox.Show("Ha seleccionado la opción de interacción por voz");
-            //    //this.Hide();
-            //}
-            //if (seleccionInteraccionPorVoz.rbtn_voz_no.Checked)
-            //{
-            //    SeleccionInteraccionPorVoz2.activarBusquedaVoz = seleccionInteraccionPorVoz.rbtn_voz_no.Text;
-            //    MessageBox.Show("Ha seleccionado la opción de interacción por botones");
-            //    //this.Hide();
-            //}
-            ////Codigo de boton de guardado de SeleccionApis
-            ////SeleccionApis2.apiSeleccionadaEnciclopedia = seleccionApis.cbx_apisEnciclopedia.GetItemText(seleccionApis.cbx_apisEnciclopedia.SelectedItem);
-            ////SeleccionApis2.apiSeleccionadaDefinicion = seleccionApis.cbx_apisDefiniciones.GetItemText(seleccionApis.cbx_apisDefiniciones.SelectedItem);
-            ////SeleccionApis2.apiSeleccionadaTraduccion = seleccionApis.cbx_apisTraducciones.GetItemText(seleccionApis.cbx_apisTraducciones.SelectedItem);
-            ////SeleccionApis2.apiSeleccionadaVideo = seleccionApis.cbx_apisVideos.GetItemText(seleccionApis.cbx_apisVideos.SelectedItem);
-            ////SeleccionApis2.apiSeleccionadaImagen = seleccionApis.cbx_apisImagenes.GetItemText(seleccionApis.cbx_apisImagenes.SelectedItem);
-            ////SeleccionApis2.idiomaSeleccionadoTraduccion = seleccionApis.cbx_idiomaTraducir.GetItemText(seleccionApis.cbx_idiomaTraducir.SelectedValue);
-            //MessageBox.Show("Apis seleccionadas con éxito");
-            
+            if (seleccionInteraccionPorVoz.rbtn_voz_si.Checked && seleccionInteraccionPorVoz.rbtn_Si_botones.Checked)
+            {
+                SeleccionInteraccionPorVoz2.activarBusquedaVoz = seleccionInteraccionPorVoz.rbtn_voz_si.Text;
+                SeleccionInteraccionPorVoz2.mostrarBotonesconVoz = seleccionInteraccionPorVoz.rbtn_Si_botones.Text;
+                MessageBox.Show("Ha seleccionado la opción de interacción por voz");
+                //this.Hide();
+            }
+            if (seleccionInteraccionPorVoz.rbtn_voz_si.Checked && seleccionInteraccionPorVoz.rbtn_no_botones.Checked)
+            {
+                SeleccionInteraccionPorVoz2.activarBusquedaVoz = seleccionInteraccionPorVoz.rbtn_voz_si.Text;
+                SeleccionInteraccionPorVoz2.mostrarBotonesconVoz = seleccionInteraccionPorVoz.rbtn_no_botones.Text;
+                MessageBox.Show("Ha seleccionado la opción de interacción por voz");
+                //this.Hide();
+            }
+            if (seleccionInteraccionPorVoz.rbtn_voz_no.Checked)
+            {
+                SeleccionInteraccionPorVoz2.activarBusquedaVoz = seleccionInteraccionPorVoz.rbtn_voz_no.Text;
+                MessageBox.Show("Ha seleccionado la opción de interacción por botones");
+                //this.Hide();
+            }
+            //Codigo de boton de guardado de SeleccionApis
+            SeleccionApis2.apiSeleccionadaEnciclopedia = seleccionApis.cbx_apisEnciclopedia.GetItemText(seleccionApis.cbx_apisEnciclopedia.SelectedItem);
+            SeleccionApis2.apiSeleccionadaDefinicion = seleccionApis.cbx_apisDefiniciones.GetItemText(seleccionApis.cbx_apisDefiniciones.SelectedItem);
+            SeleccionApis2.apiSeleccionadaTraduccion = seleccionApis.cbx_apisTraducciones.GetItemText(seleccionApis.cbx_apisTraducciones.SelectedItem);
+            SeleccionApis2.apiSeleccionadaVideo = seleccionApis.cbx_apisVideos.GetItemText(seleccionApis.cbx_apisVideos.SelectedItem);
+            SeleccionApis2.apiSeleccionadaImagen = seleccionApis.cbx_apisImagenes.GetItemText(seleccionApis.cbx_apisImagenes.SelectedItem);
+            SeleccionApis2.idiomaSeleccionadoTraduccion = seleccionApis.cbx_idiomaTraducir.GetItemText(seleccionApis.cbx_idiomaTraducir.SelectedValue);
+            MessageBox.Show("Apis seleccionadas con éxito");
+
         }
 
         private void ResetSettingsButtonModified_Click(object sender, EventArgs e)
@@ -534,6 +568,26 @@ namespace AugmentedReadingApp
             ///
             
             
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backgroundWorkerStartProjection_DoWork(object sender, DoWorkEventArgs e)
+        {
+            //progressBox.Show();
+        }
+
+        private void backgroundWorkerStartProjection_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+
+        }
+
+        private void backgroundWorkerStartProjection_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            //progressBox.Close();
         }
     }
 }

@@ -145,6 +145,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ProgressBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgressBox.designer.cs">
+      <DependentUpon>ProgressBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="busquedasRecientes2.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -257,6 +263,9 @@
     <Compile Include="AlertBox.designer.cs">
       <DependentUpon>AlertBox.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ProgressBox.resx">
+      <DependentUpon>ProgressBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="busquedasRecientes2.resx">
       <DependentUpon>busquedasRecientes2.cs</DependentUpon>
     </EmbeddedResource>
@@ -338,7 +347,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="License-LGPL.txt" />
+    <None Include="Resources\target %281%29.png" />
+    <None Include="Resources\Spinner-1s-200px.gif" />
+    <None Include="Resources\giphy.gif" />
+    <None Include="Resources\CustomLoadingGif.gif" />
     <Content Include="Resources\informationIcon.png" />
+    <None Include="Resources\LoadingGif.bmp" />
     <None Include="Resources\XButtonImageHover.png" />
     <None Include="Resources\XButtonImageClicked.png" />
     <None Include="Resources\XButtonImage.png" />

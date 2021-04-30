@@ -173,6 +173,16 @@ namespace AugmentedReadingApp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CustomLoadingGif {
+            get {
+                object obj = ResourceManager.GetObject("CustomLoadingGif", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DeleteBookmarksButtonClicked {
             get {
                 object obj = ResourceManager.GetObject("DeleteBookmarksButtonClicked", resourceCulture);
@@ -293,6 +303,16 @@ namespace AugmentedReadingApp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap giphy {
+            get {
+                object obj = ResourceManager.GetObject("giphy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap HighlightModeButtonHover {
             get {
                 object obj = ResourceManager.GetObject("HighlightModeButtonHover", resourceCulture);
@@ -406,6 +426,16 @@ namespace AugmentedReadingApp.Properties {
         internal static System.Drawing.Bitmap LeftArrowButtonImage {
             get {
                 object obj = ResourceManager.GetObject("LeftArrowButtonImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LoadingSinFondo {
+            get {
+                object obj = ResourceManager.GetObject("LoadingSinFondo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -536,6 +566,16 @@ namespace AugmentedReadingApp.Properties {
         internal static System.Drawing.Bitmap SynchronizerButtonONImage {
             get {
                 object obj = ResourceManager.GetObject("SynchronizerButtonONImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Target {
+            get {
+                object obj = ResourceManager.GetObject("Target", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
