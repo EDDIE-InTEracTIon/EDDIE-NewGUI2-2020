@@ -38,8 +38,6 @@
             this.panel_log = new System.Windows.Forms.Panel();
             this.gb_busquedasRecientes = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.buttonEliminarComentario2 = new Front_EDDIE_WindowsForm.ButtonModified();
-            this.buttonEliminarMarcador2 = new Front_EDDIE_WindowsForm.ButtonModified();
             this.comentariosPDF = new System.Windows.Forms.Label();
             this.labelMarcadoresPDF = new System.Windows.Forms.Label();
             this.listBox2 = new System.Windows.Forms.ListBox();
@@ -52,17 +50,16 @@
             this.PagesLabel = new System.Windows.Forms.Label();
             this.Pages = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_leerEnciclopedia = new ModuloRastreoOcular.ButtonAlt();
+            this.btn_nav_adelante = new ModuloRastreoOcular.ButtonAlt();
+            this.btn_nav_atras = new ModuloRastreoOcular.ButtonAlt();
+            this.btn_cerrarVentanaDerecha = new ModuloRastreoOcular.ButtonAlt();
             this.label2 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
-            this.syncPDFLabel = new System.Windows.Forms.Label();
-            this.btnSearchPages2 = new Front_EDDIE_WindowsForm.ButtonModified();
-            this.backPageButton2 = new Front_EDDIE_WindowsForm.ButtonModified();
-            this.buttonModified2 = new Front_EDDIE_WindowsForm.ButtonModified();
-            this.nextPageButton2 = new Front_EDDIE_WindowsForm.ButtonModified();
-            this.markButton = new Front_EDDIE_WindowsForm.ButtonModified();
             this.btn_leerDefinicionTraduccion = new ModuloRastreoOcular.ButtonAlt();
             this.btn_cerrarVentanaIzquierda = new ModuloRastreoOcular.ButtonAlt();
+            this.syncPDFLabel = new System.Windows.Forms.Label();
             this.btn_turnOFF = new ModuloRastreoOcular.ButtonAlt();
             this.btn_sincronizadorPdf = new ModuloRastreoOcular.ButtonAlt();
             this.buttonComments = new System.Windows.Forms.Button();
@@ -77,14 +74,19 @@
             this.syncButton = new System.Windows.Forms.Button();
             this.btn_traductor = new ModuloRastreoOcular.ButtonAlt();
             this.btn_buscarWeb = new ModuloRastreoOcular.ButtonAlt();
-            this.btn_leerEnciclopedia = new ModuloRastreoOcular.ButtonAlt();
-            this.btn_nav_adelante = new ModuloRastreoOcular.ButtonAlt();
-            this.btn_nav_atras = new ModuloRastreoOcular.ButtonAlt();
-            this.btn_cerrarVentanaDerecha = new ModuloRastreoOcular.ButtonAlt();
             this.textImageButton = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.LeftLoadingPictureBox = new System.Windows.Forms.PictureBox();
+            this.RightLoadingPictureBox = new System.Windows.Forms.PictureBox();
+            this.btnSearchPages2 = new Front_EDDIE_WindowsForm.ButtonModified();
+            this.backPageButton2 = new Front_EDDIE_WindowsForm.ButtonModified();
+            this.buttonModified2 = new Front_EDDIE_WindowsForm.ButtonModified();
+            this.nextPageButton2 = new Front_EDDIE_WindowsForm.ButtonModified();
+            this.markButton = new Front_EDDIE_WindowsForm.ButtonModified();
+            this.buttonEliminarComentario2 = new Front_EDDIE_WindowsForm.ButtonModified();
+            this.buttonEliminarMarcador2 = new Front_EDDIE_WindowsForm.ButtonModified();
             this.panel_navegador.SuspendLayout();
             this.panel_log.SuspendLayout();
             this.gb_busquedasRecientes.SuspendLayout();
@@ -94,6 +96,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LeftLoadingPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RightLoadingPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -114,6 +118,7 @@
             // 
             // rtb_ResultadosWikipedia
             // 
+            this.rtb_ResultadosWikipedia.BackColor = System.Drawing.SystemColors.Window;
             this.rtb_ResultadosWikipedia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtb_ResultadosWikipedia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtb_ResultadosWikipedia.Location = new System.Drawing.Point(0, 0);
@@ -190,42 +195,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Contenido PDF";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // buttonEliminarComentario2
-            // 
-            this.buttonEliminarComentario2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.buttonEliminarComentario2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.buttonEliminarComentario2.FlatAppearance.BorderSize = 5;
-            this.buttonEliminarComentario2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
-            this.buttonEliminarComentario2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.buttonEliminarComentario2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEliminarComentario2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEliminarComentario2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.buttonEliminarComentario2.Location = new System.Drawing.Point(123, 386);
-            this.buttonEliminarComentario2.Name = "buttonEliminarComentario2";
-            this.buttonEliminarComentario2.Size = new System.Drawing.Size(120, 33);
-            this.buttonEliminarComentario2.TabIndex = 146;
-            this.buttonEliminarComentario2.Text = "Delete comment";
-            this.buttonEliminarComentario2.UseVisualStyleBackColor = false;
-            this.buttonEliminarComentario2.Click += new System.EventHandler(this.buttonEliminarComentario_Click);
-            // 
-            // buttonEliminarMarcador2
-            // 
-            this.buttonEliminarMarcador2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.buttonEliminarMarcador2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.buttonEliminarMarcador2.FlatAppearance.BorderSize = 5;
-            this.buttonEliminarMarcador2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
-            this.buttonEliminarMarcador2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.buttonEliminarMarcador2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEliminarMarcador2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEliminarMarcador2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.buttonEliminarMarcador2.Location = new System.Drawing.Point(123, 213);
-            this.buttonEliminarMarcador2.Name = "buttonEliminarMarcador2";
-            this.buttonEliminarMarcador2.Size = new System.Drawing.Size(120, 33);
-            this.buttonEliminarMarcador2.TabIndex = 145;
-            this.buttonEliminarMarcador2.Text = "Delete bookmark";
-            this.buttonEliminarMarcador2.UseVisualStyleBackColor = false;
-            this.buttonEliminarMarcador2.Click += new System.EventHandler(this.buttonEliminarMarcador_Click);
             // 
             // comentariosPDF
             // 
@@ -354,6 +323,86 @@
             this.panel2.TabIndex = 95;
             this.panel2.Visible = false;
             // 
+            // btn_leerEnciclopedia
+            // 
+            this.btn_leerEnciclopedia.FlatAppearance.BorderSize = 0;
+            this.btn_leerEnciclopedia.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btn_leerEnciclopedia.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_leerEnciclopedia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_leerEnciclopedia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_leerEnciclopedia.Image = global::AugmentedReadingApp.Properties.Resources.ReadButtonImage;
+            this.btn_leerEnciclopedia.Location = new System.Drawing.Point(198, 444);
+            this.btn_leerEnciclopedia.Name = "btn_leerEnciclopedia";
+            this.btn_leerEnciclopedia.Size = new System.Drawing.Size(81, 61);
+            this.btn_leerEnciclopedia.TabIndex = 93;
+            this.btn_leerEnciclopedia.UseVisualStyleBackColor = true;
+            this.btn_leerEnciclopedia.Visible = false;
+            this.btn_leerEnciclopedia.Click += new System.EventHandler(this.btn_leerEnciclopedia_Click);
+            this.btn_leerEnciclopedia.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_leerEnciclopedia_MouseDown);
+            this.btn_leerEnciclopedia.MouseEnter += new System.EventHandler(this.btn_leerEnciclopedia_MouseEnter);
+            this.btn_leerEnciclopedia.MouseLeave += new System.EventHandler(this.btn_leerEnciclopedia_MouseLeave);
+            this.btn_leerEnciclopedia.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_leerEnciclopedia_MouseUp);
+            // 
+            // btn_nav_adelante
+            // 
+            this.btn_nav_adelante.FlatAppearance.BorderSize = 0;
+            this.btn_nav_adelante.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btn_nav_adelante.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_nav_adelante.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_nav_adelante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_nav_adelante.Image = global::AugmentedReadingApp.Properties.Resources.RightArrowButtonImage;
+            this.btn_nav_adelante.Location = new System.Drawing.Point(98, 444);
+            this.btn_nav_adelante.Name = "btn_nav_adelante";
+            this.btn_nav_adelante.Size = new System.Drawing.Size(81, 61);
+            this.btn_nav_adelante.TabIndex = 7;
+            this.btn_nav_adelante.UseVisualStyleBackColor = true;
+            this.btn_nav_adelante.Visible = false;
+            this.btn_nav_adelante.Click += new System.EventHandler(this.btn_nav_adelante_Click);
+            this.btn_nav_adelante.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_nav_adelante_MouseDown);
+            this.btn_nav_adelante.MouseEnter += new System.EventHandler(this.btn_nav_adelante_MouseEnter);
+            this.btn_nav_adelante.MouseLeave += new System.EventHandler(this.btn_nav_adelante_MouseLeave);
+            this.btn_nav_adelante.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_nav_adelante_MouseUp);
+            // 
+            // btn_nav_atras
+            // 
+            this.btn_nav_atras.FlatAppearance.BorderSize = 0;
+            this.btn_nav_atras.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btn_nav_atras.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_nav_atras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_nav_atras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_nav_atras.Image = global::AugmentedReadingApp.Properties.Resources.LeftArrowButtonImage;
+            this.btn_nav_atras.Location = new System.Drawing.Point(8, 443);
+            this.btn_nav_atras.Name = "btn_nav_atras";
+            this.btn_nav_atras.Size = new System.Drawing.Size(81, 61);
+            this.btn_nav_atras.TabIndex = 6;
+            this.btn_nav_atras.UseVisualStyleBackColor = true;
+            this.btn_nav_atras.Visible = false;
+            this.btn_nav_atras.Click += new System.EventHandler(this.btn_nav_atras_Click);
+            this.btn_nav_atras.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_nav_atras_MouseDown);
+            this.btn_nav_atras.MouseEnter += new System.EventHandler(this.btn_nav_atras_MouseEnter);
+            this.btn_nav_atras.MouseLeave += new System.EventHandler(this.btn_nav_atras_MouseLeave);
+            this.btn_nav_atras.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_nav_atras_MouseUp);
+            // 
+            // btn_cerrarVentanaDerecha
+            // 
+            this.btn_cerrarVentanaDerecha.FlatAppearance.BorderSize = 0;
+            this.btn_cerrarVentanaDerecha.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btn_cerrarVentanaDerecha.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_cerrarVentanaDerecha.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_cerrarVentanaDerecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cerrarVentanaDerecha.Image = global::AugmentedReadingApp.Properties.Resources.XButtonImage;
+            this.btn_cerrarVentanaDerecha.Location = new System.Drawing.Point(289, 444);
+            this.btn_cerrarVentanaDerecha.Name = "btn_cerrarVentanaDerecha";
+            this.btn_cerrarVentanaDerecha.Size = new System.Drawing.Size(81, 61);
+            this.btn_cerrarVentanaDerecha.TabIndex = 3;
+            this.btn_cerrarVentanaDerecha.UseVisualStyleBackColor = true;
+            this.btn_cerrarVentanaDerecha.Visible = false;
+            this.btn_cerrarVentanaDerecha.Click += new System.EventHandler(this.btn_cerrarVentanaDerecha_Click);
+            this.btn_cerrarVentanaDerecha.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_cerrarVentanaDerecha_MouseDown);
+            this.btn_cerrarVentanaDerecha.MouseEnter += new System.EventHandler(this.btn_cerrarVentanaDerecha_MouseEnter);
+            this.btn_cerrarVentanaDerecha.MouseLeave += new System.EventHandler(this.btn_cerrarVentanaDerecha_MouseLeave);
+            this.btn_cerrarVentanaDerecha.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_cerrarVentanaDerecha_MouseUp);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -372,6 +421,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(233)))), ((int)(((byte)(242)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.LeftLoadingPictureBox);
             this.panel3.Controls.Add(this.rtb_result_definicion_traduccion);
             this.panel3.Controls.Add(this.lbl_datoBuscado_trad_def);
             this.panel3.Controls.Add(this.btn_leerDefinicionTraduccion);
@@ -381,106 +431,6 @@
             this.panel3.Size = new System.Drawing.Size(262, 361);
             this.panel3.TabIndex = 149;
             this.panel3.Visible = false;
-            // 
-            // syncPDFLabel
-            // 
-            this.syncPDFLabel.AutoSize = true;
-            this.syncPDFLabel.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.syncPDFLabel.Location = new System.Drawing.Point(902, 653);
-            this.syncPDFLabel.Name = "syncPDFLabel";
-            this.syncPDFLabel.Size = new System.Drawing.Size(26, 14);
-            this.syncPDFLabel.TabIndex = 150;
-            this.syncPDFLabel.Text = "X/Y";
-            this.syncPDFLabel.Visible = false;
-            // 
-            // btnSearchPages2
-            // 
-            this.btnSearchPages2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.btnSearchPages2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.btnSearchPages2.FlatAppearance.BorderSize = 5;
-            this.btnSearchPages2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
-            this.btnSearchPages2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.btnSearchPages2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearchPages2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchPages2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.btnSearchPages2.Location = new System.Drawing.Point(1063, 654);
-            this.btnSearchPages2.Name = "btnSearchPages2";
-            this.btnSearchPages2.Size = new System.Drawing.Size(68, 58);
-            this.btnSearchPages2.TabIndex = 148;
-            this.btnSearchPages2.Text = "Search Pages";
-            this.btnSearchPages2.UseVisualStyleBackColor = false;
-            this.btnSearchPages2.Click += new System.EventHandler(this.searchButton_Click);
-            // 
-            // backPageButton2
-            // 
-            this.backPageButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.backPageButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.backPageButton2.FlatAppearance.BorderSize = 5;
-            this.backPageButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
-            this.backPageButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.backPageButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backPageButton2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backPageButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.backPageButton2.Location = new System.Drawing.Point(899, 591);
-            this.backPageButton2.Name = "backPageButton2";
-            this.backPageButton2.Size = new System.Drawing.Size(68, 59);
-            this.backPageButton2.TabIndex = 147;
-            this.backPageButton2.Text = "<<";
-            this.backPageButton2.UseVisualStyleBackColor = false;
-            this.backPageButton2.Click += new System.EventHandler(this.backPagebutton_Click);
-            // 
-            // buttonModified2
-            // 
-            this.buttonModified2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.buttonModified2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.buttonModified2.FlatAppearance.BorderSize = 5;
-            this.buttonModified2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
-            this.buttonModified2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.buttonModified2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonModified2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonModified2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.buttonModified2.Location = new System.Drawing.Point(967, 4);
-            this.buttonModified2.Name = "buttonModified2";
-            this.buttonModified2.Size = new System.Drawing.Size(118, 57);
-            this.buttonModified2.TabIndex = 146;
-            this.buttonModified2.Text = "Settings";
-            this.buttonModified2.UseVisualStyleBackColor = false;
-            // 
-            // nextPageButton2
-            // 
-            this.nextPageButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.nextPageButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.nextPageButton2.FlatAppearance.BorderSize = 5;
-            this.nextPageButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
-            this.nextPageButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.nextPageButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nextPageButton2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nextPageButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.nextPageButton2.Location = new System.Drawing.Point(1063, 591);
-            this.nextPageButton2.Name = "nextPageButton2";
-            this.nextPageButton2.Size = new System.Drawing.Size(68, 59);
-            this.nextPageButton2.TabIndex = 144;
-            this.nextPageButton2.Text = ">>";
-            this.nextPageButton2.UseVisualStyleBackColor = false;
-            this.nextPageButton2.Click += new System.EventHandler(this.nextPageButton_Click);
-            // 
-            // markButton
-            // 
-            this.markButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.markButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.markButton.FlatAppearance.BorderSize = 5;
-            this.markButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
-            this.markButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.markButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.markButton.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.markButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.markButton.Location = new System.Drawing.Point(1154, 656);
-            this.markButton.Name = "markButton";
-            this.markButton.Size = new System.Drawing.Size(118, 57);
-            this.markButton.TabIndex = 143;
-            this.markButton.Text = "Hide caliibration marks";
-            this.markButton.UseVisualStyleBackColor = false;
-            this.markButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_leerDefinicionTraduccion
             // 
@@ -519,6 +469,17 @@
             this.btn_cerrarVentanaIzquierda.MouseEnter += new System.EventHandler(this.btn_cerrarVentanaIzquierda_MouseEnter);
             this.btn_cerrarVentanaIzquierda.MouseLeave += new System.EventHandler(this.btn_cerrarVentanaIzquierda_MouseLeave);
             this.btn_cerrarVentanaIzquierda.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_cerrarVentanaIzquierda_MouseUp);
+            // 
+            // syncPDFLabel
+            // 
+            this.syncPDFLabel.AutoSize = true;
+            this.syncPDFLabel.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.syncPDFLabel.Location = new System.Drawing.Point(902, 653);
+            this.syncPDFLabel.Name = "syncPDFLabel";
+            this.syncPDFLabel.Size = new System.Drawing.Size(26, 14);
+            this.syncPDFLabel.TabIndex = 150;
+            this.syncPDFLabel.Text = "X/Y";
+            this.syncPDFLabel.Visible = false;
             // 
             // btn_turnOFF
             // 
@@ -730,7 +691,7 @@
             this.btn_enciclopedia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_enciclopedia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_enciclopedia.Image = global::AugmentedReadingApp.Properties.Resources.EncyclopediaButtonImage;
-            this.btn_enciclopedia.Location = new System.Drawing.Point(537, 606);
+            this.btn_enciclopedia.Location = new System.Drawing.Point(537, 604);
             this.btn_enciclopedia.Name = "btn_enciclopedia";
             this.btn_enciclopedia.Size = new System.Drawing.Size(81, 61);
             this.btn_enciclopedia.TabIndex = 120;
@@ -798,86 +759,6 @@
             this.btn_buscarWeb.UseVisualStyleBackColor = false;
             this.btn_buscarWeb.Click += new System.EventHandler(this.btn_buscarWeb_Click);
             // 
-            // btn_leerEnciclopedia
-            // 
-            this.btn_leerEnciclopedia.FlatAppearance.BorderSize = 0;
-            this.btn_leerEnciclopedia.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.btn_leerEnciclopedia.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_leerEnciclopedia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_leerEnciclopedia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_leerEnciclopedia.Image = global::AugmentedReadingApp.Properties.Resources.ReadButtonImage;
-            this.btn_leerEnciclopedia.Location = new System.Drawing.Point(198, 444);
-            this.btn_leerEnciclopedia.Name = "btn_leerEnciclopedia";
-            this.btn_leerEnciclopedia.Size = new System.Drawing.Size(81, 61);
-            this.btn_leerEnciclopedia.TabIndex = 93;
-            this.btn_leerEnciclopedia.UseVisualStyleBackColor = true;
-            this.btn_leerEnciclopedia.Visible = false;
-            this.btn_leerEnciclopedia.Click += new System.EventHandler(this.btn_leerEnciclopedia_Click);
-            this.btn_leerEnciclopedia.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_leerEnciclopedia_MouseDown);
-            this.btn_leerEnciclopedia.MouseEnter += new System.EventHandler(this.btn_leerEnciclopedia_MouseEnter);
-            this.btn_leerEnciclopedia.MouseLeave += new System.EventHandler(this.btn_leerEnciclopedia_MouseLeave);
-            this.btn_leerEnciclopedia.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_leerEnciclopedia_MouseUp);
-            // 
-            // btn_nav_adelante
-            // 
-            this.btn_nav_adelante.FlatAppearance.BorderSize = 0;
-            this.btn_nav_adelante.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.btn_nav_adelante.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_nav_adelante.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_nav_adelante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_nav_adelante.Image = global::AugmentedReadingApp.Properties.Resources.RightArrowButtonImage;
-            this.btn_nav_adelante.Location = new System.Drawing.Point(98, 444);
-            this.btn_nav_adelante.Name = "btn_nav_adelante";
-            this.btn_nav_adelante.Size = new System.Drawing.Size(81, 61);
-            this.btn_nav_adelante.TabIndex = 7;
-            this.btn_nav_adelante.UseVisualStyleBackColor = true;
-            this.btn_nav_adelante.Visible = false;
-            this.btn_nav_adelante.Click += new System.EventHandler(this.btn_nav_adelante_Click);
-            this.btn_nav_adelante.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_nav_adelante_MouseDown);
-            this.btn_nav_adelante.MouseEnter += new System.EventHandler(this.btn_nav_adelante_MouseEnter);
-            this.btn_nav_adelante.MouseLeave += new System.EventHandler(this.btn_nav_adelante_MouseLeave);
-            this.btn_nav_adelante.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_nav_adelante_MouseUp);
-            // 
-            // btn_nav_atras
-            // 
-            this.btn_nav_atras.FlatAppearance.BorderSize = 0;
-            this.btn_nav_atras.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.btn_nav_atras.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_nav_atras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_nav_atras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_nav_atras.Image = global::AugmentedReadingApp.Properties.Resources.LeftArrowButtonImage;
-            this.btn_nav_atras.Location = new System.Drawing.Point(8, 443);
-            this.btn_nav_atras.Name = "btn_nav_atras";
-            this.btn_nav_atras.Size = new System.Drawing.Size(81, 61);
-            this.btn_nav_atras.TabIndex = 6;
-            this.btn_nav_atras.UseVisualStyleBackColor = true;
-            this.btn_nav_atras.Visible = false;
-            this.btn_nav_atras.Click += new System.EventHandler(this.btn_nav_atras_Click);
-            this.btn_nav_atras.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_nav_atras_MouseDown);
-            this.btn_nav_atras.MouseEnter += new System.EventHandler(this.btn_nav_atras_MouseEnter);
-            this.btn_nav_atras.MouseLeave += new System.EventHandler(this.btn_nav_atras_MouseLeave);
-            this.btn_nav_atras.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_nav_atras_MouseUp);
-            // 
-            // btn_cerrarVentanaDerecha
-            // 
-            this.btn_cerrarVentanaDerecha.FlatAppearance.BorderSize = 0;
-            this.btn_cerrarVentanaDerecha.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.btn_cerrarVentanaDerecha.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_cerrarVentanaDerecha.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_cerrarVentanaDerecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cerrarVentanaDerecha.Image = global::AugmentedReadingApp.Properties.Resources.XButtonImage;
-            this.btn_cerrarVentanaDerecha.Location = new System.Drawing.Point(289, 444);
-            this.btn_cerrarVentanaDerecha.Name = "btn_cerrarVentanaDerecha";
-            this.btn_cerrarVentanaDerecha.Size = new System.Drawing.Size(81, 61);
-            this.btn_cerrarVentanaDerecha.TabIndex = 3;
-            this.btn_cerrarVentanaDerecha.UseVisualStyleBackColor = true;
-            this.btn_cerrarVentanaDerecha.Visible = false;
-            this.btn_cerrarVentanaDerecha.Click += new System.EventHandler(this.btn_cerrarVentanaDerecha_Click);
-            this.btn_cerrarVentanaDerecha.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_cerrarVentanaDerecha_MouseDown);
-            this.btn_cerrarVentanaDerecha.MouseEnter += new System.EventHandler(this.btn_cerrarVentanaDerecha_MouseEnter);
-            this.btn_cerrarVentanaDerecha.MouseLeave += new System.EventHandler(this.btn_cerrarVentanaDerecha_MouseLeave);
-            this.btn_cerrarVentanaDerecha.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_cerrarVentanaDerecha_MouseUp);
-            // 
             // textImageButton
             // 
             this.textImageButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
@@ -924,6 +805,156 @@
             this.pictureBox3.TabIndex = 86;
             this.pictureBox3.TabStop = false;
             // 
+            // LeftLoadingPictureBox
+            // 
+            this.LeftLoadingPictureBox.BackColor = System.Drawing.SystemColors.Window;
+            this.LeftLoadingPictureBox.Image = global::AugmentedReadingApp.Properties.Resources.LoadingSinFondo;
+            this.LeftLoadingPictureBox.Location = new System.Drawing.Point(32, 54);
+            this.LeftLoadingPictureBox.Name = "LeftLoadingPictureBox";
+            this.LeftLoadingPictureBox.Size = new System.Drawing.Size(200, 200);
+            this.LeftLoadingPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.LeftLoadingPictureBox.TabIndex = 151;
+            this.LeftLoadingPictureBox.TabStop = false;
+            this.LeftLoadingPictureBox.Visible = false;
+            // 
+            // RightLoadingPictureBox
+            // 
+            this.RightLoadingPictureBox.BackColor = System.Drawing.SystemColors.Window;
+            this.RightLoadingPictureBox.Image = global::AugmentedReadingApp.Properties.Resources.LoadingSinFondo;
+            this.RightLoadingPictureBox.Location = new System.Drawing.Point(728, 12);
+            this.RightLoadingPictureBox.Name = "RightLoadingPictureBox";
+            this.RightLoadingPictureBox.Size = new System.Drawing.Size(200, 200);
+            this.RightLoadingPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.RightLoadingPictureBox.TabIndex = 152;
+            this.RightLoadingPictureBox.TabStop = false;
+            this.RightLoadingPictureBox.Visible = false;
+            this.RightLoadingPictureBox.WaitOnLoad = true;
+            // 
+            // btnSearchPages2
+            // 
+            this.btnSearchPages2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.btnSearchPages2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.btnSearchPages2.FlatAppearance.BorderSize = 5;
+            this.btnSearchPages2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
+            this.btnSearchPages2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.btnSearchPages2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchPages2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchPages2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.btnSearchPages2.Location = new System.Drawing.Point(1063, 654);
+            this.btnSearchPages2.Name = "btnSearchPages2";
+            this.btnSearchPages2.Size = new System.Drawing.Size(68, 58);
+            this.btnSearchPages2.TabIndex = 148;
+            this.btnSearchPages2.Text = "Search Pages";
+            this.btnSearchPages2.UseVisualStyleBackColor = false;
+            this.btnSearchPages2.Click += new System.EventHandler(this.searchButton_Click);
+            // 
+            // backPageButton2
+            // 
+            this.backPageButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.backPageButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.backPageButton2.FlatAppearance.BorderSize = 5;
+            this.backPageButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
+            this.backPageButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.backPageButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backPageButton2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backPageButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.backPageButton2.Location = new System.Drawing.Point(899, 591);
+            this.backPageButton2.Name = "backPageButton2";
+            this.backPageButton2.Size = new System.Drawing.Size(68, 59);
+            this.backPageButton2.TabIndex = 147;
+            this.backPageButton2.Text = "<<";
+            this.backPageButton2.UseVisualStyleBackColor = false;
+            this.backPageButton2.Click += new System.EventHandler(this.backPagebutton_Click);
+            // 
+            // buttonModified2
+            // 
+            this.buttonModified2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonModified2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonModified2.FlatAppearance.BorderSize = 5;
+            this.buttonModified2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
+            this.buttonModified2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.buttonModified2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonModified2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonModified2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.buttonModified2.Location = new System.Drawing.Point(967, 4);
+            this.buttonModified2.Name = "buttonModified2";
+            this.buttonModified2.Size = new System.Drawing.Size(118, 57);
+            this.buttonModified2.TabIndex = 146;
+            this.buttonModified2.Text = "Settings";
+            this.buttonModified2.UseVisualStyleBackColor = false;
+            // 
+            // nextPageButton2
+            // 
+            this.nextPageButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.nextPageButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.nextPageButton2.FlatAppearance.BorderSize = 5;
+            this.nextPageButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
+            this.nextPageButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.nextPageButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nextPageButton2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nextPageButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.nextPageButton2.Location = new System.Drawing.Point(1063, 591);
+            this.nextPageButton2.Name = "nextPageButton2";
+            this.nextPageButton2.Size = new System.Drawing.Size(68, 59);
+            this.nextPageButton2.TabIndex = 144;
+            this.nextPageButton2.Text = ">>";
+            this.nextPageButton2.UseVisualStyleBackColor = false;
+            this.nextPageButton2.Click += new System.EventHandler(this.nextPageButton_Click);
+            // 
+            // markButton
+            // 
+            this.markButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.markButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.markButton.FlatAppearance.BorderSize = 5;
+            this.markButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
+            this.markButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.markButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.markButton.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.markButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.markButton.Location = new System.Drawing.Point(1154, 656);
+            this.markButton.Name = "markButton";
+            this.markButton.Size = new System.Drawing.Size(118, 57);
+            this.markButton.TabIndex = 143;
+            this.markButton.Text = "Hide caliibration marks";
+            this.markButton.UseVisualStyleBackColor = false;
+            this.markButton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // buttonEliminarComentario2
+            // 
+            this.buttonEliminarComentario2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonEliminarComentario2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonEliminarComentario2.FlatAppearance.BorderSize = 5;
+            this.buttonEliminarComentario2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
+            this.buttonEliminarComentario2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.buttonEliminarComentario2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEliminarComentario2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminarComentario2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.buttonEliminarComentario2.Location = new System.Drawing.Point(123, 386);
+            this.buttonEliminarComentario2.Name = "buttonEliminarComentario2";
+            this.buttonEliminarComentario2.Size = new System.Drawing.Size(120, 33);
+            this.buttonEliminarComentario2.TabIndex = 146;
+            this.buttonEliminarComentario2.Text = "Delete comment";
+            this.buttonEliminarComentario2.UseVisualStyleBackColor = false;
+            this.buttonEliminarComentario2.Click += new System.EventHandler(this.buttonEliminarComentario_Click);
+            // 
+            // buttonEliminarMarcador2
+            // 
+            this.buttonEliminarMarcador2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonEliminarMarcador2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonEliminarMarcador2.FlatAppearance.BorderSize = 5;
+            this.buttonEliminarMarcador2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
+            this.buttonEliminarMarcador2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.buttonEliminarMarcador2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEliminarMarcador2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminarMarcador2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.buttonEliminarMarcador2.Location = new System.Drawing.Point(123, 213);
+            this.buttonEliminarMarcador2.Name = "buttonEliminarMarcador2";
+            this.buttonEliminarMarcador2.Size = new System.Drawing.Size(120, 33);
+            this.buttonEliminarMarcador2.TabIndex = 145;
+            this.buttonEliminarMarcador2.Text = "Delete bookmark";
+            this.buttonEliminarMarcador2.UseVisualStyleBackColor = false;
+            this.buttonEliminarMarcador2.Click += new System.EventHandler(this.buttonEliminarMarcador_Click);
+            // 
             // ProjectionScreenActivity2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -931,6 +962,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.syncPDFLabel);
+            this.Controls.Add(this.RightLoadingPictureBox);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnSearchPages2);
             this.Controls.Add(this.backPageButton2);
@@ -977,9 +1009,12 @@
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LeftLoadingPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RightLoadingPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1042,5 +1077,7 @@
         private Front_EDDIE_WindowsForm.ButtonModified btnSearchPages2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label syncPDFLabel;
+        private System.Windows.Forms.PictureBox LeftLoadingPictureBox;
+        private System.Windows.Forms.PictureBox RightLoadingPictureBox;
     }
 }

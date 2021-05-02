@@ -16,7 +16,7 @@ namespace ApiDefinicionesGoogle
         {
             var url = "https://googledictionaryapi.eu-gb.mybluemix.net/?define=" + textoBuscado + "&lang=en";
             WebClient wc = new WebClient();
-            string definicion = wc.DownloadString(url);
+            string definicion = wc.DownloadString(url);//Error 404, no se encontró en el servidor remoto
             definicion = definicion.TrimStart(new char[] { '[' }).TrimEnd(new char[] { ']' });
             JObject Jdefinicion = JObject.Parse(definicion);
             var _dataResponse = JToken.Parse(JsonConvert.SerializeObject(Jdefinicion));

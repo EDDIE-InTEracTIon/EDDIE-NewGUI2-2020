@@ -18,6 +18,7 @@ using ModuloProcesamientoImagenes;
 using ModuloVisualizacionDatos;
 using Newtonsoft.Json.Linq;
 using ModuloRastreoOcular;
+using System.Threading;
 
 namespace AugmentedReadingApp
 {
@@ -45,7 +46,7 @@ namespace AugmentedReadingApp
 
         //string conceptoBuscar;
         //Linea agregada para probar el buscador sin detector de imagen ocr
-        string conceptoBuscar = "Harry Potter";
+        string conceptoBuscar = "Hello";
         //string conceptoBuscar = "LQ!ve";
 
         StringBuilder csvFile = new StringBuilder();
@@ -152,9 +153,9 @@ namespace AugmentedReadingApp
             {
 
 
-                pictureBox3.Image = Image.FromFile("x_mark_red_circle.png");
-                pictureBox4.Image = Image.FromFile("x_mark_red_circle.png");
-                pictureBox5.Image = Image.FromFile("x_mark_red_circle.png");
+                pictureBox3.Image = Properties.Resources.Target;
+                pictureBox4.Image = Properties.Resources.Target;
+                pictureBox5.Image = Properties.Resources.Target;
 
                 markPoint = false;
             }
@@ -416,6 +417,8 @@ namespace AugmentedReadingApp
 
         private void buscar_Enciclopedia()
         {
+            //RightLoadingPictureBox.BringToFront();
+            //RightLoadingPictureBox.Visible = true;
             btn_cerrarVentanaDerecha.Visible = true;
             rtb_ResultadosWikipedia.Clear();
             lbl_PalabraBuscada.Visible = true;
@@ -455,7 +458,9 @@ namespace AugmentedReadingApp
                     rtb_ResultadosWikipedia.AppendText(Environment.NewLine + elemento);
                 }
             }
+            //RightLoadingPictureBox.Visible = false;
         }
+
 
         private void btn_video_Click(object sender, EventArgs e)
         {
@@ -546,8 +551,8 @@ namespace AugmentedReadingApp
                     fl_busquedasRecientes.Controls.Add(busquedaReciente);
                     csvFile.AppendLine(formatTime + " ; " + textoTraducir + " ; " + apiUtilizada);
 
-                    var apiSeleccionada = SeleccionApis2.apiSeleccionadaTraduccion;
-                    string resultado = traducirTexto.traducirTexto(textoTraducir, idiomaSeleccionado, apiSeleccionada);
+                    string apiSeleccionada = SeleccionApis2.apiSeleccionadaTraduccion;
+                    string resultado = traducirTexto.traducirTexto(textoTraducir, idiomaSeleccionado, apiSeleccionada);//Acá se traba, tambien en interfaz antigua
                     rtb_result_definicion_traduccion.AppendText(resultado);
                 }
                 catch (Exception ex) { MessageBox.Show("Seleccione una api para búsqueda en traductor."); }
