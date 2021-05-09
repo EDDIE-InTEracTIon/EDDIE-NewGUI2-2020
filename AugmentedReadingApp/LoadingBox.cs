@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AugmentedReadingApp
 {
-    public partial class ProgressBox : Form
+    public partial class LoadingBox : Form
     {
-        public ProgressBox()
+        public LoadingBox()
         {
             InitializeComponent();
             

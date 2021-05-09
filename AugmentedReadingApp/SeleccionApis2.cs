@@ -235,5 +235,12 @@ namespace AugmentedReadingApp
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+            toolTip1.Show("Select the web search services for each type of search\n (encyclopedia, definitions, images, video and translation),\n for translation select the language to translate into.", pictureBox1);
+            
+        }
     }
 }

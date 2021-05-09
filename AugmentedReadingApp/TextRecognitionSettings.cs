@@ -340,6 +340,11 @@ namespace AugmentedReadingApp
             EyeTrackingConfiguration eyeTrackingConfig = new EyeTrackingConfiguration();
             eyeTrackingConfig.Show();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            toolTip1.Show("Camera selection for OCR text recognition. The same camera must not be used for gesture recognition.", pictureBox2);
+        }
     }
 }
 

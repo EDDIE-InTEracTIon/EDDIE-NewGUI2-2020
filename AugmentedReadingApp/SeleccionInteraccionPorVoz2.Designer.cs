@@ -42,6 +42,7 @@
             this.InteractionsTittle = new System.Windows.Forms.Label();
             this.TittlePanel = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.InteractionsSettingsPanel1.SuspendLayout();
@@ -108,6 +109,8 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 21;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label2
             // 
@@ -162,7 +165,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Help;
             this.pictureBox1.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
             this.pictureBox1.Location = new System.Drawing.Point(235, 34);
             this.pictureBox1.Name = "pictureBox1";
@@ -180,9 +183,9 @@
             this.InteractionsTittle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
             this.InteractionsTittle.Location = new System.Drawing.Point(12, 8);
             this.InteractionsTittle.Name = "InteractionsTittle";
-            this.InteractionsTittle.Size = new System.Drawing.Size(280, 58);
+            this.InteractionsTittle.Size = new System.Drawing.Size(611, 58);
             this.InteractionsTittle.TabIndex = 0;
-            this.InteractionsTittle.Text = "Interactions";
+            this.InteractionsTittle.Text = "Interaction with web search";
             // 
             // TittlePanel
             // 
@@ -231,5 +234,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTip2;
     }
 }

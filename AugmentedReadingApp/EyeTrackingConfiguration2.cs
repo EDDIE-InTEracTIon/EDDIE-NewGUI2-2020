@@ -329,5 +329,30 @@ namespace AugmentedReadingApp
         {
             toolTipSaveData.Show("Si se selecciona, los datos capturados por el eye tracker\nson guardados en un archivo .csv", saveData);
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            toolTip1.Show("Select an available plugin,\nfirst select the path of your\ndirectory and select the plugin\navailable", pictureBox1);
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            toolTip1.Show("Select an available reticle,\nfirst select the path of your\ndirectory and select the reticle\navailable", pictureBox2);
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            toolTip1.Show("If selected it is possible to control the pointer with your gaze. Click(s) time is the number of seconds that must elapse before a click is made when looking at a button.", pictureBox3);
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            toolTip1.Show("If selected, the data captured by the eye tracker are saved in a .csv file, you can give the file a name and a save path.", pictureBox4);
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            toolTip1.Show("Select the eye tracking settings. The settings can be saved to a file using the 'Export Settings' button and loaded with the 'Import Settings' button.", pictureBox5);
+        }
     }
 }

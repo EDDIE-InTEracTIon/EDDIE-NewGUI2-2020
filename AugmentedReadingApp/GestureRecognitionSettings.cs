@@ -536,6 +536,21 @@ namespace AugmentedReadingApp
         {
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            toolTip1.Show("Camera selection for gesture recognition. The same camera must not be used for text recognition. Before starting the recognition you must select a plug-in.", pictureBox2);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            toolTip1.Show("If the device is going to take control of the mouse such as the Hand Skin or Color Pen, activate the Recognition on checkbox.", pictureBox1);
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            toolTip1.Show("'Sensor X' and 'Sensor Y' Displays the sensor information, relative coordinate in X and Y axis.\n In 'Sensor start X' and 'Sensor start Y' the X and Y coordinates shown in the input 'Sensor X' and 'Sensor Y' must be entered when pointing the cursor to the center of the upper left calibration cross.\n In 'Sensor end X' and 'Sensor end Y' the X and Y coordinates shown in the input 'Sensor X' and 'Sensor Y' must be entered by pointing the cursor to the center of the lower right calibration cross.", pictureBox4);
+        }
     }
 }
 

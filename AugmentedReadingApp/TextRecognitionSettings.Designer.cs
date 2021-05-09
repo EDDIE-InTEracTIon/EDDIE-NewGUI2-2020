@@ -40,6 +40,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.imageBox1 = new Emgu.CV.UI.ImageBox();
             this.imageBox3 = new Emgu.CV.UI.ImageBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownResXText)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownResYText)).BeginInit();
             this.TittlePanel.SuspendLayout();
@@ -171,6 +172,8 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 138;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_Click);
             // 
             // imageBox1
             // 
@@ -229,5 +232,6 @@
         private System.Windows.Forms.Label InteractionsTittle;
         private System.Windows.Forms.Panel InteractionsSettingsPanel1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

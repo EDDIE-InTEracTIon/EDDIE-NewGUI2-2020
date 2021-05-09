@@ -64,7 +64,6 @@
             this.InteractionsSettingsPanel1 = new System.Windows.Forms.Panel();
             this.buttonModified4 = new Front_EDDIE_WindowsForm.ButtonModified();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonModified3 = new Front_EDDIE_WindowsForm.ButtonModified();
@@ -74,6 +73,8 @@
             this.StartProjectionButtonModified = new Front_EDDIE_WindowsForm.ButtonModified();
             this.TittlePanel = new System.Windows.Forms.Panel();
             this.InteractionsTittle = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAStartY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAEndY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSStartY)).BeginInit();
@@ -88,7 +89,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageBox2)).BeginInit();
             this.InteractionsSettingsPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.TittlePanel.SuspendLayout();
@@ -123,9 +123,9 @@
             this.label51.Location = new System.Drawing.Point(612, 377);
             this.label51.Margin = new System.Windows.Forms.Padding(0);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(68, 19);
+            this.label51.Size = new System.Drawing.Size(81, 19);
             this.label51.TabIndex = 109;
-            this.label51.Text = "App End";
+            this.label51.Text = "App End Y";
             // 
             // label52
             // 
@@ -134,9 +134,9 @@
             this.label52.Location = new System.Drawing.Point(410, 377);
             this.label52.Margin = new System.Windows.Forms.Padding(0);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(74, 19);
+            this.label52.Size = new System.Drawing.Size(87, 19);
             this.label52.TabIndex = 108;
-            this.label52.Text = "App Start";
+            this.label52.Text = "App Start Y";
             // 
             // label53
             // 
@@ -145,9 +145,9 @@
             this.label53.Location = new System.Drawing.Point(612, 351);
             this.label53.Margin = new System.Windows.Forms.Padding(0);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(87, 19);
+            this.label53.Size = new System.Drawing.Size(100, 19);
             this.label53.TabIndex = 107;
-            this.label53.Text = "Sensor End";
+            this.label53.Text = "Sensor End Y";
             // 
             // label54
             // 
@@ -156,13 +156,13 @@
             this.label54.Location = new System.Drawing.Point(410, 351);
             this.label54.Margin = new System.Windows.Forms.Padding(0);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(93, 19);
+            this.label54.Size = new System.Drawing.Size(106, 19);
             this.label54.TabIndex = 106;
-            this.label54.Text = "Sensor Start";
+            this.label54.Text = "Sensor Start Y";
             // 
             // numericUpDownAStartY
             // 
-            this.numericUpDownAStartY.Location = new System.Drawing.Point(503, 377);
+            this.numericUpDownAStartY.Location = new System.Drawing.Point(513, 377);
             this.numericUpDownAStartY.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.numericUpDownAStartY.Maximum = new decimal(new int[] {
             3000,
@@ -187,7 +187,7 @@
             // 
             this.numericUpDownAEndY.BackColor = System.Drawing.SystemColors.Window;
             this.numericUpDownAEndY.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.numericUpDownAEndY.Location = new System.Drawing.Point(707, 377);
+            this.numericUpDownAEndY.Location = new System.Drawing.Point(717, 377);
             this.numericUpDownAEndY.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.numericUpDownAEndY.Maximum = new decimal(new int[] {
             3000,
@@ -210,7 +210,7 @@
             // 
             // numericUpDownSStartY
             // 
-            this.numericUpDownSStartY.Location = new System.Drawing.Point(503, 350);
+            this.numericUpDownSStartY.Location = new System.Drawing.Point(513, 350);
             this.numericUpDownSStartY.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.numericUpDownSStartY.Maximum = new decimal(new int[] {
             300000,
@@ -233,7 +233,7 @@
             // 
             // numericUpDownSEndY
             // 
-            this.numericUpDownSEndY.Location = new System.Drawing.Point(707, 350);
+            this.numericUpDownSEndY.Location = new System.Drawing.Point(717, 350);
             this.numericUpDownSEndY.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.numericUpDownSEndY.Maximum = new decimal(new int[] {
             300000,
@@ -261,9 +261,9 @@
             this.label38.Location = new System.Drawing.Point(211, 377);
             this.label38.Margin = new System.Windows.Forms.Padding(0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(68, 19);
+            this.label38.Size = new System.Drawing.Size(81, 19);
             this.label38.TabIndex = 101;
-            this.label38.Text = "App End";
+            this.label38.Text = "App End X";
             // 
             // label39
             // 
@@ -272,9 +272,9 @@
             this.label39.Location = new System.Drawing.Point(15, 377);
             this.label39.Margin = new System.Windows.Forms.Padding(0);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(74, 19);
+            this.label39.Size = new System.Drawing.Size(87, 19);
             this.label39.TabIndex = 100;
-            this.label39.Text = "App Start";
+            this.label39.Text = "App Start X";
             this.label39.Click += new System.EventHandler(this.label39_Click);
             // 
             // label40
@@ -284,9 +284,9 @@
             this.label40.Location = new System.Drawing.Point(211, 351);
             this.label40.Margin = new System.Windows.Forms.Padding(0);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(87, 19);
+            this.label40.Size = new System.Drawing.Size(100, 19);
             this.label40.TabIndex = 99;
-            this.label40.Text = "Sensor End";
+            this.label40.Text = "Sensor End X";
             // 
             // label41
             // 
@@ -295,14 +295,14 @@
             this.label41.Location = new System.Drawing.Point(15, 351);
             this.label41.Margin = new System.Windows.Forms.Padding(0);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(93, 19);
+            this.label41.Size = new System.Drawing.Size(106, 19);
             this.label41.TabIndex = 98;
-            this.label41.Text = "Sensor Start";
+            this.label41.Text = "Sensor Start X";
             this.label41.Click += new System.EventHandler(this.label41_Click);
             // 
             // numericUpDownAStartX
             // 
-            this.numericUpDownAStartX.Location = new System.Drawing.Point(108, 377);
+            this.numericUpDownAStartX.Location = new System.Drawing.Point(118, 377);
             this.numericUpDownAStartX.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.numericUpDownAStartX.Maximum = new decimal(new int[] {
             3000,
@@ -325,7 +325,7 @@
             // 
             // numericUpDownAEndX
             // 
-            this.numericUpDownAEndX.Location = new System.Drawing.Point(307, 377);
+            this.numericUpDownAEndX.Location = new System.Drawing.Point(317, 377);
             this.numericUpDownAEndX.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.numericUpDownAEndX.Maximum = new decimal(new int[] {
             3000,
@@ -348,7 +348,7 @@
             // 
             // numericUpDownSStartX
             // 
-            this.numericUpDownSStartX.Location = new System.Drawing.Point(108, 350);
+            this.numericUpDownSStartX.Location = new System.Drawing.Point(118, 350);
             this.numericUpDownSStartX.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.numericUpDownSStartX.Maximum = new decimal(new int[] {
             300000,
@@ -371,7 +371,7 @@
             // 
             // numericUpDownSEndX
             // 
-            this.numericUpDownSEndX.Location = new System.Drawing.Point(307, 350);
+            this.numericUpDownSEndX.Location = new System.Drawing.Point(317, 350);
             this.numericUpDownSEndX.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.numericUpDownSEndX.Maximum = new decimal(new int[] {
             300000,
@@ -555,9 +555,9 @@
             this.label4.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(300, 6);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 22);
+            this.label4.Size = new System.Drawing.Size(67, 22);
             this.label4.TabIndex = 163;
-            this.label4.Text = "Complement";
+            this.label4.Text = "Plug-in";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // InteractionsSettingsPanel1
@@ -565,7 +565,6 @@
             this.InteractionsSettingsPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.InteractionsSettingsPanel1.Controls.Add(this.buttonModified4);
             this.InteractionsSettingsPanel1.Controls.Add(this.pictureBox4);
-            this.InteractionsSettingsPanel1.Controls.Add(this.pictureBox3);
             this.InteractionsSettingsPanel1.Controls.Add(this.pictureBox2);
             this.InteractionsSettingsPanel1.Controls.Add(this.pictureBox1);
             this.InteractionsSettingsPanel1.Controls.Add(this.buttonModified3);
@@ -639,17 +638,8 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 172;
             this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Help;
-            this.pictureBox3.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
-            this.pictureBox3.Location = new System.Drawing.Point(414, 8);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 171;
-            this.pictureBox3.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.pictureBox4.MouseHover += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox2
             // 
@@ -661,6 +651,8 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 170;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -672,6 +664,8 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 169;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_Click);
             // 
             // buttonModified3
             // 
@@ -703,7 +697,7 @@
             this.buttonModified2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonModified2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonModified2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.buttonModified2.Location = new System.Drawing.Point(636, 14);
+            this.buttonModified2.Location = new System.Drawing.Point(648, 14);
             this.buttonModified2.Name = "buttonModified2";
             this.buttonModified2.Size = new System.Drawing.Size(140, 63);
             this.buttonModified2.TabIndex = 167;
@@ -732,7 +726,7 @@
             this.buttonModified1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonModified1.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonModified1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.buttonModified1.Location = new System.Drawing.Point(782, 14);
+            this.buttonModified1.Location = new System.Drawing.Point(794, 14);
             this.buttonModified1.Name = "buttonModified1";
             this.buttonModified1.Size = new System.Drawing.Size(137, 63);
             this.buttonModified1.TabIndex = 165;
@@ -751,7 +745,7 @@
             this.StartProjectionButtonModified.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.StartProjectionButtonModified.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StartProjectionButtonModified.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.StartProjectionButtonModified.Location = new System.Drawing.Point(490, 14);
+            this.StartProjectionButtonModified.Location = new System.Drawing.Point(502, 14);
             this.StartProjectionButtonModified.Name = "StartProjectionButtonModified";
             this.StartProjectionButtonModified.Size = new System.Drawing.Size(140, 63);
             this.StartProjectionButtonModified.TabIndex = 164;
@@ -778,6 +772,13 @@
             this.InteractionsTittle.Size = new System.Drawing.Size(435, 58);
             this.InteractionsTittle.TabIndex = 0;
             this.InteractionsTittle.Text = "Gesture recognition";
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.AutomaticDelay = 15000;
+            this.toolTip1.AutoPopDelay = 150000;
+            this.toolTip1.InitialDelay = 100;
+            this.toolTip1.ReshowDelay = 3000;
             // 
             // GestureRecognitionSettings
             // 
@@ -807,7 +808,6 @@
             this.InteractionsSettingsPanel1.ResumeLayout(false);
             this.InteractionsSettingsPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.TittlePanel.ResumeLayout(false);
@@ -858,9 +858,10 @@
         private Front_EDDIE_WindowsForm.ButtonModified buttonModified3;
         private Front_EDDIE_WindowsForm.ButtonModified buttonModified2;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Front_EDDIE_WindowsForm.ButtonModified buttonModified4;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTip2;
     }
 }

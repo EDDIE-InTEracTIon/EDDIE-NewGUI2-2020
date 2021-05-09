@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label5 = new System.Windows.Forms.Label();
             this.cbx_idiomaTraducir = new System.Windows.Forms.ComboBox();
             this.cbx_apisImagenes = new System.Windows.Forms.ComboBox();
@@ -41,12 +42,13 @@
             this.lbl_Enciclopedias = new System.Windows.Forms.Label();
             this.cbx_apisEnciclopedia = new System.Windows.Forms.ComboBox();
             this.TittlePanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.InteractionsTittle = new System.Windows.Forms.Label();
             this.InteractionsSettingsPanel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.TittlePanel.SuspendLayout();
-            this.InteractionsSettingsPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.InteractionsSettingsPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label5
@@ -183,6 +185,19 @@
             this.TittlePanel.Size = new System.Drawing.Size(988, 74);
             this.TittlePanel.TabIndex = 48;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Help;
+            this.pictureBox1.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
+            this.pictureBox1.Location = new System.Drawing.Point(469, 28);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // InteractionsTittle
             // 
             this.InteractionsTittle.AutoSize = true;
@@ -215,16 +230,6 @@
             this.InteractionsSettingsPanel1.TabIndex = 49;
             this.InteractionsSettingsPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.InteractionsSettingsPanel1_Paint);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
-            this.pictureBox1.Location = new System.Drawing.Point(469, 28);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(28, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 21;
-            this.pictureBox1.TabStop = false;
-            // 
             // SeleccionApis2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,9 +245,9 @@
             this.Load += new System.EventHandler(this.SeleccionApis_Load);
             this.TittlePanel.ResumeLayout(false);
             this.TittlePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.InteractionsSettingsPanel1.ResumeLayout(false);
             this.InteractionsSettingsPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -265,5 +270,6 @@
         private System.Windows.Forms.Label InteractionsTittle;
         private System.Windows.Forms.Panel InteractionsSettingsPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuSettings));
             this.PanelNavBar = new System.Windows.Forms.Panel();
+            this.LoadingPictureBox = new System.Windows.Forms.PictureBox();
             this.ContenidoNavBar = new System.Windows.Forms.Panel();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.PageDetectionButton = new System.Windows.Forms.Button();
@@ -44,18 +45,17 @@
             this.MinimizePictureBox = new System.Windows.Forms.PictureBox();
             this.ExitPictureBox = new System.Windows.Forms.PictureBox();
             this.PanelContenido = new System.Windows.Forms.Panel();
-            this.LoadingPictureBox = new System.Windows.Forms.PictureBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.backgroundWorkerStartProjection = new System.ComponentModel.BackgroundWorker();
             this.StartProjectionButtonModified = new Front_EDDIE_WindowsForm.ButtonModified();
             this.SaveSettingsButtonModified = new Front_EDDIE_WindowsForm.ButtonModified();
             this.ResetSettingsButtonModified = new Front_EDDIE_WindowsForm.ButtonModified();
             this.PanelNavBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadingPictureBox)).BeginInit();
             this.ContenidoNavBar.SuspendLayout();
             this.PanelBarraSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MinimizePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LoadingPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,6 +68,17 @@
             this.PanelNavBar.Name = "PanelNavBar";
             this.PanelNavBar.Size = new System.Drawing.Size(257, 662);
             this.PanelNavBar.TabIndex = 1;
+            // 
+            // LoadingPictureBox
+            // 
+            this.LoadingPictureBox.Image = global::AugmentedReadingApp.Properties.Resources.LoadingSinFondo;
+            this.LoadingPictureBox.Location = new System.Drawing.Point(32, 450);
+            this.LoadingPictureBox.Name = "LoadingPictureBox";
+            this.LoadingPictureBox.Size = new System.Drawing.Size(200, 200);
+            this.LoadingPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.LoadingPictureBox.TabIndex = 6;
+            this.LoadingPictureBox.TabStop = false;
+            this.LoadingPictureBox.Visible = false;
             // 
             // ContenidoNavBar
             // 
@@ -195,7 +206,7 @@
             this.InteractionsButton.Name = "InteractionsButton";
             this.InteractionsButton.Size = new System.Drawing.Size(225, 39);
             this.InteractionsButton.TabIndex = 0;
-            this.InteractionsButton.Text = "Interactions";
+            this.InteractionsButton.Text = "Interactions WS";
             this.InteractionsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.InteractionsButton.UseVisualStyleBackColor = false;
             this.InteractionsButton.Click += new System.EventHandler(this.InteractionsButton_Click);
@@ -255,17 +266,6 @@
             this.PanelContenido.Size = new System.Drawing.Size(987, 539);
             this.PanelContenido.TabIndex = 3;
             this.PanelContenido.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContenido_Paint);
-            // 
-            // LoadingPictureBox
-            // 
-            this.LoadingPictureBox.Image = global::AugmentedReadingApp.Properties.Resources.LoadingSinFondo;
-            this.LoadingPictureBox.Location = new System.Drawing.Point(32, 450);
-            this.LoadingPictureBox.Name = "LoadingPictureBox";
-            this.LoadingPictureBox.Size = new System.Drawing.Size(200, 200);
-            this.LoadingPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.LoadingPictureBox.TabIndex = 6;
-            this.LoadingPictureBox.TabStop = false;
-            this.LoadingPictureBox.Visible = false;
             // 
             // backgroundWorkerStartProjection
             // 
@@ -349,13 +349,13 @@
             this.Load += new System.EventHandler(this.MenuSettings_Load);
             this.PanelNavBar.ResumeLayout(false);
             this.PanelNavBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LoadingPictureBox)).EndInit();
             this.ContenidoNavBar.ResumeLayout(false);
             this.ContenidoNavBar.PerformLayout();
             this.PanelBarraSuperior.ResumeLayout(false);
             this.PanelBarraSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MinimizePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExitPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LoadingPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 

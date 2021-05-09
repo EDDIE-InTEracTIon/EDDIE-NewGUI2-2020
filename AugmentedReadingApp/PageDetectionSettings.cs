@@ -541,6 +541,11 @@ namespace AugmentedReadingApp
             EyeTrackingConfiguration eyeTrackingConfig = new EyeTrackingConfiguration();
             eyeTrackingConfig.Show();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            toolTip1.Show("Select the PDF file to be synchronized with the physical book.", pictureBox2);
+        }
     }
 }
 

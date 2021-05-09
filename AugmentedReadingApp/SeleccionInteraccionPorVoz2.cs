@@ -66,5 +66,11 @@ namespace AugmentedReadingApp
         {
             toolTip1.Show("When activated it is possible to interact with the web search by means of voice prompts", pictureBox1);
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+      
+            toolTip1.Show("When activated, the web search buttons are displayed", pictureBox2);
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textBoxPathPDF = new System.Windows.Forms.TextBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
@@ -49,6 +50,7 @@
             this.buttonModified1 = new Front_EDDIE_WindowsForm.ButtonModified();
             this.buttonModified2 = new Front_EDDIE_WindowsForm.ButtonModified();
             this.label1 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
@@ -334,6 +336,8 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 171;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_Click);
             // 
             // buttonModified1
             // 
@@ -384,6 +388,13 @@
             this.label1.TabIndex = 162;
             this.label1.Text = "PDF Settings";
             // 
+            // toolTip1
+            // 
+            this.toolTip1.AutomaticDelay = 15000;
+            this.toolTip1.AutoPopDelay = 150000;
+            this.toolTip1.InitialDelay = 100;
+            this.toolTip1.ReshowDelay = 3000;
+            // 
             // PageDetectionSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -433,5 +444,6 @@
         private Front_EDDIE_WindowsForm.ButtonModified buttonModified1;
         private Front_EDDIE_WindowsForm.ButtonModified buttonModified2;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

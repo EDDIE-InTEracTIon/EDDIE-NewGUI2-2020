@@ -1,6 +1,6 @@
 ﻿namespace AugmentedReadingApp
 {
-    partial class ProgressBox
+    partial class LoadingBox
     {
         /// <summary>
         /// Required designer variable.

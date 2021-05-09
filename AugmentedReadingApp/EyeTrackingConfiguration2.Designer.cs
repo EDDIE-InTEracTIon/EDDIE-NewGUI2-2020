@@ -75,6 +75,11 @@
             this.buttonModified2 = new Front_EDDIE_WindowsForm.ButtonModified();
             this.buttonModified1 = new Front_EDDIE_WindowsForm.ButtonModified();
             this.buttonModified3 = new Front_EDDIE_WindowsForm.ButtonModified();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.reticleExample)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clickTimer)).BeginInit();
             this.TittlePanel.SuspendLayout();
@@ -86,6 +91,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // trackingPlugins
@@ -324,6 +330,7 @@
             // TittlePanel
             // 
             this.TittlePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.TittlePanel.Controls.Add(this.pictureBox5);
             this.TittlePanel.Controls.Add(this.InteractionsTittle);
             this.TittlePanel.Location = new System.Drawing.Point(0, 0);
             this.TittlePanel.Name = "TittlePanel";
@@ -344,7 +351,7 @@
             // InteractionsSettingsPanel1
             // 
             this.InteractionsSettingsPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.InteractionsSettingsPanel1.Controls.Add(this.pictureBox2);
+            this.InteractionsSettingsPanel1.Controls.Add(this.pictureBox1);
             this.InteractionsSettingsPanel1.Controls.Add(this.label8);
             this.InteractionsSettingsPanel1.Controls.Add(this.label2);
             this.InteractionsSettingsPanel1.Controls.Add(this.pluginsRoute);
@@ -360,12 +367,14 @@
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Help;
             this.pictureBox2.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
-            this.pictureBox2.Location = new System.Drawing.Point(246, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(148, 10);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(20, 20);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 171;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label8
             // 
@@ -404,6 +413,8 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 174;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.pictureBox4.MouseHover += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label9
             // 
@@ -419,8 +430,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.reticleExample);
             this.panel2.Controls.Add(this.label3);
@@ -437,12 +448,14 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Help;
             this.pictureBox1.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
-            this.pictureBox1.Location = new System.Drawing.Point(148, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(246, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(20, 20);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 172;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label10
             // 
@@ -478,6 +491,8 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 173;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBox3.MouseHover += new System.EventHandler(this.pictureBox3_Click);
             // 
             // label11
             // 
@@ -503,7 +518,7 @@
             this.buttonModified2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.buttonModified2.Location = new System.Drawing.Point(401, 259);
             this.buttonModified2.Name = "buttonModified2";
-            this.buttonModified2.Size = new System.Drawing.Size(140, 44);
+            this.buttonModified2.Size = new System.Drawing.Size(154, 44);
             this.buttonModified2.TabIndex = 168;
             this.buttonModified2.Text = "Apply";
             this.buttonModified2.UseVisualStyleBackColor = false;
@@ -520,11 +535,11 @@
             this.buttonModified1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonModified1.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonModified1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.buttonModified1.Location = new System.Drawing.Point(547, 259);
+            this.buttonModified1.Location = new System.Drawing.Point(561, 259);
             this.buttonModified1.Name = "buttonModified1";
-            this.buttonModified1.Size = new System.Drawing.Size(140, 44);
+            this.buttonModified1.Size = new System.Drawing.Size(154, 44);
             this.buttonModified1.TabIndex = 169;
-            this.buttonModified1.Text = "Save Settings";
+            this.buttonModified1.Text = "Export Settings";
             this.buttonModified1.UseVisualStyleBackColor = false;
             this.buttonModified1.Click += new System.EventHandler(this.SaveConfig_Click);
             // 
@@ -539,13 +554,26 @@
             this.buttonModified3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonModified3.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonModified3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.buttonModified3.Location = new System.Drawing.Point(693, 259);
+            this.buttonModified3.Location = new System.Drawing.Point(721, 259);
             this.buttonModified3.Name = "buttonModified3";
-            this.buttonModified3.Size = new System.Drawing.Size(140, 44);
+            this.buttonModified3.Size = new System.Drawing.Size(154, 44);
             this.buttonModified3.TabIndex = 170;
-            this.buttonModified3.Text = "Load Settings";
+            this.buttonModified3.Text = "Import Settings";
             this.buttonModified3.UseVisualStyleBackColor = false;
             this.buttonModified3.Click += new System.EventHandler(this.LoadConfig_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Help;
+            this.pictureBox5.Image = global::AugmentedReadingApp.Properties.Resources.informationIcon;
+            this.pictureBox5.Location = new System.Drawing.Point(295, 32);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(28, 24);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 22;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.pictureBox5.MouseHover += new System.EventHandler(this.pictureBox5_Click);
             // 
             // EyeTrackingConfiguration2
             // 
@@ -583,6 +611,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -635,5 +664,10 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTip2;
+        private System.Windows.Forms.ToolTip toolTip3;
+        private System.Windows.Forms.ToolTip toolTip4;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }
