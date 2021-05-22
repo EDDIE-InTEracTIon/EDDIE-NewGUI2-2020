@@ -62,7 +62,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.InteractionsSettingsPanel1 = new System.Windows.Forms.Panel();
-            this.buttonModified4 = new Front_EDDIE_WindowsForm.ButtonModified();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -563,7 +562,6 @@
             // InteractionsSettingsPanel1
             // 
             this.InteractionsSettingsPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.InteractionsSettingsPanel1.Controls.Add(this.buttonModified4);
             this.InteractionsSettingsPanel1.Controls.Add(this.pictureBox4);
             this.InteractionsSettingsPanel1.Controls.Add(this.pictureBox2);
             this.InteractionsSettingsPanel1.Controls.Add(this.pictureBox1);
@@ -609,24 +607,6 @@
             this.InteractionsSettingsPanel1.Size = new System.Drawing.Size(947, 417);
             this.InteractionsSettingsPanel1.TabIndex = 166;
             this.InteractionsSettingsPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.InteractionsSettingsPanel1_Paint);
-            // 
-            // buttonModified4
-            // 
-            this.buttonModified4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.buttonModified4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonModified4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.buttonModified4.FlatAppearance.BorderSize = 5;
-            this.buttonModified4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
-            this.buttonModified4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.buttonModified4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonModified4.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonModified4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.buttonModified4.Location = new System.Drawing.Point(746, 164);
-            this.buttonModified4.Name = "buttonModified4";
-            this.buttonModified4.Size = new System.Drawing.Size(157, 67);
-            this.buttonModified4.TabIndex = 173;
-            this.buttonModified4.Text = "Calibration Guide";
-            this.buttonModified4.UseVisualStyleBackColor = false;
             // 
             // pictureBox4
             // 
@@ -860,7 +840,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Front_EDDIE_WindowsForm.ButtonModified buttonModified4;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolTip toolTip2;
     }

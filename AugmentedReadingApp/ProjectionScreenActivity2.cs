@@ -24,6 +24,10 @@ namespace AugmentedReadingApp
 {
     public partial class ProjectionScreenActivity2 : Form
     {
+        AlertBox alertBox;//Alertbox para aviso cuando se cierra la app
+        String bandera;//Para saber que hace el confirm del alert box
+        Thread loadthread;
+
         int posY = 0;//Variable para mover el formulario con el mouse
         int posX = 0;//Variable para mover el formulario con el mouse
 
@@ -73,6 +77,8 @@ namespace AugmentedReadingApp
             //pictureBox3.Image = Image.FromFile("x_mark_red_circle.png");
             //pictureBox4.Image = Image.FromFile("x_mark_red_circle.png");
             //pictureBox5.Image = Image.FromFile("x_mark_red_circle.png");
+
+            alertBox = new AlertBox(bandera);
 
             markPoint = false;
 
@@ -351,6 +357,7 @@ namespace AugmentedReadingApp
                 if (syncronizerButtonActived == true)
                 {
                     //Se Apagan los botonesSyncrhonizerPDF
+                    panel_log.Visible = false;
                     syncronizerButtonActived = false;
                     btn_sincronizadorPdf.Image = AugmentedReadingApp.Properties.Resources.SynchonizerButtonOFFImage;
                     //SynchronizerButton.BackColor = Color.FromArgb(248, 245, 250);//Blanco
@@ -381,6 +388,8 @@ namespace AugmentedReadingApp
         {
             if (syncronizerButtonActived == false)
             {
+                panel_log.Visible = true;
+                panel_log.BringToFront();
                 syncronizerButtonActived = true;
                 btn_sincronizadorPdf.Image = AugmentedReadingApp.Properties.Resources.SynchronizerButtonONImage;
                 buttonMarker.Visible = true;
@@ -400,6 +409,7 @@ namespace AugmentedReadingApp
             }
             else
             {
+                panel_log.Visible = false;
                 syncronizerButtonActived = false;
                 btn_sincronizadorPdf.Image = AugmentedReadingApp.Properties.Resources.SynchonizerButtonOFFImage;
                 buttonMarker.Visible = false;
@@ -567,6 +577,7 @@ namespace AugmentedReadingApp
 
         private void diccionario()
         {
+            
             panel_log.Visible = false;
             panel3.Visible = true;
             btn_cerrarVentanaIzquierda.Visible = true;
@@ -622,7 +633,8 @@ namespace AugmentedReadingApp
                 {
                     rtb_result_definicion_traduccion.AppendText("No se ha podido encontrar la palabra buscada");
                 }
-            }            
+            }
+            leftLoadingPanel.Visible = false;
         }
 
         private void btn_imagen_Click(object sender, EventArgs e)
@@ -691,6 +703,7 @@ namespace AugmentedReadingApp
         {
             cerrar_definicion();
             cerrar_traduccion();
+            panel3.Hide();
         }
 
         private void btn_leerDefinicionTraduccion_Click(object sender, EventArgs e)
@@ -773,14 +786,14 @@ namespace AugmentedReadingApp
 
         private void btn_drawMenu_Click(object sender, EventArgs e)
         {
-            if(panel_log.Visible == false){
+            if(historyLogPanel.Visible == false){
                 //timer1.Start();
-                panel_log.Visible = true;
-                panel_log.BringToFront();
+                historyLogPanel.Visible = true;
+                historyLogPanel.BringToFront();
             }
             else
             {
-                panel_log.Visible = false;
+                historyLogPanel.Visible = false;
             }
             
         }
@@ -1638,6 +1651,59 @@ namespace AugmentedReadingApp
         private void timer2_Tick(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonModified2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void gb_busquedasRecientes_Enter(object sender, EventArgs e)
+        {
+
+        }
+        private void LoadingProcess()
+        {
+            leftLoadingPanel.Visible = true;
+        }
+
+        private void btn_turnOFF_Click(object sender, EventArgs e)
+        {
+            Form formBackground = new Form();
+            try
+            {
+                formBackground.StartPosition = FormStartPosition.Manual;
+                formBackground.FormBorderStyle = FormBorderStyle.None;
+                formBackground.Opacity = .50d;
+                formBackground.BackColor = Color.Black;
+                formBackground.WindowState = FormWindowState.Normal;
+                formBackground.Width = 1280;
+                formBackground.Height = 720;
+                formBackground.TopMost = true;
+                formBackground.Location = this.Location;
+                formBackground.ShowInTaskbar = false;
+                formBackground.Show();
+
+                alertBox.bandera = "exit";
+                alertBox.label1.Text = "¿Are you sure you want to close the application?";
+                alertBox.label2.Text = "If you have not saved any settings, they will be lost for the next session.";
+                alertBox.okButton.Visible = false;
+                alertBox.buttonModified1.Visible = true;
+                alertBox.buttonModified2.Visible = true;
+                alertBox.StartPosition = FormStartPosition.CenterScreen;
+                alertBox.Location = this.Location;
+                alertBox.ShowDialog();
+
+                formBackground.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                formBackground.Dispose();
+            }
         }
     }
 }

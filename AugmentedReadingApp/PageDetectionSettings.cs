@@ -546,6 +546,11 @@ namespace AugmentedReadingApp
         {
             toolTip1.Show("Select the PDF file to be synchronized with the physical book.", pictureBox2);
         }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
     }
 }
 

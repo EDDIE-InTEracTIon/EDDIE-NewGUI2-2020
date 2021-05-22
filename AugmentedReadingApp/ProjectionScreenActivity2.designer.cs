@@ -38,6 +38,8 @@
             this.panel_log = new System.Windows.Forms.Panel();
             this.gb_busquedasRecientes = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonEliminarComentario2 = new Front_EDDIE_WindowsForm.ButtonModified();
+            this.buttonEliminarMarcador2 = new Front_EDDIE_WindowsForm.ButtonModified();
             this.comentariosPDF = new System.Windows.Forms.Label();
             this.labelMarcadoresPDF = new System.Windows.Forms.Label();
             this.listBox2 = new System.Windows.Forms.ListBox();
@@ -57,6 +59,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
+            this.LeftLoadingPictureBox = new System.Windows.Forms.PictureBox();
             this.btn_leerDefinicionTraduccion = new ModuloRastreoOcular.ButtonAlt();
             this.btn_cerrarVentanaIzquierda = new ModuloRastreoOcular.ButtonAlt();
             this.syncPDFLabel = new System.Windows.Forms.Label();
@@ -78,26 +81,26 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.LeftLoadingPictureBox = new System.Windows.Forms.PictureBox();
             this.RightLoadingPictureBox = new System.Windows.Forms.PictureBox();
             this.btnSearchPages2 = new Front_EDDIE_WindowsForm.ButtonModified();
             this.backPageButton2 = new Front_EDDIE_WindowsForm.ButtonModified();
-            this.buttonModified2 = new Front_EDDIE_WindowsForm.ButtonModified();
             this.nextPageButton2 = new Front_EDDIE_WindowsForm.ButtonModified();
             this.markButton = new Front_EDDIE_WindowsForm.ButtonModified();
-            this.buttonEliminarComentario2 = new Front_EDDIE_WindowsForm.ButtonModified();
-            this.buttonEliminarMarcador2 = new Front_EDDIE_WindowsForm.ButtonModified();
+            this.historyLogPanel = new System.Windows.Forms.Panel();
+            this.leftLoadingPanel = new System.Windows.Forms.Panel();
+            this.holaaa = new System.Windows.Forms.Label();
             this.panel_navegador.SuspendLayout();
             this.panel_log.SuspendLayout();
-            this.gb_busquedasRecientes.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LeftLoadingPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LeftLoadingPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RightLoadingPictureBox)).BeginInit();
+            this.historyLogPanel.SuspendLayout();
+            this.leftLoadingPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
@@ -160,23 +163,22 @@
             // 
             this.panel_log.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(233)))), ((int)(((byte)(242)))));
             this.panel_log.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_log.Controls.Add(this.groupBox1);
             this.panel_log.Controls.Add(this.gb_busquedasRecientes);
             this.panel_log.Location = new System.Drawing.Point(12, 67);
             this.panel_log.Name = "panel_log";
-            this.panel_log.Size = new System.Drawing.Size(262, 620);
+            this.panel_log.Size = new System.Drawing.Size(262, 438);
             this.panel_log.TabIndex = 129;
             // 
             // gb_busquedasRecientes
             // 
-            this.gb_busquedasRecientes.Controls.Add(this.groupBox1);
-            this.gb_busquedasRecientes.Controls.Add(this.label1);
-            this.gb_busquedasRecientes.Controls.Add(this.fl_busquedasRecientes);
             this.gb_busquedasRecientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_busquedasRecientes.Location = new System.Drawing.Point(4, 9);
             this.gb_busquedasRecientes.Name = "gb_busquedasRecientes";
-            this.gb_busquedasRecientes.Size = new System.Drawing.Size(253, 606);
+            this.gb_busquedasRecientes.Size = new System.Drawing.Size(253, 428);
             this.gb_busquedasRecientes.TabIndex = 0;
             this.gb_busquedasRecientes.TabStop = false;
+            this.gb_busquedasRecientes.Enter += new System.EventHandler(this.gb_busquedasRecientes_Enter);
             // 
             // groupBox1
             // 
@@ -188,39 +190,75 @@
             this.groupBox1.Controls.Add(this.listBox1);
             this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Font = new System.Drawing.Font("IBM Plex Sans", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(2, 171);
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(264, 422);
+            this.groupBox1.Size = new System.Drawing.Size(254, 434);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Contenido PDF";
+            this.groupBox1.Text = "PDF Content";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // buttonEliminarComentario2
+            // 
+            this.buttonEliminarComentario2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonEliminarComentario2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonEliminarComentario2.FlatAppearance.BorderSize = 5;
+            this.buttonEliminarComentario2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
+            this.buttonEliminarComentario2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.buttonEliminarComentario2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEliminarComentario2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminarComentario2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.buttonEliminarComentario2.Location = new System.Drawing.Point(122, 386);
+            this.buttonEliminarComentario2.Name = "buttonEliminarComentario2";
+            this.buttonEliminarComentario2.Size = new System.Drawing.Size(120, 33);
+            this.buttonEliminarComentario2.TabIndex = 146;
+            this.buttonEliminarComentario2.Text = "Delete comment";
+            this.buttonEliminarComentario2.UseVisualStyleBackColor = false;
+            this.buttonEliminarComentario2.Click += new System.EventHandler(this.buttonEliminarComentario_Click);
+            // 
+            // buttonEliminarMarcador2
+            // 
+            this.buttonEliminarMarcador2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonEliminarMarcador2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonEliminarMarcador2.FlatAppearance.BorderSize = 5;
+            this.buttonEliminarMarcador2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
+            this.buttonEliminarMarcador2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.buttonEliminarMarcador2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEliminarMarcador2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminarMarcador2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.buttonEliminarMarcador2.Location = new System.Drawing.Point(122, 213);
+            this.buttonEliminarMarcador2.Name = "buttonEliminarMarcador2";
+            this.buttonEliminarMarcador2.Size = new System.Drawing.Size(120, 33);
+            this.buttonEliminarMarcador2.TabIndex = 145;
+            this.buttonEliminarMarcador2.Text = "Delete bookmark";
+            this.buttonEliminarMarcador2.UseVisualStyleBackColor = false;
+            this.buttonEliminarMarcador2.Click += new System.EventHandler(this.buttonEliminarMarcador_Click);
             // 
             // comentariosPDF
             // 
             this.comentariosPDF.AutoSize = true;
             this.comentariosPDF.Font = new System.Drawing.Font("IBM Plex Sans", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comentariosPDF.Location = new System.Drawing.Point(6, 232);
+            this.comentariosPDF.Location = new System.Drawing.Point(5, 232);
             this.comentariosPDF.Name = "comentariosPDF";
-            this.comentariosPDF.Size = new System.Drawing.Size(93, 14);
+            this.comentariosPDF.Size = new System.Drawing.Size(84, 14);
             this.comentariosPDF.TabIndex = 4;
-            this.comentariosPDF.Text = "Comentarios PDF";
+            this.comentariosPDF.Text = "PDF Comments";
             // 
             // labelMarcadoresPDF
             // 
             this.labelMarcadoresPDF.AutoSize = true;
             this.labelMarcadoresPDF.Font = new System.Drawing.Font("IBM Plex Sans", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMarcadoresPDF.Location = new System.Drawing.Point(3, 60);
+            this.labelMarcadoresPDF.Location = new System.Drawing.Point(2, 60);
             this.labelMarcadoresPDF.Name = "labelMarcadoresPDF";
-            this.labelMarcadoresPDF.Size = new System.Drawing.Size(88, 14);
+            this.labelMarcadoresPDF.Size = new System.Drawing.Size(85, 14);
             this.labelMarcadoresPDF.TabIndex = 3;
-            this.labelMarcadoresPDF.Text = "Marcadores PDF";
+            this.labelMarcadoresPDF.Text = "PDF bookmarks";
             // 
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 14;
-            this.listBox2.Location = new System.Drawing.Point(6, 250);
+            this.listBox2.Location = new System.Drawing.Point(5, 250);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(245, 130);
             this.listBox2.TabIndex = 2;
@@ -229,7 +267,7 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 14;
-            this.listBox1.Location = new System.Drawing.Point(3, 77);
+            this.listBox1.Location = new System.Drawing.Point(2, 77);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(248, 130);
             this.listBox1.TabIndex = 1;
@@ -241,11 +279,11 @@
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Font = new System.Drawing.Font("IBM Plex Sans", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
-            this.checkBox1.Location = new System.Drawing.Point(9, 25);
+            this.checkBox1.Location = new System.Drawing.Point(8, 25);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(149, 18);
+            this.checkBox1.Size = new System.Drawing.Size(115, 18);
             this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Mostrar/Esconder figuras";
+            this.checkBox1.Text = "Show/Hide figures";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
@@ -253,20 +291,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("IBM Plex Sans", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, -2);
+            this.label1.Location = new System.Drawing.Point(3, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 14);
+            this.label1.Size = new System.Drawing.Size(78, 14);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Busquedas recientes";
+            this.label1.Text = "Recent search";
             // 
             // fl_busquedasRecientes
             // 
             this.fl_busquedasRecientes.AutoScroll = true;
             this.fl_busquedasRecientes.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.fl_busquedasRecientes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.fl_busquedasRecientes.Location = new System.Drawing.Point(2, 19);
+            this.fl_busquedasRecientes.Location = new System.Drawing.Point(3, 29);
             this.fl_busquedasRecientes.Name = "fl_busquedasRecientes";
-            this.fl_busquedasRecientes.Size = new System.Drawing.Size(251, 151);
+            this.fl_busquedasRecientes.Size = new System.Drawing.Size(251, 380);
             this.fl_busquedasRecientes.TabIndex = 0;
             // 
             // lbl_PalabraBuscada
@@ -421,7 +459,6 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(233)))), ((int)(((byte)(242)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.LeftLoadingPictureBox);
             this.panel3.Controls.Add(this.rtb_result_definicion_traduccion);
             this.panel3.Controls.Add(this.lbl_datoBuscado_trad_def);
             this.panel3.Controls.Add(this.btn_leerDefinicionTraduccion);
@@ -431,6 +468,17 @@
             this.panel3.Size = new System.Drawing.Size(262, 361);
             this.panel3.TabIndex = 149;
             this.panel3.Visible = false;
+            // 
+            // LeftLoadingPictureBox
+            // 
+            this.LeftLoadingPictureBox.BackColor = System.Drawing.SystemColors.Window;
+            this.LeftLoadingPictureBox.Image = global::AugmentedReadingApp.Properties.Resources.LoadingSinFondo;
+            this.LeftLoadingPictureBox.Location = new System.Drawing.Point(32, 33);
+            this.LeftLoadingPictureBox.Name = "LeftLoadingPictureBox";
+            this.LeftLoadingPictureBox.Size = new System.Drawing.Size(200, 200);
+            this.LeftLoadingPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.LeftLoadingPictureBox.TabIndex = 151;
+            this.LeftLoadingPictureBox.TabStop = false;
             // 
             // btn_leerDefinicionTraduccion
             // 
@@ -495,6 +543,7 @@
             this.btn_turnOFF.Size = new System.Drawing.Size(81, 61);
             this.btn_turnOFF.TabIndex = 141;
             this.btn_turnOFF.UseVisualStyleBackColor = false;
+            this.btn_turnOFF.Click += new System.EventHandler(this.btn_turnOFF_Click);
             this.btn_turnOFF.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_turnOFF_MouseDown);
             this.btn_turnOFF.MouseEnter += new System.EventHandler(this.btn_turnOFF_MouseEnter);
             this.btn_turnOFF.MouseLeave += new System.EventHandler(this.btn_turnOFF_MouseLeave);
@@ -805,23 +854,11 @@
             this.pictureBox3.TabIndex = 86;
             this.pictureBox3.TabStop = false;
             // 
-            // LeftLoadingPictureBox
-            // 
-            this.LeftLoadingPictureBox.BackColor = System.Drawing.SystemColors.Window;
-            this.LeftLoadingPictureBox.Image = global::AugmentedReadingApp.Properties.Resources.LoadingSinFondo;
-            this.LeftLoadingPictureBox.Location = new System.Drawing.Point(32, 54);
-            this.LeftLoadingPictureBox.Name = "LeftLoadingPictureBox";
-            this.LeftLoadingPictureBox.Size = new System.Drawing.Size(200, 200);
-            this.LeftLoadingPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.LeftLoadingPictureBox.TabIndex = 151;
-            this.LeftLoadingPictureBox.TabStop = false;
-            this.LeftLoadingPictureBox.Visible = false;
-            // 
             // RightLoadingPictureBox
             // 
             this.RightLoadingPictureBox.BackColor = System.Drawing.SystemColors.Window;
             this.RightLoadingPictureBox.Image = global::AugmentedReadingApp.Properties.Resources.LoadingSinFondo;
-            this.RightLoadingPictureBox.Location = new System.Drawing.Point(728, 12);
+            this.RightLoadingPictureBox.Location = new System.Drawing.Point(728, 122);
             this.RightLoadingPictureBox.Name = "RightLoadingPictureBox";
             this.RightLoadingPictureBox.Size = new System.Drawing.Size(200, 200);
             this.RightLoadingPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -866,23 +903,6 @@
             this.backPageButton2.UseVisualStyleBackColor = false;
             this.backPageButton2.Click += new System.EventHandler(this.backPagebutton_Click);
             // 
-            // buttonModified2
-            // 
-            this.buttonModified2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.buttonModified2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.buttonModified2.FlatAppearance.BorderSize = 5;
-            this.buttonModified2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
-            this.buttonModified2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.buttonModified2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonModified2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonModified2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.buttonModified2.Location = new System.Drawing.Point(967, 4);
-            this.buttonModified2.Name = "buttonModified2";
-            this.buttonModified2.Size = new System.Drawing.Size(118, 57);
-            this.buttonModified2.TabIndex = 146;
-            this.buttonModified2.Text = "Settings";
-            this.buttonModified2.UseVisualStyleBackColor = false;
-            // 
             // nextPageButton2
             // 
             this.nextPageButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
@@ -919,41 +939,36 @@
             this.markButton.UseVisualStyleBackColor = false;
             this.markButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // buttonEliminarComentario2
+            // historyLogPanel
             // 
-            this.buttonEliminarComentario2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.buttonEliminarComentario2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.buttonEliminarComentario2.FlatAppearance.BorderSize = 5;
-            this.buttonEliminarComentario2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
-            this.buttonEliminarComentario2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.buttonEliminarComentario2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEliminarComentario2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEliminarComentario2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.buttonEliminarComentario2.Location = new System.Drawing.Point(123, 386);
-            this.buttonEliminarComentario2.Name = "buttonEliminarComentario2";
-            this.buttonEliminarComentario2.Size = new System.Drawing.Size(120, 33);
-            this.buttonEliminarComentario2.TabIndex = 146;
-            this.buttonEliminarComentario2.Text = "Delete comment";
-            this.buttonEliminarComentario2.UseVisualStyleBackColor = false;
-            this.buttonEliminarComentario2.Click += new System.EventHandler(this.buttonEliminarComentario_Click);
+            this.historyLogPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(233)))), ((int)(((byte)(242)))));
+            this.historyLogPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.historyLogPanel.Controls.Add(this.fl_busquedasRecientes);
+            this.historyLogPanel.Controls.Add(this.label1);
+            this.historyLogPanel.Location = new System.Drawing.Point(12, 67);
+            this.historyLogPanel.Name = "historyLogPanel";
+            this.historyLogPanel.Size = new System.Drawing.Size(262, 438);
+            this.historyLogPanel.TabIndex = 153;
+            this.historyLogPanel.Visible = false;
             // 
-            // buttonEliminarMarcador2
+            // leftLoadingPanel
             // 
-            this.buttonEliminarMarcador2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.buttonEliminarMarcador2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.buttonEliminarMarcador2.FlatAppearance.BorderSize = 5;
-            this.buttonEliminarMarcador2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
-            this.buttonEliminarMarcador2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.buttonEliminarMarcador2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEliminarMarcador2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEliminarMarcador2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.buttonEliminarMarcador2.Location = new System.Drawing.Point(123, 213);
-            this.buttonEliminarMarcador2.Name = "buttonEliminarMarcador2";
-            this.buttonEliminarMarcador2.Size = new System.Drawing.Size(120, 33);
-            this.buttonEliminarMarcador2.TabIndex = 145;
-            this.buttonEliminarMarcador2.Text = "Delete bookmark";
-            this.buttonEliminarMarcador2.UseVisualStyleBackColor = false;
-            this.buttonEliminarMarcador2.Click += new System.EventHandler(this.buttonEliminarMarcador_Click);
+            this.leftLoadingPanel.Controls.Add(this.holaaa);
+            this.leftLoadingPanel.Controls.Add(this.LeftLoadingPictureBox);
+            this.leftLoadingPanel.Location = new System.Drawing.Point(12, 67);
+            this.leftLoadingPanel.Name = "leftLoadingPanel";
+            this.leftLoadingPanel.Size = new System.Drawing.Size(262, 439);
+            this.leftLoadingPanel.TabIndex = 154;
+            this.leftLoadingPanel.Visible = false;
+            // 
+            // holaaa
+            // 
+            this.holaaa.AutoSize = true;
+            this.holaaa.Location = new System.Drawing.Point(91, 270);
+            this.holaaa.Name = "holaaa";
+            this.holaaa.Size = new System.Drawing.Size(45, 13);
+            this.holaaa.TabIndex = 152;
+            this.holaaa.Text = "holaaaa";
             // 
             // ProjectionScreenActivity2
             // 
@@ -961,12 +976,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.leftLoadingPanel);
+            this.Controls.Add(this.historyLogPanel);
             this.Controls.Add(this.syncPDFLabel);
             this.Controls.Add(this.RightLoadingPictureBox);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnSearchPages2);
             this.Controls.Add(this.backPageButton2);
-            this.Controls.Add(this.buttonModified2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_turnOFF);
             this.Controls.Add(this.nextPageButton2);
@@ -1003,18 +1019,19 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ProjectionScreenActivity2_MouseMove);
             this.panel_navegador.ResumeLayout(false);
             this.panel_log.ResumeLayout(false);
-            this.gb_busquedasRecientes.ResumeLayout(false);
-            this.gb_busquedasRecientes.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LeftLoadingPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LeftLoadingPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RightLoadingPictureBox)).EndInit();
+            this.historyLogPanel.ResumeLayout(false);
+            this.historyLogPanel.PerformLayout();
+            this.leftLoadingPanel.ResumeLayout(false);
+            this.leftLoadingPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1071,7 +1088,6 @@
         private Front_EDDIE_WindowsForm.ButtonModified nextPageButton2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private Front_EDDIE_WindowsForm.ButtonModified buttonModified2;
         private System.Windows.Forms.Timer timer2;
         private Front_EDDIE_WindowsForm.ButtonModified backPageButton2;
         private Front_EDDIE_WindowsForm.ButtonModified btnSearchPages2;
@@ -1079,5 +1095,8 @@
         private System.Windows.Forms.Label syncPDFLabel;
         private System.Windows.Forms.PictureBox LeftLoadingPictureBox;
         private System.Windows.Forms.PictureBox RightLoadingPictureBox;
+        private System.Windows.Forms.Panel historyLogPanel;
+        private System.Windows.Forms.Panel leftLoadingPanel;
+        private System.Windows.Forms.Label holaaa;
     }
 }

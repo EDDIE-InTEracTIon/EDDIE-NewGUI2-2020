@@ -15,7 +15,31 @@ namespace AugmentedReadingApp
         public LoadingBox()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterParent;
             
+        }
+
+        public LoadingBox(Form parent)
+        {
+            InitializeComponent();
+            if (parent != null)
+            {
+                this.StartPosition = FormStartPosition.CenterScreen;
+
+            }
+            else
+                this.StartPosition = FormStartPosition.CenterParent;
+        }
+
+        public void CloseLoadingBox()
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+            if (label1.Image != null)
+            {
+                label1.Image.Dispose();
+            }
+
         }
     }
 }

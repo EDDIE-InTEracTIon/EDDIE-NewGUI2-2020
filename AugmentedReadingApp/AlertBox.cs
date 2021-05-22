@@ -29,6 +29,12 @@ namespace AugmentedReadingApp
             bandera = incomingBandera;
             
         }
+        public AlertBox(String incomingBandera)
+        {
+            InitializeComponent();
+            bandera = incomingBandera;
+
+        }
 
         private void WebSearchServicesSettings_Load(object sender, EventArgs e)
         {
