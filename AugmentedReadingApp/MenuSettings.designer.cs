@@ -71,10 +71,10 @@
             // 
             // LoadingPictureBox
             // 
-            this.LoadingPictureBox.Image = global::AugmentedReadingApp.Properties.Resources.LoadingSinFondo;
-            this.LoadingPictureBox.Location = new System.Drawing.Point(32, 450);
+            this.LoadingPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("LoadingPictureBox.Image")));
+            this.LoadingPictureBox.Location = new System.Drawing.Point(17, 365);
             this.LoadingPictureBox.Name = "LoadingPictureBox";
-            this.LoadingPictureBox.Size = new System.Drawing.Size(200, 200);
+            this.LoadingPictureBox.Size = new System.Drawing.Size(225, 285);
             this.LoadingPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.LoadingPictureBox.TabIndex = 6;
             this.LoadingPictureBox.TabStop = false;

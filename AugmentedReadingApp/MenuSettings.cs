@@ -21,6 +21,9 @@ namespace AugmentedReadingApp
         //WebSearchServicesSettings WebSearchServicesForm = new WebSearchServicesSettings();
         AlertBox alertBox;
         String bandera;
+        LoadingBox loadingbox; //Para la animacion de carga
+        Thread loadthread;//Para la animacion de carga
+
         //ProgressBox progressBox = new ProgressBox();
         SeleccionInteraccionPorVoz2 seleccionInteraccionPorVoz = new SeleccionInteraccionPorVoz2();
         SeleccionApis2 seleccionApis = new SeleccionApis2();
@@ -422,7 +425,32 @@ namespace AugmentedReadingApp
 
         private async void StartProjectionButtonModified_Click_1(object sender, EventArgs e)
         {
-            LoadingPictureBox.Show();
+            try
+            {
+
+                projectionScreenActivity2.LoadingShow(this);
+                
+                //Configuraciones de Text Recognition Settings
+                var CameraNumber = textRecognitionSettings._CameraTextIndex;
+                //Se cambia projectionScreenActivity luego del if para que se muestre la interfaz proyectada sin interrupcion
+                //projectionScreenActivity2.Show();
+
+                if (textRecognitionSettings.captureText == null)
+                {
+                    textRecognitionSettings.captureText = new VideoCapture(CameraNumber);
+                    textRecognitionSettings.captureText.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameWidth, (double)textRecognitionSettings.numericUpDownResXText.Value);
+                    textRecognitionSettings.captureText.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameHeight, (double)textRecognitionSettings.numericUpDownResYText.Value);
+
+                    textRecognitionSettings.imageBox1.Image = textRecognitionSettings.recTxt.Recognition(textRecognitionSettings.captureText);
+                }
+                projectionScreenActivity2.Show();
+                projectionScreenActivity2.LoadingClose();
+            }
+            catch
+            {
+
+            }
+            //LoadingPictureBox.Show();
             //progressBox.StartPosition = FormStartPosition.CenterScreen;
             //progressBox.Show();
             //mostrarLoading();
@@ -432,23 +460,10 @@ namespace AugmentedReadingApp
             //ProjectionScreenForm.Show();
             
             
-            //Configuraciones de Text Recognition Settings
-            var CameraNumber = textRecognitionSettings._CameraTextIndex;
-            //Se cambia projectionScreenActivity luego del if para que se muestre la interfaz proyectada sin interrupcion
-            //projectionScreenActivity2.Show();
-            
-            if (textRecognitionSettings.captureText == null)
-            {
-                textRecognitionSettings.captureText = new VideoCapture(CameraNumber);
-                textRecognitionSettings.captureText.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameWidth, (double)textRecognitionSettings.numericUpDownResXText.Value);
-                textRecognitionSettings.captureText.SetCaptureProperty(Emgu.CV.CvEnum.CapProp.FrameHeight, (double)textRecognitionSettings.numericUpDownResYText.Value);
-
-                textRecognitionSettings.imageBox1.Image = textRecognitionSettings.recTxt.Recognition(textRecognitionSettings.captureText);
-            }
-            projectionScreenActivity2.Show();
+           
             //progressBox.Close();
             //ocultarLoading();
-            LoadingPictureBox.Hide();
+            //LoadingPictureBox.Hide();
         }//IDENTIFICAR EL MENSAJE "No hay reconocedor instalado"
 
         private void SaveSettingsButtonModified_Click(object sender, EventArgs e)

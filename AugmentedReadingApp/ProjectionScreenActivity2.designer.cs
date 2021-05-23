@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProjectionScreenActivity2));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel_navegador = new System.Windows.Forms.Panel();
             this.rtb_ResultadosWikipedia = new System.Windows.Forms.RichTextBox();
@@ -36,7 +37,6 @@
             this.rtb_result_definicion_traduccion = new System.Windows.Forms.RichTextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel_log = new System.Windows.Forms.Panel();
-            this.gb_busquedasRecientes = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonEliminarComentario2 = new Front_EDDIE_WindowsForm.ButtonModified();
             this.buttonEliminarMarcador2 = new Front_EDDIE_WindowsForm.ButtonModified();
@@ -45,6 +45,7 @@
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.gb_busquedasRecientes = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.fl_busquedasRecientes = new System.Windows.Forms.FlowLayoutPanel();
             this.lbl_PalabraBuscada = new System.Windows.Forms.Label();
@@ -59,7 +60,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
-            this.LeftLoadingPictureBox = new System.Windows.Forms.PictureBox();
             this.btn_leerDefinicionTraduccion = new ModuloRastreoOcular.ButtonAlt();
             this.btn_cerrarVentanaIzquierda = new ModuloRastreoOcular.ButtonAlt();
             this.syncPDFLabel = new System.Windows.Forms.Label();
@@ -81,26 +81,26 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.RightLoadingPictureBox = new System.Windows.Forms.PictureBox();
             this.btnSearchPages2 = new Front_EDDIE_WindowsForm.ButtonModified();
             this.backPageButton2 = new Front_EDDIE_WindowsForm.ButtonModified();
             this.nextPageButton2 = new Front_EDDIE_WindowsForm.ButtonModified();
             this.markButton = new Front_EDDIE_WindowsForm.ButtonModified();
             this.historyLogPanel = new System.Windows.Forms.Panel();
+            this.LeftLoadingPictureBox = new System.Windows.Forms.PictureBox();
             this.leftLoadingPanel = new System.Windows.Forms.Panel();
-            this.holaaa = new System.Windows.Forms.Label();
+            this.RightLoadingPictureBox = new System.Windows.Forms.PictureBox();
             this.panel_navegador.SuspendLayout();
             this.panel_log.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LeftLoadingPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RightLoadingPictureBox)).BeginInit();
             this.historyLogPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LeftLoadingPictureBox)).BeginInit();
             this.leftLoadingPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RightLoadingPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -169,16 +169,6 @@
             this.panel_log.Name = "panel_log";
             this.panel_log.Size = new System.Drawing.Size(262, 438);
             this.panel_log.TabIndex = 129;
-            // 
-            // gb_busquedasRecientes
-            // 
-            this.gb_busquedasRecientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gb_busquedasRecientes.Location = new System.Drawing.Point(4, 9);
-            this.gb_busquedasRecientes.Name = "gb_busquedasRecientes";
-            this.gb_busquedasRecientes.Size = new System.Drawing.Size(253, 428);
-            this.gb_busquedasRecientes.TabIndex = 0;
-            this.gb_busquedasRecientes.TabStop = false;
-            this.gb_busquedasRecientes.Enter += new System.EventHandler(this.gb_busquedasRecientes_Enter);
             // 
             // groupBox1
             // 
@@ -287,6 +277,16 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // gb_busquedasRecientes
+            // 
+            this.gb_busquedasRecientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gb_busquedasRecientes.Location = new System.Drawing.Point(4, 9);
+            this.gb_busquedasRecientes.Name = "gb_busquedasRecientes";
+            this.gb_busquedasRecientes.Size = new System.Drawing.Size(253, 428);
+            this.gb_busquedasRecientes.TabIndex = 0;
+            this.gb_busquedasRecientes.TabStop = false;
+            this.gb_busquedasRecientes.Enter += new System.EventHandler(this.gb_busquedasRecientes_Enter);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -368,7 +368,7 @@
             this.btn_leerEnciclopedia.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_leerEnciclopedia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_leerEnciclopedia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_leerEnciclopedia.Image = global::AugmentedReadingApp.Properties.Resources.ReadButtonImage;
+            this.btn_leerEnciclopedia.Image = ((System.Drawing.Image)(resources.GetObject("btn_leerEnciclopedia.Image")));
             this.btn_leerEnciclopedia.Location = new System.Drawing.Point(198, 444);
             this.btn_leerEnciclopedia.Name = "btn_leerEnciclopedia";
             this.btn_leerEnciclopedia.Size = new System.Drawing.Size(81, 61);
@@ -388,7 +388,7 @@
             this.btn_nav_adelante.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_nav_adelante.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_nav_adelante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_nav_adelante.Image = global::AugmentedReadingApp.Properties.Resources.RightArrowButtonImage;
+            this.btn_nav_adelante.Image = ((System.Drawing.Image)(resources.GetObject("btn_nav_adelante.Image")));
             this.btn_nav_adelante.Location = new System.Drawing.Point(98, 444);
             this.btn_nav_adelante.Name = "btn_nav_adelante";
             this.btn_nav_adelante.Size = new System.Drawing.Size(81, 61);
@@ -408,7 +408,7 @@
             this.btn_nav_atras.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_nav_atras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_nav_atras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_nav_atras.Image = global::AugmentedReadingApp.Properties.Resources.LeftArrowButtonImage;
+            this.btn_nav_atras.Image = ((System.Drawing.Image)(resources.GetObject("btn_nav_atras.Image")));
             this.btn_nav_atras.Location = new System.Drawing.Point(8, 443);
             this.btn_nav_atras.Name = "btn_nav_atras";
             this.btn_nav_atras.Size = new System.Drawing.Size(81, 61);
@@ -428,7 +428,7 @@
             this.btn_cerrarVentanaDerecha.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_cerrarVentanaDerecha.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_cerrarVentanaDerecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cerrarVentanaDerecha.Image = global::AugmentedReadingApp.Properties.Resources.XButtonImage;
+            this.btn_cerrarVentanaDerecha.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrarVentanaDerecha.Image")));
             this.btn_cerrarVentanaDerecha.Location = new System.Drawing.Point(289, 444);
             this.btn_cerrarVentanaDerecha.Name = "btn_cerrarVentanaDerecha";
             this.btn_cerrarVentanaDerecha.Size = new System.Drawing.Size(81, 61);
@@ -469,24 +469,13 @@
             this.panel3.TabIndex = 149;
             this.panel3.Visible = false;
             // 
-            // LeftLoadingPictureBox
-            // 
-            this.LeftLoadingPictureBox.BackColor = System.Drawing.SystemColors.Window;
-            this.LeftLoadingPictureBox.Image = global::AugmentedReadingApp.Properties.Resources.LoadingSinFondo;
-            this.LeftLoadingPictureBox.Location = new System.Drawing.Point(32, 33);
-            this.LeftLoadingPictureBox.Name = "LeftLoadingPictureBox";
-            this.LeftLoadingPictureBox.Size = new System.Drawing.Size(200, 200);
-            this.LeftLoadingPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.LeftLoadingPictureBox.TabIndex = 151;
-            this.LeftLoadingPictureBox.TabStop = false;
-            // 
             // btn_leerDefinicionTraduccion
             // 
             this.btn_leerDefinicionTraduccion.FlatAppearance.BorderSize = 0;
             this.btn_leerDefinicionTraduccion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_leerDefinicionTraduccion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_leerDefinicionTraduccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_leerDefinicionTraduccion.Image = global::AugmentedReadingApp.Properties.Resources.ReadButtonImage;
+            this.btn_leerDefinicionTraduccion.Image = ((System.Drawing.Image)(resources.GetObject("btn_leerDefinicionTraduccion.Image")));
             this.btn_leerDefinicionTraduccion.Location = new System.Drawing.Point(14, 278);
             this.btn_leerDefinicionTraduccion.Name = "btn_leerDefinicionTraduccion";
             this.btn_leerDefinicionTraduccion.Size = new System.Drawing.Size(81, 61);
@@ -505,7 +494,7 @@
             this.btn_cerrarVentanaIzquierda.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_cerrarVentanaIzquierda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_cerrarVentanaIzquierda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cerrarVentanaIzquierda.Image = global::AugmentedReadingApp.Properties.Resources.XButtonImage;
+            this.btn_cerrarVentanaIzquierda.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrarVentanaIzquierda.Image")));
             this.btn_cerrarVentanaIzquierda.Location = new System.Drawing.Point(170, 278);
             this.btn_cerrarVentanaIzquierda.Name = "btn_cerrarVentanaIzquierda";
             this.btn_cerrarVentanaIzquierda.Size = new System.Drawing.Size(81, 61);
@@ -537,7 +526,7 @@
             this.btn_turnOFF.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_turnOFF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_turnOFF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_turnOFF.Image = global::AugmentedReadingApp.Properties.Resources.TurnOffButtonImage;
+            this.btn_turnOFF.Image = ((System.Drawing.Image)(resources.GetObject("btn_turnOFF.Image")));
             this.btn_turnOFF.Location = new System.Drawing.Point(1192, 2);
             this.btn_turnOFF.Name = "btn_turnOFF";
             this.btn_turnOFF.Size = new System.Drawing.Size(81, 61);
@@ -558,7 +547,7 @@
             this.btn_sincronizadorPdf.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_sincronizadorPdf.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_sincronizadorPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_sincronizadorPdf.Image = global::AugmentedReadingApp.Properties.Resources.SynchonizerButtonOFFImage;
+            this.btn_sincronizadorPdf.Image = ((System.Drawing.Image)(resources.GetObject("btn_sincronizadorPdf.Image")));
             this.btn_sincronizadorPdf.Location = new System.Drawing.Point(624, 531);
             this.btn_sincronizadorPdf.Name = "btn_sincronizadorPdf";
             this.btn_sincronizadorPdf.Size = new System.Drawing.Size(81, 65);
@@ -574,7 +563,7 @@
             this.buttonComments.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.buttonComments.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonComments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonComments.Image = global::AugmentedReadingApp.Properties.Resources.CommentsButtonImage;
+            this.buttonComments.Image = ((System.Drawing.Image)(resources.GetObject("buttonComments.Image")));
             this.buttonComments.Location = new System.Drawing.Point(412, 629);
             this.buttonComments.Name = "buttonComments";
             this.buttonComments.Size = new System.Drawing.Size(81, 61);
@@ -595,7 +584,7 @@
             this.buttonMarker.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.buttonMarker.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonMarker.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMarker.Image = global::AugmentedReadingApp.Properties.Resources.BookmarkButtonImage;
+            this.buttonMarker.Image = ((System.Drawing.Image)(resources.GetObject("buttonMarker.Image")));
             this.buttonMarker.Location = new System.Drawing.Point(499, 629);
             this.buttonMarker.Name = "buttonMarker";
             this.buttonMarker.Size = new System.Drawing.Size(81, 61);
@@ -616,7 +605,7 @@
             this.buttonPDF.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.buttonPDF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonPDF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPDF.Image = global::AugmentedReadingApp.Properties.Resources.ContentButtonImage;
+            this.buttonPDF.Image = ((System.Drawing.Image)(resources.GetObject("buttonPDF.Image")));
             this.buttonPDF.Location = new System.Drawing.Point(673, 629);
             this.buttonPDF.Name = "buttonPDF";
             this.buttonPDF.Size = new System.Drawing.Size(81, 61);
@@ -637,7 +626,7 @@
             this.buttonFiguresPD.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.buttonFiguresPD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonFiguresPD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonFiguresPD.Image = global::AugmentedReadingApp.Properties.Resources.FiguresButtonnImage;
+            this.buttonFiguresPD.Image = ((System.Drawing.Image)(resources.GetObject("buttonFiguresPD.Image")));
             this.buttonFiguresPD.Location = new System.Drawing.Point(586, 629);
             this.buttonFiguresPD.Name = "buttonFiguresPD";
             this.buttonFiguresPD.Size = new System.Drawing.Size(81, 61);
@@ -656,7 +645,7 @@
             this.btn_drawMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_drawMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_drawMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_drawMenu.Image = global::AugmentedReadingApp.Properties.Resources.HistoryButtonImage;
+            this.btn_drawMenu.Image = ((System.Drawing.Image)(resources.GetObject("btn_drawMenu.Image")));
             this.btn_drawMenu.Location = new System.Drawing.Point(12, 2);
             this.btn_drawMenu.Name = "btn_drawMenu";
             this.btn_drawMenu.Size = new System.Drawing.Size(81, 61);
@@ -676,7 +665,7 @@
             this.btn_diccionario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_diccionario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_diccionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_diccionario.Image = global::AugmentedReadingApp.Properties.Resources.DiccionarioButtonImage;
+            this.btn_diccionario.Image = ((System.Drawing.Image)(resources.GetObject("btn_diccionario.Image")));
             this.btn_diccionario.Location = new System.Drawing.Point(363, 604);
             this.btn_diccionario.Name = "btn_diccionario";
             this.btn_diccionario.Size = new System.Drawing.Size(81, 61);
@@ -697,7 +686,7 @@
             this.btn_imagen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_imagen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_imagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_imagen.Image = global::AugmentedReadingApp.Properties.Resources.ImagesButtonImage;
+            this.btn_imagen.Image = ((System.Drawing.Image)(resources.GetObject("btn_imagen.Image")));
             this.btn_imagen.Location = new System.Drawing.Point(710, 604);
             this.btn_imagen.Name = "btn_imagen";
             this.btn_imagen.Size = new System.Drawing.Size(81, 61);
@@ -718,7 +707,7 @@
             this.btn_video.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_video.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_video.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_video.Image = global::AugmentedReadingApp.Properties.Resources.VideoButtonImage;
+            this.btn_video.Image = ((System.Drawing.Image)(resources.GetObject("btn_video.Image")));
             this.btn_video.Location = new System.Drawing.Point(624, 604);
             this.btn_video.Name = "btn_video";
             this.btn_video.Size = new System.Drawing.Size(81, 61);
@@ -739,7 +728,7 @@
             this.btn_enciclopedia.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_enciclopedia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_enciclopedia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_enciclopedia.Image = global::AugmentedReadingApp.Properties.Resources.EncyclopediaButtonImage;
+            this.btn_enciclopedia.Image = ((System.Drawing.Image)(resources.GetObject("btn_enciclopedia.Image")));
             this.btn_enciclopedia.Location = new System.Drawing.Point(537, 604);
             this.btn_enciclopedia.Name = "btn_enciclopedia";
             this.btn_enciclopedia.Size = new System.Drawing.Size(81, 61);
@@ -758,7 +747,7 @@
             this.syncButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.syncButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.syncButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.syncButton.Image = global::AugmentedReadingApp.Properties.Resources.SyncHighlightsButtonImage;
+            this.syncButton.Image = ((System.Drawing.Image)(resources.GetObject("syncButton.Image")));
             this.syncButton.Location = new System.Drawing.Point(973, 591);
             this.syncButton.Name = "syncButton";
             this.syncButton.Size = new System.Drawing.Size(81, 61);
@@ -778,7 +767,7 @@
             this.btn_traductor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_traductor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_traductor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_traductor.Image = global::AugmentedReadingApp.Properties.Resources.TraductorButtonImage;
+            this.btn_traductor.Image = ((System.Drawing.Image)(resources.GetObject("btn_traductor.Image")));
             this.btn_traductor.Location = new System.Drawing.Point(450, 604);
             this.btn_traductor.Name = "btn_traductor";
             this.btn_traductor.Size = new System.Drawing.Size(81, 61);
@@ -800,7 +789,7 @@
             this.btn_buscarWeb.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_buscarWeb.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_buscarWeb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_buscarWeb.Image = global::AugmentedReadingApp.Properties.Resources.WebSearcherButtonOFFImage;
+            this.btn_buscarWeb.Image = ((System.Drawing.Image)(resources.GetObject("btn_buscarWeb.Image")));
             this.btn_buscarWeb.Location = new System.Drawing.Point(466, 531);
             this.btn_buscarWeb.Name = "btn_buscarWeb";
             this.btn_buscarWeb.Size = new System.Drawing.Size(81, 65);
@@ -816,7 +805,7 @@
             this.textImageButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.textImageButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.textImageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.textImageButton.Image = global::AugmentedReadingApp.Properties.Resources.HighlightModeButtonImage;
+            this.textImageButton.Image = ((System.Drawing.Image)(resources.GetObject("textImageButton.Image")));
             this.textImageButton.Location = new System.Drawing.Point(553, 533);
             this.textImageButton.Name = "textImageButton";
             this.textImageButton.Size = new System.Drawing.Size(60, 60);
@@ -826,7 +815,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::AugmentedReadingApp.Properties.Resources.Target;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(297, 570);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(60, 60);
@@ -836,7 +825,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::AugmentedReadingApp.Properties.Resources.Target;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(797, 570);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(60, 60);
@@ -846,26 +835,13 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::AugmentedReadingApp.Properties.Resources.Target;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(298, 20);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(60, 60);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 86;
             this.pictureBox3.TabStop = false;
-            // 
-            // RightLoadingPictureBox
-            // 
-            this.RightLoadingPictureBox.BackColor = System.Drawing.SystemColors.Window;
-            this.RightLoadingPictureBox.Image = global::AugmentedReadingApp.Properties.Resources.LoadingSinFondo;
-            this.RightLoadingPictureBox.Location = new System.Drawing.Point(728, 122);
-            this.RightLoadingPictureBox.Name = "RightLoadingPictureBox";
-            this.RightLoadingPictureBox.Size = new System.Drawing.Size(200, 200);
-            this.RightLoadingPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.RightLoadingPictureBox.TabIndex = 152;
-            this.RightLoadingPictureBox.TabStop = false;
-            this.RightLoadingPictureBox.Visible = false;
-            this.RightLoadingPictureBox.WaitOnLoad = true;
             // 
             // btnSearchPages2
             // 
@@ -951,24 +927,38 @@
             this.historyLogPanel.TabIndex = 153;
             this.historyLogPanel.Visible = false;
             // 
+            // LeftLoadingPictureBox
+            // 
+            this.LeftLoadingPictureBox.BackColor = System.Drawing.SystemColors.Window;
+            this.LeftLoadingPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("LeftLoadingPictureBox.Image")));
+            this.LeftLoadingPictureBox.Location = new System.Drawing.Point(12, 9);
+            this.LeftLoadingPictureBox.Name = "LeftLoadingPictureBox";
+            this.LeftLoadingPictureBox.Size = new System.Drawing.Size(200, 200);
+            this.LeftLoadingPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.LeftLoadingPictureBox.TabIndex = 151;
+            this.LeftLoadingPictureBox.TabStop = false;
+            // 
             // leftLoadingPanel
             // 
-            this.leftLoadingPanel.Controls.Add(this.holaaa);
             this.leftLoadingPanel.Controls.Add(this.LeftLoadingPictureBox);
-            this.leftLoadingPanel.Location = new System.Drawing.Point(12, 67);
+            this.leftLoadingPanel.Location = new System.Drawing.Point(297, 97);
             this.leftLoadingPanel.Name = "leftLoadingPanel";
-            this.leftLoadingPanel.Size = new System.Drawing.Size(262, 439);
+            this.leftLoadingPanel.Size = new System.Drawing.Size(225, 285);
             this.leftLoadingPanel.TabIndex = 154;
             this.leftLoadingPanel.Visible = false;
             // 
-            // holaaa
+            // RightLoadingPictureBox
             // 
-            this.holaaa.AutoSize = true;
-            this.holaaa.Location = new System.Drawing.Point(91, 270);
-            this.holaaa.Name = "holaaa";
-            this.holaaa.Size = new System.Drawing.Size(45, 13);
-            this.holaaa.TabIndex = 152;
-            this.holaaa.Text = "holaaaa";
+            this.RightLoadingPictureBox.BackColor = System.Drawing.SystemColors.Window;
+            this.RightLoadingPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("RightLoadingPictureBox.Image")));
+            this.RightLoadingPictureBox.Location = new System.Drawing.Point(553, 106);
+            this.RightLoadingPictureBox.Name = "RightLoadingPictureBox";
+            this.RightLoadingPictureBox.Size = new System.Drawing.Size(200, 200);
+            this.RightLoadingPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.RightLoadingPictureBox.TabIndex = 152;
+            this.RightLoadingPictureBox.TabStop = false;
+            this.RightLoadingPictureBox.Visible = false;
+            this.RightLoadingPictureBox.WaitOnLoad = true;
             // 
             // ProjectionScreenActivity2
             // 
@@ -1023,15 +1013,15 @@
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.LeftLoadingPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RightLoadingPictureBox)).EndInit();
             this.historyLogPanel.ResumeLayout(false);
             this.historyLogPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LeftLoadingPictureBox)).EndInit();
             this.leftLoadingPanel.ResumeLayout(false);
             this.leftLoadingPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RightLoadingPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1093,10 +1083,9 @@
         private Front_EDDIE_WindowsForm.ButtonModified btnSearchPages2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label syncPDFLabel;
-        private System.Windows.Forms.PictureBox LeftLoadingPictureBox;
-        private System.Windows.Forms.PictureBox RightLoadingPictureBox;
         private System.Windows.Forms.Panel historyLogPanel;
+        private System.Windows.Forms.PictureBox LeftLoadingPictureBox;
         private System.Windows.Forms.Panel leftLoadingPanel;
-        private System.Windows.Forms.Label holaaa;
+        private System.Windows.Forms.PictureBox RightLoadingPictureBox;
     }
 }

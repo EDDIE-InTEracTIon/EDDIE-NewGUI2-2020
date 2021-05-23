@@ -26,8 +26,10 @@ namespace AugmentedReadingApp
     {
         AlertBox alertBox;//Alertbox para aviso cuando se cierra la app
         String bandera;//Para saber que hace el confirm del alert box
-        Thread loadthread;
 
+        LoadingBox loadingbox; //Para la animacion de carga
+        Thread loadthread;//Para la animacion de carga
+        //Crear Bandera para saber donde se pone el formulario de carga**
         int posY = 0;//Variable para mover el formulario con el mouse
         int posX = 0;//Variable para mover el formulario con el mouse
 
@@ -50,7 +52,7 @@ namespace AugmentedReadingApp
 
         //string conceptoBuscar;
         //Linea agregada para probar el buscador sin detector de imagen ocr
-        string conceptoBuscar = "Hello";
+        string conceptoBuscar = "Harry Potter";
         //string conceptoBuscar = "LQ!ve";
 
         StringBuilder csvFile = new StringBuilder();
@@ -421,8 +423,19 @@ namespace AugmentedReadingApp
 
         private void btn_enciclopedia_Click(object sender, EventArgs e)
         {
-            panel2.Visible = true;
-            buscar_Enciclopedia();
+            try
+            {
+                LoadingShow(this);
+                panel2.Visible = true;
+                buscar_Enciclopedia();
+                LoadingClose();
+            }
+            catch
+            {
+
+            }
+            
+            
         }
 
         private void buscar_Enciclopedia()
@@ -572,7 +585,18 @@ namespace AugmentedReadingApp
 
         private void btn_diccionario_Click(object sender, EventArgs e)
         {
-            diccionario();
+            try
+            {
+                LoadingShow(this);
+                Thread.Sleep(500);
+                diccionario();
+                LoadingClose();
+            }
+            catch
+            {
+
+            }
+            
         }
 
         private void diccionario()
@@ -1662,9 +1686,43 @@ namespace AugmentedReadingApp
         {
 
         }
+        public void LoadingShow()
+        {
+            loadthread = new Thread(new ThreadStart(LoadingProcess));
+            loadthread.Start();
+        }
+        public void LoadingShow(Form parent)
+        {
+            loadthread = new Thread(new ParameterizedThreadStart(LoadingProcess));
+            loadthread.Start(parent);
+        }
+        public void LoadingClose()
+        {
+            if (loadingbox!=null)
+            {
+                loadingbox.BeginInvoke(new System.Threading.ThreadStart(loadingbox.CloseLoadingBox));
+                loadingbox = null;
+                loadthread = null;
+            }
+        }
         private void LoadingProcess()
         {
-            leftLoadingPanel.Visible = true;
+            loadingbox = new LoadingBox();
+            loadingbox.ShowDialog();
+        }
+        private void LoadingProcess(object parent)
+        {
+            Form parent1 = parent as Form;
+            loadingbox = new LoadingBox(parent1);
+
+            loadingbox.ShowDialog();
+        }
+        private void LoadingProcess(object parent,String dondeCargar)
+        {
+            Form parent1 = parent as Form;
+            loadingbox = new LoadingBox(parent1, dondeCargar);
+
+            loadingbox.ShowDialog();
         }
 
         private void btn_turnOFF_Click(object sender, EventArgs e)
