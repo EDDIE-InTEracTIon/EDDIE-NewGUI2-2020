@@ -38,8 +38,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel_log = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.buttonEliminarComentario2 = new Front_EDDIE_WindowsForm.ButtonModified();
-            this.buttonEliminarMarcador2 = new Front_EDDIE_WindowsForm.ButtonModified();
             this.comentariosPDF = new System.Windows.Forms.Label();
             this.labelMarcadoresPDF = new System.Windows.Forms.Label();
             this.listBox2 = new System.Windows.Forms.ListBox();
@@ -81,14 +79,16 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnSearchPages2 = new Front_EDDIE_WindowsForm.ButtonModified();
-            this.backPageButton2 = new Front_EDDIE_WindowsForm.ButtonModified();
-            this.nextPageButton2 = new Front_EDDIE_WindowsForm.ButtonModified();
-            this.markButton = new Front_EDDIE_WindowsForm.ButtonModified();
             this.historyLogPanel = new System.Windows.Forms.Panel();
             this.LeftLoadingPictureBox = new System.Windows.Forms.PictureBox();
             this.leftLoadingPanel = new System.Windows.Forms.Panel();
             this.RightLoadingPictureBox = new System.Windows.Forms.PictureBox();
+            this.btnSearchPages2 = new Front_EDDIE_WindowsForm.ButtonModified();
+            this.backPageButton2 = new Front_EDDIE_WindowsForm.ButtonModified();
+            this.nextPageButton2 = new Front_EDDIE_WindowsForm.ButtonModified();
+            this.markButton = new Front_EDDIE_WindowsForm.ButtonModified();
+            this.buttonEliminarComentario2 = new Front_EDDIE_WindowsForm.ButtonModified();
+            this.buttonEliminarMarcador2 = new Front_EDDIE_WindowsForm.ButtonModified();
             this.panel_navegador.SuspendLayout();
             this.panel_log.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -149,7 +149,7 @@
             this.rtb_result_definicion_traduccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtb_result_definicion_traduccion.Location = new System.Drawing.Point(14, 42);
             this.rtb_result_definicion_traduccion.Name = "rtb_result_definicion_traduccion";
-            this.rtb_result_definicion_traduccion.Size = new System.Drawing.Size(237, 230);
+            this.rtb_result_definicion_traduccion.Size = new System.Drawing.Size(237, 303);
             this.rtb_result_definicion_traduccion.TabIndex = 0;
             this.rtb_result_definicion_traduccion.Text = "";
             this.rtb_result_definicion_traduccion.Visible = false;
@@ -187,42 +187,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "PDF Content";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // buttonEliminarComentario2
-            // 
-            this.buttonEliminarComentario2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.buttonEliminarComentario2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.buttonEliminarComentario2.FlatAppearance.BorderSize = 5;
-            this.buttonEliminarComentario2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
-            this.buttonEliminarComentario2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.buttonEliminarComentario2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEliminarComentario2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEliminarComentario2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.buttonEliminarComentario2.Location = new System.Drawing.Point(122, 386);
-            this.buttonEliminarComentario2.Name = "buttonEliminarComentario2";
-            this.buttonEliminarComentario2.Size = new System.Drawing.Size(120, 33);
-            this.buttonEliminarComentario2.TabIndex = 146;
-            this.buttonEliminarComentario2.Text = "Delete comment";
-            this.buttonEliminarComentario2.UseVisualStyleBackColor = false;
-            this.buttonEliminarComentario2.Click += new System.EventHandler(this.buttonEliminarComentario_Click);
-            // 
-            // buttonEliminarMarcador2
-            // 
-            this.buttonEliminarMarcador2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.buttonEliminarMarcador2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.buttonEliminarMarcador2.FlatAppearance.BorderSize = 5;
-            this.buttonEliminarMarcador2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
-            this.buttonEliminarMarcador2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.buttonEliminarMarcador2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEliminarMarcador2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEliminarMarcador2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.buttonEliminarMarcador2.Location = new System.Drawing.Point(122, 213);
-            this.buttonEliminarMarcador2.Name = "buttonEliminarMarcador2";
-            this.buttonEliminarMarcador2.Size = new System.Drawing.Size(120, 33);
-            this.buttonEliminarMarcador2.TabIndex = 145;
-            this.buttonEliminarMarcador2.Text = "Delete bookmark";
-            this.buttonEliminarMarcador2.UseVisualStyleBackColor = false;
-            this.buttonEliminarMarcador2.Click += new System.EventHandler(this.buttonEliminarMarcador_Click);
             // 
             // comentariosPDF
             // 
@@ -465,7 +429,7 @@
             this.panel3.Controls.Add(this.btn_cerrarVentanaIzquierda);
             this.panel3.Location = new System.Drawing.Point(12, 67);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(262, 361);
+            this.panel3.Size = new System.Drawing.Size(262, 438);
             this.panel3.TabIndex = 149;
             this.panel3.Visible = false;
             // 
@@ -476,7 +440,7 @@
             this.btn_leerDefinicionTraduccion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_leerDefinicionTraduccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_leerDefinicionTraduccion.Image = ((System.Drawing.Image)(resources.GetObject("btn_leerDefinicionTraduccion.Image")));
-            this.btn_leerDefinicionTraduccion.Location = new System.Drawing.Point(14, 278);
+            this.btn_leerDefinicionTraduccion.Location = new System.Drawing.Point(14, 351);
             this.btn_leerDefinicionTraduccion.Name = "btn_leerDefinicionTraduccion";
             this.btn_leerDefinicionTraduccion.Size = new System.Drawing.Size(81, 61);
             this.btn_leerDefinicionTraduccion.TabIndex = 130;
@@ -495,7 +459,7 @@
             this.btn_cerrarVentanaIzquierda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_cerrarVentanaIzquierda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cerrarVentanaIzquierda.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrarVentanaIzquierda.Image")));
-            this.btn_cerrarVentanaIzquierda.Location = new System.Drawing.Point(170, 278);
+            this.btn_cerrarVentanaIzquierda.Location = new System.Drawing.Point(170, 351);
             this.btn_cerrarVentanaIzquierda.Name = "btn_cerrarVentanaIzquierda";
             this.btn_cerrarVentanaIzquierda.Size = new System.Drawing.Size(81, 61);
             this.btn_cerrarVentanaIzquierda.TabIndex = 4;
@@ -843,6 +807,51 @@
             this.pictureBox3.TabIndex = 86;
             this.pictureBox3.TabStop = false;
             // 
+            // historyLogPanel
+            // 
+            this.historyLogPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(233)))), ((int)(((byte)(242)))));
+            this.historyLogPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.historyLogPanel.Controls.Add(this.fl_busquedasRecientes);
+            this.historyLogPanel.Controls.Add(this.label1);
+            this.historyLogPanel.Location = new System.Drawing.Point(12, 67);
+            this.historyLogPanel.Name = "historyLogPanel";
+            this.historyLogPanel.Size = new System.Drawing.Size(262, 438);
+            this.historyLogPanel.TabIndex = 153;
+            this.historyLogPanel.Visible = false;
+            // 
+            // LeftLoadingPictureBox
+            // 
+            this.LeftLoadingPictureBox.BackColor = System.Drawing.SystemColors.Window;
+            this.LeftLoadingPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("LeftLoadingPictureBox.Image")));
+            this.LeftLoadingPictureBox.Location = new System.Drawing.Point(12, 9);
+            this.LeftLoadingPictureBox.Name = "LeftLoadingPictureBox";
+            this.LeftLoadingPictureBox.Size = new System.Drawing.Size(200, 200);
+            this.LeftLoadingPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.LeftLoadingPictureBox.TabIndex = 151;
+            this.LeftLoadingPictureBox.TabStop = false;
+            // 
+            // leftLoadingPanel
+            // 
+            this.leftLoadingPanel.Controls.Add(this.LeftLoadingPictureBox);
+            this.leftLoadingPanel.Location = new System.Drawing.Point(297, 97);
+            this.leftLoadingPanel.Name = "leftLoadingPanel";
+            this.leftLoadingPanel.Size = new System.Drawing.Size(225, 285);
+            this.leftLoadingPanel.TabIndex = 154;
+            this.leftLoadingPanel.Visible = false;
+            // 
+            // RightLoadingPictureBox
+            // 
+            this.RightLoadingPictureBox.BackColor = System.Drawing.SystemColors.Window;
+            this.RightLoadingPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("RightLoadingPictureBox.Image")));
+            this.RightLoadingPictureBox.Location = new System.Drawing.Point(553, 106);
+            this.RightLoadingPictureBox.Name = "RightLoadingPictureBox";
+            this.RightLoadingPictureBox.Size = new System.Drawing.Size(200, 200);
+            this.RightLoadingPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.RightLoadingPictureBox.TabIndex = 152;
+            this.RightLoadingPictureBox.TabStop = false;
+            this.RightLoadingPictureBox.Visible = false;
+            this.RightLoadingPictureBox.WaitOnLoad = true;
+            // 
             // btnSearchPages2
             // 
             this.btnSearchPages2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
@@ -915,50 +924,41 @@
             this.markButton.UseVisualStyleBackColor = false;
             this.markButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // historyLogPanel
+            // buttonEliminarComentario2
             // 
-            this.historyLogPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(233)))), ((int)(((byte)(242)))));
-            this.historyLogPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.historyLogPanel.Controls.Add(this.fl_busquedasRecientes);
-            this.historyLogPanel.Controls.Add(this.label1);
-            this.historyLogPanel.Location = new System.Drawing.Point(12, 67);
-            this.historyLogPanel.Name = "historyLogPanel";
-            this.historyLogPanel.Size = new System.Drawing.Size(262, 438);
-            this.historyLogPanel.TabIndex = 153;
-            this.historyLogPanel.Visible = false;
+            this.buttonEliminarComentario2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonEliminarComentario2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonEliminarComentario2.FlatAppearance.BorderSize = 5;
+            this.buttonEliminarComentario2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
+            this.buttonEliminarComentario2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.buttonEliminarComentario2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEliminarComentario2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminarComentario2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.buttonEliminarComentario2.Location = new System.Drawing.Point(122, 386);
+            this.buttonEliminarComentario2.Name = "buttonEliminarComentario2";
+            this.buttonEliminarComentario2.Size = new System.Drawing.Size(120, 33);
+            this.buttonEliminarComentario2.TabIndex = 146;
+            this.buttonEliminarComentario2.Text = "Delete comment";
+            this.buttonEliminarComentario2.UseVisualStyleBackColor = false;
+            this.buttonEliminarComentario2.Click += new System.EventHandler(this.buttonEliminarComentario_Click);
             // 
-            // LeftLoadingPictureBox
+            // buttonEliminarMarcador2
             // 
-            this.LeftLoadingPictureBox.BackColor = System.Drawing.SystemColors.Window;
-            this.LeftLoadingPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("LeftLoadingPictureBox.Image")));
-            this.LeftLoadingPictureBox.Location = new System.Drawing.Point(12, 9);
-            this.LeftLoadingPictureBox.Name = "LeftLoadingPictureBox";
-            this.LeftLoadingPictureBox.Size = new System.Drawing.Size(200, 200);
-            this.LeftLoadingPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.LeftLoadingPictureBox.TabIndex = 151;
-            this.LeftLoadingPictureBox.TabStop = false;
-            // 
-            // leftLoadingPanel
-            // 
-            this.leftLoadingPanel.Controls.Add(this.LeftLoadingPictureBox);
-            this.leftLoadingPanel.Location = new System.Drawing.Point(297, 97);
-            this.leftLoadingPanel.Name = "leftLoadingPanel";
-            this.leftLoadingPanel.Size = new System.Drawing.Size(225, 285);
-            this.leftLoadingPanel.TabIndex = 154;
-            this.leftLoadingPanel.Visible = false;
-            // 
-            // RightLoadingPictureBox
-            // 
-            this.RightLoadingPictureBox.BackColor = System.Drawing.SystemColors.Window;
-            this.RightLoadingPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("RightLoadingPictureBox.Image")));
-            this.RightLoadingPictureBox.Location = new System.Drawing.Point(553, 106);
-            this.RightLoadingPictureBox.Name = "RightLoadingPictureBox";
-            this.RightLoadingPictureBox.Size = new System.Drawing.Size(200, 200);
-            this.RightLoadingPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.RightLoadingPictureBox.TabIndex = 152;
-            this.RightLoadingPictureBox.TabStop = false;
-            this.RightLoadingPictureBox.Visible = false;
-            this.RightLoadingPictureBox.WaitOnLoad = true;
+            this.buttonEliminarMarcador2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonEliminarMarcador2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonEliminarMarcador2.FlatAppearance.BorderSize = 5;
+            this.buttonEliminarMarcador2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
+            this.buttonEliminarMarcador2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.buttonEliminarMarcador2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEliminarMarcador2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminarMarcador2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.buttonEliminarMarcador2.Location = new System.Drawing.Point(122, 213);
+            this.buttonEliminarMarcador2.Name = "buttonEliminarMarcador2";
+            this.buttonEliminarMarcador2.Size = new System.Drawing.Size(120, 33);
+            this.buttonEliminarMarcador2.TabIndex = 145;
+            this.buttonEliminarMarcador2.Text = "Delete bookmark";
+            this.buttonEliminarMarcador2.UseVisualStyleBackColor = false;
+            this.buttonEliminarMarcador2.Click += new System.EventHandler(this.buttonEliminarMarcador_Click);
             // 
             // ProjectionScreenActivity2
             // 

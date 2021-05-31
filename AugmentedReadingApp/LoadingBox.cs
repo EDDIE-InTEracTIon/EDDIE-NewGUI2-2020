@@ -22,13 +22,25 @@ namespace AugmentedReadingApp
         public LoadingBox(Form parent)
         {
             InitializeComponent();
-            if (parent != null )
+            if (parent != null && parent.Name == "ProjectionScreenActivity2")
             {
+                ProjectionScreenActivity2 parentProjected = parent as ProjectionScreenActivity2;
+                this.BackColor = SystemColors.Window;
                 this.StartPosition = FormStartPosition.Manual;
-                if (parent.Name == "MenuSettings")
+                if (parentProjected.ladoBusqueda == "izquierda")
                 {
-                    this.Location = new Point(parent.Location.X + 17, parent.Location.Y + 420);
+                    this.Location = new Point(parentProjected.Location.X + 30, parentProjected.Location.Y + 122);
                 }
+                else if (parentProjected.ladoBusqueda == "derecha")
+                {
+                    this.Location = new Point(parentProjected.Location.X + 980, parentProjected.Location.Y + 134);
+                }
+            }
+            else if (parent != null && parent.Name == "MenuSettings")
+            {
+                this.BackColor = Color.FromArgb(248, 245, 250);
+                this.StartPosition = FormStartPosition.Manual;
+                this.Location = new Point(parent.Location.X + 17, parent.Location.Y + 420);
             }
             else
                 this.StartPosition = FormStartPosition.CenterScreen;

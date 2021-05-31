@@ -29,6 +29,7 @@ namespace AugmentedReadingApp
 
         LoadingBox loadingbox; //Para la animacion de carga
         Thread loadthread;//Para la animacion de carga
+        public String ladoBusqueda;
         //Crear Bandera para saber donde se pone el formulario de carga**
         int posY = 0;//Variable para mover el formulario con el mouse
         int posX = 0;//Variable para mover el formulario con el mouse
@@ -425,8 +426,9 @@ namespace AugmentedReadingApp
         {
             try
             {
-                LoadingShow(this);
+                ladoBusqueda = "derecha";
                 panel2.Visible = true;
+                LoadingShow(this);
                 buscar_Enciclopedia();
                 LoadingClose();
             }
@@ -487,8 +489,14 @@ namespace AugmentedReadingApp
 
         private void btn_video_Click(object sender, EventArgs e)
         {
-            panel2.Visible = true;
-            buscar_Video();
+            try
+            {
+                buscar_Video();
+            }
+            catch
+            {
+
+            }
         }
 
         private void buscar_Video()
@@ -539,7 +547,18 @@ namespace AugmentedReadingApp
 
         private void btn_traductor_Click(object sender, EventArgs e)
         {
-            traductor();
+            try
+            {
+                ladoBusqueda = "izquierda";
+                LoadingShow(this);
+                traductor();
+                LoadingClose();
+            }
+            catch
+            {
+
+            }
+            
         }
 
         private void traductor()
@@ -587,8 +606,8 @@ namespace AugmentedReadingApp
         {
             try
             {
+                ladoBusqueda = "izquierda";
                 LoadingShow(this);
-                Thread.Sleep(500);
                 diccionario();
                 LoadingClose();
             }
@@ -663,7 +682,19 @@ namespace AugmentedReadingApp
 
         private void btn_imagen_Click(object sender, EventArgs e)
         {
-            buscarPorImagen();
+            try
+            {
+                ladoBusqueda = "derecha";
+                panel2.Visible = true;
+                LoadingShow(this);
+                buscarPorImagen();
+                LoadingClose();
+            }
+            catch
+            {
+
+            }
+            
         }
 
         private void buscarPorImagen() {

@@ -37,7 +37,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 209);
+            this.label2.Location = new System.Drawing.Point(5, 196);
             this.label2.MaximumSize = new System.Drawing.Size(900, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(219, 56);
@@ -57,7 +57,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(225, 285);
+            this.ClientSize = new System.Drawing.Size(225, 257);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
