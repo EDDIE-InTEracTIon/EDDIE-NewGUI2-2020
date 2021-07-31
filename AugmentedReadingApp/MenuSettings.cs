@@ -71,6 +71,7 @@ namespace AugmentedReadingApp
             Brush separador = new SolidBrush(Color.Black);
             Pen blackPen = new Pen(separador, 1);
             gOject.DrawLine(blackPen, 0, 47, 213, 47);
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

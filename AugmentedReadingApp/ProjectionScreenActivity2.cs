@@ -51,9 +51,9 @@ namespace AugmentedReadingApp
         int panelWidth;
         bool Hidden;
 
-        //string conceptoBuscar;
+        string conceptoBuscar;
         //Linea agregada para probar el buscador sin detector de imagen ocr
-        string conceptoBuscar = "Harry Potter";
+        //string conceptoBuscar = "Harry Potter";
         //string conceptoBuscar = "LQ!ve";
 
         StringBuilder csvFile = new StringBuilder();
@@ -66,12 +66,24 @@ namespace AugmentedReadingApp
         //Agrega Modulo Consistencia DP
         public int numeroCamara;
         FiguresDP FiguresDP;
-        
+
+        Graphics gOjectLeftPanel;
+        Graphics gOjectRightPanel;
+        Brush brush;
+        Pen blackPen;
+
+
+
         public ProjectionScreenActivity2(PageDetectionSettings pageDetectionSettings, TextRecognitionSettings textRecognitionSettings, GestureRecognitionSettings gestureRecognitionSettings)
         {
 
             InitializeComponent();
-
+            //
+            gOjectLeftPanel = leftLinePanel.CreateGraphics();//Código para dibujar la linea izquierda del boton al contenido
+            gOjectRightPanel = rightLinePaper.CreateGraphics();//Código para dibujar la linea izquierda del boton al contenido
+            brush = new SolidBrush(Color.Black);
+            blackPen = new Pen(brush, 1);
+            //
             incomingPageDetectionSettings = pageDetectionSettings;
             incomingTextRecognitionSettings = textRecognitionSettings;
             incomingGestureRecognitionSettings = gestureRecognitionSettings;
@@ -121,7 +133,6 @@ namespace AugmentedReadingApp
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            
             // En esta parte se comprueba si el usuario ha seleccionado//
             // La opción de interacción a través de la voz o no//
             var opcionInteraccionSeleccionada = SeleccionInteraccionPorVoz2.activarBusquedaVoz;
@@ -426,11 +437,13 @@ namespace AugmentedReadingApp
         {
             try
             {
+                Lineright_Clear();
                 ladoBusqueda = "derecha";
                 panel2.Visible = true;
                 LoadingShow(this);
                 buscar_Enciclopedia();
                 LoadingClose();
+                Line_Paint_enciclopedia();
             }
             catch
             {
@@ -491,7 +504,9 @@ namespace AugmentedReadingApp
         {
             try
             {
+                Lineright_Clear();
                 buscar_Video();
+                Line_Paint_video();
             }
             catch
             {
@@ -549,14 +564,20 @@ namespace AugmentedReadingApp
         {
             try
             {
+                LineLeft_Clear();
                 ladoBusqueda = "izquierda";
                 LoadingShow(this);
                 traductor();
                 LoadingClose();
+                Line_Paint_traductor();
+                if (rtb_result_definicion_traduccion.Visible != true)
+                {
+                    LineLeft_Clear();
+                }
             }
             catch
             {
-
+                LoadingClose();
             }
             
         }
@@ -606,10 +627,12 @@ namespace AugmentedReadingApp
         {
             try
             {
+                LineLeft_Clear();
                 ladoBusqueda = "izquierda";
                 LoadingShow(this);
                 diccionario();
                 LoadingClose();
+                Line_Paint_diccionario();
             }
             catch
             {
@@ -677,18 +700,19 @@ namespace AugmentedReadingApp
                     rtb_result_definicion_traduccion.AppendText("No se ha podido encontrar la palabra buscada");
                 }
             }
-            leftLoadingPanel.Visible = false;
         }
 
         private void btn_imagen_Click(object sender, EventArgs e)
         {
             try
             {
+                Lineright_Clear();
                 ladoBusqueda = "derecha";
                 panel2.Visible = true;
                 LoadingShow(this);
                 buscarPorImagen();
                 LoadingClose();
+                Line_Paint_imagen();
             }
             catch
             {
@@ -748,6 +772,7 @@ namespace AugmentedReadingApp
 
         private void btn_cerrarVentanaDerecha_Click(object sender, EventArgs e)
         {
+            Lineright_Clear();
             panel2.Visible = false;
             cerrar_enciclopedia();
             cerrar_video();
@@ -756,6 +781,7 @@ namespace AugmentedReadingApp
 
         private void btn_cerrarVentanaIzquierda_Click(object sender, EventArgs e)
         {
+            LineLeft_Clear();
             cerrar_definicion();
             cerrar_traduccion();
             panel3.Hide();
@@ -1794,6 +1820,87 @@ namespace AugmentedReadingApp
                 formBackground.Dispose();
             }
         }
+        private void Line_Paint(object sender, PaintEventArgs e)
+        {
+
+            //Para diccionario
+            gOjectLeftPanel.DrawLine(blackPen, 118, 3, 118, 170);//De contenido a intermedio
+            gOjectLeftPanel.DrawLine(blackPen, 118, 170, 386, 170);//De intermedio a bajo boton
+            gOjectLeftPanel.DrawLine(blackPen, 386, 170, 386, 163);//De bajo boton a boton
+            //Para traductor
+            gOjectLeftPanel.DrawLine(blackPen, 118, 3, 118, 170);//De contenido a intermedio
+            gOjectLeftPanel.DrawLine(blackPen, 118, 170, 481, 170);//De intermedio a bajo boton
+            gOjectLeftPanel.DrawLine(blackPen, 481, 170, 481, 163);//De bajo boton a boton
+            //Para enciclopedia
+            gOjectLeftPanel.DrawLine(blackPen, 881, 48, 856, 48);//De contenido a intermedio1
+            gOjectLeftPanel.DrawLine(blackPen, 856, 48, 856, 170);//De intermedio1 a intermedio2
+            gOjectLeftPanel.DrawLine(blackPen, 856, 170, 568, 170);//De intermedio2 a bajo boton
+            gOjectLeftPanel.DrawLine(blackPen, 568, 170, 568, 163);//De bajo boton a boton
+            //Para Video
+            gOjectLeftPanel.DrawLine(blackPen, 881, 48, 856, 48);//De contenido a intermedio1
+            gOjectLeftPanel.DrawLine(blackPen, 856, 48, 856, 170);//De intermedio1 a intermedio2
+            gOjectLeftPanel.DrawLine(blackPen, 856, 170, 654, 170);//De intermedio2 a bajo boton
+            gOjectLeftPanel.DrawLine(blackPen, 654, 170, 654, 163);//De bajo boton a boton
+            //Para Imagen
+            gOjectLeftPanel.DrawLine(blackPen, 881, 48, 856, 48);//De contenido a intermedio1
+            gOjectLeftPanel.DrawLine(blackPen, 856, 48, 856, 170);//De intermedio1 a intermedio2
+            gOjectLeftPanel.DrawLine(blackPen, 856, 170, 741, 170);//De intermedio2 a bajo boton
+            gOjectLeftPanel.DrawLine(blackPen, 741, 170, 741, 163);//De bajo boton a boton
+            gOjectLeftPanel.Clear(Color.FromArgb(248, 245, 250));//Para limpiar linea trazada
+
+            //Inicio contenido 881 x 48
+            //Intermedio 1 856; 48
+            //Bajo boton 568; 170
+            //481; 162 traductor
+            //118; 163 Intermedio
+        }
+        private void Line_Paint_diccionario()
+        {
+            gOjectLeftPanel.DrawLine(blackPen, 118, 3, 118, 170);//De contenido a intermedio
+            gOjectLeftPanel.DrawLine(blackPen, 118, 170, 386, 170);//De intermedio a bajo boton
+            gOjectLeftPanel.DrawLine(blackPen, 386, 170, 386, 163);//De bajo boton a boton
+            
+        }
+        private void Line_Paint_traductor()
+        {
+            gOjectLeftPanel.DrawLine(blackPen, 118, 3, 118, 170);//De contenido a intermedio
+            gOjectLeftPanel.DrawLine(blackPen, 118, 170, 481, 170);//De intermedio a bajo boton
+            gOjectLeftPanel.DrawLine(blackPen, 481, 170, 481, 163);//De bajo boton a boton
+
+        }
+        private void Line_Paint_enciclopedia()
+        {
+            gOjectRightPanel.DrawLine(blackPen, 356, 45, 330, 45);//De contenido a intermedio1
+            gOjectRightPanel.DrawLine(blackPen, 330, 45, 330, 170);//De intermedio1 a intermedio2
+            gOjectRightPanel.DrawLine(blackPen, 330, 170, 43, 170);//De intermedio2 a bajo boton
+            gOjectRightPanel.DrawLine(blackPen, 43, 170, 43, 163);//De bajo boton a boton
+
+        }
+        private void Line_Paint_video()
+        {
+            gOjectRightPanel.DrawLine(blackPen, 356, 45, 330, 45);//De contenido a intermedio1
+            gOjectRightPanel.DrawLine(blackPen, 330, 45, 330, 170);//De intermedio1 a intermedio2
+            gOjectRightPanel.DrawLine(blackPen, 330, 170, 129, 170);//De intermedio2 a bajo boton
+            gOjectRightPanel.DrawLine(blackPen, 129, 170, 129, 163);//De bajo boton a boton
+
+        }
+        private void Line_Paint_imagen()
+        {
+            gOjectRightPanel.DrawLine(blackPen, 356, 45, 330, 45);//De contenido a intermedio1
+            gOjectRightPanel.DrawLine(blackPen, 330, 45, 330, 170);//De intermedio1 a intermedio2
+            gOjectRightPanel.DrawLine(blackPen, 330, 170, 216, 170);//De intermedio2 a bajo boton
+            gOjectRightPanel.DrawLine(blackPen, 216, 170, 216, 163);//De bajo boton a boton
+
+        }
+        private void LineLeft_Clear()
+        {
+            gOjectLeftPanel.Clear(Color.FromArgb(248, 245, 250));//Para limpiar linea trazada
+        }
+        private void Lineright_Clear()
+        {
+            gOjectRightPanel.Clear(Color.FromArgb(248, 245, 250));//Para limpiar linea trazada
+        }
+
     }
 }
 

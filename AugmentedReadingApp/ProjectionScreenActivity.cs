@@ -37,9 +37,9 @@ namespace AugmentedReadingApp
         int panelWidth;
         bool Hidden;
 
-        //string conceptoBuscar;
+        string conceptoBuscar;
         //Linea agregada para probar el buscador sin detector de imagen ocr
-        string conceptoBuscar = "Harry Potter";
+        //string conceptoBuscar = "Harry Potter";
         //string conceptoBuscar = "LQ!ve";
 
         StringBuilder csvFile = new StringBuilder();
