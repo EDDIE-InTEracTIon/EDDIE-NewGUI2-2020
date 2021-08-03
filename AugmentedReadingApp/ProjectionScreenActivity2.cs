@@ -352,7 +352,9 @@ namespace AugmentedReadingApp
         private void btn_buscarWeb_Click(object sender, EventArgs e)
         {
             //if (btn_diccionario.Visible == false || btn_enciclopedia.Visible == false || btn_traductor.Visible == false || btn_video.Visible == false || btn_imagen.Visible == false)
-            if(webSearchButtonActived == false)
+            LineLeft_Clear();
+            Lineright_Clear();
+            if (webSearchButtonActived == false)
             {
                 //Se Prenden los botonesWebSearch
                 webSearchButtonActived = true;
@@ -400,6 +402,8 @@ namespace AugmentedReadingApp
 
         private void btn_sincronizadorPdf_Click(object sender, EventArgs e)
         {
+            LineLeft_Clear();
+            Lineright_Clear();
             if (syncronizerButtonActived == false)
             {
                 panel_log.Visible = true;
