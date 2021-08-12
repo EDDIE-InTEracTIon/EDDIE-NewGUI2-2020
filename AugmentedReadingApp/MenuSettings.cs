@@ -445,6 +445,7 @@ namespace AugmentedReadingApp
                     textRecognitionSettings.imageBox1.Image = textRecognitionSettings.recTxt.Recognition(textRecognitionSettings.captureText);
                 }
                 projectionScreenActivity2.Show();
+                Thread.Sleep(10);
                 projectionScreenActivity2.LoadingClose();
             }
             catch

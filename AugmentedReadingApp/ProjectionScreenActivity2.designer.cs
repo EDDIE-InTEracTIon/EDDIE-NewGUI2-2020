@@ -38,8 +38,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel_log = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.buttonEliminarComentario2 = new Front_EDDIE_WindowsForm.ButtonModified();
-            this.buttonEliminarMarcador2 = new Front_EDDIE_WindowsForm.ButtonModified();
             this.comentariosPDF = new System.Windows.Forms.Label();
             this.labelMarcadoresPDF = new System.Windows.Forms.Label();
             this.listBox2 = new System.Windows.Forms.ListBox();
@@ -73,10 +71,6 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.historyLogPanel = new System.Windows.Forms.Panel();
-            this.btnSearchPages2 = new Front_EDDIE_WindowsForm.ButtonModified();
-            this.backPageButton2 = new Front_EDDIE_WindowsForm.ButtonModified();
-            this.nextPageButton2 = new Front_EDDIE_WindowsForm.ButtonModified();
-            this.markButton = new Front_EDDIE_WindowsForm.ButtonModified();
             this.btn_turnOFF = new ModuloRastreoOcular.ButtonAlt();
             this.btn_sincronizadorPdf = new ModuloRastreoOcular.ButtonAlt();
             this.btn_drawMenu = new ModuloRastreoOcular.ButtonAlt();
@@ -90,6 +84,12 @@
             this.rightLinePanel = new System.Windows.Forms.Panel();
             this.rightLinePaper = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnSearchPages2 = new Front_EDDIE_WindowsForm.ButtonModified();
+            this.backPageButton2 = new Front_EDDIE_WindowsForm.ButtonModified();
+            this.nextPageButton2 = new Front_EDDIE_WindowsForm.ButtonModified();
+            this.markButton = new Front_EDDIE_WindowsForm.ButtonModified();
+            this.buttonEliminarComentario2 = new Front_EDDIE_WindowsForm.ButtonModified();
+            this.buttonEliminarMarcador2 = new Front_EDDIE_WindowsForm.ButtonModified();
             this.panel_navegador.SuspendLayout();
             this.panel_log.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -105,18 +105,20 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(441, 26);
+            this.textBox1.Location = new System.Drawing.Point(588, 32);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(338, 38);
+            this.textBox1.Size = new System.Drawing.Size(449, 46);
             this.textBox1.TabIndex = 6;
             // 
             // panel_navegador
             // 
             this.panel_navegador.Controls.Add(this.rtb_ResultadosWikipedia);
-            this.panel_navegador.Location = new System.Drawing.Point(6, 44);
+            this.panel_navegador.Location = new System.Drawing.Point(8, 54);
+            this.panel_navegador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel_navegador.Name = "panel_navegador";
-            this.panel_navegador.Size = new System.Drawing.Size(365, 393);
+            this.panel_navegador.Size = new System.Drawing.Size(487, 484);
             this.panel_navegador.TabIndex = 5;
             // 
             // rtb_ResultadosWikipedia
@@ -125,8 +127,9 @@
             this.rtb_ResultadosWikipedia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtb_ResultadosWikipedia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtb_ResultadosWikipedia.Location = new System.Drawing.Point(0, 0);
+            this.rtb_ResultadosWikipedia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rtb_ResultadosWikipedia.Name = "rtb_ResultadosWikipedia";
-            this.rtb_ResultadosWikipedia.Size = new System.Drawing.Size(365, 393);
+            this.rtb_ResultadosWikipedia.Size = new System.Drawing.Size(487, 484);
             this.rtb_ResultadosWikipedia.TabIndex = 2;
             this.rtb_ResultadosWikipedia.Text = "";
             this.rtb_ResultadosWikipedia.Visible = false;
@@ -134,10 +137,11 @@
             // 
             // lbl_datoBuscado_trad_def
             // 
-            this.lbl_datoBuscado_trad_def.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_datoBuscado_trad_def.Location = new System.Drawing.Point(15, 10);
+            this.lbl_datoBuscado_trad_def.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_datoBuscado_trad_def.Location = new System.Drawing.Point(20, 12);
+            this.lbl_datoBuscado_trad_def.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_datoBuscado_trad_def.Name = "lbl_datoBuscado_trad_def";
-            this.lbl_datoBuscado_trad_def.Size = new System.Drawing.Size(237, 24);
+            this.lbl_datoBuscado_trad_def.Size = new System.Drawing.Size(316, 30);
             this.lbl_datoBuscado_trad_def.TabIndex = 1;
             this.lbl_datoBuscado_trad_def.Text = "label1";
             this.lbl_datoBuscado_trad_def.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -147,9 +151,10 @@
             // 
             this.rtb_result_definicion_traduccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtb_result_definicion_traduccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtb_result_definicion_traduccion.Location = new System.Drawing.Point(14, 42);
+            this.rtb_result_definicion_traduccion.Location = new System.Drawing.Point(19, 52);
+            this.rtb_result_definicion_traduccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rtb_result_definicion_traduccion.Name = "rtb_result_definicion_traduccion";
-            this.rtb_result_definicion_traduccion.Size = new System.Drawing.Size(237, 303);
+            this.rtb_result_definicion_traduccion.Size = new System.Drawing.Size(316, 373);
             this.rtb_result_definicion_traduccion.TabIndex = 0;
             this.rtb_result_definicion_traduccion.Text = "";
             this.rtb_result_definicion_traduccion.Visible = false;
@@ -165,9 +170,10 @@
             this.panel_log.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_log.Controls.Add(this.groupBox1);
             this.panel_log.Controls.Add(this.gb_busquedasRecientes);
-            this.panel_log.Location = new System.Drawing.Point(12, 67);
+            this.panel_log.Location = new System.Drawing.Point(16, 82);
+            this.panel_log.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel_log.Name = "panel_log";
-            this.panel_log.Size = new System.Drawing.Size(262, 438);
+            this.panel_log.Size = new System.Drawing.Size(349, 539);
             this.panel_log.TabIndex = 129;
             // 
             // groupBox1
@@ -179,87 +185,57 @@
             this.groupBox1.Controls.Add(this.listBox2);
             this.groupBox1.Controls.Add(this.listBox1);
             this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Font = new System.Drawing.Font("IBM Plex Sans", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(254, 434);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(339, 534);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "PDF Content";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // buttonEliminarComentario2
-            // 
-            this.buttonEliminarComentario2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.buttonEliminarComentario2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.buttonEliminarComentario2.FlatAppearance.BorderSize = 5;
-            this.buttonEliminarComentario2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
-            this.buttonEliminarComentario2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.buttonEliminarComentario2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEliminarComentario2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEliminarComentario2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.buttonEliminarComentario2.Location = new System.Drawing.Point(122, 386);
-            this.buttonEliminarComentario2.Name = "buttonEliminarComentario2";
-            this.buttonEliminarComentario2.Size = new System.Drawing.Size(120, 33);
-            this.buttonEliminarComentario2.TabIndex = 146;
-            this.buttonEliminarComentario2.Text = "Delete comment";
-            this.buttonEliminarComentario2.UseVisualStyleBackColor = false;
-            this.buttonEliminarComentario2.Click += new System.EventHandler(this.buttonEliminarComentario_Click);
-            // 
-            // buttonEliminarMarcador2
-            // 
-            this.buttonEliminarMarcador2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.buttonEliminarMarcador2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.buttonEliminarMarcador2.FlatAppearance.BorderSize = 5;
-            this.buttonEliminarMarcador2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
-            this.buttonEliminarMarcador2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.buttonEliminarMarcador2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEliminarMarcador2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEliminarMarcador2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.buttonEliminarMarcador2.Location = new System.Drawing.Point(122, 213);
-            this.buttonEliminarMarcador2.Name = "buttonEliminarMarcador2";
-            this.buttonEliminarMarcador2.Size = new System.Drawing.Size(120, 33);
-            this.buttonEliminarMarcador2.TabIndex = 145;
-            this.buttonEliminarMarcador2.Text = "Delete bookmark";
-            this.buttonEliminarMarcador2.UseVisualStyleBackColor = false;
-            this.buttonEliminarMarcador2.Click += new System.EventHandler(this.buttonEliminarMarcador_Click);
-            // 
             // comentariosPDF
             // 
             this.comentariosPDF.AutoSize = true;
-            this.comentariosPDF.Font = new System.Drawing.Font("IBM Plex Sans", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comentariosPDF.Location = new System.Drawing.Point(5, 232);
+            this.comentariosPDF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comentariosPDF.Location = new System.Drawing.Point(7, 286);
+            this.comentariosPDF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.comentariosPDF.Name = "comentariosPDF";
-            this.comentariosPDF.Size = new System.Drawing.Size(84, 14);
+            this.comentariosPDF.Size = new System.Drawing.Size(105, 17);
             this.comentariosPDF.TabIndex = 4;
             this.comentariosPDF.Text = "PDF Comments";
             // 
             // labelMarcadoresPDF
             // 
             this.labelMarcadoresPDF.AutoSize = true;
-            this.labelMarcadoresPDF.Font = new System.Drawing.Font("IBM Plex Sans", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMarcadoresPDF.Location = new System.Drawing.Point(2, 60);
+            this.labelMarcadoresPDF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMarcadoresPDF.Location = new System.Drawing.Point(3, 74);
+            this.labelMarcadoresPDF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMarcadoresPDF.Name = "labelMarcadoresPDF";
-            this.labelMarcadoresPDF.Size = new System.Drawing.Size(85, 14);
+            this.labelMarcadoresPDF.Size = new System.Drawing.Size(108, 17);
             this.labelMarcadoresPDF.TabIndex = 3;
             this.labelMarcadoresPDF.Text = "PDF bookmarks";
             // 
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 14;
-            this.listBox2.Location = new System.Drawing.Point(5, 250);
+            this.listBox2.ItemHeight = 17;
+            this.listBox2.Location = new System.Drawing.Point(11, 314);
+            this.listBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(245, 130);
+            this.listBox2.Size = new System.Drawing.Size(312, 157);
             this.listBox2.TabIndex = 2;
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 14;
-            this.listBox1.Location = new System.Drawing.Point(2, 77);
+            this.listBox1.ItemHeight = 17;
+            this.listBox1.Location = new System.Drawing.Point(8, 103);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(248, 130);
+            this.listBox1.Size = new System.Drawing.Size(315, 157);
             this.listBox1.TabIndex = 1;
             // 
             // checkBox1
@@ -267,11 +243,12 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Font = new System.Drawing.Font("IBM Plex Sans", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
-            this.checkBox1.Location = new System.Drawing.Point(8, 25);
+            this.checkBox1.Location = new System.Drawing.Point(11, 31);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(115, 18);
+            this.checkBox1.Size = new System.Drawing.Size(144, 21);
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "Show/Hide figures";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -280,9 +257,11 @@
             // gb_busquedasRecientes
             // 
             this.gb_busquedasRecientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gb_busquedasRecientes.Location = new System.Drawing.Point(4, 9);
+            this.gb_busquedasRecientes.Location = new System.Drawing.Point(5, 11);
+            this.gb_busquedasRecientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gb_busquedasRecientes.Name = "gb_busquedasRecientes";
-            this.gb_busquedasRecientes.Size = new System.Drawing.Size(253, 428);
+            this.gb_busquedasRecientes.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gb_busquedasRecientes.Size = new System.Drawing.Size(337, 527);
             this.gb_busquedasRecientes.TabIndex = 0;
             this.gb_busquedasRecientes.TabStop = false;
             this.gb_busquedasRecientes.Enter += new System.EventHandler(this.gb_busquedasRecientes_Enter);
@@ -290,10 +269,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("IBM Plex Sans", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 10);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(4, 12);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 14);
+            this.label1.Size = new System.Drawing.Size(100, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Recent search";
             // 
@@ -302,48 +282,56 @@
             this.fl_busquedasRecientes.AutoScroll = true;
             this.fl_busquedasRecientes.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.fl_busquedasRecientes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.fl_busquedasRecientes.Location = new System.Drawing.Point(3, 29);
+            this.fl_busquedasRecientes.Location = new System.Drawing.Point(4, 36);
+            this.fl_busquedasRecientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fl_busquedasRecientes.Name = "fl_busquedasRecientes";
-            this.fl_busquedasRecientes.Size = new System.Drawing.Size(251, 380);
+            this.fl_busquedasRecientes.Size = new System.Drawing.Size(334, 467);
             this.fl_busquedasRecientes.TabIndex = 0;
             // 
             // lbl_PalabraBuscada
             // 
-            this.lbl_PalabraBuscada.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PalabraBuscada.Location = new System.Drawing.Point(6, 5);
+            this.lbl_PalabraBuscada.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_PalabraBuscada.Location = new System.Drawing.Point(8, 6);
+            this.lbl_PalabraBuscada.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_PalabraBuscada.Name = "lbl_PalabraBuscada";
-            this.lbl_PalabraBuscada.Size = new System.Drawing.Size(362, 36);
+            this.lbl_PalabraBuscada.Size = new System.Drawing.Size(483, 44);
             this.lbl_PalabraBuscada.TabIndex = 2;
             this.lbl_PalabraBuscada.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_PalabraBuscada.Visible = false;
             // 
             // searchTextBox
             // 
-            this.searchTextBox.Location = new System.Drawing.Point(899, 668);
+            this.searchTextBox.Location = new System.Drawing.Point(1199, 822);
+            this.searchTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.searchTextBox.Multiline = true;
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(162, 21);
+            this.searchTextBox.Size = new System.Drawing.Size(215, 25);
             this.searchTextBox.TabIndex = 131;
+            this.searchTextBox.Visible = false;
             // 
             // PagesLabel
             // 
             this.PagesLabel.AutoSize = true;
             this.PagesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.PagesLabel.Location = new System.Drawing.Point(964, 698);
+            this.PagesLabel.Location = new System.Drawing.Point(1285, 859);
+            this.PagesLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PagesLabel.Name = "PagesLabel";
-            this.PagesLabel.Size = new System.Drawing.Size(20, 16);
+            this.PagesLabel.Size = new System.Drawing.Size(27, 20);
             this.PagesLabel.TabIndex = 133;
             this.PagesLabel.Text = "---";
+            this.PagesLabel.Visible = false;
             // 
             // Pages
             // 
             this.Pages.AutoSize = true;
-            this.Pages.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pages.Location = new System.Drawing.Point(904, 697);
+            this.Pages.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pages.Location = new System.Drawing.Point(1205, 858);
+            this.Pages.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Pages.Name = "Pages";
-            this.Pages.Size = new System.Drawing.Size(44, 14);
+            this.Pages.Size = new System.Drawing.Size(63, 17);
             this.Pages.TabIndex = 134;
             this.Pages.Text = "Pages :";
+            this.Pages.Visible = false;
             // 
             // panel2
             // 
@@ -355,9 +343,10 @@
             this.panel2.Controls.Add(this.btn_cerrarVentanaDerecha);
             this.panel2.Controls.Add(this.lbl_PalabraBuscada);
             this.panel2.Controls.Add(this.panel_navegador);
-            this.panel2.Location = new System.Drawing.Point(892, 67);
+            this.panel2.Location = new System.Drawing.Point(1189, 82);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(380, 518);
+            this.panel2.Size = new System.Drawing.Size(506, 637);
             this.panel2.TabIndex = 95;
             this.panel2.Visible = false;
             // 
@@ -369,9 +358,10 @@
             this.btn_leerEnciclopedia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_leerEnciclopedia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_leerEnciclopedia.Image = ((System.Drawing.Image)(resources.GetObject("btn_leerEnciclopedia.Image")));
-            this.btn_leerEnciclopedia.Location = new System.Drawing.Point(198, 444);
+            this.btn_leerEnciclopedia.Location = new System.Drawing.Point(264, 546);
+            this.btn_leerEnciclopedia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_leerEnciclopedia.Name = "btn_leerEnciclopedia";
-            this.btn_leerEnciclopedia.Size = new System.Drawing.Size(81, 61);
+            this.btn_leerEnciclopedia.Size = new System.Drawing.Size(108, 75);
             this.btn_leerEnciclopedia.TabIndex = 93;
             this.btn_leerEnciclopedia.UseVisualStyleBackColor = true;
             this.btn_leerEnciclopedia.Visible = false;
@@ -389,9 +379,10 @@
             this.btn_nav_adelante.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_nav_adelante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_nav_adelante.Image = ((System.Drawing.Image)(resources.GetObject("btn_nav_adelante.Image")));
-            this.btn_nav_adelante.Location = new System.Drawing.Point(98, 444);
+            this.btn_nav_adelante.Location = new System.Drawing.Point(131, 546);
+            this.btn_nav_adelante.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_nav_adelante.Name = "btn_nav_adelante";
-            this.btn_nav_adelante.Size = new System.Drawing.Size(81, 61);
+            this.btn_nav_adelante.Size = new System.Drawing.Size(108, 75);
             this.btn_nav_adelante.TabIndex = 7;
             this.btn_nav_adelante.UseVisualStyleBackColor = true;
             this.btn_nav_adelante.Visible = false;
@@ -409,9 +400,10 @@
             this.btn_nav_atras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_nav_atras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_nav_atras.Image = ((System.Drawing.Image)(resources.GetObject("btn_nav_atras.Image")));
-            this.btn_nav_atras.Location = new System.Drawing.Point(8, 443);
+            this.btn_nav_atras.Location = new System.Drawing.Point(11, 545);
+            this.btn_nav_atras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_nav_atras.Name = "btn_nav_atras";
-            this.btn_nav_atras.Size = new System.Drawing.Size(81, 61);
+            this.btn_nav_atras.Size = new System.Drawing.Size(108, 75);
             this.btn_nav_atras.TabIndex = 6;
             this.btn_nav_atras.UseVisualStyleBackColor = true;
             this.btn_nav_atras.Visible = false;
@@ -429,9 +421,10 @@
             this.btn_cerrarVentanaDerecha.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_cerrarVentanaDerecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cerrarVentanaDerecha.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrarVentanaDerecha.Image")));
-            this.btn_cerrarVentanaDerecha.Location = new System.Drawing.Point(289, 444);
+            this.btn_cerrarVentanaDerecha.Location = new System.Drawing.Point(385, 546);
+            this.btn_cerrarVentanaDerecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_cerrarVentanaDerecha.Name = "btn_cerrarVentanaDerecha";
-            this.btn_cerrarVentanaDerecha.Size = new System.Drawing.Size(81, 61);
+            this.btn_cerrarVentanaDerecha.Size = new System.Drawing.Size(108, 75);
             this.btn_cerrarVentanaDerecha.TabIndex = 3;
             this.btn_cerrarVentanaDerecha.UseVisualStyleBackColor = true;
             this.btn_cerrarVentanaDerecha.Visible = false;
@@ -444,10 +437,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(509, -4);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(679, -5);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(189, 29);
+            this.label2.Size = new System.Drawing.Size(239, 31);
             this.label2.TabIndex = 145;
             this.label2.Text = "Captured content";
             // 
@@ -463,9 +457,10 @@
             this.panel3.Controls.Add(this.lbl_datoBuscado_trad_def);
             this.panel3.Controls.Add(this.btn_leerDefinicionTraduccion);
             this.panel3.Controls.Add(this.btn_cerrarVentanaIzquierda);
-            this.panel3.Location = new System.Drawing.Point(12, 67);
+            this.panel3.Location = new System.Drawing.Point(16, 82);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(262, 438);
+            this.panel3.Size = new System.Drawing.Size(349, 539);
             this.panel3.TabIndex = 149;
             this.panel3.Visible = false;
             // 
@@ -476,9 +471,10 @@
             this.btn_leerDefinicionTraduccion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_leerDefinicionTraduccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_leerDefinicionTraduccion.Image = ((System.Drawing.Image)(resources.GetObject("btn_leerDefinicionTraduccion.Image")));
-            this.btn_leerDefinicionTraduccion.Location = new System.Drawing.Point(14, 351);
+            this.btn_leerDefinicionTraduccion.Location = new System.Drawing.Point(19, 432);
+            this.btn_leerDefinicionTraduccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_leerDefinicionTraduccion.Name = "btn_leerDefinicionTraduccion";
-            this.btn_leerDefinicionTraduccion.Size = new System.Drawing.Size(81, 61);
+            this.btn_leerDefinicionTraduccion.Size = new System.Drawing.Size(108, 75);
             this.btn_leerDefinicionTraduccion.TabIndex = 130;
             this.btn_leerDefinicionTraduccion.UseVisualStyleBackColor = true;
             this.btn_leerDefinicionTraduccion.Visible = false;
@@ -495,9 +491,10 @@
             this.btn_cerrarVentanaIzquierda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_cerrarVentanaIzquierda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cerrarVentanaIzquierda.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrarVentanaIzquierda.Image")));
-            this.btn_cerrarVentanaIzquierda.Location = new System.Drawing.Point(170, 351);
+            this.btn_cerrarVentanaIzquierda.Location = new System.Drawing.Point(227, 432);
+            this.btn_cerrarVentanaIzquierda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_cerrarVentanaIzquierda.Name = "btn_cerrarVentanaIzquierda";
-            this.btn_cerrarVentanaIzquierda.Size = new System.Drawing.Size(81, 61);
+            this.btn_cerrarVentanaIzquierda.Size = new System.Drawing.Size(108, 75);
             this.btn_cerrarVentanaIzquierda.TabIndex = 4;
             this.btn_cerrarVentanaIzquierda.UseVisualStyleBackColor = true;
             this.btn_cerrarVentanaIzquierda.Visible = false;
@@ -510,10 +507,11 @@
             // syncPDFLabel
             // 
             this.syncPDFLabel.AutoSize = true;
-            this.syncPDFLabel.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.syncPDFLabel.Location = new System.Drawing.Point(902, 653);
+            this.syncPDFLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.syncPDFLabel.Location = new System.Drawing.Point(1203, 804);
+            this.syncPDFLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.syncPDFLabel.Name = "syncPDFLabel";
-            this.syncPDFLabel.Size = new System.Drawing.Size(26, 14);
+            this.syncPDFLabel.Size = new System.Drawing.Size(33, 17);
             this.syncPDFLabel.TabIndex = 150;
             this.syncPDFLabel.Text = "X/Y";
             this.syncPDFLabel.Visible = false;
@@ -527,9 +525,10 @@
             this.buttonComments.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonComments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonComments.Image = ((System.Drawing.Image)(resources.GetObject("buttonComments.Image")));
-            this.buttonComments.Location = new System.Drawing.Point(412, 629);
+            this.buttonComments.Location = new System.Drawing.Point(549, 774);
+            this.buttonComments.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonComments.Name = "buttonComments";
-            this.buttonComments.Size = new System.Drawing.Size(81, 61);
+            this.buttonComments.Size = new System.Drawing.Size(108, 75);
             this.buttonComments.TabIndex = 134;
             this.buttonComments.UseVisualStyleBackColor = false;
             this.buttonComments.Visible = false;
@@ -548,9 +547,10 @@
             this.buttonMarker.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonMarker.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMarker.Image = ((System.Drawing.Image)(resources.GetObject("buttonMarker.Image")));
-            this.buttonMarker.Location = new System.Drawing.Point(499, 629);
+            this.buttonMarker.Location = new System.Drawing.Point(665, 774);
+            this.buttonMarker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonMarker.Name = "buttonMarker";
-            this.buttonMarker.Size = new System.Drawing.Size(81, 61);
+            this.buttonMarker.Size = new System.Drawing.Size(108, 75);
             this.buttonMarker.TabIndex = 133;
             this.buttonMarker.UseVisualStyleBackColor = false;
             this.buttonMarker.Visible = false;
@@ -569,9 +569,10 @@
             this.buttonPDF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonPDF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPDF.Image = ((System.Drawing.Image)(resources.GetObject("buttonPDF.Image")));
-            this.buttonPDF.Location = new System.Drawing.Point(673, 629);
+            this.buttonPDF.Location = new System.Drawing.Point(897, 774);
+            this.buttonPDF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonPDF.Name = "buttonPDF";
-            this.buttonPDF.Size = new System.Drawing.Size(81, 61);
+            this.buttonPDF.Size = new System.Drawing.Size(108, 75);
             this.buttonPDF.TabIndex = 132;
             this.buttonPDF.UseVisualStyleBackColor = false;
             this.buttonPDF.Visible = false;
@@ -590,9 +591,10 @@
             this.buttonFiguresPD.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonFiguresPD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonFiguresPD.Image = ((System.Drawing.Image)(resources.GetObject("buttonFiguresPD.Image")));
-            this.buttonFiguresPD.Location = new System.Drawing.Point(586, 629);
+            this.buttonFiguresPD.Location = new System.Drawing.Point(781, 774);
+            this.buttonFiguresPD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonFiguresPD.Name = "buttonFiguresPD";
-            this.buttonFiguresPD.Size = new System.Drawing.Size(81, 61);
+            this.buttonFiguresPD.Size = new System.Drawing.Size(108, 75);
             this.buttonFiguresPD.TabIndex = 131;
             this.buttonFiguresPD.UseVisualStyleBackColor = false;
             this.buttonFiguresPD.Visible = false;
@@ -609,11 +611,13 @@
             this.syncButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.syncButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.syncButton.Image = ((System.Drawing.Image)(resources.GetObject("syncButton.Image")));
-            this.syncButton.Location = new System.Drawing.Point(973, 591);
+            this.syncButton.Location = new System.Drawing.Point(1297, 727);
+            this.syncButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.syncButton.Name = "syncButton";
-            this.syncButton.Size = new System.Drawing.Size(81, 61);
+            this.syncButton.Size = new System.Drawing.Size(108, 75);
             this.syncButton.TabIndex = 92;
             this.syncButton.UseVisualStyleBackColor = true;
+            this.syncButton.Visible = false;
             this.syncButton.Click += new System.EventHandler(this.syncPdfButton_Click);
             this.syncButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.syncButton_MouseDown);
             this.syncButton.MouseEnter += new System.EventHandler(this.syncButton_MouseEnter);
@@ -623,15 +627,17 @@
             // textImageButton
             // 
             this.textImageButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.textImageButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textImageButton.FlatAppearance.BorderSize = 0;
             this.textImageButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.textImageButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.textImageButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.textImageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.textImageButton.Image = ((System.Drawing.Image)(resources.GetObject("textImageButton.Image")));
-            this.textImageButton.Location = new System.Drawing.Point(553, 533);
+            this.textImageButton.Location = new System.Drawing.Point(737, 656);
+            this.textImageButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textImageButton.Name = "textImageButton";
-            this.textImageButton.Size = new System.Drawing.Size(60, 60);
+            this.textImageButton.Size = new System.Drawing.Size(80, 74);
             this.textImageButton.TabIndex = 91;
             this.textImageButton.UseVisualStyleBackColor = false;
             this.textImageButton.Click += new System.EventHandler(this.button3_Click);
@@ -639,9 +645,10 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(297, 570);
+            this.pictureBox4.Location = new System.Drawing.Point(396, 702);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox4.Size = new System.Drawing.Size(80, 74);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 87;
             this.pictureBox4.TabStop = false;
@@ -649,9 +656,10 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(797, 570);
+            this.pictureBox5.Location = new System.Drawing.Point(1063, 702);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox5.Size = new System.Drawing.Size(80, 74);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 88;
             this.pictureBox5.TabStop = false;
@@ -659,9 +667,10 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(298, 20);
+            this.pictureBox3.Location = new System.Drawing.Point(397, 25);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox3.Size = new System.Drawing.Size(80, 74);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 86;
             this.pictureBox3.TabStop = false;
@@ -672,83 +681,12 @@
             this.historyLogPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.historyLogPanel.Controls.Add(this.fl_busquedasRecientes);
             this.historyLogPanel.Controls.Add(this.label1);
-            this.historyLogPanel.Location = new System.Drawing.Point(12, 67);
+            this.historyLogPanel.Location = new System.Drawing.Point(16, 82);
+            this.historyLogPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.historyLogPanel.Name = "historyLogPanel";
-            this.historyLogPanel.Size = new System.Drawing.Size(262, 438);
+            this.historyLogPanel.Size = new System.Drawing.Size(349, 539);
             this.historyLogPanel.TabIndex = 153;
             this.historyLogPanel.Visible = false;
-            // 
-            // btnSearchPages2
-            // 
-            this.btnSearchPages2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.btnSearchPages2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.btnSearchPages2.FlatAppearance.BorderSize = 5;
-            this.btnSearchPages2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
-            this.btnSearchPages2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.btnSearchPages2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearchPages2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchPages2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.btnSearchPages2.Location = new System.Drawing.Point(1063, 654);
-            this.btnSearchPages2.Name = "btnSearchPages2";
-            this.btnSearchPages2.Size = new System.Drawing.Size(68, 58);
-            this.btnSearchPages2.TabIndex = 148;
-            this.btnSearchPages2.Text = "Search Pages";
-            this.btnSearchPages2.UseVisualStyleBackColor = false;
-            this.btnSearchPages2.Click += new System.EventHandler(this.searchButton_Click);
-            // 
-            // backPageButton2
-            // 
-            this.backPageButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.backPageButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.backPageButton2.FlatAppearance.BorderSize = 5;
-            this.backPageButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
-            this.backPageButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.backPageButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backPageButton2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backPageButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.backPageButton2.Location = new System.Drawing.Point(899, 591);
-            this.backPageButton2.Name = "backPageButton2";
-            this.backPageButton2.Size = new System.Drawing.Size(68, 59);
-            this.backPageButton2.TabIndex = 147;
-            this.backPageButton2.Text = "<<";
-            this.backPageButton2.UseVisualStyleBackColor = false;
-            this.backPageButton2.Click += new System.EventHandler(this.backPagebutton_Click);
-            // 
-            // nextPageButton2
-            // 
-            this.nextPageButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.nextPageButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.nextPageButton2.FlatAppearance.BorderSize = 5;
-            this.nextPageButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
-            this.nextPageButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.nextPageButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nextPageButton2.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nextPageButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.nextPageButton2.Location = new System.Drawing.Point(1063, 591);
-            this.nextPageButton2.Name = "nextPageButton2";
-            this.nextPageButton2.Size = new System.Drawing.Size(68, 59);
-            this.nextPageButton2.TabIndex = 144;
-            this.nextPageButton2.Text = ">>";
-            this.nextPageButton2.UseVisualStyleBackColor = false;
-            this.nextPageButton2.Click += new System.EventHandler(this.nextPageButton_Click);
-            // 
-            // markButton
-            // 
-            this.markButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.markButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
-            this.markButton.FlatAppearance.BorderSize = 5;
-            this.markButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
-            this.markButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
-            this.markButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.markButton.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.markButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.markButton.Location = new System.Drawing.Point(1154, 656);
-            this.markButton.Name = "markButton";
-            this.markButton.Size = new System.Drawing.Size(118, 57);
-            this.markButton.TabIndex = 143;
-            this.markButton.Text = "Hide caliibration marks";
-            this.markButton.UseVisualStyleBackColor = false;
-            this.markButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_turnOFF
             // 
@@ -759,9 +697,10 @@
             this.btn_turnOFF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_turnOFF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_turnOFF.Image = ((System.Drawing.Image)(resources.GetObject("btn_turnOFF.Image")));
-            this.btn_turnOFF.Location = new System.Drawing.Point(1192, 2);
+            this.btn_turnOFF.Location = new System.Drawing.Point(1589, 2);
+            this.btn_turnOFF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_turnOFF.Name = "btn_turnOFF";
-            this.btn_turnOFF.Size = new System.Drawing.Size(81, 61);
+            this.btn_turnOFF.Size = new System.Drawing.Size(108, 75);
             this.btn_turnOFF.TabIndex = 141;
             this.btn_turnOFF.UseVisualStyleBackColor = false;
             this.btn_turnOFF.Click += new System.EventHandler(this.btn_turnOFF_Click);
@@ -780,9 +719,10 @@
             this.btn_sincronizadorPdf.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_sincronizadorPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_sincronizadorPdf.Image = ((System.Drawing.Image)(resources.GetObject("btn_sincronizadorPdf.Image")));
-            this.btn_sincronizadorPdf.Location = new System.Drawing.Point(624, 531);
+            this.btn_sincronizadorPdf.Location = new System.Drawing.Point(832, 654);
+            this.btn_sincronizadorPdf.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_sincronizadorPdf.Name = "btn_sincronizadorPdf";
-            this.btn_sincronizadorPdf.Size = new System.Drawing.Size(81, 65);
+            this.btn_sincronizadorPdf.Size = new System.Drawing.Size(108, 80);
             this.btn_sincronizadorPdf.TabIndex = 140;
             this.btn_sincronizadorPdf.UseVisualStyleBackColor = false;
             this.btn_sincronizadorPdf.Click += new System.EventHandler(this.btn_sincronizadorPdf_Click);
@@ -794,9 +734,10 @@
             this.btn_drawMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_drawMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_drawMenu.Image = ((System.Drawing.Image)(resources.GetObject("btn_drawMenu.Image")));
-            this.btn_drawMenu.Location = new System.Drawing.Point(12, 2);
+            this.btn_drawMenu.Location = new System.Drawing.Point(16, 2);
+            this.btn_drawMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_drawMenu.Name = "btn_drawMenu";
-            this.btn_drawMenu.Size = new System.Drawing.Size(81, 61);
+            this.btn_drawMenu.Size = new System.Drawing.Size(108, 75);
             this.btn_drawMenu.TabIndex = 16;
             this.btn_drawMenu.UseVisualStyleBackColor = true;
             this.btn_drawMenu.Click += new System.EventHandler(this.btn_drawMenu_Click);
@@ -814,9 +755,10 @@
             this.btn_diccionario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_diccionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_diccionario.Image = ((System.Drawing.Image)(resources.GetObject("btn_diccionario.Image")));
-            this.btn_diccionario.Location = new System.Drawing.Point(363, 604);
+            this.btn_diccionario.Location = new System.Drawing.Point(484, 743);
+            this.btn_diccionario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_diccionario.Name = "btn_diccionario";
-            this.btn_diccionario.Size = new System.Drawing.Size(81, 61);
+            this.btn_diccionario.Size = new System.Drawing.Size(108, 75);
             this.btn_diccionario.TabIndex = 123;
             this.btn_diccionario.UseVisualStyleBackColor = false;
             this.btn_diccionario.Visible = false;
@@ -835,9 +777,10 @@
             this.btn_imagen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_imagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_imagen.Image = ((System.Drawing.Image)(resources.GetObject("btn_imagen.Image")));
-            this.btn_imagen.Location = new System.Drawing.Point(710, 604);
+            this.btn_imagen.Location = new System.Drawing.Point(947, 743);
+            this.btn_imagen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_imagen.Name = "btn_imagen";
-            this.btn_imagen.Size = new System.Drawing.Size(81, 61);
+            this.btn_imagen.Size = new System.Drawing.Size(108, 75);
             this.btn_imagen.TabIndex = 122;
             this.btn_imagen.UseVisualStyleBackColor = false;
             this.btn_imagen.Visible = false;
@@ -856,9 +799,10 @@
             this.btn_video.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_video.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_video.Image = ((System.Drawing.Image)(resources.GetObject("btn_video.Image")));
-            this.btn_video.Location = new System.Drawing.Point(624, 604);
+            this.btn_video.Location = new System.Drawing.Point(832, 743);
+            this.btn_video.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_video.Name = "btn_video";
-            this.btn_video.Size = new System.Drawing.Size(81, 61);
+            this.btn_video.Size = new System.Drawing.Size(108, 75);
             this.btn_video.TabIndex = 121;
             this.btn_video.UseVisualStyleBackColor = false;
             this.btn_video.Visible = false;
@@ -877,9 +821,10 @@
             this.btn_enciclopedia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_enciclopedia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_enciclopedia.Image = ((System.Drawing.Image)(resources.GetObject("btn_enciclopedia.Image")));
-            this.btn_enciclopedia.Location = new System.Drawing.Point(537, 604);
+            this.btn_enciclopedia.Location = new System.Drawing.Point(716, 743);
+            this.btn_enciclopedia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_enciclopedia.Name = "btn_enciclopedia";
-            this.btn_enciclopedia.Size = new System.Drawing.Size(81, 61);
+            this.btn_enciclopedia.Size = new System.Drawing.Size(108, 75);
             this.btn_enciclopedia.TabIndex = 120;
             this.btn_enciclopedia.UseVisualStyleBackColor = false;
             this.btn_enciclopedia.Visible = false;
@@ -898,9 +843,10 @@
             this.btn_traductor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_traductor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_traductor.Image = ((System.Drawing.Image)(resources.GetObject("btn_traductor.Image")));
-            this.btn_traductor.Location = new System.Drawing.Point(450, 604);
+            this.btn_traductor.Location = new System.Drawing.Point(600, 743);
+            this.btn_traductor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_traductor.Name = "btn_traductor";
-            this.btn_traductor.Size = new System.Drawing.Size(81, 61);
+            this.btn_traductor.Size = new System.Drawing.Size(108, 75);
             this.btn_traductor.TabIndex = 119;
             this.btn_traductor.UseVisualStyleBackColor = false;
             this.btn_traductor.Visible = false;
@@ -920,9 +866,10 @@
             this.btn_buscarWeb.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_buscarWeb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_buscarWeb.Image = ((System.Drawing.Image)(resources.GetObject("btn_buscarWeb.Image")));
-            this.btn_buscarWeb.Location = new System.Drawing.Point(466, 531);
+            this.btn_buscarWeb.Location = new System.Drawing.Point(621, 654);
+            this.btn_buscarWeb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_buscarWeb.Name = "btn_buscarWeb";
-            this.btn_buscarWeb.Size = new System.Drawing.Size(81, 65);
+            this.btn_buscarWeb.Size = new System.Drawing.Size(108, 80);
             this.btn_buscarWeb.TabIndex = 118;
             this.btn_buscarWeb.UseVisualStyleBackColor = false;
             this.btn_buscarWeb.Click += new System.EventHandler(this.btn_buscarWeb_Click);
@@ -931,42 +878,163 @@
             // 
             this.leftLinePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.leftLinePanel.Controls.Add(this.rightLinePanel);
-            this.leftLinePanel.Location = new System.Drawing.Point(12, 502);
+            this.leftLinePanel.Location = new System.Drawing.Point(16, 618);
+            this.leftLinePanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.leftLinePanel.Name = "leftLinePanel";
-            this.leftLinePanel.Size = new System.Drawing.Size(519, 206);
+            this.leftLinePanel.Size = new System.Drawing.Size(692, 254);
             this.leftLinePanel.TabIndex = 155;
             // 
             // rightLinePanel
             // 
             this.rightLinePanel.BackColor = System.Drawing.Color.Black;
-            this.rightLinePanel.Location = new System.Drawing.Point(50, 502);
+            this.rightLinePanel.Location = new System.Drawing.Point(67, 618);
+            this.rightLinePanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rightLinePanel.Name = "rightLinePanel";
-            this.rightLinePanel.Size = new System.Drawing.Size(881, 206);
+            this.rightLinePanel.Size = new System.Drawing.Size(1175, 254);
             this.rightLinePanel.TabIndex = 156;
             // 
             // rightLinePaper
             // 
             this.rightLinePaper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.rightLinePaper.Controls.Add(this.panel4);
-            this.rightLinePaper.Location = new System.Drawing.Point(537, 502);
+            this.rightLinePaper.Location = new System.Drawing.Point(716, 618);
+            this.rightLinePaper.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rightLinePaper.Name = "rightLinePaper";
-            this.rightLinePaper.Size = new System.Drawing.Size(356, 206);
+            this.rightLinePaper.Size = new System.Drawing.Size(475, 254);
             this.rightLinePaper.TabIndex = 157;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Black;
-            this.panel4.Location = new System.Drawing.Point(50, 502);
+            this.panel4.Location = new System.Drawing.Point(67, 618);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(881, 206);
+            this.panel4.Size = new System.Drawing.Size(1175, 254);
             this.panel4.TabIndex = 156;
+            // 
+            // btnSearchPages2
+            // 
+            this.btnSearchPages2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.btnSearchPages2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.btnSearchPages2.FlatAppearance.BorderSize = 5;
+            this.btnSearchPages2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
+            this.btnSearchPages2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.btnSearchPages2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearchPages2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchPages2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.btnSearchPages2.Location = new System.Drawing.Point(1417, 805);
+            this.btnSearchPages2.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearchPages2.Name = "btnSearchPages2";
+            this.btnSearchPages2.Size = new System.Drawing.Size(91, 71);
+            this.btnSearchPages2.TabIndex = 148;
+            this.btnSearchPages2.Text = "Search Pages";
+            this.btnSearchPages2.UseVisualStyleBackColor = false;
+            this.btnSearchPages2.Visible = false;
+            this.btnSearchPages2.Click += new System.EventHandler(this.searchButton_Click);
+            // 
+            // backPageButton2
+            // 
+            this.backPageButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.backPageButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.backPageButton2.FlatAppearance.BorderSize = 5;
+            this.backPageButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
+            this.backPageButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.backPageButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backPageButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backPageButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.backPageButton2.Location = new System.Drawing.Point(1199, 727);
+            this.backPageButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.backPageButton2.Name = "backPageButton2";
+            this.backPageButton2.Size = new System.Drawing.Size(91, 73);
+            this.backPageButton2.TabIndex = 147;
+            this.backPageButton2.Text = "<<";
+            this.backPageButton2.UseVisualStyleBackColor = false;
+            this.backPageButton2.Visible = false;
+            this.backPageButton2.Click += new System.EventHandler(this.backPagebutton_Click);
+            // 
+            // nextPageButton2
+            // 
+            this.nextPageButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.nextPageButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.nextPageButton2.FlatAppearance.BorderSize = 5;
+            this.nextPageButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
+            this.nextPageButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.nextPageButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nextPageButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nextPageButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.nextPageButton2.Location = new System.Drawing.Point(1417, 727);
+            this.nextPageButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.nextPageButton2.Name = "nextPageButton2";
+            this.nextPageButton2.Size = new System.Drawing.Size(91, 73);
+            this.nextPageButton2.TabIndex = 144;
+            this.nextPageButton2.Text = ">>";
+            this.nextPageButton2.UseVisualStyleBackColor = false;
+            this.nextPageButton2.Visible = false;
+            this.nextPageButton2.Click += new System.EventHandler(this.nextPageButton_Click);
+            // 
+            // markButton
+            // 
+            this.markButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.markButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.markButton.FlatAppearance.BorderSize = 5;
+            this.markButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
+            this.markButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.markButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.markButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.markButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.markButton.Location = new System.Drawing.Point(1539, 807);
+            this.markButton.Margin = new System.Windows.Forms.Padding(4);
+            this.markButton.Name = "markButton";
+            this.markButton.Size = new System.Drawing.Size(157, 70);
+            this.markButton.TabIndex = 143;
+            this.markButton.Text = "Hide caliibration marks";
+            this.markButton.UseVisualStyleBackColor = false;
+            this.markButton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // buttonEliminarComentario2
+            // 
+            this.buttonEliminarComentario2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonEliminarComentario2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonEliminarComentario2.FlatAppearance.BorderSize = 5;
+            this.buttonEliminarComentario2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
+            this.buttonEliminarComentario2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.buttonEliminarComentario2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEliminarComentario2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminarComentario2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.buttonEliminarComentario2.Location = new System.Drawing.Point(120, 475);
+            this.buttonEliminarComentario2.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonEliminarComentario2.Name = "buttonEliminarComentario2";
+            this.buttonEliminarComentario2.Size = new System.Drawing.Size(203, 41);
+            this.buttonEliminarComentario2.TabIndex = 146;
+            this.buttonEliminarComentario2.Text = "Delete comment";
+            this.buttonEliminarComentario2.UseVisualStyleBackColor = false;
+            this.buttonEliminarComentario2.Click += new System.EventHandler(this.buttonEliminarComentario_Click);
+            // 
+            // buttonEliminarMarcador2
+            // 
+            this.buttonEliminarMarcador2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonEliminarMarcador2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(157)))), ((int)(((byte)(236)))));
+            this.buttonEliminarMarcador2.FlatAppearance.BorderSize = 5;
+            this.buttonEliminarMarcador2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(87)))), ((int)(((byte)(202)))));
+            this.buttonEliminarMarcador2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(202)))), ((int)(((byte)(202)))));
+            this.buttonEliminarMarcador2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEliminarMarcador2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEliminarMarcador2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.buttonEliminarMarcador2.Location = new System.Drawing.Point(120, 262);
+            this.buttonEliminarMarcador2.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonEliminarMarcador2.Name = "buttonEliminarMarcador2";
+            this.buttonEliminarMarcador2.Size = new System.Drawing.Size(203, 41);
+            this.buttonEliminarMarcador2.TabIndex = 145;
+            this.buttonEliminarMarcador2.Text = "Delete bookmark";
+            this.buttonEliminarMarcador2.UseVisualStyleBackColor = false;
+            this.buttonEliminarMarcador2.Click += new System.EventHandler(this.buttonEliminarMarcador_Click);
             // 
             // ProjectionScreenActivity2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.ClientSize = new System.Drawing.Size(1707, 886);
             this.Controls.Add(this.historyLogPanel);
             this.Controls.Add(this.syncPDFLabel);
             this.Controls.Add(this.panel3);
@@ -1002,7 +1070,7 @@
             this.Controls.Add(this.leftLinePanel);
             this.Controls.Add(this.rightLinePaper);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ProjectionScreenActivity2";
             this.Text = "AR";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ProjectionScreenActivity_FormClosing);

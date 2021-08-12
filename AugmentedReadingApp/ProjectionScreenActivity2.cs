@@ -381,6 +381,14 @@ namespace AugmentedReadingApp
                     buttonComments.Visible = false;
                     buttonFiguresPD.Visible = false;
                     buttonPDF.Visible = false;
+                    syncButton.Visible = false;
+                    backPageButton2.Visible = false;
+                    nextPageButton2.Visible = false;
+                    btnSearchPages2.Visible = false;
+                    searchTextBox.Visible = false;
+                    syncPDFLabel.Visible = false;
+                    Pages.Visible = false;
+                    PagesLabel.Visible = false;
                 }
             }
             else
@@ -414,6 +422,14 @@ namespace AugmentedReadingApp
                 buttonComments.Visible = true;
                 buttonFiguresPD.Visible = true;
                 buttonPDF.Visible = true;
+                syncButton.Visible = true;
+                backPageButton2.Visible = true;
+                nextPageButton2.Visible = true;
+                btnSearchPages2.Visible = true;
+                searchTextBox.Visible = true;
+                syncPDFLabel.Visible = true;
+                Pages.Visible = true;
+                PagesLabel.Visible = true;
                 if (webSearchButtonActived == true)
                 {
                     webSearchButtonActived = false;
@@ -434,6 +450,14 @@ namespace AugmentedReadingApp
                 buttonComments.Visible = false;
                 buttonFiguresPD.Visible = false;
                 buttonPDF.Visible = false;
+                syncButton.Visible = false;
+                backPageButton2.Visible = false;
+                nextPageButton2.Visible = false;
+                btnSearchPages2.Visible = false;
+                searchTextBox.Visible = false;
+                syncPDFLabel.Visible = false;
+                Pages.Visible = false;
+                PagesLabel.Visible = false;
             }
         }
 
@@ -446,6 +470,7 @@ namespace AugmentedReadingApp
                 panel2.Visible = true;
                 LoadingShow(this);
                 buscar_Enciclopedia();
+                Thread.Sleep(10);
                 LoadingClose();
                 Line_Paint_enciclopedia();
             }
@@ -572,6 +597,7 @@ namespace AugmentedReadingApp
                 ladoBusqueda = "izquierda";
                 LoadingShow(this);
                 traductor();
+                Thread.Sleep(10);
                 LoadingClose();
                 Line_Paint_traductor();
                 if (rtb_result_definicion_traduccion.Visible != true)
@@ -635,6 +661,7 @@ namespace AugmentedReadingApp
                 ladoBusqueda = "izquierda";
                 LoadingShow(this);
                 diccionario();
+                Thread.Sleep(10);
                 LoadingClose();
                 Line_Paint_diccionario();
             }
@@ -715,6 +742,7 @@ namespace AugmentedReadingApp
                 panel2.Visible = true;
                 LoadingShow(this);
                 buscarPorImagen();
+                Thread.Sleep(10);
                 LoadingClose();
                 Line_Paint_imagen();
             }

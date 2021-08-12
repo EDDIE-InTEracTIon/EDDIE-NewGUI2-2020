@@ -16,7 +16,10 @@ namespace AugmentedReadingApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenuSettings());
+            Application.Run(new MenuSettings()); //Descomentar esta linea Para utilizar la ultima interfaz y comentar la siguiente
+            //Application.Run(new InteractionCoordinator()); //Descomentar esta linea Para utilizar la interfaz original y comentar la anterior
+            
+            //Iniciar InteractionCoordinator para la interfaz original o usar MenuSettings para la nueva interfaz
         }
     }
 }
